@@ -383,7 +383,7 @@
 <p>如果电子的自旋向上，正电子的自旋必须向下，反之亦然。在任何一个特定的π 0 介子衰变中，量子力学无法预测会得到哪一种自旋组合，但是它明确指出电子、正电子自旋的测量是 相关的，平均说来得到每一种组合的几率是 1/2。</p>
 <p>定域性：任何<strong>影响</strong>的传播速度都不能超过光速</p>
 <p>结论：波函数的坍塌是瞬时的！</p>
-<h2 id="Bell定理"><a href="#Bell定理" class="headerlink" title="Bell定理"></a>Bell定理</h2><p>推广实验：<br>Bell 让两个探测器都能独立的转动。第一个测量电子自旋沿一个单位矢量<strong>a</strong>的分量， 第二个测量正电子自旋沿另一个单位矢量<strong>b</strong>的分量。<br>简单起见，以$h/2$为单位记录自旋;则每个探测器沿指定方向记录+1(自旋向上)或-1(自旋向下)<br>测量结果<br><img src="/img/1.png" srcset="/img/loading.gif" alt=""></p>
+<h2 id="Bell定理"><a href="#Bell定理" class="headerlink" title="Bell定理"></a>Bell定理</h2><p>推广实验：<br>Bell 让两个探测器都能独立的转动。第一个测量电子自旋沿一个单位矢量<strong>a</strong>的分量， 第二个测量正电子自旋沿另一个单位矢量<strong>b</strong>的分量。<br>简单起见，以$h/2$为单位记录自旋;则每个探测器沿指定方向记录+1(自旋向上)或-1(自旋向下)<br>测量结果<br><img src="/img/1.png" alt=""></p>
 <p><strong>计算自旋乘积的平均值</strong>$P(a,b)$（量子力学结论）<br>对任意的指向，由量子力学有</p>
 <script type="math/tex; mode=display">P(a,b)=-a\cdot b</script><p>特别的：</p>
 <ul>
@@ -422,11 +422,11 @@
 <ul>
 <li><strong>比较器</strong></li>
 </ul>
-<p><img src="/img/2.png" srcset="/img/loading.gif" alt=""><br>预先设置调谐的阈值电平$U_{th}(t)$，比较探测信号与阈值电平的大小输出二进制信息<br>优点：结构简单，可以达到GHz的带宽与GSa/s的采样频率（不快）<br>缺点：1.速度慢，每次只能输出1bit的信息。2.阈值电平设置问题，会产生非均匀分布，要使用von Neumann方法消除偏差，更慢！</p>
+<p><img src="/img/2.png" alt=""><br>预先设置调谐的阈值电平$U_{th}(t)$，比较探测信号与阈值电平的大小输出二进制信息<br>优点：结构简单，可以达到GHz的带宽与GSa/s的采样频率（不快）<br>缺点：1.速度慢，每次只能输出1bit的信息。2.阈值电平设置问题，会产生非均匀分布，要使用von Neumann方法消除偏差，更慢！</p>
 <ul>
 <li><strong>模-数转化器</strong></li>
 </ul>
-<p><img src="/img/3.png" srcset="/img/loading.gif" alt=""><br>改良的比较器，有多个阈值和一个前置滤波器。输出的信号通过具有较大带宽$B_{pre}$的前置滤波器（为使探测模块的信号采样不失真），之后逐级与阈值比较，输出二进制信号。<br>模-数转化器最大允许的采样速率一般可以大于器件自身的采样速率——“过采样”，合理使用过采样可以提速。<br>优点：速度快，好应用</p>
+<p><img src="/img/3.png" alt=""><br>改良的比较器，有多个阈值和一个前置滤波器。输出的信号通过具有较大带宽$B_{pre}$的前置滤波器（为使探测模块的信号采样不失真），之后逐级与阈值比较，输出二进制信号。<br>模-数转化器最大允许的采样速率一般可以大于器件自身的采样速率——“过采样”，合理使用过采样可以提速。<br>优点：速度快，好应用</p>
 <ul>
 <li><strong>数字示波器</strong><br>多级模-数转化器<br>优点：一体化。缺点：功率体积太大</li>
 </ul>
@@ -435,7 +435,7 @@
 <li><strong>采样速率</strong><br>实际过程中，不是采样速率越大越好。<br>由于噪声功率谱密度函数与自相关函数互为傅立叶变化关系，其参数——噪声功率谱的线宽与信号的相干时间，二者互为倒数。<br><em>这意味着</em>：采样速率越大数据中的相关性也越大。同时采样速率过快也会使后处理中最小熵下降，使用m-LSB时要舍弃更多的数据。<br>选择采样速率的操作：通过采样后信号的熵估算，平衡采样速率与相关性。使后处理出来的数据在可靠的基础上最多</li>
 <li><strong>采样精度</strong>采样精度由采集器决定<br>采样精度越高，就可以更精准的描述信号中的随机性，有效信息（每一个采样信号的信息量）也越大。模-数转化器有8、10、12bit的精度，一般为8bit。</li>
 </ul>
-<p><img src="/img/4.png" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/4.png" alt=""></p>
 <p>对一个高斯分布<script type="math/tex">p(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-x^2/2\sigma^2}</script>，其信息熵只与方差有关<script type="math/tex">H(x)=-\int_{-\infty}^{\infty} p(x) log_2 p(x) dx=\frac{1}{2} log_2 2\pi e\sigma^2</script><br>采样精度提高后信号的分布函数方差更接近随机数方差。<br>当然，采样精度也不是越大越好。<br>在采样速率对于经典噪声与量子噪声都不是“过采样”时继续提高采样精度，量子与经典噪声都会等幅度的增加划分。因此，提高采样精度并不可以提高最终序列的产生速率，反而增加了后处理的难度。</p>
 <h3 id="算法后处理"><a href="#算法后处理" class="headerlink" title="算法后处理"></a>算法后处理</h3><p>目的：提高采样速率</p>
 <ol>
@@ -447,12 +447,12 @@
 <li>其他全部舍弃（00，11）<br>作用：无论原始数据有何偏差，都可以使处理后的序列统计分布均匀$P(01)=P(10)$<br>缺点：产生速率损失大，速率也不稳定。输出序列和输入序列的长度比为$(1/4-e(n)^2)$，$e(n)^2$为原始数据的bias。</li>
 </ul>
 <ol>
-<li><strong>逻辑异或（Exclusive OR）操作</strong><br>任意两个bit位$A_J$，$A_i$可以视为独立同分布，通过异或操作$B=A_i \oplus A_j$得到概率分布为<script type="math/tex; mode=display">P(B)=P(A_i\oplus A_j)=P(|A_i - A_j|)=P(A_i)P(A_j)</script>由于$A_J$，$A_i$分布相同，则可以将任意分布转化为对阵分布<br><img src="/img/5.png" srcset="/img/loading.gif" alt=""><br>异或操作：1.每个比特与后续数据进行异或操作，且每个bit只用一次<br> 2.每个比特与后续数据进行异或操作</li>
+<li><strong>逻辑异或（Exclusive OR）操作</strong><br>任意两个bit位$A_J$，$A_i$可以视为独立同分布，通过异或操作$B=A_i \oplus A_j$得到概率分布为<script type="math/tex; mode=display">P(B)=P(A_i\oplus A_j)=P(|A_i - A_j|)=P(A_i)P(A_j)</script>由于$A_J$，$A_i$分布相同，则可以将任意分布转化为对阵分布<br><img src="/img/5.png" alt=""><br>异或操作：1.每个比特与后续数据进行异或操作，且每个bit只用一次<br> 2.每个比特与后续数据进行异或操作</li>
 </ol>
-<p><img src="/img/6.png" srcset="/img/loading.gif" alt=""></p>
-<p>作用：1.改善统计分布，减小数据采集时引入的经典bias。<br>    2.具有较高的输入/输出比（1or1/2）<br><img src="/img/7.png" srcset="/img/loading.gif" alt=""><br>缺点：引入了一定的相关性与经典信息</p>
+<p><img src="/img/6.png" alt=""></p>
+<p>作用：1.改善统计分布，减小数据采集时引入的经典bias。<br>    2.具有较高的输入/输出比（1or1/2）<br><img src="/img/7.png" alt=""><br>缺点：引入了一定的相关性与经典信息</p>
 <ol>
-<li><strong>最低有效位（m—LSB）操作</strong><br>保留每一次采样信号的m比特最低有效位。<br><img src="/img/8.png" srcset="/img/loading.gif" alt=""></li>
+<li><strong>最低有效位（m—LSB）操作</strong><br>保留每一次采样信号的m比特最低有效位。<br><img src="/img/8.png" alt=""></li>
 </ol>
 <h3 id="随机性检验"><a href="#随机性检验" class="headerlink" title="随机性检验"></a>随机性检验</h3><ul>
 <li><strong>算数平均值</strong>由均匀性，算数平均值为1/2。<script type="math/tex; mode=display">e(n)=\bar{X}-\frac{1}{2}</script>$e(n)$为偏置</li>
@@ -461,7 +461,7 @@
 <li><strong>最小熵</strong><script type="math/tex">H_{n-min}=-log_k (max[p_i])</script><br>最小熵刻画了随机序列不确定的最小下限。m-LSB后处理使用最小熵确定m的值</li>
 </ul>
 <h4 id="输出序列的实际检验"><a href="#输出序列的实际检验" class="headerlink" title="输出序列的实际检验"></a>输出序列的实际检验</h4><ul>
-<li><strong>标准检验包</strong><br>一套公认的的检验体系，基本思路：将一个带检测的输出序列划分为多个固定长度的子序列，根据置信水平（$\alpha=0.01$）给出待检序列通过检测的概率<br>1.DIEHARD统计检验包。<br>有18种子检测<br><img src="/img/9.png" srcset="/img/loading.gif" alt=""><br>所有检测共需要80M的待检测数据，每一个检测会给出一个p值，当$p&gt;\alpha$则通过检测。<br>对于6—11子检测，只能给出划分后子序列的p值，通过K-S Test转化为一个p值。<br>2.NIST-STS统计检验包。<br>有15个子检测<br><img src="/img/10.png" srcset="/img/loading.gif" alt=""><br>通过所有子检测需要有1G的比特长度，若不足检测会继续进行。<br>NIST-STS会给出两个值<br>p-值：同上，一般的判决阈值为$\alpha=0.0001$。<br>序列通过子检验的成功比例：假定划分的子序列数量为n，置信水平为$\alpha$<br>子序列通过单项检验的成功率取值在一个高斯分布中，其区间为<script type="math/tex">[1-\alpha-3\sqrt{\frac{\alpha (1-\alpha )}{n}},1-\alpha+3\sqrt{\frac{\alpha (1-\alpha )}{n}}]</script>当比例落入区间时，视为通过检测包。一般预设值为（n=1000，$\alpha=0.01$）区间为[0.9805，0.9995]</li>
+<li><strong>标准检验包</strong><br>一套公认的的检验体系，基本思路：将一个带检测的输出序列划分为多个固定长度的子序列，根据置信水平（$\alpha=0.01$）给出待检序列通过检测的概率<br>1.DIEHARD统计检验包。<br>有18种子检测<br><img src="/img/9.png" alt=""><br>所有检测共需要80M的待检测数据，每一个检测会给出一个p值，当$p&gt;\alpha$则通过检测。<br>对于6—11子检测，只能给出划分后子序列的p值，通过K-S Test转化为一个p值。<br>2.NIST-STS统计检验包。<br>有15个子检测<br><img src="/img/10.png" alt=""><br>通过所有子检测需要有1G的比特长度，若不足检测会继续进行。<br>NIST-STS会给出两个值<br>p-值：同上，一般的判决阈值为$\alpha=0.0001$。<br>序列通过子检验的成功比例：假定划分的子序列数量为n，置信水平为$\alpha$<br>子序列通过单项检验的成功率取值在一个高斯分布中，其区间为<script type="math/tex">[1-\alpha-3\sqrt{\frac{\alpha (1-\alpha )}{n}},1-\alpha+3\sqrt{\frac{\alpha (1-\alpha )}{n}}]</script>当比例落入区间时，视为通过检测包。一般预设值为（n=1000，$\alpha=0.01$）区间为[0.9805，0.9995]</li>
 <li><strong>三倍标准差（$3\sigma$）检测</strong></li>
 </ul>
 <p>指标：偏置$e(n)$，$k$阶自相关系数 $\alpha_k(n)$。</p>
@@ -500,8 +500,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/23/1/" rel="next" title="Berry Phase">
-                <i class="fa fa-chevron-left"></i> Berry Phase
+              <a href="/2020/02/23/note/" rel="next" title="introduction to python">
+                <i class="fa fa-chevron-left"></i> introduction to python
               </a>
             
           </div>
@@ -510,8 +510,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/02/23/note/" rel="prev" title="introduction to python">
-                introduction to python <i class="fa fa-chevron-right"></i>
+              <a href="/2020/02/23/1/" rel="prev" title="Berry Phase">
+                Berry Phase <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
