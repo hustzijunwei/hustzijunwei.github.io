@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="Zijun Wei">
+  <meta name="keywords" content="">
+  <title>QMNG - My Web</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Zijun Wei's space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                about me
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-02-23 19:20">
+      February 23, 2020 pm
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.9k words
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      23
+       minutes
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="总结与思考"><a href="#总结与思考" class="headerlink" title="总结与思考"></a>总结与思考</h1><p><strong>问题</strong></p>
+<ul>
+<li>随机性的来源？<br>随机性检验？or量子力学假设？认为QRNG为真随机数的依据（逻辑链）？</li>
+</ul>
+<h1 id="量子力学"><a href="#量子力学" class="headerlink" title="量子力学"></a>量子力学</h1><h2 id="EPR佯谬"><a href="#EPR佯谬" class="headerlink" title="EPR佯谬"></a>EPR佯谬</h2><p>考虑一个$\pi^0$介子到电子——正电子的衰变：</p>
+<script type="math/tex; mode=display">\pi^0 \rightarrow e^- +e^+</script><p>由于$\pi^0$的自旋为0，由角动量守恒，要求电子与正电子对处在单态组态。</p>
+<p>EPR实验的BOHM方案：一个静止$\pi^0$介子衰变为电子-正电子对。<br><strong><script type="math/tex">\frac{1}{\sqrt{2}}(\uparrow_-\downarrow+\uparrow_+\downarrow_-）</script></strong></p>
+<p>如果电子的自旋向上，正电子的自旋必须向下，反之亦然。在任何一个特定的π 0 介子衰变<br>中，量子力学无法预测会得到哪一种自旋组合，但是它明确指出电子、正电子自旋的测量是 相关的，平均说来得到每一种组合的几率是 1/2。</p>
+<p>定域性：任何<strong>影响</strong>的传播速度都不能超过光速</p>
+<p>结论：波函数的坍塌是瞬时的！</p>
+<h2 id="Bell定理"><a href="#Bell定理" class="headerlink" title="Bell定理"></a>Bell定理</h2><p>推广实验：<br>Bell 让两个探测器都能独立的转动。第一个测量电子自旋沿一个单位矢量<strong>a</strong>的分量， 第二个测量正电子自旋沿另一个单位矢量<strong>b</strong>的分量。<br>简单起见，以$h/2$为单位记录自旋;则每个探测器沿指定方向记录+1(自旋向上)或-1(自旋向下)<br>测量结果<br><img src="/source/img/1.png" srcset="/img/loading.gif" alt=""></p>
+<p><strong>计算自旋乘积的平均值</strong>$P(a,b)$（量子力学结论）<br>对任意的指向，由量子力学有</p>
+<script type="math/tex; mode=display">P(a,b)=-a\cdot b</script><p>特别的：</p>
+<ul>
+<li>如果两个探测器方向是平行$(b=a)$<script type="math/tex; mode=display">P(a,a)=-1</script></li>
+<li>如果安排探测器方向反平行$(b=-a)$<script type="math/tex; mode=display">P(a,-a)=1</script></li>
+</ul>
+<p><strong>Bell不等式</strong>（隐变量结论）</p>
+<ul>
+<li>假设电子，正电子体系的“完整”态是由隐变量 λ 表征的( λ<br>从一个衰变到下一个的变化是我们不知也不可控制的)。</li>
+<li>假设电子测量的结果是独立于正电子探测器指向( b )的——这个指向可以在对电子马上要进行测量之前由试验者选择， 使得指向选择的信息无法在电子测量之前传到电子。(这就是<strong>定域性假设</strong>。)</li>
+<li>设函数$A(a,\lambda)$给出电子测量结果，函数$B(b,\lambda)$给出正电子测量结果<br>$A(a,\lambda)=\pm1 $         $B(b,\lambda)=\pm1$<br>当探测器指向一致时，有完全（反）相关<script type="math/tex">A(a,\lambda)=-B(b,\lambda)</script>测量乘积的平均值为<script type="math/tex">P(a,b)=-\int\rho(\lambda) A(a,\lambda) B(b,\lambda) d \lambda</script>其中为隐变量的几率密度，有$\int \rho d\lambda=1$，不同的理论有不同的<br>消去B有<script type="math/tex">P(a,b)=-\int\rho(\lambda) A(a,\lambda) A(b,\lambda) d \lambda</script><br>对任意的单位矢量c，有<script type="math/tex">P(a,b)-P(a,c)=-\int \rho(\lambda)[A(a,\lambda)A(b,\lambda)-A(a,\lambda)A(c,\lambda)]d\lambda</script><script type="math/tex; mode=display">=-\int \rho(\lambda)[1-A(b,\lambda)A(c,\lambda)]A(a,\lambda)A(b,\lambda)d\lambda</script>(<em>$[A(b,\lambda)]^2 =1$</em>)<br>又因为$-1\leq [A(a,\lambda)B(b,\lambda)]\leq +1$，所以$\rho(\lambda)[1-A(b,\lambda)A(c,\lambda)]\ge 0 $<script type="math/tex; mode=display">|P(a,b)-P(a,c)|\leq \int \rho (\lambda)[1-A(b,\lambda)A(c,\lambda)]d\lambda</script>即<strong><script type="math/tex">|P(a,b)-P(a,c)|\leq 1+P(b,c)</script></strong></li>
+</ul>
+<p>可以计算出，Bell不等式与量子力学的结论矛盾。</p>
+<hr>
+<h1 id="量子随机数"><a href="#量子随机数" class="headerlink" title="量子随机数"></a>量子随机数</h1><h2 id="真随机数基础知识"><a href="#真随机数基础知识" class="headerlink" title="真随机数基础知识"></a>真随机数基础知识</h2><p>定义：<br>随机数是不存在<strong>周期性</strong>或明显的规律的非确定<strong>时序</strong>（时序特性），满足一定的统计规律（统计特性）<br>理想二进制随机序列的特性：</p>
+<ul>
+<li><strong>统计均匀性</strong>出现0和1的概率为均匀分布即<script type="math/tex">p(x_i)=\frac{1}{2}</script>其中$x_i =0,1$<br>扩展到N进制，则出现0，1，2，…，N-1的概率为均匀分布，即<script type="math/tex">p(x_i)=\frac{1}{N}</script></li>
+<li><strong>相互无关性</strong>每一位信息与序列中其余的信息之间没有关联，使用<em>自相关系数</em>表示<script type="math/tex">a_k= \delta[k]</script>    $k\in(-\infty,+\infty)$     ,$k\in Z$（没有周期性）</li>
+<li><strong>不可预测性</strong>无法以超过$p(x<em>i)=0.5$的精确度向前（后）预测产生的随机信息$$P(x_i)=P(x_i|x</em>{i-m}x<em>{i-m+1}…x</em>{i-1})<script type="math/tex">$$P(x_i)=P(x_i|x_{i+m}x_{i+m-1}...x_{i+1})</script></li>
+<li><strong>不可重复性</strong>无法在有限的时间内产生完全相同的随机序列</li>
+</ul>
+<h2 id="真随机数发生器的设计"><a href="#真随机数发生器的设计" class="headerlink" title="真随机数发生器的设计"></a>真随机数发生器的设计</h2><h3 id="量子随机源"><a href="#量子随机源" class="headerlink" title="量子随机源"></a>量子随机源</h3><p> <strong>离散型随机源</strong>例子——单光子源。优点：简单，好实现<br>实际方案为：将激光进行衰减，使脉冲的平均光子数$\mu$降到单光子数量级（准单光子源）。</p>
+<ul>
+<li>空间分辨特性：单光子对路径选择的随机性</li>
+<li>时间分辨特性：在相干时间内对单光子进行测量，响应时间具有随机性<br>将脉冲的相干态以Fock态$|n&gt;$展开<script type="math/tex; mode=display">|a>=e^{-|a|^2/2}\sum_{n=0}^{\infty}\frac{a^n}{n!}|n></script>相干态的光子数分布符合柏松分布：<script type="math/tex">p(n)=<n|a><a|n>=\frac{<n>^n e^{-<n>}}{n!}</script>其中$<n>=|a|^2$为平均光子数<br>当通过衰减器后平均光子数为$\lambda$探测器效率为$\eta$<script type="math/tex; mode=display">p(n)=\frac{<\eta \lambda>^n e^{-<\eta \lambda>}}{n!}</script>此时平均光子数为$\eta \lambda$，且通过衰减器之后仍未泊松分布。<br>故二阶相关系数为$g^{(2)}(0)=1$?各个脉冲之间无聚束（Bunchin）也无（Anti—Bunchi）？</li>
+</ul>
+<p><strong>连续性随机源</strong>例子——激光相位噪声，放大自发辐射噪声，真空散粒噪声。优点：数据多，快。<br>  统计指标——平均值，方差，平均强度<br>对随机信号$x(t)$</p>
+<p>统计性质——</p>
+<ul>
+<li><strong>概率密度分布函数</strong><script type="math/tex; mode=display">p(x)=\lim_{\Delta x\to0}\frac{P(x(t)\in (x,x+\Delta x))}{\Delta x}</script>与时序无关，描述的是信号取值的分布</li>
+<li><strong>功率谱密度函数</strong><script type="math/tex; mode=display">G(f)=\lim_{\Delta f\to 0}\frac{\Psi_x^2(f,f+\Delta f)}{\Delta f }</script>信号的功率谱密度函数与自相关系数互为Fourier变换关系（Wiener—Khintchine定理），用来描述噪声信号的相干性。<br> （补充）</li>
+</ul>
+<h3 id="探测与采样"><a href="#探测与采样" class="headerlink" title="探测与采样"></a>探测与采样</h3><h4 id="器件"><a href="#器件" class="headerlink" title="器件"></a>器件</h4><p>对离散型真随机数产生方案中，探测方式为单光子探测器。可以直接作为数字化的随机序列输出</p>
+<p>对连续型真随机数，探测结果为连续的，如光电传感器。需要将连续型结果转化为离散型的二进制信息。<br>采集器分别有：</p>
+<ul>
+<li><strong>比较器</strong></li>
+</ul>
+<p><img src="/source/img/2.png" srcset="/img/loading.gif" alt=""><br>预先设置调谐的阈值电平$U_{th}(t)$，比较探测信号与阈值电平的大小输出二进制信息<br>优点：结构简单，可以达到GHz的带宽与GSa/s的采样频率（不快）<br>缺点：1.速度慢，每次只能输出1bit的信息。2.阈值电平设置问题，会产生非均匀分布，要使用von Neumann方法消除偏差，更慢！</p>
+<ul>
+<li><strong>模-数转化器</strong></li>
+</ul>
+<p><img src="/source/img/3.png" srcset="/img/loading.gif" alt=""><br>改良的比较器，有多个阈值和一个前置滤波器。输出的信号通过具有较大带宽$B_{pre}$的前置滤波器（为使探测模块的信号采样不失真），之后逐级与阈值比较，输出二进制信号。<br>模-数转化器最大允许的采样速率一般可以大于器件自身的采样速率——“过采样”，合理使用过采样可以提速。<br>优点：速度快，好应用</p>
+<ul>
+<li><strong>数字示波器</strong><br>多级模-数转化器<br>优点：一体化。缺点：功率体积太大</li>
+</ul>
+<h4 id="采样速率与采样精度的影响"><a href="#采样速率与采样精度的影响" class="headerlink" title="采样速率与采样精度的影响"></a>采样速率与采样精度的影响</h4><p>采样速率与采样精度会对随机数发生器的输出产生影响。<br>        原始序列产生速率=采样速率*采样精度<br>单位：采样速率为个数/秒（Sa/s），采样精度为比特（bit）</p>
+<ul>
+<li><strong>采样速率</strong><br>实际过程中，不是采样速率越大越好。<br>由于噪声功率谱密度函数与自相关函数互为傅立叶变化关系，其参数——噪声功率谱的线宽与信号的相干时间，二者互为倒数。<br><em>这意味着</em>：采样速率越大数据中的相关性也越大。同时采样速率过快也会使后处理中最小熵下降，使用m-LSB时要舍弃更多的数据。<br>选择采样速率的操作：通过采样后信号的熵估算，平衡采样速率与相关性。使后处理出来的数据在可靠的基础上最多</li>
+<li><strong>采样精度</strong>采样精度由采集器决定<br>采样精度越高，就可以更精准的描述信号中的随机性，有效信息（每一个采样信号的信息量）也越大。模-数转化器有8、10、12bit的精度，一般为8bit。</li>
+</ul>
+<p><img src="media/15580142410541.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>对一个高斯分布<script type="math/tex">p(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-x^2/2\sigma^2}</script>，其信息熵只与方差有关<script type="math/tex">H(x)=-\int_{-\infty}^{\infty} p(x) log_2 p(x) dx=\frac{1}{2} log_2 2\pi e\sigma^2</script><br>采样精度提高后信号的分布函数方差更接近随机数方差。<br>当然，采样精度也不是越大越好。<br>在采样速率对于经典噪声与量子噪声都不是“过采样”时继续提高采样精度，量子与经典噪声都会等幅度的增加划分。因此，提高采样精度并不可以提高最终序列的产生速率，反而增加了后处理的难度。</p>
+<h3 id="算法后处理"><a href="#算法后处理" class="headerlink" title="算法后处理"></a>算法后处理</h3><p>目的：提高采样速率</p>
+<ol>
+<li><strong>von Neumann方法</strong><br>重新定义联合事件：</li>
+</ol>
+<ul>
+<li>连续两个bit位出现10的组合，称为新bit<strong>1</strong></li>
+<li>连续两个bit位出现01的组合，称为新bit<strong>0</strong></li>
+<li>其他全部舍弃（00，11）<br>作用：无论原始数据有何偏差，都可以使处理后的序列统计分布均匀$P(01)=P(10)$<br>缺点：产生速率损失大，速率也不稳定。输出序列和输入序列的长度比为$(1/4-e(n)^2)$，$e(n)^2$为原始数据的bias。</li>
+</ul>
+<ol>
+<li><strong>逻辑异或（Exclusive OR）操作</strong><br>任意两个bit位$A_J$，$A_i$可以视为独立同分布，通过异或操作$B=A_i \oplus A_j$得到概率分布为<script type="math/tex; mode=display">P(B)=P(A_i\oplus A_j)=P(|A_i - A_j|)=P(A_i)P(A_j)</script>由于$A_J$，$A_i$分布相同，则可以将任意分布转化为对阵分布<br><img src="media/15579242626587.jpg" srcset="/img/loading.gif" alt=""><br>异或操作：1.每个比特与后续数据进行异或操作，且每个bit只用一次<pre><code>           2.每个比特与后续数据进行异或操作
+</code></pre></li>
+</ol>
+<p><img src="media/15580933676856.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>作用：1.改善统计分布，减小数据采集时引入的经典bias。<br>           2.具有较高的输入/输出比（1or1/2）<br>           3.<br><img src="media/15579246235235.jpg" srcset="/img/loading.gif" alt=""><br>缺点：引入了一定的相关性与经典信息</p>
+<ol>
+<li><strong>最低有效位（m—LSB）操作</strong><br>保留每一次采样信号的m比特最低有效位。<br><img src="media/15579249592580.jpg" srcset="/img/loading.gif" alt=""></li>
+</ol>
+<h3 id="随机性检验"><a href="#随机性检验" class="headerlink" title="随机性检验"></a>随机性检验</h3><ul>
+<li><strong>算数平均值</strong>由均匀性，算数平均值为1/2。<script type="math/tex; mode=display">e(n)=\bar{X}-\frac{1}{2}</script>$e(n)$为偏置</li>
+<li><strong>k阶自相关系数</strong>，是带检验序列$X_0$与自身位移后得到的序列$X_k$之间相关性的度量<script type="math/tex; mode=display">a_k=\frac{E[(x_i -\mu)(x_{i+k}-\mu)]}{\sigma^2}=\frac{\sum_i (x_i -\mu)(x_{(i+k)  modn}-\mu)}{\sum_i (x_i -\mu)^2}</script>式中n为序列长度，$\mu$ $\sigma$分别为序列的平均值与标准差。<br>对于理想随机数，$a_0=1$，$a_k=0$当$k\ne 0$时</li>
+<li><strong>信息熵</strong>（Shannon熵）考察n比特长度作为基本单元子序列的概率密度分布<script type="math/tex; mode=display">H_n(X)=-\sum_{i=1}^{k^n} p_i log_k p_i</script>其中：k为进制，n为基本单位长度，$p_i$为子序列在总长度为N比特中出现的概率。规定$p_i=0$时$p_i log_k p_i=0$<br>信息熵是对序列概率的加权平均描述可以在一定程度上表示比特之间的统计分布和相关性的大小<br>对于理想二进制均匀分布，$p_i =1/N$其中$(i=0,1,2,…,2^n-1)$则此时信息熵最大值$H_n(X)=n$。<em>物理意义：</em>所有信息都有价值，有最大的非确定性4</li>
+<li><strong>最小熵</strong><script type="math/tex">H_{n-min}=-log_k (max[p_i])</script><br>最小熵刻画了随机序列不确定的最小下限。m-LSB后处理使用最小熵确定m的值</li>
+</ul>
+<h4 id="输出序列的实际检验"><a href="#输出序列的实际检验" class="headerlink" title="输出序列的实际检验"></a>输出序列的实际检验</h4><ul>
+<li><strong>标准检验包</strong><br>一套公认的的检验体系，基本思路：将一个带检测的输出序列划分为多个固定长度的子序列，根据置信水平（$\alpha=0.01$）给出待检序列通过检测的概率<br>1.DIEHARD统计检验包。<br>有18种子检测<br><img src="media/15580037395396.jpg" srcset="/img/loading.gif" alt=""><br>所有检测共需要80M的待检测数据，每一个检测会给出一个p值，当$p&gt;\alpha$则通过检测。<br>对于6—11子检测，只能给出划分后子序列的p值，通过K-S Test转化为一个p值。<br>2.NIST-STS统计检验包。<br>有15个子检测<br><img src="media/15580041854564.jpg" srcset="/img/loading.gif" alt=""><br>通过所有子检测需要有1G的比特长度，若不足检测会继续进行。<br>NIST-STS会给出两个值<br>p-值：同上，一般的判决阈值为$\alpha=0.0001$。<br>序列通过子检验的成功比例：假定划分的子序列数量为n，置信水平为$\alpha$<br>子序列通过单项检验的成功率取值在一个高斯分布中，其区间为<script type="math/tex">[1-\alpha-3\sqrt{\frac{\alpha (1-\alpha )}{n}},1-\alpha+3\sqrt{\frac{\alpha (1-\alpha )}{n}}]</script>当比例落入区间时，视为通过检测包。一般预设值为（n=1000，$\alpha=0.01$）区间为[0.9805，0.9995]</li>
+<li><strong>三倍标准差（$3\sigma$）检测</strong><pre><code>指标：偏置$e(n)$，$k$阶自相关系数 $\alpha_k(n)$。
+</code></pre>  基本思想：由理想抛硬币模型所模拟的二进制随机序列的统计参数在一定置信水平下与数据长度相关。<br>1.偏置$e(n)$的$3\sigma$检验标准<br>理想抛硬币模型为均匀分布$P(1)=P(0)=1/2$<br>n次抛硬币出现m次正面的组合数为<script type="math/tex">N_n(m)=C_n^m</script><br>为伯努力分布，对其归一化<br>可以求出该分布的期望$E(x)=\frac{1}{2}$方差$D(x)=\frac{1}{4n}$<br>由中心极限定理，当$n\rightarrow \infty$时，p（x）趋于高斯分布<script type="math/tex">E(X),\sigma (x))=N(\frac{1}{2},\frac{1}{2\sqrt{n}})</script><br>同时偏置$p[e(x)]$也符合高斯分布<script type="math/tex; mode=display">p[e(n)]=N(e(X),\sigma (x))=N(0,\frac{1}{2\sqrt{n}})=\frac{1}{\sqrt{2\pi}\sigma_e}exp(-x^2/2\sigma_e^2)</script>在高斯分布中位于$[-3\sigma,+3\sigma]$区间的概率为99.7%，也就是偏置有99.7%落入$[-\frac{3}{2\sqrt{n}},+\frac{3}{2\sqrt{n}}]$。<br>对于落入区域以外的待检测序列，极大可能不满足随机序列的统计特征。<br>描述：<br>长度为n的随机序列，偏置$e(n)$满足：$|e(n)|&gt; \frac{3}{2\sqrt{n}}$，且序列仍为真随机序列的概率只有0.3%<br>2.自相关系数$\alpha<em>k(n)$的$3\sigma$检验标准<br>改写自相关的定义：$$a_1(n)\approx \frac{\sum</em>{i=1}^n y<em>i |</em>{y<em>i = [(1/2+e)^2,(1/2-e)^2,(-1/4+e^2)]}}{n(1/4+e^2)}\approx \frac{\sum</em>{i=1}^n y<em>i |</em>{y<em>i=[+1,-1]}}{n}$$<br><em>简化规则：</em><br>$x_i$为而进制，则$x_i=0,1$<br>令$y_1 =[x_i -E(x)][x</em>{(i+1)mod n}-E(x)]$，由$x_i$的取值$y_i$只有三种取法$y_i=(1/2+e)^2,(1/2-e)^2,(-1/4+e^2)$<br>当$n\rightarrow\infty$时，此时$e(n)$很小，故$y_i$中$e^2$项可以忽略<br>由数据之间的独立性，$y_i$中$-2e,+2e$项个数可以相互抵消<br>则一阶自相关系数满足高斯分布<script type="math/tex; mode=display">p[a_1 (n)]=N(0,\sigma_a)=\frac{1}{\sqrt{2 \pi}\sigma_a} exp(-x^2/2\sigma_a^2)</script>由于偏置$e(n)$中$y_i$取值为$\pm 1/2$，而一阶自相关系数中$y_i$取值为$\pm 1$，则<script type="math/tex">\sigma_a=2\sigma_e=\frac{1}{\sqrt{n}}</script><br><em>描述</em>：<br>长度为n的随机序列，一阶自相关系数满足$|a_1(n)|&gt;\frac{3}{\sqrt{n}}$，且仍为真随机序列的概率只有0.3%<br>此方法可以推广到k阶</li>
+</ul>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/physics-note/">physics note</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/application-of-QM/">application of QM</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/02/23/note/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">introduction to python</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "QMNG&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
