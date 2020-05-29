@@ -210,7 +210,7 @@
 <h1 id="量子力学"><a href="#量子力学" class="headerlink" title="量子力学"></a>量子力学</h1><h2 id="EPR佯谬"><a href="#EPR佯谬" class="headerlink" title="EPR佯谬"></a>EPR佯谬</h2><p>考虑一个$\pi^0$介子到电子——正电子的衰变：</p>
 <script type="math/tex; mode=display">\pi^0 \rightarrow e^- +e^+</script><p>由于$\pi^0$的自旋为0，由角动量守恒，要求电子与正电子对处在单态组态。</p>
 <p>EPR实验的BOHM方案：一个静止$\pi^0$介子衰变为电子-正电子对。<br><strong><script type="math/tex">\frac{1}{\sqrt{2}}(\uparrow_-\downarrow+\uparrow_+\downarrow_-）</script></strong></p>
-<p>如果电子的自旋向上，正电子的自旋必须向下，反之亦然。在任何一个特定的π 0 介子衰变<br>中，量子力学无法预测会得到哪一种自旋组合，但是它明确指出电子、正电子自旋的测量是 相关的，平均说来得到每一种组合的几率是 1/2。</p>
+<p>如果电子的自旋向上，正电子的自旋必须向下，反之亦然。在任何一个特定的π 0 介子衰变中，量子力学无法预测会得到哪一种自旋组合，但是它明确指出电子、正电子自旋的测量是 相关的，平均说来得到每一种组合的几率是 1/2。</p>
 <p>定域性：任何<strong>影响</strong>的传播速度都不能超过光速</p>
 <p>结论：波函数的坍塌是瞬时的！</p>
 <h2 id="Bell定理"><a href="#Bell定理" class="headerlink" title="Bell定理"></a>Bell定理</h2><p>推广实验：<br>Bell 让两个探测器都能独立的转动。第一个测量电子自旋沿一个单位矢量<strong>a</strong>的分量， 第二个测量正电子自旋沿另一个单位矢量<strong>b</strong>的分量。<br>简单起见，以$h/2$为单位记录自旋;则每个探测器沿指定方向记录+1(自旋向上)或-1(自旋向下)<br>测量结果<br><img src="/img/1.png" srcset="/img/loading.gif" alt=""></p>
@@ -297,7 +297,7 @@
 <p>指标：偏置$e(n)$，$k$阶自相关系数 $\alpha_k(n)$。</p>
 <p>基本思想：由理想抛硬币模型所模拟的二进制随机序列的统计参数在一定置信水平下与数据长度相关。<br>1.偏置$e(n)$的$3\sigma$检验标准<br>理想抛硬币模型为均匀分布$P(1)=P(0)=1/2$<br>n次抛硬币出现m次正面的组合数为<script type="math/tex">N_n(m)=C_n^m</script><br>为伯努力分布，对其归一化<br>可以求出该分布的期望$E(x)=\frac{1}{2}$方差$D(x)=\frac{1}{4n}$<br>由中心极限定理，当$n\rightarrow \infty$时，p（x）趋于高斯分布<script type="math/tex">E(X),\sigma (x))=N(\frac{1}{2},\frac{1}{2\sqrt{n}})</script><br>同时偏置$p[e(x)]$也符合高斯分布</p>
 <script type="math/tex; mode=display">p[e(n)]=N(e(X),\sigma (x))=N(0,\frac{1}{2\sqrt{n}})=\frac{1}{\sqrt{2\pi}\sigma_e}exp(-x^2/2\sigma_e^2)</script><p>在高斯分布中位于$[-3\sigma,+3\sigma]$区间的概率为99.7%，也就是偏置有99.7%落入$[-\frac{3}{2\sqrt{n}},+\frac{3}{2\sqrt{n}}]$。<br>对于落入区域以外的待检测序列，极大可能不满足随机序列的统计特征。<br>描述：<br>长度为n的随机序列，偏置$e(n)$满足：$|e(n)|&gt; \frac{3}{2\sqrt{n}}$，且序列仍为真随机序列的概率只有0.3%<br>2.自相关系数$\alpha_k(n)$的$3\sigma$检验标准<br>改写自相关的定义：</p>
-<script type="math/tex; mode=display">a_1(n)\approx \frac{\sum_{i=1}^n y_i |_{y_i = [(1/2+e)^2,(1/2-e)^2,(-1/4+e^2)]}}{n(1/4+e^2)}\approx \frac{\sum_{i=1}^n y_i |_{y_i=[+1,-1]}}{n}</script><p><em>简化规则：</em><br>$x<em>i$ 为而进制，则 $x_i=0,1$<br>令 $y_1 =[x_i -E(x)][x</em>{(i+1)mod n}-E(x)]$ ，由 x_i$ 的取值 $y_i$ 只有三种取法 $y_i=(1/2+e)^2,(1/2-e)^2,(-1/4+e^2)$<br>当 $n-&gt;\infty$ 时，此时$e(n)$很小，故$y_i$中$e^2$项可以忽略<br>由数据之间的独立性，$y_i$中$-2e,+2e$项个数可以相互抵消<br>则一阶自相关系数满足高斯分布</p>
+<script type="math/tex; mode=display">a_1(n)\approx \frac{\sum_{i=1}^n y_i |_{y_i = [(1/2+e)^2,(1/2-e)^2,(-1/4+e^2)]}}{n(1/4+e^2)}\approx \frac{\sum_{i=1}^n y_i |_{y_i=[+1,-1]}}{n}</script><p><em>简化规则：</em><br> $x<em>i$ 为而进制，则 $x_i=0,1$<br>令 $y_1 =[x_i -E(x)][x</em>{(i+1)mod n}-E(x)]$ ，由 x_i$ 的取值 $y_i$ 只有三种取法 $y_i=(1/2+e)^2,(1/2-e)^2,(-1/4+e^2)$<br>当 $n-&gt;\infty$ 时，此时$e(n)$很小，故$y_i$中$e^2$项可以忽略<br>由数据之间的独立性，$y_i$中$-2e,+2e$项个数可以相互抵消<br>则一阶自相关系数满足高斯分布</p>
 <script type="math/tex; mode=display">p[a_1 (n)]=N(0,\sigma_a)=\frac{1}{\sqrt{2 \pi}\sigma_a} exp(-x^2/2\sigma_a^2)</script><p>由于偏置$e(n)$中$y_i$取值为$\pm 1/2$，而一阶自相关系数中 $y_i$ 取值为 $\pm 1$ ，则</p>
 <script type="math/tex; mode=display">\sigma_a=2\sigma_e=\frac{1}{\sqrt{n}}</script><p><em>描述</em>：<br>长度为n的随机序列，一阶自相关系数满足$|a_1(n)|&gt;\frac{3}{\sqrt{n}}$，且仍为真随机序列的概率只有0.3%<br>此方法可以推广到k阶</p>
 
