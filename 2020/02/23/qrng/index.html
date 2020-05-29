@@ -1,379 +1,209 @@
 <!DOCTYPE html>
+<html lang="en">
 
 
 
-  
 
 
-<html class="theme-next pisces use-motion" lang="en">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="expand your horizons">
+  <meta name="author" content="Zijun Wei">
+  <meta name="keywords" content="">
+  <title>QMNG - My Web</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="application of QM," />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="总结与思考问题  随机性的来源？随机性检验？or量子力学假设？认为QRNG为真随机数的依据（逻辑链）？  量子力学EPR佯谬考虑一个$\pi^0$介子到电子——正电子的衰变： \pi^0 \rightarrow e^- +e^+由于$\pi^0$的自旋为0，由角动量守恒，要求电子与正电子对处在单态组态。 EPR实验的BOHM方案：一个静止$\pi^0$介子衰变为电子-正电子对。\frac{1}{\">
-<meta property="og:type" content="article">
-<meta property="og:title" content="QMNG">
-<meta property="og:url" content="http://yoursite.com/2020/02/23/qrng/index.html">
-<meta property="og:site_name" content="My Web">
-<meta property="og:description" content="总结与思考问题  随机性的来源？随机性检验？or量子力学假设？认为QRNG为真随机数的依据（逻辑链）？  量子力学EPR佯谬考虑一个$\pi^0$介子到电子——正电子的衰变： \pi^0 \rightarrow e^- +e^+由于$\pi^0$的自旋为0，由角动量守恒，要求电子与正电子对处在单态组态。 EPR实验的BOHM方案：一个静止$\pi^0$介子衰变为电子-正电子对。\frac{1}{\">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/img/1.png">
-<meta property="og:image" content="http://yoursite.com/img/2.png">
-<meta property="og:image" content="http://yoursite.com/img/3.png">
-<meta property="og:image" content="http://yoursite.com/img/4.png">
-<meta property="og:image" content="http://yoursite.com/img/5.png">
-<meta property="og:image" content="http://yoursite.com/img/6.png">
-<meta property="og:image" content="http://yoursite.com/img/7.png">
-<meta property="og:image" content="http://yoursite.com/img/8.png">
-<meta property="og:image" content="http://yoursite.com/img/9.png">
-<meta property="og:image" content="http://yoursite.com/img/10.png">
-<meta property="article:published_time" content="2020-02-23T11:20:33.000Z">
-<meta property="article:modified_time" content="2020-05-29T12:41:52.224Z">
-<meta property="article:author" content="Zijun Wei">
-<meta property="article:tag" content="application of QM">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/img/1.png">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2020/02/23/qrng/"/>
-
-
-
-
-
-  <title>QMNG | My Web</title>
   
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
 
 
 <meta name="generator" content="Hexo 4.2.1"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
-  
-  
-    
-  
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Zijun Wei's space</strong>&nbsp;</a>
 
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">My Web</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
     </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                about me
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
   </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/%E9%A6%96%E9%A1%B5" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/%E5%BD%92%E6%A1%A3" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/%E5%88%86%E7%B1%BB" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/%E6%A0%87%E7%AD%BE" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/%E5%85%B3%E4%BA%8E" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            About
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-search">
-          <a href="/%E6%90%9C%E7%B4%A2" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            Search
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
 </nav>
 
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/23/qrng/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zijun Wei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My Web">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">QMNG</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-23T19:20:33+08:00">
-                2020-02-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/physics-note/" itemprop="url" rel="index">
-                    <span itemprop="name">physics note</span>
-                  </a>
-                </span>
-
-                
-                
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
               
             </span>
-          
 
-          
             
-          
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-02-23 19:20">
+      February 23, 2020 pm
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.9k words
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      23
+       minutes
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
 
           
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      </div>
+    </div>
+  </header>
 
+  <main>
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
-      
-        <h1 id="总结与思考"><a href="#总结与思考" class="headerlink" title="总结与思考"></a>总结与思考</h1><p><strong>问题</strong></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="总结与思考"><a href="#总结与思考" class="headerlink" title="总结与思考"></a>总结与思考</h1><p><strong>问题</strong></p>
 <ul>
 <li>随机性的来源？<br>随机性检验？or量子力学假设？认为QRNG为真随机数的依据（逻辑链）？</li>
 </ul>
@@ -383,7 +213,7 @@
 <p>如果电子的自旋向上，正电子的自旋必须向下，反之亦然。在任何一个特定的π 0 介子衰变中，量子力学无法预测会得到哪一种自旋组合，但是它明确指出电子、正电子自旋的测量是 相关的，平均说来得到每一种组合的几率是 1/2。</p>
 <p>定域性：任何<strong>影响</strong>的传播速度都不能超过光速</p>
 <p>结论：波函数的坍塌是瞬时的！</p>
-<h2 id="Bell定理"><a href="#Bell定理" class="headerlink" title="Bell定理"></a>Bell定理</h2><p>推广实验：<br>Bell 让两个探测器都能独立的转动。第一个测量电子自旋沿一个单位矢量<strong>a</strong>的分量， 第二个测量正电子自旋沿另一个单位矢量<strong>b</strong>的分量。<br>简单起见，以$h/2$为单位记录自旋;则每个探测器沿指定方向记录+1(自旋向上)或-1(自旋向下)<br>测量结果<br><img src="/img/1.png" alt=""></p>
+<h2 id="Bell定理"><a href="#Bell定理" class="headerlink" title="Bell定理"></a>Bell定理</h2><p>推广实验：<br>Bell 让两个探测器都能独立的转动。第一个测量电子自旋沿一个单位矢量<strong>a</strong>的分量， 第二个测量正电子自旋沿另一个单位矢量<strong>b</strong>的分量。<br>简单起见，以$h/2$为单位记录自旋;则每个探测器沿指定方向记录+1(自旋向上)或-1(自旋向下)<br>测量结果<br><img src="/img/1.png" srcset="/img/loading.gif" alt=""></p>
 <p><strong>计算自旋乘积的平均值</strong>$P(a,b)$（量子力学结论）<br>对任意的指向，由量子力学有</p>
 <script type="math/tex; mode=display">P(a,b)=-a\cdot b</script><p>特别的：</p>
 <ul>
@@ -422,11 +252,11 @@
 <ul>
 <li><strong>比较器</strong></li>
 </ul>
-<p><img src="/img/2.png" alt=""><br>预先设置调谐的阈值电平$U_{th}(t)$，比较探测信号与阈值电平的大小输出二进制信息<br>优点：结构简单，可以达到GHz的带宽与GSa/s的采样频率（不快）<br>缺点：1.速度慢，每次只能输出1bit的信息。2.阈值电平设置问题，会产生非均匀分布，要使用von Neumann方法消除偏差，更慢！</p>
+<p><img src="/img/2.png" srcset="/img/loading.gif" alt=""><br>预先设置调谐的阈值电平$U_{th}(t)$，比较探测信号与阈值电平的大小输出二进制信息<br>优点：结构简单，可以达到GHz的带宽与GSa/s的采样频率（不快）<br>缺点：1.速度慢，每次只能输出1bit的信息。2.阈值电平设置问题，会产生非均匀分布，要使用von Neumann方法消除偏差，更慢！</p>
 <ul>
 <li><strong>模-数转化器</strong></li>
 </ul>
-<p><img src="/img/3.png" alt=""><br>改良的比较器，有多个阈值和一个前置滤波器。输出的信号通过具有较大带宽$B_{pre}$的前置滤波器（为使探测模块的信号采样不失真），之后逐级与阈值比较，输出二进制信号。<br>模-数转化器最大允许的采样速率一般可以大于器件自身的采样速率——“过采样”，合理使用过采样可以提速。<br>优点：速度快，好应用</p>
+<p><img src="/img/3.png" srcset="/img/loading.gif" alt=""><br>改良的比较器，有多个阈值和一个前置滤波器。输出的信号通过具有较大带宽$B_{pre}$的前置滤波器（为使探测模块的信号采样不失真），之后逐级与阈值比较，输出二进制信号。<br>模-数转化器最大允许的采样速率一般可以大于器件自身的采样速率——“过采样”，合理使用过采样可以提速。<br>优点：速度快，好应用</p>
 <ul>
 <li><strong>数字示波器</strong><br>多级模-数转化器<br>优点：一体化。缺点：功率体积太大</li>
 </ul>
@@ -435,7 +265,7 @@
 <li><strong>采样速率</strong><br>实际过程中，不是采样速率越大越好。<br>由于噪声功率谱密度函数与自相关函数互为傅立叶变化关系，其参数——噪声功率谱的线宽与信号的相干时间，二者互为倒数。<br><em>这意味着</em>：采样速率越大数据中的相关性也越大。同时采样速率过快也会使后处理中最小熵下降，使用m-LSB时要舍弃更多的数据。<br>选择采样速率的操作：通过采样后信号的熵估算，平衡采样速率与相关性。使后处理出来的数据在可靠的基础上最多</li>
 <li><strong>采样精度</strong>采样精度由采集器决定<br>采样精度越高，就可以更精准的描述信号中的随机性，有效信息（每一个采样信号的信息量）也越大。模-数转化器有8、10、12bit的精度，一般为8bit。</li>
 </ul>
-<p><img src="/img/4.png" alt=""></p>
+<p><img src="/img/4.png" srcset="/img/loading.gif" alt=""></p>
 <p>对一个高斯分布<script type="math/tex">p(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-x^2/2\sigma^2}</script>，其信息熵只与方差有关<script type="math/tex">H(x)=-\int_{-\infty}^{\infty} p(x) log_2 p(x) dx=\frac{1}{2} log_2 2\pi e\sigma^2</script><br>采样精度提高后信号的分布函数方差更接近随机数方差。<br>当然，采样精度也不是越大越好。<br>在采样速率对于经典噪声与量子噪声都不是“过采样”时继续提高采样精度，量子与经典噪声都会等幅度的增加划分。因此，提高采样精度并不可以提高最终序列的产生速率，反而增加了后处理的难度。</p>
 <h3 id="算法后处理"><a href="#算法后处理" class="headerlink" title="算法后处理"></a>算法后处理</h3><p>目的：提高采样速率</p>
 <ol>
@@ -447,12 +277,12 @@
 <li>其他全部舍弃（00，11）<br>作用：无论原始数据有何偏差，都可以使处理后的序列统计分布均匀$P(01)=P(10)$<br>缺点：产生速率损失大，速率也不稳定。输出序列和输入序列的长度比为$(1/4-e(n)^2)$，$e(n)^2$为原始数据的bias。</li>
 </ul>
 <ol>
-<li><strong>逻辑异或（Exclusive OR）操作</strong><br>任意两个bit位$A_J$，$A_i$可以视为独立同分布，通过异或操作$B=A_i \oplus A_j$得到概率分布为<script type="math/tex; mode=display">P(B)=P(A_i\oplus A_j)=P(|A_i - A_j|)=P(A_i)P(A_j)</script>由于$A_J$，$A_i$分布相同，则可以将任意分布转化为对阵分布<br><img src="/img/5.png" alt=""><br>异或操作：1.每个比特与后续数据进行异或操作，且每个bit只用一次<br> 2.每个比特与后续数据进行异或操作</li>
+<li><strong>逻辑异或（Exclusive OR）操作</strong><br>任意两个bit位$A_J$，$A_i$可以视为独立同分布，通过异或操作$B=A_i \oplus A_j$得到概率分布为<script type="math/tex; mode=display">P(B)=P(A_i\oplus A_j)=P(|A_i - A_j|)=P(A_i)P(A_j)</script>由于$A_J$，$A_i$分布相同，则可以将任意分布转化为对阵分布<br><img src="/img/5.png" srcset="/img/loading.gif" alt=""><br>异或操作：1.每个比特与后续数据进行异或操作，且每个bit只用一次<br> 2.每个比特与后续数据进行异或操作</li>
 </ol>
-<p><img src="/img/6.png" alt=""></p>
-<p>作用：1.改善统计分布，减小数据采集时引入的经典bias。<br>    2.具有较高的输入/输出比（1or1/2）<br><img src="/img/7.png" alt=""><br>缺点：引入了一定的相关性与经典信息</p>
+<p><img src="/img/6.png" srcset="/img/loading.gif" alt=""></p>
+<p>作用：1.改善统计分布，减小数据采集时引入的经典bias。<br>    2.具有较高的输入/输出比（1or1/2）<br><img src="/img/7.png" srcset="/img/loading.gif" alt=""><br>缺点：引入了一定的相关性与经典信息</p>
 <ol>
-<li><strong>最低有效位（m—LSB）操作</strong><br>保留每一次采样信号的m比特最低有效位。<br><img src="/img/8.png" alt=""></li>
+<li><strong>最低有效位（m—LSB）操作</strong><br>保留每一次采样信号的m比特最低有效位。<br><img src="/img/8.png" srcset="/img/loading.gif" alt=""></li>
 </ol>
 <h3 id="随机性检验"><a href="#随机性检验" class="headerlink" title="随机性检验"></a>随机性检验</h3><ul>
 <li><strong>算数平均值</strong>由均匀性，算数平均值为1/2。<script type="math/tex; mode=display">e(n)=\bar{X}-\frac{1}{2}</script>$e(n)$为偏置</li>
@@ -461,7 +291,7 @@
 <li><strong>最小熵</strong><script type="math/tex">H_{n-min}=-log_k (max[p_i])</script><br>最小熵刻画了随机序列不确定的最小下限。m-LSB后处理使用最小熵确定m的值</li>
 </ul>
 <h4 id="输出序列的实际检验"><a href="#输出序列的实际检验" class="headerlink" title="输出序列的实际检验"></a>输出序列的实际检验</h4><ul>
-<li><strong>标准检验包</strong><br>一套公认的的检验体系，基本思路：将一个带检测的输出序列划分为多个固定长度的子序列，根据置信水平（$\alpha=0.01$）给出待检序列通过检测的概率<br>1.DIEHARD统计检验包。<br>有18种子检测<br><img src="/img/9.png" alt=""><br>所有检测共需要80M的待检测数据，每一个检测会给出一个p值，当$p&gt;\alpha$则通过检测。<br>对于6—11子检测，只能给出划分后子序列的p值，通过K-S Test转化为一个p值。<br>2.NIST-STS统计检验包。<br>有15个子检测<br><img src="/img/10.png" alt=""><br>通过所有子检测需要有1G的比特长度，若不足检测会继续进行。<br>NIST-STS会给出两个值<br>p-值：同上，一般的判决阈值为$\alpha=0.0001$。<br>序列通过子检验的成功比例：假定划分的子序列数量为n，置信水平为$\alpha$<br>子序列通过单项检验的成功率取值在一个高斯分布中，其区间为<script type="math/tex">[1-\alpha-3\sqrt{\frac{\alpha (1-\alpha )}{n}},1-\alpha+3\sqrt{\frac{\alpha (1-\alpha )}{n}}]</script>当比例落入区间时，视为通过检测包。一般预设值为（n=1000，$\alpha=0.01$）区间为[0.9805，0.9995]</li>
+<li><strong>标准检验包</strong><br>一套公认的的检验体系，基本思路：将一个带检测的输出序列划分为多个固定长度的子序列，根据置信水平（$\alpha=0.01$）给出待检序列通过检测的概率<br>1.DIEHARD统计检验包。<br>有18种子检测<br><img src="/img/9.png" srcset="/img/loading.gif" alt=""><br>所有检测共需要80M的待检测数据，每一个检测会给出一个p值，当$p&gt;\alpha$则通过检测。<br>对于6—11子检测，只能给出划分后子序列的p值，通过K-S Test转化为一个p值。<br>2.NIST-STS统计检验包。<br>有15个子检测<br><img src="/img/10.png" srcset="/img/loading.gif" alt=""><br>通过所有子检测需要有1G的比特长度，若不足检测会继续进行。<br>NIST-STS会给出两个值<br>p-值：同上，一般的判决阈值为$\alpha=0.0001$。<br>序列通过子检验的成功比例：假定划分的子序列数量为n，置信水平为$\alpha$<br>子序列通过单项检验的成功率取值在一个高斯分布中，其区间为<script type="math/tex">[1-\alpha-3\sqrt{\frac{\alpha (1-\alpha )}{n}},1-\alpha+3\sqrt{\frac{\alpha (1-\alpha )}{n}}]</script>当比例落入区间时，视为通过检测包。一般预设值为（n=1000，$\alpha=0.01$）区间为[0.9805，0.9995]</li>
 <li><strong>三倍标准差（$3\sigma$）检测</strong></li>
 </ul>
 <p>指标：偏置$e(n)$，$k$阶自相关系数 $\alpha_k(n)$。</p>
@@ -471,390 +301,294 @@
 <script type="math/tex; mode=display">p[a_1 (n)]=N(0,\sigma_a)=\frac{1}{\sqrt{2 \pi}\sigma_a} exp(-x^2/2\sigma_a^2)</script><p>由于偏置$e(n)$中$y_i$取值为$\pm 1/2$，而一阶自相关系数中 $y_i$ 取值为 $\pm 1$ ，则</p>
 <script type="math/tex; mode=display">\sigma_a=2\sigma_e=\frac{1}{\sqrt{n}}</script><p><em>描述</em>：<br>长度为n的随机序列，一阶自相关系数满足$|a_1(n)|&gt;\frac{3}{\sqrt{n}}$，且仍为真随机序列的概率只有0.3%<br>此方法可以推广到k阶</p>
 
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/application-of-QM/" rel="tag"># application of QM</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2020/02/23/note/" rel="next" title="introduction to python">
-                <i class="fa fa-chevron-left"></i> introduction to python
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/23/1/" rel="prev" title="Berry Phase">
-                Berry Phase <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">Zijun Wei</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/%E5%BD%92%E6%A1%A3">
-              
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
                 
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">categories</span>
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/physics-note/">physics note</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/application-of-QM/">application of QM</a>
+                    
+                  </div>
                 
               </div>
-            
-
-            
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，大部分都是我整理前人的工作或学习笔记 ，所以可以随便使用与转载，不过希望转载时最好注明出处！</p>
               
               
-              <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">tags</span>
-                
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/02/23/note/">
+                        <span class="hidden-mobile">introduction to python</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
               
-            
+            </div>
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#总结与思考"><span class="nav-number">1.</span> <span class="nav-text">总结与思考</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#量子力学"><span class="nav-number">2.</span> <span class="nav-text">量子力学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EPR佯谬"><span class="nav-number">2.1.</span> <span class="nav-text">EPR佯谬</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bell定理"><span class="nav-number">2.2.</span> <span class="nav-text">Bell定理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#量子随机数"><span class="nav-number">3.</span> <span class="nav-text">量子随机数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#真随机数基础知识"><span class="nav-number">3.1.</span> <span class="nav-text">真随机数基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#真随机数发生器的设计"><span class="nav-number">3.2.</span> <span class="nav-text">真随机数发生器的设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#量子随机源"><span class="nav-number">3.2.1.</span> <span class="nav-text">量子随机源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#探测与采样"><span class="nav-number">3.2.2.</span> <span class="nav-text">探测与采样</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#器件"><span class="nav-number">3.2.2.1.</span> <span class="nav-text">器件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#采样速率与采样精度的影响"><span class="nav-number">3.2.2.2.</span> <span class="nav-text">采样速率与采样精度的影响</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#算法后处理"><span class="nav-number">3.2.3.</span> <span class="nav-text">算法后处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机性检验"><span class="nav-number">3.2.4.</span> <span class="nav-text">随机性检验</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输出序列的实际检验"><span class="nav-number">3.2.4.1.</span> <span class="nav-text">输出序列的实际检验</span></a></li></ol></li></ol></li></ol></li></ol></div>
-            
-
           </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+        </div>
       </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Zijun Wei</span>
-
-  
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
 </div>
 
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
       </div>
     
-
-    
-
   </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
 
   
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
   
 
   
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
   
 
   
 
   
 
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
   
+    <script  src="/js/lazyload.js" ></script>
   
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "QMNG&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
 
   
 
   
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
 
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>

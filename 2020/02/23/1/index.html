@@ -1,368 +1,209 @@
 <!DOCTYPE html>
+<html lang="en">
 
 
 
-  
 
 
-<html class="theme-next pisces use-motion" lang="en">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="expand your horizons">
+  <meta name="author" content="Zijun Wei">
+  <meta name="keywords" content="">
+  <title>Berry Phase - My Web</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="QM," />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="概论   我翻开物理书一查，这里面没有年代，歪歪斜斜的每页上都写着‘Berry Phase’两个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是‘近似’!不含时哈密顿量由Schrodinger equation i \, \hbar \frac{\partial}{\partial t} | \psi\rangle&#x3D; H(t) |\psi\rangle其边界条件为 |\psi">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Berry Phase">
-<meta property="og:url" content="http://yoursite.com/2020/02/23/1/index.html">
-<meta property="og:site_name" content="My Web">
-<meta property="og:description" content="概论   我翻开物理书一查，这里面没有年代，歪歪斜斜的每页上都写着‘Berry Phase’两个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是‘近似’!不含时哈密顿量由Schrodinger equation i \, \hbar \frac{\partial}{\partial t} | \psi\rangle&#x3D; H(t) |\psi\rangle其边界条件为 |\psi">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-02-23T11:20:33.000Z">
-<meta property="article:modified_time" content="2020-05-29T14:52:10.408Z">
-<meta property="article:author" content="Zijun Wei">
-<meta property="article:tag" content="QM">
-<meta name="twitter:card" content="summary">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2020/02/23/1/"/>
-
-
-
-
-
-  <title>Berry Phase | My Web</title>
   
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 
 
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
 
 
 <meta name="generator" content="Hexo 4.2.1"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
-  
-  
-    
-  
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Zijun Wei's space</strong>&nbsp;</a>
 
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">My Web</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
     </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                about me
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
   </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/%E9%A6%96%E9%A1%B5" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/%E5%BD%92%E6%A1%A3" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/%E5%88%86%E7%B1%BB" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/%E6%A0%87%E7%AD%BE" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/%E5%85%B3%E4%BA%8E" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            About
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-search">
-          <a href="/%E6%90%9C%E7%B4%A2" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            Search
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
 </nav>
 
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/23/1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zijun Wei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My Web">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">Berry Phase</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-23T19:20:33+08:00">
-                2020-02-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/physics-note/" itemprop="url" rel="index">
-                    <span itemprop="name">physics note</span>
-                  </a>
-                </span>
-
-                
-                
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
               
             </span>
-          
 
-          
             
-          
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-02-23 19:20">
+      February 23, 2020 pm
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      547 words
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      4
+       minutes
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
 
           
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      </div>
+    </div>
+  </header>
 
+  <main>
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
-      
-        <h1 id="概论"><a href="#概论" class="headerlink" title="概论"></a>概论</h1><h2 id="我翻开物理书一查，这里面没有年代，歪歪斜斜的每页上都写着‘Berry-Phase’两个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是‘近似’"><a href="#我翻开物理书一查，这里面没有年代，歪歪斜斜的每页上都写着‘Berry-Phase’两个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是‘近似’" class="headerlink" title="   我翻开物理书一查，这里面没有年代，歪歪斜斜的每页上都写着‘Berry Phase’两个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是‘近似’!"></a>   <strong>我翻开物理书一查，这里面没有年代，歪歪斜斜的每页上都写着‘Berry Phase’两个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是‘近似’!</strong></h2><h1 id="不含时哈密顿量"><a href="#不含时哈密顿量" class="headerlink" title="不含时哈密顿量"></a>不含时哈密顿量</h1><p>由Schrodinger equation</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="概论"><a href="#概论" class="headerlink" title="概论"></a>概论</h1><h2 id="我翻开物理书一查，这里面没有年代，歪歪斜斜的每页上都写着‘Berry-Phase’两个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是‘近似’"><a href="#我翻开物理书一查，这里面没有年代，歪歪斜斜的每页上都写着‘Berry-Phase’两个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是‘近似’" class="headerlink" title="   我翻开物理书一查，这里面没有年代，歪歪斜斜的每页上都写着‘Berry Phase’两个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是‘近似’!"></a>   <strong>我翻开物理书一查，这里面没有年代，歪歪斜斜的每页上都写着‘Berry Phase’两个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是‘近似’!</strong></h2><h1 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h1><h2 id="不含时哈密顿量"><a href="#不含时哈密顿量" class="headerlink" title="不含时哈密顿量"></a>不含时哈密顿量</h2><p>由Schrodinger equation</p>
 <script type="math/tex; mode=display">i \, \hbar \frac{\partial}{\partial t} | \psi\rangle= H(t) |\psi\rangle</script><p>其边界条件为</p>
 <script type="math/tex; mode=display">|\psi_{(t=0)}\rangle=|\psi_{（0）}\rangle</script><p>当哈密顿量不含时时，$H(t)=H$ （其中H可为多体的哈密顿量）</p>
 <script type="math/tex; mode=display">H|n\rangle=E_n |n\rangle</script><p>$\langle m | n \rangle = \delta_{mn}$  </p>
@@ -376,391 +217,360 @@
 <script type="math/tex; mode=display">i \, \hbar \frac{\partial}{\partial t} \sum_{n} c_n(t) | n \rangle= H \sum_{n} c_{n}(t)|n\rangle=\sum_{n} c_{n}(t) E_{n}|n\rangle</script><p>两边同时作用$| n \rangle$</p>
 <script type="math/tex; mode=display">i\, \hbar \frac{\partial}{\partial t} \sum_{n} c_n(t)\langle m|n\rangle= \sum_n c_{n}(t) E_{n}\langle m | n\rangle</script><p>带入正交归一化条件</p>
 <script type="math/tex; mode=display">i \,\hbar \frac{\partial}{\partial t} c_{m}(t)=E_{m} C_{m}(t)</script><p>通过积分解方程为</p>
-<script type="math/tex; mode=display">i\, \hbar\left[\ln C_{n}(t)-\ln C_{n}(t=0)\right]=E_{n} t</script><p>解为$c<em>{m}(t)=c</em>{m}(t=0) e^{-i E_{m} t / \hbar}$</p>
+<script type="math/tex; mode=display">i\, \hbar\left[\ln C_{n}(t)-\ln C_{n}(t=0)\right]=E_{n} t</script><p>解为$c_m (t)=c_m (t=0) e^{-i E_m t / \hbar}$</p>
 <p>若把$c_{m}(t=0)$记为$c_n$，则</p>
 <script type="math/tex; mode=display">|\psi(t)\rangle=\sum_{n} C_{n} e^{-i E t / \, \hbar}|n\rangle</script><p>其中 $e^{-i E t / \, \hbar}$ 为时间演化因子</p>
 <p>特别的，若设 $c<em>{n}=\delta</em>{n m}$ 为初始条件，则</p>
-<script type="math/tex; mode=display">| \psi \rangle=\sum_{n} \delta_{n m} e^{-i E_{n} t /  \, \hbar}|n\rangle=e^{-i E_{n} t / \, \hbar} | m\rangle</script>
-      
-    </div>
-    
-    
-    
+<script type="math/tex; mode=display">| \psi \rangle=\sum_{n} \delta_{n m} e^{-i E_{n} t /  \, \hbar}|n\rangle=e^{-i E_{n} t / \, \hbar} | m\rangle</script><h2 id="含时哈密顿量"><a href="#含时哈密顿量" class="headerlink" title="含时哈密顿量"></a>含时哈密顿量</h2><p>当哈密顿量含时时H(t)</p>
+<p>本质上还是解schrodinger方程$H(t)|n(t)\rangle= E_{n}(t)|n(t)\rangle$</p>
+<p>尝试运用近似————将方程中的t看成参数。</p>
+<p>对一个例子：对长度随时间变化的无限深势阱</p>
+<script type="math/tex; mode=display">H(t)=\left\{\begin{array}{cc}{+\infty} & {x>L(t)} \\ {0} & {x \in[0, L(t)]} \\ {+\infty} & {x<0}\end{array}\right.</script><p><img src="/img_QM2/1.png" srcset="/img/loading.gif" alt="势能如图"><br>则此时</p>
+<script type="math/tex; mode=display">E_{n}(t)=\frac{n^{2} h^{2}}{8 m L^{2} C t}</script><p>但是这肯定是无意义的，是可以自己计算的</p>
+<p>所以这个近似是错误的</p>
+<p>从数学上解释可以有。当随时间变化时，本征函数要满足正交归一化条件</p>
+<script type="math/tex; mode=display">\begin{array}{l}{\sum_{n}|n(t)\rangle\langle n(t)|=1} \\ {\langle n(t) | m(t)\rangle=\delta m n}\end{array}</script><p>但当时间变化时这个关系不能很好的满足！</p>
+<p>当然这种近似也不是完全没有作用的，在电子多体理论中哈密顿量为</p>
+<script type="math/tex; mode=display">H(t)=-\frac{\hbar^{2}}{2 m} \sum_{i=1}^{N} \nabla_{i}^{2}+\sum_{i=1}^{N} V\left(\vec{r}_{i}, t\right)</script><p>可以使用上面的近似（1983年）</p>
+<script type="math/tex; mode=display">{\Psi}=e^{-i \int^t} E\left(t^{\prime}\right) d t^{\prime} /\, \hbar {\Psi} (0)</script><p>这其中的E就为$H(t)|n(t)\rangle= E_{n}(t)|n(t)\rangle$解出的E</p>
+<h2 id="近似"><a href="#近似" class="headerlink" title="近似"></a>近似</h2><script type="math/tex; mode=display">|\psi(t)\rangle \doteq \exp \left[-\frac{i}{\hbar} \int_{0}^{t} E_{n}(t') d t^{\prime}+i \gamma_{n}(t)\right] |n (t)\rangle</script><p>同时这里的 $|n\rangle$ 为上面计算的正交归一基</p>
+<p>接下来计算这个近似解：</p>
+<p>带入shrodinger方程$i \hbar \frac{\partial}{\partial t}|\psi\rangle= H(t)|\psi\rangle$有</p>
+<script type="math/tex; mode=display">\left.c_{n}(t) H(t) |n(t)\right\rangle= i \hbar \dot{c}_n(t)|n(t)\rangle+ i \hbar c_n (t)\frac{d}{d t}|n(t)\rangle</script><p>这其中$\dot{c}_n (t)$为c对时间的导数，又由于$H(t)|n(t)\rangle= E_n (t)|n(t)\rangle$则可得方程</p>
+<script type="math/tex; mode=display">\dot{c}_{n}(t)=c_{n}(t)\left[-\frac{i}{\hbar} E_{n}(t)+i \dot{\gamma}_{n}(t)\right]</script><p>带入上式有</p>
+<script type="math/tex; mode=display">\dot{\gamma}_{n}(t)=i\langle n|\dot{n}\rangle   (1)</script><p>其中 $|\dot{n}\rangle$ 为 $\frac{d}{d t}|n(t)\rangle$ ，写成积分模式为</p>
+<script type="math/tex; mode=display">\gamma_{n}(t)=i \int_{0}^{t}\left\langle n\left(t^{\prime}\right) | \dot{n}\left(t^{\prime}\right)\right\rangle d t^{\prime}</script><p>进一步，当H由参数$R(t)$决定时(H通过R来依赖t）即$H(t)=H \cdot \vec{R}(t)$。$\vec{R}(t)$是一个多方向的取值函数，则</p>
+<script type="math/tex; mode=display">\frac{d}{d t} |n \left(\vec{R}(t)\right)\rangle =\left(\frac{d}{d t} \vec{R}(t)\right) \cdot \nabla_{\vec{R}} \cdot | n (\vec{R}_{(t)})\rangle</script><p>其中</p>
+<script type="math/tex; mode=display">\bar{R}=\left(R_{1}, \cdots, R_{n}\right) \quad \nabla_{\bar{R}}=\sum_{i}^{n} \hat{e}_{i} \frac{\partial}{\partial R_{j}}</script><p>带入（1）式有,使用牛顿记号表示R对时间t的导数。</p>
+<script type="math/tex; mode=display">\left.\dot{\gamma}_{n}(t)=i\left\langle n(\vec{R}(t))\left|\vec{\nabla}_{R}\right| n(\vec{R}(t))\right\rangle\right\rangle \cdot \dot{\vec{R}}(t)</script><p>则可得：</p>
+<script type="math/tex; mode=display">| \psi(t)\rangle = \exp \left[-\frac{i}{\hbar} \int_{0}^{t} E_{n}\left(\vec{R}\left(t^{\prime}\right)\right) d t^{\prime}\right]\exp \left[-\int_{0}^{t} \langle n(t^{\prime}) \left|\dot{n}\left(t^{\prime}\right)\right\rangle d t^{\prime}\right]|n (\vec{R}(t))\rangle</script><p>可以观察到该结构有一定的对称性，可以约定</p>
+<p>第一项可设为动力学因子，这与量1中是相同的</p>
+<script type="math/tex; mode=display">\alpha_{n}(t)=-\frac{1}{\hbar} \int_{0}^{t} E_{n}(t^{\prime}) d t^{\prime}  (2)</script><p>第二项即为Barry phase，是一个‘多出来’的一项</p>
+<script type="math/tex; mode=display">\gamma_{n}(t)=i \int_{0}^{t} \langle n(t^{\prime}) \left|\dot{n}\left(t^{\prime}\right)\right\rangle d t^{\prime}   (3)</script><p>则此时$| \psi(t)\rangle$可以改写为简单的形式</p>
+<script type="math/tex; mode=display">| \psi(t)\rangle = \exp (i \alpha_{n}(t)) \exp (i\gamma_{n}(t))|n (\vec{R}(t))\rangle   (4)</script><p>式（2）（3）（4）即为Barry phase理论的核心！</p>
+<p><strong>specially:</strong>$\vec{R}_{(t=0)}=\vec{R}(t=T)$即R(t)可以周期回归，则</p>
+<script type="math/tex; mode=display">\gamma_{n}(t=T)=i \oint_{c} \langle n (\vec{R}) | \nabla_{R} n(\vec{R}) \rangle \cdot d \vec{R}</script><h1 id="引入——绝热条件"><a href="#引入——绝热条件" class="headerlink" title="引入——绝热条件"></a>引入——绝热条件</h1><p>现在不妨重新严格的解一遍。此时参考H不含时$|\psi(t)\rangle=\sum_{n}c_n(t)|n(t)\rangle$<br>对于$c_n (t)$可以将其设为,可以看出这种设法相当于是将$c_n (t)$以不同能量组成的时间演化算子展开。咕这种展开是不失一般性的。</p>
+<script type="math/tex; mode=display">c_n(t)=a_n (t) \exp [-\frac{i}{n} \int_{0}^{t} E_{n}(t^{\prime}) d t^{\prime}]</script><p>带入Schrodinger方程中$i \hbar \frac{\partial}{\partial t} | \psi \rangle= H(t)|\psi\rangle$<br>则</p>
+<script type="math/tex; mode=display">i \hbar \sum_{n}\left\{\dot{a}_{n}(t) \exp \left[-\frac{i}{\hbar} \int_{0}^{t} E_{n}\left(t^{\prime}\right) d t\right]|n(t)\rangle\right.-\frac{i}{\hbar} a_{n}(t) E_{n}(t) \exp \left[-\frac{i}{\hbar} \int_{0}^{t} E_{n}\left(t^{\prime}\right) d t^{\prime}\right] |n(t)\rangle</script><script type="math/tex; mode=display">\left.+a_{n}(t) \exp \left[-\frac{i}{\hbar} \int_{0}^{t} E_{n}\left(t^{\prime}\right) d t^{\prime}\right] \frac{\partial}{\partial t}|n(t)\rangle\right\}=\sum_{n} a_n (t) E_{n}(t) \exp [-\frac{i}{\hbar} \int_{0}^{t} E_{n}(t^{\prime}) d t^{\prime}] |n(t)\rangle</script><p>化简后即为</p>
+<script type="math/tex; mode=display">i \hbar \sum_{n}\left\{\dot{a}_{n}(t) \exp \left[-\frac{i}{\hbar} \int_{0}^{t} E_{n}\left(t^{\prime}\right) d t\right]|n(t)\rangle\right.\left.+a_{n}(t) \exp \left[-\frac{i}{\hbar} \int_{0}^{t} E_{n}\left(t^{\prime}\right) d t^{\prime}\right] \frac{\partial}{\partial t}|n(t)\rangle\right\}=0</script><p>操作：同时左乘$\langle l(t) |$，其中l为n中的一个本征态（即$\langle l(t) | n \rangle = \delta_{l n}$）。有</p>
+<script type="math/tex; mode=display">i \hbar \left\{\dot{a}_{l} (t) \exp \left(-\frac{i}{\hbar} \int_{0}^{t} E_{l} (t^{\prime}) d t^{\prime}\right)\right\}+\sum_{n} a_{n}(t) \exp \left[-\frac{i}{\hbar} \int_{0}^{t} E_{n}\left(t^{\prime}\right) d t^{\prime}\right]\left\langle l(t)\left|\frac{\partial}{\partial t}\right| n(t)\right\rangle=0</script><p>则有</p>
+<script type="math/tex; mode=display">\dot{a}_{n}(t)=-\sum_{i \neq n} a_{l}(t) \exp \left(\frac{i}{\hbar} \int_{0}^{t}\left[E_{n}\left(t^{\prime}\right)-E_{l}\left(t^{\prime}\right)\right] d t^{\prime}\right)\langle n | \dot{l} \rangle -a_{n}(t)\langle n / \dot{l}\rangle</script><p>此时若令出态为$|\psi_0\rangle=|m_0\rangle$。则可以单独提出 $l=m$ 的一项，为</p>
+<script type="math/tex; mode=display">\dot{a}_{n}(t)= -a_{n}(t)\langle n / \dot{l}\rangle</script><script type="math/tex; mode=display">-a_{m}(t) \exp \left(\frac{i}{\hbar} \int_{0}^{t}\left[E_{n}\left(t^{\prime}\right)-E_{m}\left(t^{\prime}\right)\right] d t^{\prime}\right)\langle n | \dot{m} \rangle</script><script type="math/tex; mode=display">-\sum_{i \neq n or m} a_{l}(t) \exp \left(\frac{i}{\hbar} \int_{0}^{t}\left[E_{n}\left(t^{\prime}\right)-E_{l}\left(t^{\prime}\right)\right] d t^{\prime}\right)\langle n | \dot{l} \rangle</script><p>接下来做近似：对于这个近似我们希望可以使$\dot{a}_{n}(t)$很小，同时由$\sum_n \left|a_n (t)\right|^2 =1$<br>可知a（t）的图像为<br><img src="/img_QM2/2.png" srcset="/img/loading.gif" alt="势能如图"><br>我们可知，只需使$\langle n | \dot{m} \rangle$较小，既可以使a（t）小。具体逻辑链如图</p>
+<p><img src="/img_QM2/3.png" srcset="/img/loading.gif" alt="势能如图"><br>其中箭头代表可以推出，而1、2、3则为$\dot{a}_{n}(t)$中的分项。<br>对$\langle n | \dot{m} \rangle$做无量纲化，则可以得到大名鼎鼎的绝热近似。</p>
+<script type="math/tex; mode=display">\left |\frac{\langle n | \dot{m}\rangle}{\left(E_{m}-E_{n}\right)\hbar}\right | <<1</script><p>对于任意$n \neq m$都成立<br>接下来会给出绝热近似的另一种表述以及更深一步的讨论：</p>
+<p>绝热近似也可以理解为$\dot{H}(t)$为小量，即：</p>
+<script type="math/tex; mode=display">\left|\frac{\hbar \langle m|\dot{n}\rangle}{E_{n}-E_{m}}\right|=\frac{\hbar\langle m|\dot{H}| n\rangle}{\left(E_{n}-E_{m}\right)^{2}}<<1</script><p>证明如下：</p>
+<p>由$H(t)|n(t)\rangle= E_{n}(t)|n(t)\rangle$，两边同时对t求导</p>
+<script type="math/tex; mode=display">\left(\frac{\partial}{\partial t} H(t)\right)|n(t)\rangle+ H \frac{\partial}{\partial t}|n\rangle=\dot{E}_{n}(t)|n(t)\rangle+ E_{n}|\dot{n}(t)\rangle</script><p>内积：</p>
+<script type="math/tex; mode=display">\left\langle m\left|\left(\frac{\partial}{\partial t} H(t)\right)\right| n(t)\right\rangle + {\langle m|H| \dot{n}\rangle}={\left\langle m\left|\dot{E}_{n}(t)\right| n\right\rangle}+\left\langle m\left|E_{n}\right| \dot{n}\right\rangle</script><p>其中${\langle m|H| \dot{n}\rangle}= E_m \langle m|\dot{n}\rangle$，由于$m \neq n$</p>
+<p>${\left\langle m\left|\dot{E}_n (t)\right| n\right\rangle}=0$。<br>则有</p>
+<script type="math/tex; mode=display">\langle m (t) |  \dot{n}(t) \rangle=\frac{\langle m(t)|\dot{H} (t) n(t)\rangle}{E_{n}(t)-E_{m} (t)}</script><p>Q.E.D</p>
+<p>则由绝热近似可得：</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l}{\dot{a}_{m}(t)=-a_{m}(t)\langle m|\dot{m}\rangle} \\ {\dot{a}_{n}(t)=0 \quad(n \neq m)}\end{array}\right.</script><p>咕</p>
+<script type="math/tex; mode=display">a_{m}(t)=a_{m}(0) \exp \left[-\int_{0}^{t}\langle m (t')|\dot{m}(t')\rangle d t' \right]</script><p>若令</p>
+<script type="math/tex; mode=display">i \gamma_m (t)= \left[-\int_{0}^{t}\langle m (t')|\dot{m} (t') \rangle d t' \right]</script><p>则$a_m (t)=a_m (0) \exp [i \gamma_m (t)]$</p>
+<script type="math/tex; mode=display">|\psi(t)\rangle = \sum_{n} a_n (t) \exp [-\frac{i}{n} \int_{0}^{t} E_{n}(t^{\prime}) d t^{\prime}]|n(t)\rangle</script><script type="math/tex; mode=display">=a_{m}(t) \exp \left[-\frac{i}{\hbar} \int_{0}^{t} E_{m}\left(t^{\prime}\right) d t^{\prime}\right]|m(t)\rangle</script><script type="math/tex; mode=display">=e^{i[\alpha_{m}(t)+\gamma_{m}(t)]} |m(t)\rangle</script><p>其中</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l}{\alpha_{n}(t)=-\frac{1}{\hbar} \int_{0}^{t} E_{n}\left(t^{\prime}\right) d t^{\prime}} \\ {\gamma_{m}(t)=i \int_{0}^{t}\langle n | n\rangle d t'}\end{array}\right.</script><p>其中$\gamma_{m}(t)$为Barry phase</p>
+<p>以上即为绝热近似与Barry phase的关系。接下来带入到一个例子中来看看具体的计算</p>
+<h2 id="Example-spin-in-maginatic-fields"><a href="#Example-spin-in-maginatic-fields" class="headerlink" title="Example: spin in maginatic fields"></a>Example: spin in maginatic fields</h2><p>对于一个自旋系统，其哈密顿量为：</p>
+<script type="math/tex; mode=display">H(\vec{B}(t))=  -\vec{\mu} \cdot \vec{B}(t)=-\vec{\mu} \vec{\sigma} \cdot \vec{B}(t)</script><script type="math/tex; mode=display">=-\vec{\mu} \left[\sigma_{x} B_{x}+\sigma_{y} B_{y}+\sigma_{z} B_{z}\right]</script><p>其中：$\vec{\sigma}$为Pauli矩阵；且set周期性磁场为$\vec{B}(t)=\left(B_1 \cos 2 w_0 t, B_1 \sin 2 w_1 t, B_0 \right)$<br>即当$t=T=\frac{\pi}{w_0}$时回归。</p>
+<p>解方程:</p>
+<script type="math/tex; mode=display">H(t)\left|\psi_{\pm}(t)\right\rangle= E_{1}(t)\left|\psi_{\pm}(t)\right\rangle</script><p>即解H的本征问题，其中</p>
+<script type="math/tex; mode=display">H(t)= -\mu_{B}\left(B_x \left[\begin{array}{ll}{0} & {1} \\ {1} & {0}\end{array}\right] + B_y \left[\begin{array}{ll}{0} & {-i} \\ {i} & {0}\end{array}\right] +B_z \left[\begin{array}{ll}{1} & {0} \\ {0} & {-1}\end{array}\right]\right)</script><script type="math/tex; mode=display">=-\vec{\mu}_B \left[\begin{array}{cc}{B_{0}} & {B_{1} e^{-i 2 k t}} \\ {B_{1} e^{i 2 k_{k} t}} & {-B_{0}}\end{array}\right]</script><p>本征函数</p>
+<script type="math/tex; mode=display">\left|\psi_{-}(t)\right\rangle=\left[\begin{array}{l}{\cos \frac{\theta}{2}} \\ {\sin \frac{\theta}{2} e^{-2 i w_{0} t}}\end{array}\right]</script><script type="math/tex; mode=display">\left|\psi_{+}(t)\right\rangle=\left[\begin{array}{l}{-\sin \frac{\theta}{2}} \\ {\cos \frac{\theta}{2} e^{\sin \alpha \cdot t}}\end{array}\right]</script><p>其中$\theta=\tan ^-1\left(\frac{B_1}{B_0}\right)$<br>其对应的本征值为</p>
+<script type="math/tex; mode=display">E_{-}(t)=-\mu_{B} \sqrt{B_{0}^{2}+B_{1}^{2}}</script><script type="math/tex; mode=display">E_{+}(t)=\mu_{B} \sqrt{B_{0}^{2}+B_{1}^{2}}</script><p>现在来计算这个问题中的Barry phase<br>首先我们设</p>
+<script type="math/tex; mode=display">|\psi(t)\rangle= e^{i\left[\alpha_n (t)+\gamma_n (t)\right]} |m(t)\rangle</script><p>其中设<script type="math/tex">|\psi(0)\rangle=\left|\psi_- (t=0)\right\rangle</script>为初始值</p>
+<script type="math/tex; mode=display">\gamma_{n}(t)= i \int_{0}^{t}\left\langle\psi\left(t^{\prime}\right) | \dot{\psi} \left(t^{\prime}\right)\right\rangle d t^{\prime}</script><script type="math/tex; mode=display">= i \int_{0}^{t}\left[\cos \frac{\theta}{2}, \sin \frac{\theta}{2} e^{-2 i w_{0} t^{\prime}}\right]\left[\begin{array}{c}{0} \\ {-2 i w_{0} \sin \frac{\theta}{2} e^{-2 i w_{0} t^{\prime}}}\end{array}\right] \quad d t^{\prime}</script><script type="math/tex; mode=display">=-2 i \int_{0}^{t} i w_{0} \sin \frac{\theta}{2} d t^{\prime}</script><script type="math/tex; mode=display">=2 w_{0} t \sin ^{2}\left(\frac{\theta}{2}\right)</script><p>则态函数可表示为</p>
+<script type="math/tex; mode=display">|\psi(t)\rangle= \exp [i \gamma(t)] \exp \left[-\frac{i}{\hbar} \int_{0}^{t} d t^{\prime} E_{-}\left(t^{\prime}\right)\right] |\psi_{-} (t)\rangle</script><script type="math/tex; mode=display">= \exp \left[i 2 w_{0} t \sin ^{2} \frac{\theta}{2}\right]\exp \left[-\frac{i}{\pi} \mu_{B} \sqrt{B_{0}^{2}+B_{1}^{2}} T\right] |\psi_{-} (t)\rangle</script><p>其中$T=\frac{\pi}{w_{0}}$为周期。</p>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/QM/" rel="tag"># QM</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2020/02/23/qrng/" rel="next" title="QMNG">
-                <i class="fa fa-chevron-left"></i> QMNG
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
-  
-
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">Zijun Wei</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/%E5%BD%92%E6%A1%A3">
-              
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
                 
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">categories</span>
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/physics-note/">physics note</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/QM/">QM</a>
+                    
+                  </div>
                 
               </div>
-            
-
-            
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，大部分都是我整理前人的工作或学习笔记 ，所以可以随便使用与转载，不过希望转载时最好注明出处！</p>
               
               
-              <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">tags</span>
-                
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/02/23/note/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">introduction to python</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                  </div>
+                </div>
               
-            
+            </div>
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概论"><span class="nav-number">1.</span> <span class="nav-text">概论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#我翻开物理书一查，这里面没有年代，歪歪斜斜的每页上都写着‘Berry-Phase’两个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是‘近似’"><span class="nav-number">1.1.</span> <span class="nav-text">   我翻开物理书一查，这里面没有年代，歪歪斜斜的每页上都写着‘Berry Phase’两个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是‘近似’!</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#不含时哈密顿量"><span class="nav-number">2.</span> <span class="nav-text">不含时哈密顿量</span></a></li></ol></div>
-            
-
           </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
+        </div>
       </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Zijun Wei</span>
-
-  
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
 </div>
 
-
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
       </div>
     
-
-    
-
   </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
 
   
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
   
 
   
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
   
 
   
 
   
 
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
   
+    <script  src="/js/lazyload.js" ></script>
   
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Berry Phase&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
 
   
 
   
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
 
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
