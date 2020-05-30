@@ -282,6 +282,97 @@
 <script type="math/tex; mode=display">|\psi(t)\rangle= e^{i\left[\alpha_n (t)+\gamma_n (t)\right]} |m(t)\rangle</script><p>其中设<script type="math/tex">|\psi(0)\rangle=\left|\psi_- (t=0)\right\rangle</script>为初始值</p>
 <script type="math/tex; mode=display">\gamma_{n}(t)= i \int_{0}^{t}\left\langle\psi\left(t^{\prime}\right) | \dot{\psi} \left(t^{\prime}\right)\right\rangle d t^{\prime}</script><script type="math/tex; mode=display">= i \int_{0}^{t}\left[\cos \frac{\theta}{2}, \sin \frac{\theta}{2} e^{-2 i w_{0} t^{\prime}}\right]\left[\begin{array}{c}{0} \\ {-2 i w_{0} \sin \frac{\theta}{2} e^{-2 i w_{0} t^{\prime}}}\end{array}\right] \quad d t^{\prime}</script><script type="math/tex; mode=display">=-2 i \int_{0}^{t} i w_{0} \sin \frac{\theta}{2} d t^{\prime}</script><script type="math/tex; mode=display">=2 w_{0} t \sin ^{2}\left(\frac{\theta}{2}\right)</script><p>则态函数可表示为</p>
 <script type="math/tex; mode=display">|\psi(t)\rangle= \exp [i \gamma(t)] \exp \left[-\frac{i}{\hbar} \int_{0}^{t} d t^{\prime} E_{-}\left(t^{\prime}\right)\right] |\psi_{-} (t)\rangle</script><script type="math/tex; mode=display">= \exp \left[i 2 w_{0} t \sin ^{2} \frac{\theta}{2}\right]\exp \left[-\frac{i}{\pi} \mu_{B} \sqrt{B_{0}^{2}+B_{1}^{2}} T\right] |\psi_{-} (t)\rangle</script><p>其中$T=\frac{\pi}{w_{0}}$为周期。</p>
+<h1 id="Effective-fields-near-degenenacy（简并）-point"><a href="#Effective-fields-near-degenenacy（简并）-point" class="headerlink" title="Effective fields near degenenacy（简并） point"></a>Effective fields near degenenacy（简并） point</h1><p>我们可以考虑另一种Barry phase的表示形式：</p>
+<script type="math/tex; mode=display">\gamma_{n}(c)=\oint_{c}  i\left\langle n\left(\vec{R}\right) | \nabla_{\vec{R}} n_{(\vec{R})}\right\rangle \cdot d \vec{R}</script><p><img src="/img_QM2/4.png" srcset="/img/loading.gif" alt="势能如图"><br>接下来先证明$\gamma_n (c)$为实数。<br>即，</p>
+<script type="math/tex; mode=display">\langle n(\vec{R}) | \nabla_{\vec{R}} n_{(\vec{R})}\rangle</script><p>为虚数<br>$\Longrightarrow$  由$\nabla_R \cdot\langle n(\vec{R}) | n(\vec{R})\rangle= 0$，其中$\langle n(\vec{R}) | n(\vec{R})\rangle=1$<br>展开有$0=\langle\nabla_R n(\vec{R}) | n(\vec{R})\rangle + \langle n(\vec{R}) | \nabla_R n(\vec{R})\rangle=(\langle n(\vec{R}) | \nabla_R n(\vec{R})\rangle)^*+\langle n(\vec{R}) | \nabla_R n(\vec{R})\rangle$</p>
+<p>由此可知$\langle n(\vec{R}) | \nabla_R n(\vec{R})\rangle$为虚数，则$\gamma_n (c)$为实数。</p>
+<p>接下来我们将$\gamma_n (c)$改写$\Longrightarrow$ $\gamma_n (c)=-{Im}\left[\oint_c \left\langle n(\vec{R}) | \nabla_R  n(\vec{k})\right\rangle \cdot d \vec{R}\right]$<br>我们令$-{A_n}(\vec{R})   = i \langle n(\vec{R}) | \nabla_R n(\vec{R})\rangle$则有</p>
+<script type="math/tex; mode=display">\gamma_n (c)=-\oint_c {A_n }(\vec{R}) \cdot d \vec{R}=-\iint_S [\vec{\nabla}_R  \times \vec{A}_n (\vec{R})] \cdot d \vec{S}</script><p>其中$-{A_n }(\vec{R})$称为磁矢势，所以我们有：$\gamma_n (c)=-\iint_S \vec{B}_n (\vec{R}) \cdot d \vec{S}$。我们可以称$\vec{B}_n (\vec{R})$为磁场也可以称为有效场，由此 $\gamma_n (c)$即为磁通量</p>
+<p>我们来接着讨论这个磁场$\vec{B}_n$,首先可以写出磁场$\vec{B}_n$，这里第二给等号是因为对易</p>
+<script type="math/tex; mode=display">\vec{B}_{n}(\vec{R})=\nabla_{R} \times {Im} \langle n(\vec{R}) | \nabla_{R} n(\vec{R})\rangle=Im \nabla_{\vec{R}} \times\langle n(\vec{R}) | \nabla_{R} n(\vec{R})\rangle</script><p>由此我们将$\vec{B}_{n}$写为</p>
+<script type="math/tex; mode=display">\vec{B}_{n}(\vec{R})=I m \sum_{m \neq n} \frac{\langle n(\vec{R})|\nabla_{R} H| m(\vec{R})\rangle \times \langle m(\vec{R})|\nabla_{\vec{R}} H| n(R)\rangle.}{[E_{n}(\vec{R})-E_{m}(\vec{R})]^{2}}</script><p>在证明这个式子之前我们先来谈一谈这个式子的‘好处’：这个式子使原来对$| n(\vec{R})\rangle$的$\nabla_{R}$转化为对哈密顿量H（通常已知）的作用，这可以极大的简化计算\<br>$\Longrightarrow$  由</p>
+<script type="math/tex; mode=display">\begin{aligned}\vec{B}_{n}(\vec{R}) &={Im}\left[\langle  \nabla_{R} n(\vec{R})|\times | \nabla_{R} n(\vec{R}) \rangle+\langle n(\vec{R}) |\nabla_{R} \times \nabla_{R} n(\vec{R}) \rangle\right]\\&=I m \left[\sum_{m \neq n}\langle\nabla_{R} n(\vec{R}) | m(\vec{R})\rangle \times \langle m(\vec{R})| \nabla_{R} n(\vec{R})\rangle +\langle\nabla_{R} n(\vec{R}) | n(\vec{R})\rangle \times \langle n(\vec{R})| \nabla_{R} n(\vec{R})\rangle\right]\end{aligned}</script><p>因为$\langle n(\vec{R}) | \nabla_{R} n(\vec{R})\rangle$为虚数故最后一项$=0$，由此B可改写为</p>
+<script type="math/tex; mode=display">\begin{aligned}\left(B_{n}\right)_{i}&=I m\left[\varepsilon_{i j k}\left\langle\partial_{j} n | \partial_{k} n\right\rangle\right] =I m\left[\varepsilon_{i j k} \sum_{m}\langle \partial_{j} n | m\rangle\left\langle m | \partial_{k} n\right\rangle\right]\\&=I m\left[\varepsilon_{i j k} \sum_{m \neq n}\langle\partial_{j} n | m\rangle\langle m | \partial_{k} n\rangle+\langle\partial_{j} n | n\rangle\langle n | \partial_{k} n\rangle\right]\end{aligned}</script><p>最后一项</p>
+<script type="math/tex; mode=display">=\epsilon_{ijk} \left\langle n | \partial_j  n\right\rangle\left\langle\partial_k n | n\right\rangle=\epsilon_{ijk} \left\langle n | \partial_k n\right\rangle\left\langle\partial_j n | n\right\rangle=0</script><p>则有</p>
+<script type="math/tex; mode=display">\vec{B}_n (\vec{R})=I m \left[\sum_{m \neq n}\langle\nabla_R n(\vec{R}) | m(\vec{R})\rangle \times \langle m(\vec{R})| \nabla_R n(\vec{R})\rangle \right]</script><p>接下来我们只需证明：<script type="math/tex">\left\langle m | \nabla_{\vec{R}} n\right\rangle=\frac{\left\langle m| \nabla_{\vec{R}} H | n\right\rangle}{E_n -E_m }</script>即可</p>
+<p>$\Longrightarrow$  由哈密顿量H的本征值$H|n\rangle=E_n |n\rangle$</p>
+<p>两边同时作用$\nabla_R$，有$\left.\left(\nabla_R H\right)|n\rangle+H \nabla_R |n\rangle=\left(\nabla_R E_n \right)\left|n\rangle+E_n \nabla_R \right| n\right\rangle$</p>
+<p>在同时乘上$\langle m|$，有</p>
+<script type="math/tex; mode=display">\left\langle m\left|\nabla_R H\right| n\right\rangle+\left\langle m\left|H \nabla_{R}^{}\right| n\right\rangle=\left\langle m\left|\nabla_R E_n \right| n\right\rangle+\left\langle m\left|E_n \nabla_R \right| n\right\rangle</script><p>其中</p>
+<script type="math/tex; mode=display">\left\langle m\left|H \nabla_{R}\right| n\right\rangle=E_{n}\left\langle m\left|\nabla_{\vec{R}}\right| n\right\rangle</script><p>而</p>
+<script type="math/tex; mode=display">\langle m|\nabla_R E_n| n\rangle=\nabla_{\vec{R}} E_n \langle m | n\rangle=0</script><p>由此可以证明</p>
+<p>接着我们来讨论一下这个问题下的能级问题，即当$E_n$与$E_m$相邻很近时，如图所示<br><img src="/img_QM2/5.png" srcset="/img/loading.gif" alt="势能如图"><br>其中$*$点代表我们讨论的点，$\cdot$代表$E_n=E_m$时的简并点</p>
+<p>此时我们有：$E_n=E_m$</p>
+<script type="math/tex; mode=display">\begin{aligned}&H(\vec{R}^*)|m(\vec{R}^{*})\rangle=E_{m}(\vec{R}^{*})|m(\vec{R}^{*})\rangle\\&H(\vec{R}^{*})|n(\vec{R}^{*})\rangle=E_{n}(\vec{R}^{*})|n(\vec{R}^{*})\rangle\end{aligned}</script><p>我们简化符号：$|n\rangle-&gt; |+\rangle\quad| m\rangle -&gt; |-\rangle$。则磁场B为</p>
+<script type="math/tex; mode=display">\vec{B}_{n}(\vec{R})=I m  \frac{\langle +(\vec{R})|\nabla_{R} H| -(\vec{R})\rangle \times \langle -(\vec{R})|\nabla_{\vec{R}} H| +(R)\rangle.}{[E_{+}(\vec{R})-E_{-}(\vec{R})]^{2}}</script><p>哈密顿量的本征值也简并为</p>
+<script type="math/tex; mode=display">\begin{aligned}H(\vec{R}^{*})|\pm(\vec{R}^{*})\rangle &=E_{\pm}\left|\pm\left(\vec{R}^{*}\right)\right\rangle \\&=E\left|\pm\left(\vec{R}^{*}\right)\right\rangle\end{aligned}</script><p>使用$|\pm\rangle$为基展开H，有</p>
+<script type="math/tex; mode=display">H(\vec{R})=\left[\begin{array}{ll}H_{11}(\vec{R}) & H_{12}(\vec{R}) \\H_{21}(\vec{R}) & H_{22}(\vec{R})\end{array}\right]</script><p>特殊的</p>
+<script type="math/tex; mode=display">H(\vec{R}^{*})=\left[\begin{array}{ll}E(\vec{R}^{*}) & 0 \\0 & E(\vec{R}^{*})\end{array}\right]</script><p>其中$E(\vec{R}^*)$为常数，经过适当调整可使其为</p>
+<script type="math/tex; mode=display">H\left(\vec{R}^* \right)=0</script><p>同时我们也可以使用泡利矩阵$\sigma$展开：</p>
+<script type="math/tex; mode=display">H(\vec{R})=\vec{\sigma} \cdot \vec{R} \pm \vec{\sigma}_0 \cdot \vec{R^* }</script><p>其中$\sigma_0$为常数使得</p>
+<script type="math/tex; mode=display">H\left(\vec{R}^* \right)=0</script><p>当我们令$R=(x,y,z)$时</p>
+<script type="math/tex; mode=display">H(\vec{R})=\left[\begin{array}{cc}z & x-i y \\x+i y & z\end{array}\right]</script><p>解其本征值有</p>
+<script type="math/tex; mode=display">E_+ (\vec{R})=-E_- (\vec{R})=R</script><p>由泡利矩阵的展开表示我们有$\nabla_R (H(\vec{R}))=\vec{\sigma}$，带入到磁场B的计算中有：</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l}B_{+ x}=Im\left[  \frac{\langle+|\sigma_{y}|-\rangle \times \langle-|\sigma_{z}|+\rangle}{2 R^{2}} \right]=0 \\B_{+ y}=Im\left[  \frac{\langle+|\sigma_{z}|-\rangle \times \langle-|\sigma_{x}|+\rangle}{2 R^{2}} \right]=0 \\B_{+ z}=Im\left[  \frac{\langle+|\sigma_{x}|-\rangle \times \langle-|\sigma_{y}|+\rangle}{2 R^{2}} \right]=\frac{1}{2 R^{2}}\end{array}\right.</script><p>即，磁极单子</p>
+<script type="math/tex; mode=display">\vec{B}_+ (\vec{R})=\frac{\vec{R}}{2 R^3 }</script><p>由此</p>
+<script type="math/tex; mode=display">\gamma_+ (c)=-\gamma_{-}(c)=-\iint_{S}[\vec{B}_{+}(\vec{R})] \cdot d \vec{S}=-\iint_{S}[\frac{\vec{R}}{2 R^{3}}] \cdot d \vec{S}=-\frac{1}{2} \Omega(c)</script><p>可以用立体角来表示磁通，如图所示</p>
+<p><img src="/img_QM2/6.png" srcset="/img/loading.gif" alt="势能如图"></p>
+<p>即磁通对应闭合曲线C在R空间中的立体角</p>
+<h1 id="Aharanov-Anandan-Phases"><a href="#Aharanov-Anandan-Phases" class="headerlink" title="Aharanov-Anandan Phases"></a>Aharanov-Anandan Phases</h1><p>当态随着时间周期性演化时：</p>
+<script type="math/tex; mode=display">|\psi(T)\rangle=\exp \left[i \gamma_{n}(T)\right] \exp \left[i \alpha_{n}(T)\right] | \psi(0)\rangle</script><p>其中T为周期，</p>
+<script type="math/tex; mode=display">\alpha_n (T)=-\frac{1}{\hbar} \int_{0}^{T} E_n \left(t^{\prime}\right) d t^{\prime}</script><p>接下我们看到如果我们将$|\psi(T)\rangle$改写为$|\psi(T)\rangle=e^{i \phi} | \psi(0)\rangle$，则我们可以看到$\phi \neq \alpha$<br>在这里我们重新定义$\alpha(T)$为</p>
+<script type="math/tex; mode=display">\alpha(T)=-\frac{1}{\hbar} \int_{0}^{t} d t<\psi(t)|H(t)| \psi(t)\rangle</script><p>在证明$\phi \neq \alpha$之前我们需要先说明一下当$H(t)=H$即不含时且在同一个态上演化时$\phi = \alpha$<br>$\Longrightarrow$ 由薛定谔方程：$i \hbar \frac{\partial}{\partial E} |\psi(t) \rangle=H(t)|\psi(t)\rangle$，其中H可以含时也可以不随时间变化<br>我们令$|\tilde{\psi}(t)\rangle=e^{-i f(t)}|\psi(t)\rangle \quad f(T)-f(0)=\phi$则经过应该周期后$|\tilde{\psi}(T)\rangle=|\tilde{\psi}(0)\rangle$。带入到薛定谔方程中</p>
+<script type="math/tex; mode=display">H(t)|\psi(t)\rangle=i \hbar \frac{\partial}{\partial t}\left[e^{-i f(t)} | \tilde{\psi}(t)\right]=-\hbar \dot{f}(t)|\psi(t)\rangle+i \hbar e^{i f(t)} \frac{\partial}{\partial t}|\tilde{\psi}(t)\rangle</script><p>两边同时作用$\langle\psi(t)|$</p>
+<script type="math/tex; mode=display">-\hbar \dot{f}(t)+i \hbar \langle \psi(t)|e^{i f(t)} \frac{\partial}{\partial t}| \tilde{\psi}(t)\rangle=\langle\psi(t)|H(t)| \psi(t)\rangle</script><script type="math/tex; mode=display">\hbar \dot{f}(t)=\langle\tilde{\psi}(t)|i \hbar \frac{\partial}{\partial t}| \tilde{\psi}(t)\rangle-\langle\psi(t)|H(t)| \psi(t)\rangle</script><p>两边作用积分$\int_{0}^{T} d t$</p>
+<script type="math/tex; mode=display">\hbar[f(T)-f(0)]=\int_{0}^{T} d t\langle\tilde{\psi}(t)|i \hbar \frac{\partial}{\partial t}| \tilde{\psi}(t)\rangle+\hbar \alpha</script><p>其中$f(T)-f(0)=\phi$而</p>
+<script type="math/tex; mode=display">\int_{0}^{T} d t\langle\tilde{\psi}(t)|i \hbar \frac{\partial}{\partial t}| \tilde{\psi}(t)\rangle=\hbar \gamma</script><p>由此$\phi \neq \alpha$</p>
+<p>Example:</p>
+<script type="math/tex; mode=display">H(t)=H \quad H|\psi_{\pm}\rangle=E_{\pm}| \psi_{\pm}\rangle\quad|\psi(0)\rangle=\cos \frac{\theta}{2}|\psi_{-} \rangle+\sin \frac{\theta}{2}| \psi_{+}\rangle</script><p>$\Longrightarrow$ </p>
+<script type="math/tex; mode=display">\begin{aligned}|\psi(t)\rangle &=e^{-i E_{-}t / \hbar} \cos \frac{\theta}{2} \beta|\psi_{-} \rangle + e^{-i E_{+} t / \hbar} \sin \frac{\theta}{2}| \psi_{+} \rangle \\&=e^{-i E_{-}t / \hbar}[\cos \frac{\theta}{2} |\psi_{-} \rangle + e^{-i(E_{+} - E_{-}) t / \hbar} \sin \frac{\theta}{2} | \psi_{+}\rangle]\end{aligned}</script><p>当我们令</p>
+<script type="math/tex; mode=display">T {\longrightarrow}(E_{ + }-E_{ - }) T/ \hbar=2 \pi</script><p>我们有</p>
+<script type="math/tex; mode=display">|\psi(T)\rangle=e^{-i E_- T / t}|\psi(0)\rangle</script><p>由此有$\phi=E_{ - } T / t$</p>
+<script type="math/tex; mode=display">\begin{aligned}\alpha(T) &=-\frac{1}{\hbar} \int_{0}^{t} d t\langle\psi(t)|H(t)| \psi(t)\rangle \\ &=-\frac{1}{\hbar} \int_{0}^{T} d t\left[\cos \frac{\theta}{2}\langle\psi_{-}|+e^{-i(E_{+}-E_{-}) t / \hbar} \sin \frac{\theta}{2}\langle\psi_{+}|\right]\left[\cos \frac{\theta}{2} \theta|\psi \rangle + e^{-i(E_{+} -E_{-}) t / \hbar} \sin \frac{\theta}{2}| \psi_{+}\rangle\right]\\ &=-\frac{1}{\hbar}[E_{-}T\cos ^{2} \frac{\theta}{2}+E_{+}T \sin \frac{\theta}{2}]\end{aligned}</script><p>所以</p>
+<script type="math/tex; mode=display">\begin{aligned}\gamma(T)&=\phi-\alpha(T)=\frac{-E_{-} \hbar}{\hbar}+\frac{1}{\hbar}[E_{-}T\cos ^{2} \frac{\theta}{2}+E_{+}T \sin \frac{\theta}{2}]\\&=\frac{1}{\hbar}\left[E_{+} -E_{-}\right] T \frac{1-\cos \theta}{2}=\left\{\begin{array}{ll} 0 & \theta=0 \\ 2 \pi & \theta=\pi \end{array}\right.\end{aligned}</script><h1 id="Gauge-invariance-of-QM"><a href="#Gauge-invariance-of-QM" class="headerlink" title="Gauge invariance of QM"></a>Gauge invariance of QM</h1><p>在电磁学中有</p>
+<script type="math/tex; mode=display">\vec{E}=-\nabla V-\frac{1}{c} \frac{\partial \vec{A}}{\partial t} \quad \vec{B}=\nabla \times \vec{A}</script><p>我们引入了规范</p>
+<script type="math/tex; mode=display">V \rightarrow V+\frac{1}{c} \frac{\partial}{\partial t} X \quad \vec{A} \rightarrow \vec{A}+\nabla X</script><p>其中X为Gauge，当X变化时E，B并不随规范变化。</p>
+<p>在QM中我们也会运用到规范，尤其时薛定谔方程$\left[\frac{p^2}{2 m}+V(\vec{r}, t)\right] \psi(r, t)=i \hbar \frac{\partial}{\partial t} \psi$中的哈密顿量含时时我们需要引入磁场B，即改写<br>动量P为</p>
+<script type="math/tex; mode=display">{\vec{p}}^{\prime}\rightarrow \vec{p}-\frac{q \vec{A}}{c}</script><p>其中我们称$ \vec{p}$为Canonical momentum，$\vec{p}^{\prime}$为Kinematic momentum<br>由此我们可以得到薛定谔电磁学绘景</p>
+<script type="math/tex; mode=display">\left[\frac{1}{2 m}\left(\vec{p}-\frac{q \vec{A}}{c}\right)^{2}+V(r, t)\right] \psi(r, t)=i \hbar \frac{\partial}{\partial t} \psi</script><p>此时我们若令</p>
+<script type="math/tex; mode=display">V^{\prime} =V+\frac{1}{c} \frac{\partial}{\partial t} X \quad \vec{A}^{\prime} = \vec{A}+\nabla X</script><p>则有</p>
+<script type="math/tex; mode=display">\left[\frac{1}{2 m}\left(\vec{p}-\frac{q \vec{A}^{\prime}}{c}\right)^{2}+V^{\prime}(r, t)\right] \psi^{\prime}(r, t)=i \hbar \frac{\partial}{\partial t} \psi^{\prime}</script><p>之后我们就可以得到$\psi^{\prime}=e^{i q X / \hbar c} \psi$。我们将规范带入即可证明。</p>
+<h1 id="Phase-due-to-scalar-potential-V-t-and-vector-potential-vec-A-R"><a href="#Phase-due-to-scalar-potential-V-t-and-vector-potential-vec-A-R" class="headerlink" title="Phase due to scalar potential $V(t)$ and vector potential $\vec{A}(R)$"></a>Phase due to scalar potential $V(t)$ and vector potential $\vec{A}(R)$</h1><p>在上一节我们已经意识到当我们改变哈密顿量H的方法不同时会得到不一样的随时间演化的态\<br>这一节我们来讨论方程</p>
+<script type="math/tex; mode=display">i \hbar \frac{\partial}{\partial t} \psi_{0}(\vec{r}, t)=H_{0}(t) \psi_{0}(\vec{r}, t)</script><ul>
+<li>$H(t)=H_0 (t)+V(t)$：当我们给哈密顿量加上随时间变换是标量势时则<script type="math/tex; mode=display">i \hbar \frac{\partial}{\partial t} \psi(\vec{r}, t)=H(t) \psi(\vec{r}, t)</script>此时态演化为<script type="math/tex; mode=display">\psi(\vec{r}, t)=\psi_{0}(\vec{r}, t) e^{-i \int_{t_{0}}^{t} V(t^{\prime}) d t^{\prime}}=\psi_{0}(\vec{r}, t) e^{-i S(t) / \hbar}</script>其中$S(t)=\int_{t_0}^t V\left(t^{\prime}\right) d t^{\prime}$</li>
+</ul>
+<ul>
+<li>$H_{0}(t)\stackrel{+\vec{A}}{\longrightarrow}H(t)$：当我们给哈密顿量加上随时间变换是矢势时有<script type="math/tex; mode=display">\psi(\vec{r}, t)=\psi_{0}(\vec{r}, t) e^{-i \frac{q}{c}\int_{\vec{r}_{0}}^{\vec{r}} \vec{A}(\vec{r}^{\prime}) d \vec{r}^{\prime}}</script> 接下来我们来证明一下这个式子<br> $\Longrightarrow$ <script type="math/tex; mode=display">\begin{aligned}\vec{p} e^{-i \frac{s}{\hbar}} &=e^{-i \frac{s}{\hbar}}(-i \hbar) \nabla\left(-i \frac{s}{\hbar}\right) \\&=\exp \left(-i \frac{s}{\hbar}\right)(-)\left(-\frac{\hbar}{c}\right) \nabla \int^{\vec{r}}_{\vec{r}_{0}} \vec{A}(\vec{r}^{\prime}) d \vec{r} ^{\prime}\\ &=\exp \left(-i \frac{s}{\hbar}\right) \frac{q}{c} \vec{A}(\vec{r})\end{aligned}</script> 由此<script type="math/tex; mode=display">\left[\vec{p}-\frac{q}{c} \vec{A}(r)\right] f(\vec{r}, t) e^{-i  S / \hbar}=</script><script type="math/tex; mode=display">[\vec{p} f(\vec{r}, t)] e^{-i {S}/{\hbar}}+f(\vec{r}, t)\left(\vec{p} e^{-i S / \hbar}\right)-\frac{q}{c} \vec{A} (\vec{r})  f(\vec{r}, t) e^{-i S / \hbar}=(\vec{p} f(\vec{r}, t)) e^{-i S / \hbar}</script> 因此有<script type="math/tex; mode=display">\frac{1}{2 m}\left[\vec{p}-\frac{q}{c} \vec{A}(\vec{r})\right]^{2} \psi_{0}(\vec{r}, t) e^{-i S/ \hbar}=\frac{1}{2 m}\left[p^{2} \psi_{0}(\vec{r}, t)\right] e^{-i S / \hbar}</script> 带入到方程中可以验证得到<br>综上所述，在H随时间变化的一般情况下我们有<script type="math/tex; mode=display">H(t) \sim \psi(\vec{r}, t)=\psi_{0}(\vec{v}, t) e^{-i S / \hbar}</script>其中<script type="math/tex; mode=display">S(\vec{r}, t)={- \frac{q}{c}\int_{\vec{r}_{0}}^{\vec{r}} \vec{A}(\vec{r}^{\prime}) d \vec{r}^{\prime}}+\int_{t_{0}}^{t} V\left(t^{\prime}\right) d t^{\prime}</script></li>
+</ul>
+<h1 id="AB-effect-1959"><a href="#AB-effect-1959" class="headerlink" title="AB effect(1959)"></a>AB effect(1959)</h1><p>如图<br><img src="/img_QM2/7.png" srcset="/img/loading.gif" alt="势能如图"></p>
+<script type="math/tex; mode=display">\int_{\vec{r}_{0}}^{\vec{r}} d \vec{r}^{\prime} \vec{A}\left(\vec{r}^{\prime}\right)+\int_{\vec{r}}^{\vec{r}_0} d \vec{r}^{\prime} \vec{A}\left(\vec{r}^{\prime}\right)=\oint d r^{\prime} \vec{A}\left(\vec{r}^{\prime}\right)=\iint_S d s^{\prime} \vec{B}\left(\vec{r}^{\prime}\right)={\Phi}</script><p>其中$\Phi$为磁通，当$\Phi\ne 0$时</p>
+<script type="math/tex; mode=display">\int_{\vec{r}_{0}}^{\vec{r}} d \vec{r}^{\prime} \vec{A}(\vec{r}^{\prime}) \ne  \int_{\vec{r}}^{\vec{r}_0} d \vec{r}^{\prime} \vec{A}(\vec{r}^{\prime}</script><p>这一条式子是可以实验测量得到的。其意义在于$\vec{A}(\vec{r})$在量子力学中是可以观测的！</p>
+<p>实验——<br><img src="/img_QM2/8.png" srcset="/img/loading.gif" alt="实验示意图"><br>实验使用中子束，这样中间的磁场不会对其波函数产生作用。</p>
+<ul>
+<li><p>$B=0$<br> 初始波函数分为$\psi_0 (\vec{r}, t) \sim \psi_1 (\vec{r}, t)+\psi_2 (\vec{r}, t)$为相干的，此时他们只会分别沿着$p_1$与$p_2$走</p>
+<ul>
+<li>在A-B-D路线中<script type="math/tex; mode=display">\left|\psi_{2}(\vec{r}, t)\right|\ll \left|\psi_{1}(\vec{r}, t)\right|</script></li>
+<li>在A-C-D路线中<script type="math/tex; mode=display">\left|\psi_{1}(\vec{r}, t)\right|\ll \left|\psi_{2}(\vec{r}, t)\right|</script></li>
+</ul>
+</li>
+<li><p>$B \ne 0$</p>
+<script type="math/tex; mode=display">\psi(\vec{r}, t) =exp[\frac{iq}{\hbar c}\int_{p_1} d \vec{r}^{\prime} \vec{A}\left(\vec{r}^{\prime}\right)]\psi_{1}(\vec{r}, t)+exp[\frac{iq}{\hbar c}\int_{p_2} d \vec{r}^{\prime} \vec{A}\left(\vec{r}^{\prime}\right)]\psi_{2}(\vec{r}, t)</script><p> 所以</p>
+<script type="math/tex; mode=display">\begin{aligned}\psi(\vec{r}, t) &=\psi_{1}(\vec{r}, t)+   \psi_{2}(\vec{r}, t)exp[\frac{iq}{\hbar c}(\int_{p_1}-\int_{p_2}) d \vec{r}^{\prime} \vec{A}\left(\vec{r}^{\prime}\right)]\\&=\psi_{1}(\vec{r}, t)+   \psi_{2}(\vec{r}, t)e^{\frac{i q}{\hbar c}\Phi}\end{aligned}</script><p> 因此</p>
+<script type="math/tex; mode=display">|\psi(\vec{r}, t)|^{2}=\left|\psi_{1}\right|^{2}+\left|\psi_{2}\right|^{2}+2\left|\psi_{1}\psi_{2}\right| \cos \left[\varphi_{1}(\vec{r}, t)-\varphi_{2}(\vec{r},t)+\frac{q \Psi}{\hbar c}\right]</script><p> 其中$\varphi_1$与$\varphi_2$为初始相位<br> 此时我们测量粒子到达D点概率，可以发现一个相移，且这个相移的大小与中间的磁通量有关。</p>
+</li>
+</ul>
+<h1 id="Electric-potential-AB-effect"><a href="#Electric-potential-AB-effect" class="headerlink" title="Electric potential AB effect"></a>Electric potential AB effect</h1><p>上一节的实验验证了磁势A对态的影响，接下来验证V对态的影响就显得十分顺其自然了<br><img src="/img_QM2/9.png" srcset="/img/loading.gif" alt="实验示意图"><br>在改实验设想中</p>
+<script type="math/tex; mode=display">\begin{aligned}\psi(\vec{r}, t) &=\psi_{1}(\vec{r}, t)+   \psi_{2}(\vec{r}, t)exp\left[i[(\int_{p_1}-\int_{p_2}) d t^{\prime} V(t^{\prime})]/\hbar\right]\\&=\psi_{1}(\vec{r}, t)+   \psi_{2}(\vec{r}, t)e^{-i \Delta V \tau /\hbar}\end{aligned}</script><p>其中</p>
+<script type="math/tex; mode=display">\int_{p_1}V\left(t^{\prime}\right) d t^{\prime}=V_2 \tau \qquad \int_{p_2}V\left(t^{\prime}\right) d t^{\prime}=V_2 \tau</script><p>$V_1$为$p_1$路径上的电压，$V_2$为$p_2$路径上的电压而$\tau$为粒子通过电压区域的时间。<br>同上节的讨论，我们测量粒子到达终点的概率时可以发现一个大小与$\Delta V$有关的相移。</p>
+<h1 id="Scalar-AB-experiment-1992"><a href="#Scalar-AB-experiment-1992" class="headerlink" title="Scalar AB experiment(1992)"></a>Scalar AB experiment(1992)</h1><p>上一节的实验在1992年实现了<br><img src="/img_QM2/10.png" srcset="/img/loading.gif" alt="实验示意图"><br>这个实验利用$V=-\vec{\mu} \vec{B}=-\mu_B \vec{\sigma}\vec{B}$来给粒子加上标势</p>
+<p>最终粒子概率的相位变化为</p>
+<script type="math/tex; mode=display">\Delta \phi=\Delta V \tau / \hbar=\frac{\sigma}{\hbar} \mu_B B \tau</script><p>其中$\sigma$为常数可以取$\pm 1$</p>
+<h1 id="Gravitationally-induced-phase-1975"><a href="#Gravitationally-induced-phase-1975" class="headerlink" title="Gravitationally induced phase(1975)"></a>Gravitationally induced phase(1975)</h1><p>不光是电势，引力势能也是标势，也有人用引力势来做了相关实验<br><img src="/img_QM2/11.png" srcset="/img/loading.gif" alt="实验示意图"><br>这个实验中势能的变化为</p>
+<script type="math/tex; mode=display">\Delta V=m g l_{2} \sin \alpha</script><p>其中$\alpha$为实验平面ABCD的仰角<br><img src="/img_QM2/12.png" srcset="/img/loading.gif" alt="实验示意图"><br>由此可知</p>
+<script type="math/tex; mode=display">\Delta \phi=\frac{\Delta V \cdot T}{\hbar}=\frac{m g l_{2} \sin \alpha T}{\hbar}</script><p><img src="/img_QM2/13.png" srcset="/img/loading.gif" alt="实验示意图"><br>最后可以发现随着$\alpha$的变化相移会震荡</p>
 
             </article>
             <hr>
@@ -312,15 +403,15 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/02/23/note/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">introduction to python</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </div>
                   <div class="post-next col-6">
                     
+                    
+                      <a href="/2020/02/23/qrng/">
+                        <span class="hidden-mobile">QMNG</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </div>
                 </div>
