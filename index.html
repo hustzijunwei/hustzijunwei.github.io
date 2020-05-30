@@ -180,10 +180,7 @@
         
           
         
-        <div>原理介绍蔡氏电路简介蔡氏电路是一个可以产生混沌振荡的三阶自治电路，它包含两个电容器 C1、C2，一个电感 L，一个可调电阻R 和一个非线性负阻 $R_N$，其电路如图
-
-有源非线性负阻元件其中，$R_N$部分是该电路唯一的非线性元件，也称为蔡氏二极管，它可用运算放大器来实现。如图：
-蔡氏电路方程依据电路可以列带电感电容的KVL和KCL Eq，由于有三个Loop,可以很容易的建立蔡氏电路的演化方程：</div>
+        <div>本文简要的介绍了蔡氏电路（Chua’s Circuit）的一些基本原理与相关的数学，并引入关于lyapunov 指数与分岔图的介绍，最终使用matlab编写程序计算不同参数下的相图和分岔图。</div>
       </a>
 
       <div class="index-btm post-metas">
@@ -229,9 +226,7 @@
         
           
         
-        <div>概论   我翻开物理书一查，这里面没有年代，歪歪斜斜的每页上都写着‘Berry Phase’两个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是‘近似’!背景介绍不含时哈密顿量由Schrodinger equation
-i \, \hbar \frac{\partial}{\partial t} | \psi\rangle= H(t) |\psi\rangle其边界条件为
-|</div>
+        <div>我翻开物理书一查，这里面没有年代，歪歪斜斜的每页上都写着‘Berry Phase’两个字。我横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是‘近似’!</div>
       </a>
 
       <div class="index-btm post-metas">
@@ -277,9 +272,7 @@ i \, \hbar \frac{\partial}{\partial t} | \psi\rangle= H(t) |\psi\rangle其边界
         
           
         
-        <div>previously of SSH modelSSH model的体部分由Peierls定理，可知一条由费米子排列成的链具有如下结构：图中，规定A粒子为灰色的粒子，B粒子为白色的粒子；A与其后的B粒子构成晶胞其作用力为v，晶胞间作用力（B与其后的A）为w。
-SSH model的Hamiltonian考虑单电子在如上图的原子排列中的运动
-H=v \sum_{m=1}^{N} (|m, B \rang</div>
+        <div>简要介绍了一下SSH的基本概念</div>
       </a>
 
       <div class="index-btm post-metas">
@@ -325,8 +318,7 @@ H=v \sum_{m=1}^{N} (|m, B \rang</div>
         
           
         
-        <div>遇事不决，量子力学！通过电动力学中我们可以列出自由电磁场中的Maxwell方程
-\begin{aligned} \nabla \cdot {B} &=0 \\ \nabla \times {E} &=-\frac{\partial {B}}{\partial t} \\\nabla \cdot {D} &=0 \\ \nabla \times {H} &=\frac{\partial{D}}{\p</div>
+        <div>Quantum Optics（D.F.Walls)第一章内容笔记</div>
       </a>
 
       <div class="index-btm post-metas">
@@ -348,58 +340,6 @@ H=v \sum_{m=1}^{N} (|m, B \rang</div>
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/Quantum-Optics/">Quantum Optics</a>
-            
-          </div>
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2020/05/29/qrng/" target="_self">
-          <img src="/img/1.png" srcset="/img/loading.gif" alt="QMNG">
-        </a>
-      </div>
-    
-    <div class="col-12 col-md-8 mx-auto index-info">
-      <a class="index-header" href="/2020/05/29/qrng/">QMNG</a>
-
-      <a href="/2020/05/29/qrng/" class="index-excerpt">
-        
-        
-          
-        
-        <div>总结与思考问题
-
-随机性的来源？随机性检验？or量子力学假设？认为QRNG为真随机数的依据（逻辑链）？
-
-量子力学EPR佯谬考虑一个$\pi^0$介子到电子——正电子的衰变：
-\pi^0 \rightarrow e^- +e^+由于$\pi^0$的自旋为0，由角动量守恒，要求电子与正电子对处在单态组态。
-EPR实验的BOHM方案：一个静止$\pi^0$介子衰变为电子-正电子对。\frac{1}{\</div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-05-29
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/program-note/">program note</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/application-of-QM/">application of QM</a>
             
           </div>
         
@@ -445,6 +385,52 @@ EPR实验的BOHM方案：一个静止$\pi^0$介子衰变为电子-正电子对�
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/python/">python</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/05/29/qrng/" target="_self">
+          <img src="/img/1.png" srcset="/img/loading.gif" alt="QMNG">
+        </a>
+      </div>
+    
+    <div class="col-12 col-md-8 mx-auto index-info">
+      <a class="index-header" href="/2020/05/29/qrng/">QMNG</a>
+
+      <a href="/2020/05/29/qrng/" class="index-excerpt">
+        
+        
+          
+        
+        <div>本文是我在做大创时的一些初步调研，主要调研了一些基本原理和实验的相关知识——量子随机源、探测与采样以及随机性检验</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-05-29
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/program-note/">program note</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/application-of-QM/">application of QM</a>
             
           </div>
         
@@ -507,30 +493,6 @@ EPR实验的BOHM方案：一个静止$\pi^0$介子衰变为电子-正电子对�
         <span>Fluid</span></a>
     </div>
     
-  <div class="statistics">
-    
-    
-
-    
-      
-        <!-- 不蒜子统计PV -->
-        <span id="busuanzi_container_site_pv" style="display: none">
-            总访问量 
-            <span id="busuanzi_value_site_pv"></span>
-             次
-          </span>
-      
-      
-        <!-- 不蒜子统计UV -->
-        <span id="busuanzi_container_site_uv" style="display: none">
-            总访客数 
-            <span id="busuanzi_value_site_uv"></span>
-             人
-          </span>
-      
-    
-  </div>
-
 
     
 
@@ -557,8 +519,6 @@ EPR实验的BOHM方案：一个静止$\pi^0$介子衰变为电子-正电子对�
   <script  src="/js/clipboard-use.js" ></script>
 
 
-
-  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
@@ -630,15 +590,7 @@ EPR实验的BOHM方案：一个静止$\pi^0$介子衰变为电子-正电子对�
 
 
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<span id="busuanzi_container_site_pv">
-  本站总访问量<span id="busuanzi_value_site_pv"></span>次
-</span>
-
-<span id="busuanzi_container_page_pv">
-  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-</span>
 
 </body>
 </html>
