@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="expand your horizons">
+  <meta name="author" content="Zijun Wei">
+  <meta name="keywords" content="">
+  <title>基于蔡氏电路（Chua’s Circuit）实验与数值计算 - My Web</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Zijun Wei's space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                about me
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-05-31 00:00">
+      May 31, 2020 am
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.3k words
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       minutes
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="原理介绍"><a href="#原理介绍" class="headerlink" title="原理介绍"></a>原理介绍</h1><h2 id="蔡氏电路简介"><a href="#蔡氏电路简介" class="headerlink" title="蔡氏电路简介"></a>蔡氏电路简介</h2><p>蔡氏电路是一个可以产生混沌振荡的三阶自治电路，它包含两个电容器 C1、C2，一个电感 L，<br>一个可调电阻R 和一个非线性负阻 $R_N$，其电路如图</p>
+<p><img src="/img_cc/1.png" srcset="/img/loading.gif" alt="势能如图"></p>
+<p><strong>有源非线性负阻元件</strong><br>其中，$R_N$部分是该电路唯一的非线性元件，也称为蔡氏二极管，它可用运算放大器来实现。如图：<br><img src="/img_cc/2.png" srcset="/img/loading.gif" alt="势能如图"></p>
+<h2 id="蔡氏电路方程"><a href="#蔡氏电路方程" class="headerlink" title="蔡氏电路方程"></a>蔡氏电路方程</h2><p>依据电路可以列带电感电容的KVL和KCL Eq，由于有三个Loop,可以很容易的建立蔡氏电路的演化方程：</p>
+<script type="math/tex; mode=display">\begin{equation}\left\{\begin{array}{l}{\frac{d V_{1}}{d t}=\frac{1}{R C_{1}}\left(V_{2}-V_{1}\right)-\frac{1}{C_{1}} I\left(V_{1}\right)} \\ {\frac{d V_{2}}{d t}=\frac{1}{C_{2}} I_{3}-\frac{1}{R C_{2}}\left(V_{2}-V_{1}\right)} \\ {\frac{d I_{3}}{d t}=-\frac{1}{L} V_{2}}\end{array}\right.\end{equation}</script><p>在计算上，我们一般考虑将其设为无量纲方程</p>
+<script type="math/tex; mode=display">\begin{equation}\begin{array}{l}{\dot{x}=\alpha(y-h(x))} \\ {\dot{y}=x-y+z} \\ {\dot{z}=-\beta y-\gamma z}\end{array}\end{equation}</script><h2 id="一般化方程"><a href="#一般化方程" class="headerlink" title="一般化方程"></a>一般化方程</h2><p>经过上述的讨论，可以得到一般形式无量纲化的蔡氏电路的方程组</p>
+<script type="math/tex; mode=display">\begin{equation}\left\{\begin{array}{l}{\dot{x}=c_1 (y-x-g(x))} \\ {\dot{y}=c_2(x-y+z)} \\ {\dot{z}=-c_3 y}\end{array}\right.\end{equation}</script><p>其中x对应V1,y对应V2，z对应I3。而$g(x)$可写为（其中$m_0&lt;m_1&lt;0$）</p>
+<script type="math/tex; mode=display">g(x)=\left\{\begin{array}{ll}{m_{0} x+m_{0}-m_{1}} & {x \leq 1} \\ {m_{1} x} & {-1 \leq x \leq 1} \\ {m_{0} x+m_{1}-m_{0}} & {x \geq 1}\end{array}\right.</script><p>为计算方便可改写为：</p>
+<script type="math/tex; mode=display">g(x)=m_{1} x+\frac{1}{2}\left(m_{0}-m_{1}\right)(|x+1|-|x-1|)</script><h1 id="数值计算"><a href="#数值计算" class="headerlink" title="数值计算"></a>数值计算</h1><h2 id="总述与参数设定"><a href="#总述与参数设定" class="headerlink" title="总述与参数设定"></a>总述与参数设定</h2><p>做完上述工作后使得参数尽量的减少了，即我们可以理解为含参数$c_1,c_2,c_3,m_0,m_1$的三元一阶微分方程。<br>而matlab中的ode45函数（龙格库塔法）是很好的胜任这项工作，这里就不具体的展开龙格库塔法的具体算法实现问题，那就是另一个报告了。<br>既然可以较为简单的计算出蔡氏电路的解，不妨就先带入一组参数来试着的解一下方程，得出一些好看的图片来。<br>设定</p>
+<script type="math/tex; mode=display">c_1=15.0 \quad c_2=1.0 \quad c_3=25.58 \quad m_0=-2.0 \quad m_1=-0.5</script><p>代码贴在下面，不做讨论。<br>整体波形图<br><img src="/img_cc/3.png" srcset="/img/loading.gif" alt="势能如图"><br>V1-V2波形图<br><img src="/img_cc/4.png" srcset="/img/loading.gif" alt="势能如图"><br>V1-V2-I3相图<br><img src="/img_cc/5.png" srcset="/img/loading.gif" alt="势能如图"></p>
+<p>画相图的程序</p>
+<pre><code class="hljs matlab"><span class="hljs-comment">%设定参数</span>
+c1=<span class="hljs-number">15</span>;
+c2=<span class="hljs-number">1</span>;
+c3=<span class="hljs-number">25.58</span>;
+<span class="hljs-comment">%m0,m1&lt;0</span>
+m0=<span class="hljs-number">-2</span>;
+m1=<span class="hljs-number">-0.5</span>;
+<span class="hljs-comment">%使用ode45解方程</span>
+<span class="hljs-comment">%设定初值</span>
+tspan = [<span class="hljs-number">0</span> <span class="hljs-number">100</span>];
+y0 = [<span class="hljs-number">0.1</span>;<span class="hljs-number">0.1</span>;<span class="hljs-number">0.1</span>];
+[t,y] = ode45(@(t,y) caiya(t,y,c1,c2,c3,m0,m1 ), tspan, y0);
+<span class="hljs-comment">%整体波形图</span>
+<span class="hljs-built_in">figure</span>(<span class="hljs-number">1</span>)
+<span class="hljs-built_in">plot</span>(t,y(:,<span class="hljs-number">1</span>),<span class="hljs-string">'y'</span>,t,y(:,<span class="hljs-number">2</span>),<span class="hljs-string">'r'</span>,t,y(:,<span class="hljs-number">3</span>),<span class="hljs-string">'b'</span>)
+title(<span class="hljs-string">'整体波形图'</span>)
+xlabel(<span class="hljs-string">'时间'</span>)
+ylabel(<span class="hljs-string">'电压（v)/电路（I）'</span>)
+<span class="hljs-built_in">legend</span>(<span class="hljs-string">'V1'</span>,<span class="hljs-string">'V2'</span>,<span class="hljs-string">'I'</span>)</code></pre>
+<pre><code class="hljs matlab"><span class="hljs-comment">%V1-V2相图</span>
+<span class="hljs-built_in">figure</span>(<span class="hljs-number">3</span>)
+<span class="hljs-built_in">plot3</span>(y(:,<span class="hljs-number">1</span>),y(:,<span class="hljs-number">2</span>),y(:,<span class="hljs-number">3</span>))
+title(<span class="hljs-string">'V1-V2相图'</span>)
+xlabel(<span class="hljs-string">'V1（v)'</span>)
+ylabel(<span class="hljs-string">'V2（v)'</span>)
+zlabel(<span class="hljs-string">'电路（I）'</span>)</code></pre>
+<p>蔡氏电路方程函数<br><pre><code class="hljs matlab"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">[Y]</span> = <span class="hljs-title">caiya</span><span class="hljs-params">( t,y,c1,c2,c3,m0,m1 )</span></span>
+<span class="hljs-comment">%UNTITLED 此处显示有关此函数的摘要</span>
+<span class="hljs-comment">%   此处显示详细说明</span>
+Y = <span class="hljs-built_in">zeros</span>(<span class="hljs-number">3</span>,<span class="hljs-number">1</span>);
+Y(<span class="hljs-number">1</span>)=c1*(y(<span class="hljs-number">2</span>)-y(<span class="hljs-number">1</span>)-hfunc(y(<span class="hljs-number">1</span>),m0,m1));
+Y(<span class="hljs-number">2</span>)=c2*(y(<span class="hljs-number">1</span>)-y(<span class="hljs-number">2</span>)+y(<span class="hljs-number">3</span>));
+Y(<span class="hljs-number">3</span>)=<span class="hljs-number">-1</span>*c3*y(<span class="hljs-number">2</span>);
+<span class="hljs-keyword">end</span></code></pre><br><pre><code class="hljs matlab"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">[ h ]</span> = <span class="hljs-title">hfunc</span><span class="hljs-params">( x,m0,m1 )</span></span>
+<span class="hljs-comment">%UNTITLED2 此处显示有关此函数的摘要</span>
+<span class="hljs-comment">%   此处显示详细说明</span>
+h=m1*x+<span class="hljs-number">0.5</span>*(m0-m1)*(<span class="hljs-built_in">abs</span>(x+<span class="hljs-number">1</span>)-<span class="hljs-built_in">abs</span>(x<span class="hljs-number">-1</span>));
+<span class="hljs-keyword">end</span></code></pre></p>
+<h1 id="理论探究与尝试"><a href="#理论探究与尝试" class="headerlink" title="理论探究与尝试"></a>理论探究与尝试</h1><h2 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h2><p>在随机的改变一些参量后得到了如下的图<br><img src="/img_cc/6.png" srcset="/img/loading.gif" alt=""><br>很明显看到与之前的图在性质上有较大的区别，说明蔡氏电路纯在不同的模式中<br>而这些就与混沌理论相关，接下来就稍微涉及一些动力系统理论</p>
+<h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><p>首先写出微分方程的一半形式，注意这里讨论的是自治方程（即其时间微分不显含t）。我们可以得到</p>
+<script type="math/tex; mode=display">\frac{d x}{dt}= F(x)</script><p>在这里我们不来讨论解析解与数值解的一些性质，并认为都是微分方程的解，且称之为‘流’（flow）</p>
+<p>在空间中我们我们可以定义每一点的方向向量，<br>只要对平面内的每一个点，都做这样的方向向量的运算，我们就可以得到一个平面矢量场<br>对其中每一个点，沿着方向向量方向走无限小的距离，就可以到达另一个点，不停地这样操作，我们就可以得到一条曲线。</p>
+<p><strong>流的体积变化</strong></p>
+<p>流有许许多多有趣的性质，比如流是不相交的，这里不做展开。</p>
+<p>我们定义：$\phi\left(x_0 ; t\right)$表示起始点为 $x_0$ 的流，经过时间 $t$ 演化后的位置。<br>这也意味着流是一个动态的概念，我们不应该仅仅考虑其静态的局部。</p>
+<p>因此我们需要一个集合A：</p>
+<script type="math/tex; mode=display">A(t)=\{\phi(x ; t): x \in D\}</script><p>即一个足够小半径的球$D={x:|x-a| \leq \epsilon}$，这个足够小半径的球中的每一点，我们都将其取为初始点<br>，并使之演化。</p>
+<p><strong>Liouville公式</strong></p>
+<p>可以看出D表示动态的集合， A表示了静态的集合</p>
+<p>接下来，我们引入一个发散量的概念。其概念可以完全类比于场论中的散度的概念。</p>
+<p>对于系统，$\frac{d x}{d t}=F(x)$，那么，对于上述的$A(t)$和 D ，我们有：</p>
+<script type="math/tex; mode=display">\frac{V(A(t))}{V(D)}=e^{\nabla F(x) t}</script><p>其中$V(D)$是指通常意义下的Lebesgue测度。在欧氏空间可以把它理解为长度、面积、体积。</p>
+<p><strong>偏导数矩阵</strong><br>我们考虑一个动力系统，不关心它的静态性质，而是关注它的动态演化性质，这就要求我们可通过偏导数来描绘。如下，定义了偏导数矩阵。<br>在定义之前先约定 $e_i$ 表示第 i个方向的单位向量。则对 $\phi\left(x_0 ; t\right)$的偏导数矩阵是指如下的形式：</p>
+<script type="math/tex; mode=display">\frac{\partial \phi_{i}\left(x_{0} ; t\right)}{\partial x_{j}}=\frac{\partial \phi_{i}\left(x_{0}+s e_{j} ; t\right)}{\partial s}</script><p>可以理解为：流的第i 个方向对$x_i$求偏导数，就是对$x_0$ 在$e_j$方向<br>有个长为s的小偏差作用下得到的新的流的第 i 个方向的偏差在$s -&gt; 0$时的极限。</p>
+<h2 id="lyapunov指数"><a href="#lyapunov指数" class="headerlink" title="lyapunov指数"></a>lyapunov指数</h2><p>首先先说明，在调研文献与资料时我找到了几种lyapunov指数的定义方法。其中的一些都比较复杂，<br>所以接下来的lyapunov指数与我写的程序中计算的定义相同。</p>
+<p>在给出定义前先做一些陈述：首先需要声明，对于一个高维系统（ $3 \le n$ ），其李雅普诺夫指数一共有n 个，<br>即每个方向一个指数，而且其中必定有一个方向的李雅普诺夫指数是0<br>当所有的小偏差方向正交时，所有方向的李雅普诺夫指数之和为发散量。具体在之后定义中看自然得出。</p>
+<p>对于某个方向 $v^i$ ，我们称这个方向的李雅普诺夫指数 $l_i$是按照如下方式定义的：</p>
+<script type="math/tex; mode=display">l_{i}=\lim _{t -> \infty} \frac{\ln \left(v^{i}(t) / v^{i}(0)\right)}{t}</script><p>李雅普诺夫指数表现的是一个极限性质，它表现了系统演化的最终走向。</p>
+<h2 id="由lyapunov指数进行的分类"><a href="#由lyapunov指数进行的分类" class="headerlink" title="由lyapunov指数进行的分类"></a>由lyapunov指数进行的分类</h2><p>经过复杂的推导，在一般的动力系统的书上都会以lyapunov指数对系统经行分类：</p>
+<ul>
+<li>稳定定点:<script type="math/tex; mode=display">\left(l_{1}, l_{2}, l_{3}\right)=(-,-,-)</script></li>
+<li>极限环（周期运动）<script type="math/tex; mode=display">\left(l_{1}, l_{2}, l_{3}\right)=(0,-,-)</script></li>
+<li>二维环面（准周期运动）<script type="math/tex; mode=display">\left(l_{1}, l_{2}, l_{3}\right)=(0,0,-)</script></li>
+<li>不稳定极限环<script type="math/tex; mode=display">\left(l_{1}, l_{2}, l_{3}\right)=(+,+,0)</script></li>
+<li>不稳定二维环面<script type="math/tex; mode=display">\left(l_{1}, l_{2}, l_{3}\right)=(+,0,0)</script></li>
+<li>奇怪吸引子（混沌运动）<script type="math/tex; mode=display">\left(l_{1}, l_{2}, l_{3}\right)=(+,-,0)</script></li>
+</ul>
+<h1 id="数值计算-lyapunov-指数与分岔图"><a href="#数值计算-lyapunov-指数与分岔图" class="headerlink" title="数值计算 lyapunov 指数与分岔图"></a>数值计算 lyapunov 指数与分岔图</h1><p>对上述的由lyapunov指数对运动的分类可以设定不同的参数，探究蔡氏电路中的模式。<br>设定参数为</p>
+<script type="math/tex; mode=display">c_{1}=15.0 \quad c_{2}=1.0 \quad c_{3}=0.2 \quad m_{0}=-2.0 \quad m_{1}=-0.5</script><p>数值计算lyapunov指数为<br><img src="/img_cc/9.png" srcset="/img/loading.gif" alt=""><br>此时三维空间中相图为<br><img src="/img_cc/6.png" srcset="/img/loading.gif" alt=""><br>为稳定定点<br>设定参数为</p>
+<script type="math/tex; mode=display">c_{1}=15.0 \quad c_{2}=1.0 \quad c_{3}=19.0 \quad m_{0}=-\frac{2}{7} \quad m_{1}=-\frac{1}{7}</script><p>数值计算lyapunov指数为<br><img src="/img_cc/10.png" srcset="/img/loading.gif" alt=""><br>此时三维空间中相图为<br><img src="/img_cc/101.png" srcset="/img/loading.gif" alt=""><br>为极限环（周期运动）<br>设定参数为</p>
+<script type="math/tex; mode=display">c_{1}=15.0 \quad c_{2}=1.0 \quad c_{3}=40 \quad m_{0}=-2.0 \quad m_{1}=-0.5</script><p>数值计算lyapunov指数为<br><img src="/img_cc/11.png" srcset="/img/loading.gif" alt=""><br>此时三维空间中相图为<br><img src="/img_cc/111.png" srcset="/img/loading.gif" alt=""><br>为奇怪吸引子（混沌运动）</p>
+<p>设定参数为</p>
+<script type="math/tex; mode=display">c_{1}=15.0 \quad c_{2}=1.0 \quad c_{3}=12 \quad m_{0}=-2.0 \quad m_{1}=-0.5</script><p>数值计算lyapunov指数为<br><img src="/img_cc/12.png" srcset="/img/loading.gif" alt=""><br>此时三维空间中相图为<br><img src="/img_cc/121.png" srcset="/img/loading.gif" alt=""><br>为不稳定二维环面?</p>
+<h2 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h2><p>数值计算lyapunov指数程序</p>
+<p>cc<br>clc;<br>clear;<br>%设定参数<br>c1=15;<br>c2=1;<br>c3=2;<br>%m0,m1<0
+m0=-2;
+m1=-1/2;
+%初始参数设定
+y0 = [0.1;0.1;0.1];
+%让子弹飞一会
+tspan = [0 100];
+[t,y] = ode45(@(t,y) caiya(t,y,c1,c2,c3,m0,m1 ), tspan, y0);
+%九九归一
+w=y(end,:);
+%主体计算
+%先设定一些参数
+t0=0.1;%每步演化时间
+d=200;%步数
+ti=0;%初始时间
+wi=w;%初始位置
+l=[0 0 0];%lypunov指数初值
+<pre><code class="hljs matlab">
+```matlab
+<span class="hljs-keyword">for</span> <span class="hljs-built_in">i</span>=<span class="hljs-number">1</span>:<span class="hljs-number">200</span>
+tspani=[ti t0];
+[t,y] = ode45(@(t,y) caiya(t,y,c1,c2,c3,m0,m1 ), tspani, wi);
+wi=y(<span class="hljs-keyword">end</span>,:);
+wi1=<span class="hljs-built_in">abs</span>(wi(<span class="hljs-number">1</span>));
+wi2=<span class="hljs-built_in">abs</span>(wi(<span class="hljs-number">2</span>));
+wi3=<span class="hljs-built_in">abs</span>(wi(<span class="hljs-number">3</span>));
+l(<span class="hljs-number">1</span>)=l(<span class="hljs-number">1</span>)+<span class="hljs-built_in">log</span>(wi1);
+l(<span class="hljs-number">2</span>)=l(<span class="hljs-number">2</span>)+<span class="hljs-built_in">log</span>(wi2);
+l(<span class="hljs-number">3</span>)=l(<span class="hljs-number">3</span>)+<span class="hljs-built_in">log</span>(wi3);
+<span class="hljs-built_in">plot</span>(<span class="hljs-built_in">i</span>,l/<span class="hljs-built_in">i</span>,<span class="hljs-string">'.'</span>)
+<span class="hljs-built_in">hold</span> on
+wi=wi/norm(wi);
+<span class="hljs-keyword">end</span></code></pre></p>
+<h1 id="绘制分岔图"><a href="#绘制分岔图" class="headerlink" title="绘制分岔图"></a>绘制分岔图</h1><p>现在我们来关心当参量变化时，运动方程的解会发生什么变化。</p>
+<p>而这个问题的关键就是找一个可以描述不同运动状态下的一个量来描述，我们可以使用离散傅里叶分析（DFT）中的功率谱密度来探讨蔡氏电路的分叉图</p>
+<h2 id="蔡氏电路的功率谱密度"><a href="#蔡氏电路的功率谱密度" class="headerlink" title="蔡氏电路的功率谱密度"></a>蔡氏电路的功率谱密度</h2><p>先来分析不同参数下的功率谱密度</p>
+<script type="math/tex; mode=display">c_{1}=15.0 \quad c_{2}=1.0 \quad c_{3}=20 \quad m_{0}=-2.0 \quad m_{1}=-0.5</script><p><img src="/img_cc/14.png" srcset="/img/loading.gif" alt=""></p>
+<script type="math/tex; mode=display">c_{1}=15.0 \quad c_{2}=1.0 \quad c_{3}=40 \quad m_{0}=-2.0 \quad m_{1}=-0.5</script><p><img src="/img_cc/15.png" srcset="/img/loading.gif" alt=""><br>可以发现，在$c_3=40$时功率谱密度的噪声更多，这也意味这此时为混沌运动。<br>而这以结论也与上面的讨论对应。</p>
+<p>通过找到每一个参数c3的功率谱密度中较大的一些点，可以维象的得到一种分岔图。<br><img src="/img_cc/13.png" srcset="/img/loading.gif" alt=""><br>这也与一些论文和网站中给出的分岔图相似。</p>
+<h2 id="代码展示-1"><a href="#代码展示-1" class="headerlink" title="代码展示"></a>代码展示</h2><pre><code class="hljs matlab">clc;
+clear; 
+<span class="hljs-comment">%设定参数</span>
+c1=<span class="hljs-number">15</span>;
+c2=<span class="hljs-number">1</span>;
+c3=<span class="hljs-number">5</span>;
+c=<span class="hljs-number">0.01</span>;<span class="hljs-comment">%c3的间隔步长</span>
+<span class="hljs-comment">%采样频率</span>
+Fs=<span class="hljs-number">1000</span>;
+<span class="hljs-comment">%m0,m1&lt;0</span>
+m0=<span class="hljs-number">-2</span>;
+m1=<span class="hljs-number">-1</span>/<span class="hljs-number">2</span>;
+<span class="hljs-comment">%初始参数设定 </span>
+y0 = [<span class="hljs-number">0.1</span>;<span class="hljs-number">0.1</span>;<span class="hljs-number">0.1</span>];
+<span class="hljs-comment">%让子弹飞一会</span>
+tspan = [<span class="hljs-number">0</span> <span class="hljs-number">100</span>];
+<span class="hljs-keyword">for</span> <span class="hljs-built_in">i</span>=<span class="hljs-number">1</span>:<span class="hljs-number">4000</span>
+c3=c3+c;
+[t,y] = ode45(@(t,y) caiya(t,y,c1,c2,c3,m0,m1 ), tspan, y0);</code></pre>
+<pre><code class="hljs matlab"><span class="hljs-comment">%DFT</span>
+F=fft(y);
+L=<span class="hljs-built_in">length</span>(t);
+<span class="hljs-comment">%计算谱密度</span>
+P2=<span class="hljs-built_in">abs</span>(F/L);
+P1=P2(<span class="hljs-number">1</span>:<span class="hljs-built_in">round</span>(L/<span class="hljs-number">2</span>)+<span class="hljs-number">1</span>);
+P1(<span class="hljs-number">2</span>:<span class="hljs-keyword">end</span><span class="hljs-number">-1</span>)=<span class="hljs-number">2</span>*P1(<span class="hljs-number">2</span>:<span class="hljs-keyword">end</span><span class="hljs-number">-1</span>);
+f=Fs*(<span class="hljs-number">0</span>:<span class="hljs-built_in">round</span>(L/<span class="hljs-number">2</span>))/L;
+<span class="hljs-comment">%间隔</span>
+ll=<span class="hljs-number">10</span>/L;
+x=znmp(P1);
+<span class="hljs-built_in">plot</span>(c3,x,<span class="hljs-string">'.'</span>)
+<span class="hljs-built_in">hold</span> on
+<span class="hljs-keyword">end</span></code></pre>
+<h1 id="总结与展望"><a href="#总结与展望" class="headerlink" title="总结与展望"></a>总结与展望</h1><ul>
+<li>混沌现象是一种特别的微分方程的解，在数学上有很多的研究，此次答辩讲述的只是其中很小一部分。</li>
+<li>可以通过蔡氏电路的混沌性质设计随机数发生器</li>
+<li>通过调研可以发现对于求解lyapunov指数也可以使用wolf算法来实现，由于时间的原因本人并没有写完算法。但值得注意的是wolf算法是现在前言科学中较为热门的一种算法，可以来实验自旋粒子多体的计算等方向</li>
+<li>混沌依旧是当今力学与数学的前言研究方向，其中还有很多有意思的研究方向。</li>
+<li>可以通过这次答辩的计算给出蔡氏电路在不同模式下的R的取值的指导建议，由于时间关系本人并没有做这一步的计算。</li>
+</ul>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>华中科技大学物理学院实验教学中心，基础物理实验讲义<br>合肥工业大学，费业泰主编，误差理论与数据处理<br>电子工业出版社，刘浩，Matlab R2016a 一本通<br><a href="https://ww2.mathworks.cn" target="_blank" rel="noopener">https://ww2.mathworks.cn</a><br><a href="https://www.ni.com/zh-cn/shop/labview.html" target="_blank" rel="noopener">https://www.ni.com/zh-cn/shop/labview.html</a><br>…..</p>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/program-note/">program note</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/others/">others</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，大部分都是我整理前人的工作或学习笔记 ，所以可以随便使用与转载，不过希望转载时最好注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/05/30/Quantumoptics/">
+                        <span class="hidden-mobile">Quantum Optics -- Quantization of electromagnetic fields</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "基于蔡氏电路（Chua’s Circuit）实验与数值计算&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
