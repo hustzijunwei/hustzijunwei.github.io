@@ -17,7 +17,7 @@
   <meta name="description" content="expand your horizons">
   <meta name="author" content="Zijun Wei">
   <meta name="keywords" content="">
-  <title>Introduction to Su-Schrieffer-Heeger - My Web</title>
+  <title>固体物理圣经——原子的凝聚 - My Web</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -151,8 +151,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-05-30 00:00">
-      May 30, 2020 am
+    <time datetime="2020-06-05 00:00">
+      June 5, 2020 am
     </time>
   </div>
 
@@ -162,7 +162,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.7k words
+      1.9k words
     </span>
   
 
@@ -203,55 +203,51 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <h1 id="previously-of-SSH-model"><a href="#previously-of-SSH-model" class="headerlink" title="previously of SSH model"></a>previously of SSH model</h1><h1 id="SSH-model的体部分"><a href="#SSH-model的体部分" class="headerlink" title="SSH model的体部分"></a>SSH model的体部分</h1><p>由Peierls定理，可知一条由费米子排列成的链具有如下结构：<br><img src="/img_ssh/1.png" srcset="/img/loading.gif" alt="势能如图"><br>图中，规定A粒子为灰色的粒子，B粒子为白色的粒子；A与其后的B粒子构成晶胞其作用力为v，晶胞间作用力（B与其后的A）为w。</p>
-<h1 id="SSH-model的Hamiltonian"><a href="#SSH-model的Hamiltonian" class="headerlink" title="SSH model的Hamiltonian"></a>SSH model的Hamiltonian</h1><p>考虑单电子在如上图的原子排列中的运动</p>
-<script type="math/tex; mode=display">H=v \sum_{m=1}^{N} (|m, B \rangle\langle m, A|+h . c .) +w \sum_{m=1}^{N-1}(|m+1, A\rangle\langle m, B|+{h.c.})</script><p>这里使用了紧束缚模型，即电子在某一原子上所受的作用只取决与与之相邻的两个原子的作用。<br>这里可以把$v,w$看成在电子在不同建上跃迁的概率。<br>同时注意SSH模型中没有电子与原子的自旋。</p>
-<h2 id="体Hamiltonian"><a href="#体Hamiltonian" class="headerlink" title="体Hamiltonian"></a>体Hamiltonian</h2><p>先来考虑均匀的链,在其体内（非边缘）的哈密顿量可以表述为：</p>
-<script type="math/tex; mode=display">\hat{H}_=\sum_{m=1}^{N}(v|m, B\rangle\langle m, A|+w|(m \bmod N)+1, A\rangle\langle m, B|)+h . c .</script><p>在实空间（$N=4$）中Hamiltonian的矩阵形式为：</p>
-<script type="math/tex; mode=display">\left(\begin{array}{llllllll}{0} & {v} & {0} & {0} & {0} & {0} & {0} & {w} \\ {v} & {0} & {w} & {0} & {0} & {0} & {0} & {0} \\ {0} & {w} & {0} & {v} & {0} & {0} & {0} & {0} \\ {0} & {0} & {v} & {0} & {w} & {0} & {0} & {0} \\ {0} & {0} & {0} & {w} & {0} & {v} & {0} & {0} \\ {0} & {0} & {0} & {0} & {v} & {0} & {w} & {0} \\ {0} & {0} & {0} & {0} & {0} & {w} & {0} & {v} \\ {w} & {0} & {0} & {0} & {0} & {0} & {v} & {0}\end{array}\right)</script><p>解特征方程，其中$\Psi_n$为特征解</p>
-<script type="math/tex; mode=display">H_{ {bulk }}\left|\Psi_{n}(k)\right\rangle= E_{n}(k)\left|\Psi_{n}(k)\right\rangle</script><h2 id="体动量空间Hamiltonian"><a href="#体动量空间Hamiltonian" class="headerlink" title="体动量空间Hamiltonian"></a>体动量空间Hamiltonian</h2><p>由Bloch定理，带入平面波形式的特征解有</p>
-<script type="math/tex; mode=display">|k\rangle=\frac{1}{\sqrt{N}} \sum_{m=1}^{N} e^{i m k}|m\rangle</script><p>其中$k$在第一布里渊区取值。</p>
-<script type="math/tex; mode=display">k \in\left\{\delta_k, 2 \delta_k, \ldots, N \delta_k \right\}</script><p>而$\delta_k=\frac{2 \pi}{N}$同时也可以把这个看成由实空间到动量空间的转换的傅里叶变换。</p>
-<p>$|\Psi_n \rangle$可以看成由$| k \rangle$与$|u_n (k)\rangle$张成的，即</p>
-<script type="math/tex; mode=display">\left|\Psi_{n}(k) \right\rangle=|k\rangle \otimes\left|u_{n}(k)\right\rangle ; \quad \quad\left|u_{n}(k)\right\rangle= a_{n}(k)|A\rangle+ b_{n}(k)|B\rangle</script><p>则$|u_n(k)\rangle$为体动量空间Hamiltonian${H}(k)$的本征态：</p>
-<script type="math/tex; mode=display">{H}(k)\left|u_{n}(k)\right\rangle= E_{n}(k)\left|u_{n}(k)\right\rangle</script><p>其中定义${H}(k)$为</p>
-<script type="math/tex; mode=display">{H}(k)=\langle k|\hat{H}_{bulk}| k\rangle</script><h2 id="Hamiltonian本征值——能量"><a href="#Hamiltonian本征值——能量" class="headerlink" title="Hamiltonian本征值——能量"></a>Hamiltonian本征值——能量</h2><p>在第一布里渊区中有周期性条件：</p>
-<script type="math/tex; mode=display">{H}(k+2 \pi)=\hat{H}(k) ; \quad \quad\left|u_{n}(k+2 \pi)\right\rangle=\left|u_{n}(k)\right\rangle</script><p>将上述对$|\Psi_n \rangle$的分解带入薛定鄂方程有<br><img src="/img_ssh/2.png" srcset="/img/loading.gif" alt=""><br>可以化简$H(k)$，发现其为分块对角矩阵，且每个分块对角的矩阵维数相同。形如</p>
-<script type="math/tex; mode=display">\left[\begin{array}{cccc}{H_{1}} & {O} & {\cdots} & {O} \\ {O} & {H_{2}} & {\cdots} & {O} \\ {\vdots} & {\vdots} & {\ddots} & {\vdots} \\ {O} & {O} & {\cdots} & {H_{n}}\end{array}\right]</script><p>对于每一个分块有（取第一分块）：</p>
-<script type="math/tex; mode=display">H(k)=\left(\begin{array}{cc}{0} & {v+w e^{-i k}} \\ {v+w e^{i k}} & {0}\end{array}\right) ; \quad H(k)\left(\begin{array}{c}{a(k)} \\ {b(k)}\end{array}\right)=E(k)\left(\begin{array}{c}{a(k)} \\ {b(k)}\end{array}\right)</script><p>可以求得能量为</p>
-<script type="math/tex; mode=display">E(k)=\left|v+e^{-i k} w\right|=\sqrt{v^{2}+w^{2}+2 v w \cos k}</script><h2 id="SSH-model的能量"><a href="#SSH-model的能量" class="headerlink" title="SSH model的能量"></a>SSH model的能量</h2><p>由上面求出的能量关系使可以给出清楚的图像：<br><img src="/img_ssh/3.png" srcset="/img/loading.gif" alt=""><br>若令$\Delta$为最小的能量差，可以看到</p>
-<script type="math/tex; mode=display">\Delta=\min _{k} E(k)=|v-w|</script><p>如图中显示，当$v=w$时两能级之间没有间隔，即为导体。当$v\ne w$时，为绝缘体。<br>需要说明的是当$v\ne w$时不一定为绝缘体，因为当v与w相隔较近时（一般为2eV）可为半导体</p>
-<h2 id="Hamiltonian的另一种表示方法"><a href="#Hamiltonian的另一种表示方法" class="headerlink" title="Hamiltonian的另一种表示方法"></a>Hamiltonian的另一种表示方法</h2><p>当使用二次量子化求Hamiltonian时可以得到Hamiltonian的另一种表示方法。当然也可以对上面求得的<br>H在palli矩阵基下进行分解，有：</p>
-<script type="math/tex; mode=display">H(k)=h(k) \cdot \sigma</script><p>其中</p>
-<script type="math/tex; mode=display">\sigma_{x}=\left(\begin{array}{cc}{0} & {1} \\ {1} & {0}\end{array}\right), \sigma_{y}=\left(\begin{array}{cc}{0} & {-i} \\ {i} & {0}\end{array}\right), \sigma_{z}=\left(\begin{array}{cc}{1} & {0} \\ {0} & {-1}\end{array}\right)</script><p>令$w=|w| e^{i a r g(w)}$则</p>
-<script type="math/tex; mode=display">\begin{array}{l}{h_{x}(k)={Re}(v)+|w| \cos (k b+\arg (w))} \\ {h_{y}(k)=-{Im}(v)+|w| \sin (k b+\arg (w))} \\ {h_{z}(k)=0}\end{array}</script><p>可知</p>
-<script type="math/tex; mode=display">H(k)=\left(\begin{array}{cc}{0} & {h^{*}(k)} \\ {h(k)} & {0}\end{array}\right)</script><h2 id="Winding-number"><a href="#Winding-number" class="headerlink" title="Winding number"></a>Winding number</h2><p>通过对能级与导体和绝缘体的讨论可以发现当v与w构成的几何有不同的特性时是可以影响物体导电性的</p>
-<p>故，设置Winding number为：</p>
-<script type="math/tex; mode=display">\nu=\frac{1}{2 \pi i} \int_{-\pi}^{\pi} d k \frac{d}{d k} \ln (h(k))</script><p>可以作为SSH模型的一个‘拓扑’数</p>
-<p>注意到当$v=w$时是无法在$R^2$空间上定义Winding number的，这时需要运用黎曼面等数学工具。</p>
-<h1 id="Edge-states"><a href="#Edge-states" class="headerlink" title="Edge states"></a>Edge states</h1><p>SSH模型在完全二聚体模型下十分简单。完全二聚体：$v=0, w=1$或者$v=1, w=2$的情形下即为完全二聚体。</p>
-<p>这时存在两种状态：</p>
-<h2 id="trivial-v-1-w-0-时"><a href="#trivial-v-1-w-0-时" class="headerlink" title="trivial:$v=1, w=0$时"></a>trivial:$v=1, w=0$时</h2><p><img src="/img_ssh/4.png" srcset="/img/loading.gif" alt=""><br>此时排列为平庸的，即只有包内有作用力，且没有咕儿原子。这时方程为</p>
-<script type="math/tex; mode=display">\hat{H}(|m, A\rangle \pm|m, B\rangle)=\pm(|m, A\rangle \pm|m, B\rangle)</script><p>此时哈密顿量为$\hat{H}(k)=\hat{\sigma}_x$，则此时解同体空间中的差不多（因此称为平凡情况）</p>
-<h2 id="topological-v-0-w-1-时"><a href="#topological-v-0-w-1-时" class="headerlink" title="topological:$v=0, w=1$时"></a>topological:$v=0, w=1$时</h2><p><img src="/img_ssh/5.png" srcset="/img/loading.gif" alt=""><br>此时为拓扑排列，在这种状态中只有不同晶胞中的才有作用力，而且开头和和结尾存在两个咕儿。方程为</p>
-<script type="math/tex; mode=display">\hat{H}(|m, B\rangle \pm|m+1, A\rangle)=\pm(|m, B\rangle \pm|m+1, A\rangle)</script><p>其中$m=1, \ldots, N-1$而$\hat{H}(k)=\hat{\sigma}_x \cos k+\hat{\sigma}_y \sin k$<br>可以发现链的每一端的都有一个零能级的单一特征态</p>
-<script type="math/tex; mode=display">\hat{H}|1, A\rangle=\hat{H}|N, B\rangle= 0</script><p>这时这两个咕儿原子就为边缘态</p>
-<h2 id="trivial态与topological态的混合"><a href="#trivial态与topological态的混合" class="headerlink" title="trivial态与topological态的混合"></a>trivial态与topological态的混合</h2><p>由实验测得有：<br><img src="/img_ssh/6.png" srcset="/img/loading.gif" alt=""><br>说明：</p>
+              <h1 id="原子结构"><a href="#原子结构" class="headerlink" title="原子结构"></a>原子结构</h1><p>在不同时期人们对原子的认识是不同的，其中出现了一个历史性的模型：</p>
 <ul>
-<li>(a)细胞间跳变幅度系统能谱w=1作为函数细胞内跳变幅度对应拓扑(平凡)相。</li>
-<li>(b)、(c)为杂化边缘态的波函数</li>
-<li>(d)为一般体波函数。</li>
+<li>汤姆孙（Thomson）模型：原子被认为是一个半径在$~10^{-8} cm$量级的球，球内均匀分布着正电荷，因此被人们戏称为葡萄布丁模型。</li>
+<li>卢瑟福模型：汤姆孙提出的原子结构模型很快被$\alpha$粒子散射实验否定，卢瑟福认为原子是由位于原子中心、 尺寸很小（半径$~10^{-13} cm$）的带正电荷的原子核和核外带负电荷的电子组成</li>
+<li>玻尔原子理论：波尔将卢瑟福模型和爱因斯坦光量子理论相结合引入定态假设、跃迁假设与角动量量子化假设提出玻尔原子理论。玻尔理论很好地解释了在 H 原子中观察到的分立光谱，但对稍稍复杂的原 子，观察到的原子光谱和玻尔理论的预言并不相一致。</li>
+<li>德布罗意（Broglie）：粒子均具有波粒二象性。</li>
 </ul>
-<p>可以发现</p>
+<p>我们知道在原子中电子受到带有正电的原子的库伦势的作用</p>
+<script type="math/tex; mode=display">V(\vec{r})=-\frac{Z e^{2}}{4 \pi \varepsilon_{0} r}</script><p>将其带入Schodinger方程可以解出相应的波函数</p>
+<script type="math/tex; mode=display">\psi_{n l m}(r, \theta, \varphi)=R_{n l}(r) Y_{l m}(\theta, \varphi)</script><p>其中：$n=1,2,3,\ldots$为主量子数；$l=1,2,\ldots (n-1)$为角量子数；$m=0,\pm 1, \ldots \pm l$为磁量子数。且电子的能量仅与主量子数n有关</p>
+<script type="math/tex; mode=display">E_{n}=-\frac{\mu Z^{2} e^{4}}{2 \hbar^{2}\left(4 \pi \epsilon_{0}\right)^{2}} \frac{1}{n^{2}}</script><p>这时我们可以发现，这时态是<strong>简并</strong>的：</p>
 <ul>
-<li>当$w=1$且v比较小时两个咕儿原子处的能量时以$E=e^{-N / \xi}$变化的，其中局域长度为$\xi=/ \log (v / w)$</li>
-<li>当存在边缘态时，电子在两个咕儿原子处出现的概率最大（波函数大）。而其他地方出现的概率则较小</li>
-<li>当只有体状态时，电子在不同原子处的概率一般分布。</li>
+<li>电子能级对磁量子数m的简并源于势场为球对称的中心场</li>
+<li>电子能级对角量子数l的简并源于电子受到的势场为库仑场这一特殊的球对称的中心场</li>
 </ul>
-<h1 id="Chiral-symmetry"><a href="#Chiral-symmetry" class="headerlink" title="Chiral symmetry"></a>Chiral symmetry</h1><p>当厄密算符$U$作用在哈密顿量时，可以说哈密顿量有U对称性</p>
-<script type="math/tex; mode=display">\hat{U} \hat{H} \hat{U}^{\dagger}=\hat{H}</script><p>若令晶格平移算符</p>
-<script type="math/tex; mode=display">\hat{U}=|m+1, A\rangle\langle m, A|+| m+1, B\rangle\langle m, B|</script><p>注意到这个算符是非厄密的</p>
-<h1 id="Edge-states数是拓扑不变的"><a href="#Edge-states数是拓扑不变的" class="headerlink" title="Edge states数是拓扑不变的"></a>Edge states数是拓扑不变的</h1>
+<p>同时我们也需要知道但对实际含有多个电子的原子，每一个电子除了受到原子核势场作用外， 还受到其它电子的作用，导致简并被部分解除，形成一系列能量不同的电子壳层。<br>我们使用角量子数$l$来标示这些壳层，其中$l=1,2,\ldots (n-1)$分别对应s、p、d、f· · · 壳层。</p>
+<p>由此，当我们考虑电子自旋，对每一个给定主量子数 n，简并度为$2n^2$，即每个能级$E_n$可以被$2n^2$个状态不同的电子占据。给定$l$壳层，简并度为$2(2l + 1)$。<br>我们使用电子构型来描述原子核外电子的分布，如Na 原子的电子构型为$1 s^{2} 2 s^{2} 2 p^{6} 3 s^{1}$</p>
+<h1 id="原子电负性"><a href="#原子电负性" class="headerlink" title="原子电负性"></a>原子电负性</h1><p>人们引入原子电负性（Electronegativity）这样一个物理量来科学地比较各种原子得失电子的难易程度，用$\chi$表示。<br>原子束缚电子的能力越强，其电负性越高，在这种情况下，原子趋向于从外界获得电子；反之，电负性越低，原子束缚电子的能力越弱，在这种情况下，原子容易丢失外层电子。</p>
+<p>电负性有很多种定义方式，接下来介绍<strong>密立根定义</strong>：<br>原子束缚电子的能力包含两个方面的内容。一是原子的电离能，用$W_i$表示</p>
+<script type="math/tex; mode=display">A+W_{i} \Rightarrow A^{+}+(-e)</script><p>另一个是原子的亲合能，用$W_a$表示</p>
+<script type="math/tex; mode=display">A+(-e) \Rightarrow A^{-}+W_{a}</script><p>则此时电负性$\chi$，由原子的电离能和原子的亲合能的平均值来量度，即</p>
+<script type="math/tex; mode=display">\chi=\frac{1}{6.3}\left(W_{i}+W_{a}\right)</script><p>其中电离能和亲合能均以eV为单位，系数的选择仅仅是为了使Li的电负性为1</p>
+<p><img src="/img_solid/1.png" srcset="/img/loading.gif" alt=""><br>原子的电负性可以从元素周期表中看出来（元素周期表从某种意义上也是原子对外层电子束缚能力的周期性反映），变化规律可总结如下：</p>
+<ul>
+<li>对同一周期的主族元素，随原子序数Z增加（周期表中自左至右），原子电负性快速增大；</li>
+<li>对同一主族元素，随Z增加（周期表中自上而下），原子电负性逐渐减小；</li>
+<li>对同一周期的过渡族元素，原子电负性随Z增加呈现不规律变化，但电负性均高于同一周期的第一和第二主族元素；</li>
+<li>对稀土元素，原子电负性随Z增加变化很小。</li>
+</ul>
+<p>同时原子电负性可以作为判断元素的金属性和非金属性强弱的尺度，一般电负性小的为金属，电负性较大为非金属</p>
+<h1 id="原子间相互作用及结合力的一般性质"><a href="#原子间相互作用及结合力的一般性质" class="headerlink" title="原子间相互作用及结合力的一般性质"></a>原子间相互作用及结合力的一般性质</h1><p>只有当吸引和排斥两种相互作用力平衡时，大量原子才能凝聚到一起形成稳定结构的固体。电磁力是引起原子凝聚的吸引力的来源。<br>原子凝聚成固体时，原子的外层电子会作重新排布：或者失去，或者得到，或者共享。通常称引起原子结合在一起的力为“键”，典型的键有：金属键、离子键、共价键、氢键、氢键结合和范德瓦斯（Van der Waals）键。<br>经验上，两原子间的相互作用势能常用幂函数来表达，即</p>
+<script type="math/tex; mode=display">u(r)=-\frac{A}{r^{m}}+\frac{B}{r^{n}}</script><p>其中第一项表示吸引能，第二项表示排斥能，A、B、C和D均为大于0的常数，这里规定即相当于原子处在自由状态（孤立原子）时的能量取为能量零点。</p>
+<p>当原子间净的相互作用力为零，即$f\left(r_{0}\right)=0$，以至于固体处在稳定的结构状态。在相互作用势中表示为</p>
+<script type="math/tex; mode=display">\left.\frac{d U(r)}{d r}\right|_{r=r_{0}}=0</script><p>这样我们就可以得到得平衡时相邻原子间距$r_0$。</p>
+<script type="math/tex; mode=display">r_{0}=\sqrt[n-m]{\frac{B n}{A m}}</script><p>N个原子组成的固体其总的相互作用势能</p>
+<script type="math/tex; mode=display">U=\frac{1}{2} \sum_{i=1}^{N} u_{i}=\frac{1}{2} \sum_{i=1}^{N} \sum_{j=1}^{N} u\left(r_{i j}\right)</script><p>其中 $r_{ ij }$ 为i，j两原子间的间距</p>
+<p>$u( r_{ ij } )$ 为原子间的相互作用势<br>当我们取固体表面层的第一个原子为参考原子时：</p>
+<script type="math/tex; mode=display">U=\frac{N}{2} \sum_{j} u\left(r_{i j}\right) \quad(j=2,3, \cdots, N)</script><p>这即是总相互作用势能实际上就是固体的内能。</p>
+<p>从能量的角度看，N个原子能够凝聚成固体的原因，是因为它们结合起来以后，能够使整个系统的总能量比N个原子处于自由状态时的总能量更低。这一部分能量的差值就叫做结合能，即</p>
+<script type="math/tex; mode=display">W=E_{N}-U\left(r_{0}\right)</script><p>假设固体有N个原胞，原胞的体积为$\Omega$，则固体的体积为$V=N \Omega$。原胞的体积应当正比于$r^3$，即$\Omega=\beta r^3$，$\beta$是与固体的几何结构有关的常数。因此</p>
+<script type="math/tex; mode=display">V=N \beta r^{3}</script><p>平衡时有</p>
+<script type="math/tex; mode=display">V_{0}=N \beta r_{0}^{3}</script><p>由热力学，我们可以定义一个系统的体弹性模量（K）为</p>
+<script type="math/tex; mode=display">K=-V\left(\frac{\partial P}{\partial V}\right)_{T}</script><p>压力P为</p>
+<script type="math/tex; mode=display">P=-\frac{\partial U}{\partial V}=-\frac{\partial U}{\partial r} \frac{\partial r}{\partial V}=-\frac{1}{3 N \beta r^{2}} \frac{\partial U}{\partial r}</script><p>由此我们可得到平衡时固体体弹性模量为</p>
+<script type="math/tex; mode=display">K=\frac{1}{9 N \beta r_{0}}\left(\frac{\partial^{2} U}{\partial r^{2}}\right)_{r=r_{0}}</script><h1 id="金属键"><a href="#金属键" class="headerlink" title="金属键"></a>金属键</h1><h1 id="离子键"><a href="#离子键" class="headerlink" title="离子键"></a>离子键</h1><h1 id="共价键"><a href="#共价键" class="headerlink" title="共价键"></a>共价键</h1><h1 id="氢键"><a href="#氢键" class="headerlink" title="氢键"></a>氢键</h1><h1 id="范德瓦斯键"><a href="#范德瓦斯键" class="headerlink" title="范德瓦斯键"></a>范德瓦斯键</h1><h1 id="轨道杂化"><a href="#轨道杂化" class="headerlink" title="轨道杂化"></a>轨道杂化</h1>
             </article>
             <hr>
             <div>
@@ -268,7 +264,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/topological/">topological</a>
+                      <a class="hover-with-bg" href="/tags/%E5%9C%A3%E7%BB%8F%E5%92%8F%E5%94%B1%E7%B3%BB%E5%88%97/">圣经咏唱系列</a>
                     
                   </div>
                 
@@ -281,18 +277,12 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/05/30/Quantumoptics/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Quantum Optics -- Quantization of electromagnetic fields</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </div>
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/05/30/QO2/">
-                        <span class="hidden-mobile">Quantum Optics -- Quantization of electromagnetic fields</span>
+                      <a href="/2020/06/05/Bible/">
+                        <span class="hidden-mobile">圣经咏唱系列前言</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -431,7 +421,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Introduction to Su-Schrieffer-Heeger&nbsp;",
+        "固体物理圣经——原子的凝聚&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

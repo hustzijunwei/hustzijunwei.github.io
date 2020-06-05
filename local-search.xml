@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>固体物理圣经——原子的凝聚</title>
+    <link href="/2020/06/05/solid%20physics/solid1/"/>
+    <url>/2020/06/05/solid%20physics/solid1/</url>
+    
+    <content type="html"><![CDATA[<h1 id="原子结构"><a href="#原子结构" class="headerlink" title="原子结构"></a>原子结构</h1><p>在不同时期人们对原子的认识是不同的，其中出现了一个历史性的模型：</p><ul><li>汤姆孙（Thomson）模型：原子被认为是一个半径在$~10^{-8} cm$量级的球，球内均匀分布着正电荷，因此被人们戏称为葡萄布丁模型。</li><li>卢瑟福模型：汤姆孙提出的原子结构模型很快被$\alpha$粒子散射实验否定，卢瑟福认为原子是由位于原子中心、 尺寸很小（半径$~10^{-13} cm$）的带正电荷的原子核和核外带负电荷的电子组成</li><li>玻尔原子理论：波尔将卢瑟福模型和爱因斯坦光量子理论相结合引入定态假设、跃迁假设与角动量量子化假设提出玻尔原子理论。玻尔理论很好地解释了在 H 原子中观察到的分立光谱，但对稍稍复杂的原 子，观察到的原子光谱和玻尔理论的预言并不相一致。</li><li>德布罗意（Broglie）：粒子均具有波粒二象性。</li></ul><p>我们知道在原子中电子受到带有正电的原子的库伦势的作用</p><script type="math/tex; mode=display">V(\vec{r})=-\frac{Z e^{2}}{4 \pi \varepsilon_{0} r}</script><p>将其带入Schodinger方程可以解出相应的波函数</p><script type="math/tex; mode=display">\psi_{n l m}(r, \theta, \varphi)=R_{n l}(r) Y_{l m}(\theta, \varphi)</script><p>其中：$n=1,2,3,\ldots$为主量子数；$l=1,2,\ldots (n-1)$为角量子数；$m=0,\pm 1, \ldots \pm l$为磁量子数。且电子的能量仅与主量子数n有关</p><script type="math/tex; mode=display">E_{n}=-\frac{\mu Z^{2} e^{4}}{2 \hbar^{2}\left(4 \pi \epsilon_{0}\right)^{2}} \frac{1}{n^{2}}</script><p>这时我们可以发现，这时态是<strong>简并</strong>的：</p><ul><li>电子能级对磁量子数m的简并源于势场为球对称的中心场</li><li>电子能级对角量子数l的简并源于电子受到的势场为库仑场这一特殊的球对称的中心场</li></ul><p>同时我们也需要知道但对实际含有多个电子的原子，每一个电子除了受到原子核势场作用外， 还受到其它电子的作用，导致简并被部分解除，形成一系列能量不同的电子壳层。<br>我们使用角量子数$l$来标示这些壳层，其中$l=1,2,\ldots (n-1)$分别对应s、p、d、f· · · 壳层。</p><p>由此，当我们考虑电子自旋，对每一个给定主量子数 n，简并度为$2n^2$，即每个能级$E_n$可以被$2n^2$个状态不同的电子占据。给定$l$壳层，简并度为$2(2l + 1)$。<br>我们使用电子构型来描述原子核外电子的分布，如Na 原子的电子构型为$1 s^{2} 2 s^{2} 2 p^{6} 3 s^{1}$</p><h1 id="原子电负性"><a href="#原子电负性" class="headerlink" title="原子电负性"></a>原子电负性</h1><p>人们引入原子电负性（Electronegativity）这样一个物理量来科学地比较各种原子得失电子的难易程度，用$\chi$表示。<br>原子束缚电子的能力越强，其电负性越高，在这种情况下，原子趋向于从外界获得电子；反之，电负性越低，原子束缚电子的能力越弱，在这种情况下，原子容易丢失外层电子。</p><p>电负性有很多种定义方式，接下来介绍<strong>密立根定义</strong>：<br>原子束缚电子的能力包含两个方面的内容。一是原子的电离能，用$W_i$表示</p><script type="math/tex; mode=display">A+W_{i} \Rightarrow A^{+}+(-e)</script><p>另一个是原子的亲合能，用$W_a$表示</p><script type="math/tex; mode=display">A+(-e) \Rightarrow A^{-}+W_{a}</script><p>则此时电负性$\chi$，由原子的电离能和原子的亲合能的平均值来量度，即</p><script type="math/tex; mode=display">\chi=\frac{1}{6.3}\left(W_{i}+W_{a}\right)</script><p>其中电离能和亲合能均以eV为单位，系数的选择仅仅是为了使Li的电负性为1</p><p><img src="/img_solid/1.png" srcset="/img/loading.gif" alt=""><br>原子的电负性可以从元素周期表中看出来（元素周期表从某种意义上也是原子对外层电子束缚能力的周期性反映），变化规律可总结如下：</p><ul><li>对同一周期的主族元素，随原子序数Z增加（周期表中自左至右），原子电负性快速增大；</li><li>对同一主族元素，随Z增加（周期表中自上而下），原子电负性逐渐减小；</li><li>对同一周期的过渡族元素，原子电负性随Z增加呈现不规律变化，但电负性均高于同一周期的第一和第二主族元素；</li><li>对稀土元素，原子电负性随Z增加变化很小。</li></ul><p>同时原子电负性可以作为判断元素的金属性和非金属性强弱的尺度，一般电负性小的为金属，电负性较大为非金属</p><h1 id="原子间相互作用及结合力的一般性质"><a href="#原子间相互作用及结合力的一般性质" class="headerlink" title="原子间相互作用及结合力的一般性质"></a>原子间相互作用及结合力的一般性质</h1><p>只有当吸引和排斥两种相互作用力平衡时，大量原子才能凝聚到一起形成稳定结构的固体。电磁力是引起原子凝聚的吸引力的来源。<br>原子凝聚成固体时，原子的外层电子会作重新排布：或者失去，或者得到，或者共享。通常称引起原子结合在一起的力为“键”，典型的键有：金属键、离子键、共价键、氢键、氢键结合和范德瓦斯（Van der Waals）键。<br>经验上，两原子间的相互作用势能常用幂函数来表达，即</p><script type="math/tex; mode=display">u(r)=-\frac{A}{r^{m}}+\frac{B}{r^{n}}</script><p>其中第一项表示吸引能，第二项表示排斥能，A、B、C和D均为大于0的常数，这里规定即相当于原子处在自由状态（孤立原子）时的能量取为能量零点。</p><p>当原子间净的相互作用力为零，即$f\left(r_{0}\right)=0$，以至于固体处在稳定的结构状态。在相互作用势中表示为</p><script type="math/tex; mode=display">\left.\frac{d U(r)}{d r}\right|_{r=r_{0}}=0</script><p>这样我们就可以得到得平衡时相邻原子间距$r_0$。</p><script type="math/tex; mode=display">r_{0}=\sqrt[n-m]{\frac{B n}{A m}}</script><p>N个原子组成的固体其总的相互作用势能</p><script type="math/tex; mode=display">U=\frac{1}{2} \sum_{i=1}^{N} u_{i}=\frac{1}{2} \sum_{i=1}^{N} \sum_{j=1}^{N} u\left(r_{i j}\right)</script><p>其中 $r_{ ij }$ 为i，j两原子间的间距</p><p>$u( r_{ ij } )$ 为原子间的相互作用势<br>当我们取固体表面层的第一个原子为参考原子时：</p><script type="math/tex; mode=display">U=\frac{N}{2} \sum_{j} u\left(r_{i j}\right) \quad(j=2,3, \cdots, N)</script><p>这即是总相互作用势能实际上就是固体的内能。</p><p>从能量的角度看，N个原子能够凝聚成固体的原因，是因为它们结合起来以后，能够使整个系统的总能量比N个原子处于自由状态时的总能量更低。这一部分能量的差值就叫做结合能，即</p><script type="math/tex; mode=display">W=E_{N}-U\left(r_{0}\right)</script><p>假设固体有N个原胞，原胞的体积为$\Omega$，则固体的体积为$V=N \Omega$。原胞的体积应当正比于$r^3$，即$\Omega=\beta r^3$，$\beta$是与固体的几何结构有关的常数。因此</p><script type="math/tex; mode=display">V=N \beta r^{3}</script><p>平衡时有</p><script type="math/tex; mode=display">V_{0}=N \beta r_{0}^{3}</script><p>由热力学，我们可以定义一个系统的体弹性模量（K）为</p><script type="math/tex; mode=display">K=-V\left(\frac{\partial P}{\partial V}\right)_{T}</script><p>压力P为</p><script type="math/tex; mode=display">P=-\frac{\partial U}{\partial V}=-\frac{\partial U}{\partial r} \frac{\partial r}{\partial V}=-\frac{1}{3 N \beta r^{2}} \frac{\partial U}{\partial r}</script><p>由此我们可得到平衡时固体体弹性模量为</p><script type="math/tex; mode=display">K=\frac{1}{9 N \beta r_{0}}\left(\frac{\partial^{2} U}{\partial r^{2}}\right)_{r=r_{0}}</script><h1 id="金属键"><a href="#金属键" class="headerlink" title="金属键"></a>金属键</h1><h1 id="离子键"><a href="#离子键" class="headerlink" title="离子键"></a>离子键</h1><h1 id="共价键"><a href="#共价键" class="headerlink" title="共价键"></a>共价键</h1><h1 id="氢键"><a href="#氢键" class="headerlink" title="氢键"></a>氢键</h1><h1 id="范德瓦斯键"><a href="#范德瓦斯键" class="headerlink" title="范德瓦斯键"></a>范德瓦斯键</h1><h1 id="轨道杂化"><a href="#轨道杂化" class="headerlink" title="轨道杂化"></a>轨道杂化</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>physics note</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>圣经咏唱系列</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>圣经咏唱系列前言</title>
+    <link href="/2020/06/05/Bible/"/>
+    <url>/2020/06/05/Bible/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>physics note</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>圣经咏唱系列</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>基于蔡氏电路（Chua’s Circuit）实验与数值计算</title>
     <link href="/2020/05/31/chuascircuit/"/>
     <url>/2020/05/31/chuascircuit/</url>
@@ -96,6 +146,31 @@
     <tags>
       
       <tag>topological</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Quantum Optics -- Quantization of electromagnetic fields</title>
+    <link href="/2020/05/30/QO2/"/>
+    <url>/2020/05/30/QO2/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>physics note</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Quantum Optics</tag>
       
     </tags>
     
