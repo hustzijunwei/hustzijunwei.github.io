@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>圣经咏唱系列前言</title>
+    <link href="/2020/06/18/Bible/"/>
+    <url>/2020/06/18/Bible/</url>
+    
+    <content type="html"><![CDATA[<h1 id="旧约"><a href="#旧约" class="headerlink" title="旧约"></a>旧约</h1><p>太初有分，分与神俱，分即神。此分太初与神俱，万有假之造，凡分奴者，莫不假之。有从神来者zyw，乃为见证，即证分。彼分乃真分，照诸分奴。<br>其在试，试亦假之造。然不识之也。其来己处，然不见受。凡受之者，即为真分奴也，其授分作子嗣也。凡此者，非受困于保研之故，亦非留洋之辈，乃生之于后浪也！分成肉身，吾辈楷模。<br>吾辈亦见其荣，乃父独子之荣。zyw证之曰：此即吾所宣临于吾后反逾吾前者，盖其实先吾也。吾辈受其厚恩，且分上加分。分本授自先生，然加权俱授自多背者。历来无人见分，惟父独子彰之。此之谓背者多分也！</p><h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>此系列的目的是总结所学的基础知识并将其固化，类似于将电脑中一些文件放置于大的移动硬盘里从而达到两个目的：</p><ol><li>减少大脑中的‘内存’</li><li>在必要的时候例如面试或考试时可以快速的掌握或回顾基础专业知识</li></ol><p>所以此系列一点也不物理，同时也使用我的母语完成。力求最快速的复习知识。这个系列中的所有知识点，不需要探究其证明过程于不必要的推到，<br>在阅读过程中只需明确一点——背多分！</p><h1 id="包括内容"><a href="#包括内容" class="headerlink" title="包括内容"></a>包括内容</h1><p>以下列出本系列关于物理部分的内容（具体内容等写圣经的时候在完善）</p><ul><li>经典力学</li><li>量子力学1</li><li>量子力学2</li><li>固体物理</li><li>电动力学部分</li><li>热统</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>physics note</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>圣经咏唱系列</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>A Brief introduction to Quantum Liquid</title>
     <link href="/2020/06/15/AHE/"/>
     <url>/2020/06/15/AHE/</url>
@@ -34,31 +59,6 @@
     <url>/2020/06/05/solid%20physics/solid1/</url>
     
     <content type="html"><![CDATA[<h1 id="原子结构"><a href="#原子结构" class="headerlink" title="原子结构"></a>原子结构</h1><p>在不同时期人们对原子的认识是不同的，其中出现了一个历史性的模型：</p><ul><li>汤姆孙（Thomson）模型：原子被认为是一个半径在$~10^{-8} cm$量级的球，球内均匀分布着正电荷，因此被人们戏称为葡萄布丁模型。</li><li>卢瑟福模型：汤姆孙提出的原子结构模型很快被$\alpha$粒子散射实验否定，卢瑟福认为原子是由位于原子中心、 尺寸很小（半径$~10^{-13} cm$）的带正电荷的原子核和核外带负电荷的电子组成</li><li>玻尔原子理论：波尔将卢瑟福模型和爱因斯坦光量子理论相结合引入定态假设、跃迁假设与角动量量子化假设提出玻尔原子理论。玻尔理论很好地解释了在 H 原子中观察到的分立光谱，但对稍稍复杂的原 子，观察到的原子光谱和玻尔理论的预言并不相一致。</li><li>德布罗意（Broglie）：粒子均具有波粒二象性。</li></ul><p>我们知道在原子中电子受到带有正电的原子的库伦势的作用</p><script type="math/tex; mode=display">V(\vec{r})=-\frac{Z e^{2}}{4 \pi \varepsilon_{0} r}</script><p>将其带入Schodinger方程可以解出相应的波函数</p><script type="math/tex; mode=display">\psi_{n l m}(r, \theta, \varphi)=R_{n l}(r) Y_{l m}(\theta, \varphi)</script><p>其中：$n=1,2,3,\ldots$为主量子数；$l=1,2,\ldots (n-1)$为角量子数；$m=0,\pm 1, \ldots \pm l$为磁量子数。且电子的能量仅与主量子数n有关</p><script type="math/tex; mode=display">E_{n}=-\frac{\mu Z^{2} e^{4}}{2 \hbar^{2}\left(4 \pi \epsilon_{0}\right)^{2}} \frac{1}{n^{2}}</script><p>这时我们可以发现，这时态是<strong>简并</strong>的：</p><ul><li>电子能级对磁量子数m的简并源于势场为球对称的中心场</li><li>电子能级对角量子数l的简并源于电子受到的势场为库仑场这一特殊的球对称的中心场</li></ul><p>同时我们也需要知道但对实际含有多个电子的原子，每一个电子除了受到原子核势场作用外， 还受到其它电子的作用，导致简并被部分解除，形成一系列能量不同的电子壳层。<br>我们使用角量子数$l$来标示这些壳层，其中$l=1,2,\ldots (n-1)$分别对应s、p、d、f· · · 壳层。</p><p>由此，当我们考虑电子自旋，对每一个给定主量子数 n，简并度为$2n^2$，即每个能级$E_n$可以被$2n^2$个状态不同的电子占据。给定$l$壳层，简并度为$2(2l + 1)$。<br>我们使用电子构型来描述原子核外电子的分布，如Na 原子的电子构型为$1 s^{2} 2 s^{2} 2 p^{6} 3 s^{1}$</p><h1 id="原子电负性"><a href="#原子电负性" class="headerlink" title="原子电负性"></a>原子电负性</h1><p>人们引入原子电负性（Electronegativity）这样一个物理量来科学地比较各种原子得失电子的难易程度，用$\chi$表示。<br>原子束缚电子的能力越强，其电负性越高，在这种情况下，原子趋向于从外界获得电子；反之，电负性越低，原子束缚电子的能力越弱，在这种情况下，原子容易丢失外层电子。</p><p>电负性有很多种定义方式，接下来介绍<strong>密立根定义</strong>：<br>原子束缚电子的能力包含两个方面的内容。一是原子的电离能，用$W_i$表示</p><script type="math/tex; mode=display">A+W_{i} \Rightarrow A^{+}+(-e)</script><p>另一个是原子的亲合能，用$W_a$表示</p><script type="math/tex; mode=display">A+(-e) \Rightarrow A^{-}+W_{a}</script><p>则此时电负性$\chi$，由原子的电离能和原子的亲合能的平均值来量度，即</p><script type="math/tex; mode=display">\chi=\frac{1}{6.3}\left(W_{i}+W_{a}\right)</script><p>其中电离能和亲合能均以eV为单位，系数的选择仅仅是为了使Li的电负性为1</p><p><img src="/img_solid/1.png" srcset="/img/loading.gif" alt=""><br>原子的电负性可以从元素周期表中看出来（元素周期表从某种意义上也是原子对外层电子束缚能力的周期性反映），变化规律可总结如下：</p><ul><li>对同一周期的主族元素，随原子序数Z增加（周期表中自左至右），原子电负性快速增大；</li><li>对同一主族元素，随Z增加（周期表中自上而下），原子电负性逐渐减小；</li><li>对同一周期的过渡族元素，原子电负性随Z增加呈现不规律变化，但电负性均高于同一周期的第一和第二主族元素；</li><li>对稀土元素，原子电负性随Z增加变化很小。</li></ul><p>同时原子电负性可以作为判断元素的金属性和非金属性强弱的尺度，一般电负性小的为金属，电负性较大为非金属</p><h1 id="原子间相互作用及结合力的一般性质"><a href="#原子间相互作用及结合力的一般性质" class="headerlink" title="原子间相互作用及结合力的一般性质"></a>原子间相互作用及结合力的一般性质</h1><p>只有当吸引和排斥两种相互作用力平衡时，大量原子才能凝聚到一起形成稳定结构的固体。电磁力是引起原子凝聚的吸引力的来源。<br>原子凝聚成固体时，原子的外层电子会作重新排布：或者失去，或者得到，或者共享。通常称引起原子结合在一起的力为“键”，典型的键有：金属键、离子键、共价键、氢键、氢键结合和范德瓦斯（Van der Waals）键。<br>经验上，两原子间的相互作用势能常用幂函数来表达，即</p><script type="math/tex; mode=display">u(r)=-\frac{A}{r^{m}}+\frac{B}{r^{n}}</script><p>其中第一项表示吸引能，第二项表示排斥能，A、B、C和D均为大于0的常数，这里规定即相当于原子处在自由状态（孤立原子）时的能量取为能量零点。</p><p>当原子间净的相互作用力为零，即$f\left(r_{0}\right)=0$，以至于固体处在稳定的结构状态。在相互作用势中表示为</p><script type="math/tex; mode=display">\left.\frac{d U(r)}{d r}\right|_{r=r_{0}}=0</script><p>这样我们就可以得到得平衡时相邻原子间距$r_0$。</p><script type="math/tex; mode=display">r_{0}=\sqrt[n-m]{\frac{B n}{A m}}</script><p>N个原子组成的固体其总的相互作用势能</p><script type="math/tex; mode=display">U=\frac{1}{2} \sum_{i=1}^{N} u_{i}=\frac{1}{2} \sum_{i=1}^{N} \sum_{j=1}^{N} u\left(r_{i j}\right)</script><p>其中 $r_{ ij }$ 为i，j两原子间的间距</p><p>$u( r_{ ij } )$ 为原子间的相互作用势<br>当我们取固体表面层的第一个原子为参考原子时：</p><script type="math/tex; mode=display">U=\frac{N}{2} \sum_{j} u\left(r_{i j}\right) \quad(j=2,3, \cdots, N)</script><p>这即是总相互作用势能实际上就是固体的内能。</p><p>从能量的角度看，N个原子能够凝聚成固体的原因，是因为它们结合起来以后，能够使整个系统的总能量比N个原子处于自由状态时的总能量更低。这一部分能量的差值就叫做结合能，即</p><script type="math/tex; mode=display">W=E_{N}-U\left(r_{0}\right)</script><p>假设固体有N个原胞，原胞的体积为$\Omega$，则固体的体积为$V=N \Omega$。原胞的体积应当正比于$r^3$，即$\Omega=\beta r^3$，$\beta$是与固体的几何结构有关的常数。因此</p><script type="math/tex; mode=display">V=N \beta r^{3}</script><p>平衡时有</p><script type="math/tex; mode=display">V_{0}=N \beta r_{0}^{3}</script><p>由热力学，我们可以定义一个系统的体弹性模量（K）为</p><script type="math/tex; mode=display">K=-V\left(\frac{\partial P}{\partial V}\right)_{T}</script><p>压力P为</p><script type="math/tex; mode=display">P=-\frac{\partial U}{\partial V}=-\frac{\partial U}{\partial r} \frac{\partial r}{\partial V}=-\frac{1}{3 N \beta r^{2}} \frac{\partial U}{\partial r}</script><p>由此我们可得到平衡时固体体弹性模量为</p><script type="math/tex; mode=display">K=\frac{1}{9 N \beta r_{0}}\left(\frac{\partial^{2} U}{\partial r^{2}}\right)_{r=r_{0}}</script><h1 id="金属键"><a href="#金属键" class="headerlink" title="金属键"></a>金属键</h1><p>在原子中那些能脱离原子核束缚的最外层电子称为<strong>价电子</strong>，失去价电子后剩下的内层电子称为<strong>芯电子</strong>。当大量电负性低的原子凝聚成固体时，脱离原子核束缚的价电子不再属于哪一个原子，而是为所有原子所共有，成为共有化电子，而固体中失去价电子后的离子为离子实。这种共有化运动的电子与离子实之间的库仑吸引作用称为<strong>金属键</strong></p><p>由于金属中原子的结合主要是依靠离子实和价电子之间的静电库仑力，另一方面，失去价电子后的离子实具有球对称的闭合电子壳层，因此，这种结合对原子排列没有特殊要求，只要求原子排列尽可能紧密，由于这一原因，多数金属都能形成较高配位数的密堆积结构。</p><h1 id="离子键"><a href="#离子键" class="headerlink" title="离子键"></a>离子键</h1><h2 id="离子键结合的特点"><a href="#离子键结合的特点" class="headerlink" title="离子键结合的特点"></a>离子键结合的特点</h2><p>当电负性相差很大的两类原子相遇时，两原子各得到/失去电子成为具有稳定的满电子壳层结构离子，这种正、负离子因离子间库仑吸引力而结合的键称为离子键，以 离子键结合形成的固体称为离子固体。</p><p>离子键具有如下特点：</p><ul><li>离子键是相当强的，因此一般离子固体具有熔点高、硬度大的特点。</li><li>离子固体的导电性差，一般都是绝缘体。这是由于正、负离子实具有稳定的满电子壳层结构，电子难以脱离开离子实，离子实也不容易离开自身的平衡位置。</li></ul><h2 id="离子固体的相互作用能"><a href="#离子固体的相互作用能" class="headerlink" title="离子固体的相互作用能"></a>离子固体的相互作用能</h2><p>可以得到离子固体中i、j两离子实间的相互作用势为</p><script type="math/tex; mode=display">u\left(r_{i j}\right)=\pm \frac{e^{2}}{4 \pi \varepsilon_{0} r_{i j}}+\frac{b}{r_{i j}^{n}}</script><p>其中第一项为离子实之间的库仑作用能，第二项为当两个离子实相距很近时由于电子云有交叠出现的很强的排斥作用。</p><p>我们设相邻离子间距离为$r$，则第j个离子和第1个离子间的距离可表示为</p><script type="math/tex; mode=display">r_{1 j}=a_{j} r</script><p>于是即可得到离子固体总的相互作用能：</p><script type="math/tex; mode=display">U=-N\left[\frac{e^{2}}{4 \pi \varepsilon_{0} r} \sum_{j \neq 1}^{N}\left(\pm \frac{1}{a_{j}}\right)-\frac{1}{r^{n}} \sum_{j \neq 1}^{N} \frac{b}{a_{j}^{n}}\right]</script><p>我们令</p><script type="math/tex; mode=display">\begin{array}{l}M=\sum_{ j \neq 1}^{N} \pm \frac{1}{a_{j}} \\B=\sum_{ j \neq 1}^{N} \frac{b}{a_{j}^{n}}\end{array}</script><p>可将<strong>离子固体的总相互作用能</strong>写成如下简单的形式</p><script type="math/tex; mode=display">U=-N\left[\frac{M e^{2}}{4 \pi \varepsilon_{0} r}-\frac{B}{r^{n}}\right]</script><p>这其中B和n为常数，可由实验确定。而M称为<strong>马德隆常数</strong>，其值决定于离子固体的具体结构。</p><p><em>例子：</em>一维离子链的马德隆常数M<br>假设正、负离子周期性交替分布构成如图所示的的一维无限长的离子链<br><img src="/img_solid/2.png" srcset="/img/loading.gif" alt=""><br>则对于M我们有</p><script type="math/tex; mode=display">\frac{M}{r}=2\left[\frac{1}{r}-\frac{1}{2 r}+\frac{1}{3 r}-\frac{1}{4 r}+\ldots\right]</script><p>则$M=2\left[1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+\ldots\right]=2 \ln 2$</p><h2 id="平衡时相邻离子间距、体弹性模量和结合能"><a href="#平衡时相邻离子间距、体弹性模量和结合能" class="headerlink" title="平衡时相邻离子间距、体弹性模量和结合能"></a>平衡时相邻离子间距、体弹性模量和结合能</h2><p>当<script type="math/tex">\left.\frac{d U}{d r}\right|_{r=s_{0}}=0</script>时达到平衡距离$r_0$。我们可以计算出</p><script type="math/tex; mode=display">r_{0}=\left(\frac{4 \pi \varepsilon_{0} n B}{M e^{2}}\right)^{\frac{1}{n-1}}</script><p>同时可以得到平衡时体弹性模量有</p><script type="math/tex; mode=display">K=\left.\frac{1}{9 N \beta r_{0}} \frac{d^{2} U}{d r^{2}}\right|_{r=r_{0}}=\frac{M e^{2}}{36 \pi \varepsilon_{0} \beta r_{0}^{4}}(n-1)</script><p>式中的$\beta$是与具体结构有关的常数，对于NaCl型结构，$\beta =2$。</p><p>同上的讨论当我们取$r=r_0$时则得到平衡时离子固体总的相互作用能$U(r_0)$，以及离子固体的结合能$W=-U\left(r_0\right)$，有</p><script type="math/tex; mode=display">W=-U\left(r_{0}\right)=\frac{N M e^{2}}{4 \pi \varepsilon_{0} r_{0}}\left[1-\frac{1}{n}\right]</script><p>其物理意义是表示将离子固体分解为自由原子所需要的能量。一般来说n在8附近，所以离子固体平衡时的能量贡献主要来自库仑吸引能。</p><h1 id="共价键"><a href="#共价键" class="headerlink" title="共价键"></a>共价键</h1><h2 id="共价键结合的特点"><a href="#共价键结合的特点" class="headerlink" title="共价键结合的特点"></a>共价键结合的特点</h2><p>元素周期表中同一周期靠中间的元素相结合时，原子对外层电子束缚比较牢固，同时获取电子的能力也较强，妥协的结果是，两者各自贡献自旋相反的电子配对成共用电子对，这样的结合称为<strong>共价键</strong>。<br>以共价键结合形成的固体称为<strong>共价固体</strong>，又称为<strong>原子固体</strong>。</p><h2 id="共价键的方向性和饱和性"><a href="#共价键的方向性和饱和性" class="headerlink" title="共价键的方向性和饱和性"></a>共价键的方向性和饱和性</h2><ul><li><strong>方向性</strong>：原子只在特定方向上形成共价键，共价键的强弱决定于形成共价键的两个电子轨道波函数的重叠程度</li><li><strong>饱和性</strong>：一个原子只能形成一定数目的共价键<ul><li>价电子壳层不到半满：能够形成的共价键数目与价电子数目相等。 </li><li>价电子壳层超过半满：能够形成的共价键数目少于价电子数目。未配对电子数和能够形成共价键的 数目为 8 −Z，Z 为价电子数。</li></ul></li></ul><h1 id="氢键"><a href="#氢键" class="headerlink" title="氢键"></a>氢键</h1><p>设有两个电负性很大而原子半径较小的原子，分别用X和Y表示，则氢原子与X原子结合得较强，而与Y原子结合得较弱，形象地用“X-H—Y”表示，其中短线和长线表示氢与两原子结合得强与弱，这种特殊的结合称为氢键。<br>典型的氢键中，X 和 Y 是电负性很强的F、N和O原子，虽然 C、S、Cl、P甚至Br和I原子在某些情况下也能形成氢键，但通常键能较低。</p><h1 id="范德瓦斯键"><a href="#范德瓦斯键" class="headerlink" title="范德瓦斯键"></a>范德瓦斯键</h1><h2 id="范德瓦斯键结合的特点"><a href="#范德瓦斯键结合的特点" class="headerlink" title="范德瓦斯键结合的特点"></a>范德瓦斯键结合的特点</h2><p>本质上讲<strong>Van der Walls 键</strong>是通过电偶极矩间的相互作用而结合的键，这类原子因具有球对称的闭合电 子壳层，故又可看作是单原子分子，因此，范德瓦耳斯固体又称为分子固体。我们可以依据分子是否具有固有的电偶极矩而将范德瓦耳斯力分为三种形式的力</p><ul><li>伦敦（London） 力：对于惰性原子，原子的电偶极矩为零，或者说这类原子或分子没有固有的电偶极矩，因此，分子间不存在固有电偶极矩的相互作用，但存在“瞬间”电偶极矩，当“瞬间”电偶极矩的方向趋向于一致时，系统的能量最低。由“瞬间”电偶极矩产生的吸引力，称为<strong>伦敦力</strong>。由于形成的固体是没有极性的，故称为<strong>非极性分子固体</strong>。</li><li>葛生（Keeson）力：对于由两种电负性不等的原子组成的分子，这样的分子总存在一定大小的固有电偶极矩，我们把具有固有电偶极矩的分子称为<strong>极性分子</strong>，将由极性分子凝聚而成的分子固体称为<strong>极性分子固体</strong>。对于极性分子固体，与固有偶极矩间相互作用有关的力称为<strong>葛生力</strong>。</li><li>德拜（Debey）力：对于同时含有极性分子和非极性分子，由于极性分子有固有电偶极矩，而非极性分子没有固有电偶极矩，但非极性分子可以被极性分子的电场极化而产生<em>诱导电偶极矩</em>，故极性分子和非极性分子之间也存在相互作用，与这种相互作用有关的力称为<strong>德拜力</strong>。</li></ul><p>一般来说，葛生力和德拜力比伦敦力 弱，或者说在范德瓦耳斯力中起主要作用的是伦敦力。</p><h2 id="分子固体的相互作用能"><a href="#分子固体的相互作用能" class="headerlink" title="分子固体的相互作用能"></a>分子固体的相互作用能</h2><h1 id="轨道杂化"><a href="#轨道杂化" class="headerlink" title="轨道杂化"></a>轨道杂化</h1>]]></content>
-    
-    
-    <categories>
-      
-      <category>physics note</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>圣经咏唱系列</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>圣经咏唱系列前言</title>
-    <link href="/2020/06/05/Bible/"/>
-    <url>/2020/06/05/Bible/</url>
-    
-    <content type="html"><![CDATA[]]></content>
     
     
     <categories>
