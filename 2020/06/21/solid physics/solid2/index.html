@@ -17,7 +17,7 @@
   <meta name="description" content="expand your horizons">
   <meta name="author" content="Zijun Wei">
   <meta name="keywords" content="">
-  <title>Introduction to Su-Schrieffer-Heeger - My Web</title>
+  <title>固体物理圣经咏唱——晶体结构及其描述 - My Web</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -151,8 +151,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-05-30 00:00">
-      May 30, 2020 am
+    <time datetime="2020-06-21 00:00">
+      June 21, 2020 am
     </time>
   </div>
 
@@ -172,7 +172,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      10
        minutes
     </span>
   
@@ -203,55 +203,91 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <h1 id="previously-of-SSH-model"><a href="#previously-of-SSH-model" class="headerlink" title="previously of SSH model"></a>previously of SSH model</h1><h1 id="SSH-model的体部分"><a href="#SSH-model的体部分" class="headerlink" title="SSH model的体部分"></a>SSH model的体部分</h1><p>由Peierls定理，可知一条由费米子排列成的链具有如下结构：<br><img src="/img_ssh/1.png" srcset="/img/loading.gif" alt="势能如图"><br>图中，规定A粒子为灰色的粒子，B粒子为白色的粒子；A与其后的B粒子构成晶胞其作用力为v，晶胞间作用力（B与其后的A）为w。</p>
-<h1 id="SSH-model的Hamiltonian"><a href="#SSH-model的Hamiltonian" class="headerlink" title="SSH model的Hamiltonian"></a>SSH model的Hamiltonian</h1><p>考虑单电子在如上图的原子排列中的运动</p>
-<script type="math/tex; mode=display">H=v \sum_{m=1}^{N} (|m, B \rangle\langle m, A|+h . c .) +w \sum_{m=1}^{N-1}(|m+1, A\rangle\langle m, B|+{h.c.})</script><p>这里使用了紧束缚模型，即电子在某一原子上所受的作用只取决与与之相邻的两个原子的作用。<br>这里可以把$v,w$看成在电子在不同建上跃迁的概率。<br>同时注意SSH模型中没有电子与原子的自旋。</p>
-<h2 id="体Hamiltonian"><a href="#体Hamiltonian" class="headerlink" title="体Hamiltonian"></a>体Hamiltonian</h2><p>先来考虑均匀的链,在其体内（非边缘）的哈密顿量可以表述为：</p>
-<script type="math/tex; mode=display">\hat{H}_=\sum_{m=1}^{N}(v|m, B\rangle\langle m, A|+w|(m \bmod N)+1, A\rangle\langle m, B|)+h . c .</script><p>在实空间（$N=4$）中Hamiltonian的矩阵形式为：</p>
-<script type="math/tex; mode=display">\left(\begin{array}{llllllll}{0} & {v} & {0} & {0} & {0} & {0} & {0} & {w} \\ {v} & {0} & {w} & {0} & {0} & {0} & {0} & {0} \\ {0} & {w} & {0} & {v} & {0} & {0} & {0} & {0} \\ {0} & {0} & {v} & {0} & {w} & {0} & {0} & {0} \\ {0} & {0} & {0} & {w} & {0} & {v} & {0} & {0} \\ {0} & {0} & {0} & {0} & {v} & {0} & {w} & {0} \\ {0} & {0} & {0} & {0} & {0} & {w} & {0} & {v} \\ {w} & {0} & {0} & {0} & {0} & {0} & {v} & {0}\end{array}\right)</script><p>解特征方程，其中$\Psi_n$为特征解</p>
-<script type="math/tex; mode=display">H_{ {bulk }}\left|\Psi_{n}(k)\right\rangle= E_{n}(k)\left|\Psi_{n}(k)\right\rangle</script><h2 id="体动量空间Hamiltonian"><a href="#体动量空间Hamiltonian" class="headerlink" title="体动量空间Hamiltonian"></a>体动量空间Hamiltonian</h2><p>由Bloch定理，带入平面波形式的特征解有</p>
-<script type="math/tex; mode=display">|k\rangle=\frac{1}{\sqrt{N}} \sum_{m=1}^{N} e^{i m k}|m\rangle</script><p>其中$k$在第一布里渊区取值。</p>
-<script type="math/tex; mode=display">k \in\left\{\delta_k, 2 \delta_k, \ldots, N \delta_k \right\}</script><p>而$\delta_k=\frac{2 \pi}{N}$同时也可以把这个看成由实空间到动量空间的转换的傅里叶变换。</p>
-<p>$|\Psi_n \rangle$可以看成由$| k \rangle$与$|u_n (k)\rangle$张成的，即</p>
-<script type="math/tex; mode=display">\left|\Psi_{n}(k) \right\rangle=|k\rangle \otimes\left|u_{n}(k)\right\rangle ; \quad \quad\left|u_{n}(k)\right\rangle= a_{n}(k)|A\rangle+ b_{n}(k)|B\rangle</script><p>则$|u_n(k)\rangle$为体动量空间Hamiltonian${H}(k)$的本征态：</p>
-<script type="math/tex; mode=display">{H}(k)\left|u_{n}(k)\right\rangle= E_{n}(k)\left|u_{n}(k)\right\rangle</script><p>其中定义${H}(k)$为</p>
-<script type="math/tex; mode=display">{H}(k)=\langle k|\hat{H}_{bulk}| k\rangle</script><h2 id="Hamiltonian本征值——能量"><a href="#Hamiltonian本征值——能量" class="headerlink" title="Hamiltonian本征值——能量"></a>Hamiltonian本征值——能量</h2><p>在第一布里渊区中有周期性条件：</p>
-<script type="math/tex; mode=display">{H}(k+2 \pi)=\hat{H}(k) ; \quad \quad\left|u_{n}(k+2 \pi)\right\rangle=\left|u_{n}(k)\right\rangle</script><p>将上述对$|\Psi_n \rangle$的分解带入薛定鄂方程有<br><img src="/img_ssh/2.png" srcset="/img/loading.gif" alt=""><br>可以化简$H(k)$，发现其为分块对角矩阵，且每个分块对角的矩阵维数相同。形如</p>
-<script type="math/tex; mode=display">\left[\begin{array}{cccc}{H_{1}} & {O} & {\cdots} & {O} \\ {O} & {H_{2}} & {\cdots} & {O} \\ {\vdots} & {\vdots} & {\ddots} & {\vdots} \\ {O} & {O} & {\cdots} & {H_{n}}\end{array}\right]</script><p>对于每一个分块有（取第一分块）：</p>
-<script type="math/tex; mode=display">H(k)=\left(\begin{array}{cc}{0} & {v+w e^{-i k}} \\ {v+w e^{i k}} & {0}\end{array}\right) ; \quad H(k)\left(\begin{array}{c}{a(k)} \\ {b(k)}\end{array}\right)=E(k)\left(\begin{array}{c}{a(k)} \\ {b(k)}\end{array}\right)</script><p>可以求得能量为</p>
-<script type="math/tex; mode=display">E(k)=\left|v+e^{-i k} w\right|=\sqrt{v^{2}+w^{2}+2 v w \cos k}</script><h2 id="SSH-model的能量"><a href="#SSH-model的能量" class="headerlink" title="SSH model的能量"></a>SSH model的能量</h2><p>由上面求出的能量关系使可以给出清楚的图像：<br><img src="/img_ssh/3.png" srcset="/img/loading.gif" alt=""><br>若令$\Delta$为最小的能量差，可以看到</p>
-<script type="math/tex; mode=display">\Delta=\min _{k} E(k)=|v-w|</script><p>如图中显示，当$v=w$时两能级之间没有间隔，即为导体。当$v\ne w$时，为绝缘体。<br>需要说明的是当$v\ne w$时不一定为绝缘体，因为当v与w相隔较近时（一般为2eV）可为半导体</p>
-<h2 id="Hamiltonian的另一种表示方法"><a href="#Hamiltonian的另一种表示方法" class="headerlink" title="Hamiltonian的另一种表示方法"></a>Hamiltonian的另一种表示方法</h2><p>当使用二次量子化求Hamiltonian时可以得到Hamiltonian的另一种表示方法。当然也可以对上面求得的<br>H在palli矩阵基下进行分解，有：</p>
-<script type="math/tex; mode=display">H(k)=h(k) \cdot \sigma</script><p>其中</p>
-<script type="math/tex; mode=display">\sigma_{x}=\left(\begin{array}{cc}{0} & {1} \\ {1} & {0}\end{array}\right), \sigma_{y}=\left(\begin{array}{cc}{0} & {-i} \\ {i} & {0}\end{array}\right), \sigma_{z}=\left(\begin{array}{cc}{1} & {0} \\ {0} & {-1}\end{array}\right)</script><p>令$w=|w| e^{i a r g(w)}$则</p>
-<script type="math/tex; mode=display">\begin{array}{l}{h_{x}(k)={Re}(v)+|w| \cos (k b+\arg (w))} \\ {h_{y}(k)=-{Im}(v)+|w| \sin (k b+\arg (w))} \\ {h_{z}(k)=0}\end{array}</script><p>可知</p>
-<script type="math/tex; mode=display">H(k)=\left(\begin{array}{cc}{0} & {h^{*}(k)} \\ {h(k)} & {0}\end{array}\right)</script><h2 id="Winding-number"><a href="#Winding-number" class="headerlink" title="Winding number"></a>Winding number</h2><p>通过对能级与导体和绝缘体的讨论可以发现当v与w构成的几何有不同的特性时是可以影响物体导电性的</p>
-<p>故，设置Winding number为：</p>
-<script type="math/tex; mode=display">\nu=\frac{1}{2 \pi i} \int_{-\pi}^{\pi} d k \frac{d}{d k} \ln (h(k))</script><p>可以作为SSH模型的一个‘拓扑’数</p>
-<p>注意到当$v=w$时是无法在$R^2$空间上定义Winding number的，这时需要运用黎曼面等数学工具。</p>
-<h1 id="Edge-states"><a href="#Edge-states" class="headerlink" title="Edge states"></a>Edge states</h1><p>SSH模型在完全二聚体模型下十分简单。完全二聚体：$v=0, w=1$或者$v=1, w=2$的情形下即为完全二聚体。</p>
-<p>这时存在两种状态：</p>
-<h2 id="trivial-v-1-w-0-时"><a href="#trivial-v-1-w-0-时" class="headerlink" title="trivial:$v=1, w=0$时"></a>trivial:$v=1, w=0$时</h2><p><img src="/img_ssh/4.png" srcset="/img/loading.gif" alt=""><br>此时排列为平庸的，即只有包内有作用力，且没有咕儿原子。这时方程为</p>
-<script type="math/tex; mode=display">\hat{H}(|m, A\rangle \pm|m, B\rangle)=\pm(|m, A\rangle \pm|m, B\rangle)</script><p>此时哈密顿量为$\hat{H}(k)=\hat{\sigma}_x$，则此时解同体空间中的差不多（因此称为平凡情况）</p>
-<h2 id="topological-v-0-w-1-时"><a href="#topological-v-0-w-1-时" class="headerlink" title="topological:$v=0, w=1$时"></a>topological:$v=0, w=1$时</h2><p><img src="/img_ssh/5.png" srcset="/img/loading.gif" alt=""><br>此时为拓扑排列，在这种状态中只有不同晶胞中的才有作用力，而且开头和和结尾存在两个咕儿。方程为</p>
-<script type="math/tex; mode=display">\hat{H}(|m, B\rangle \pm|m+1, A\rangle)=\pm(|m, B\rangle \pm|m+1, A\rangle)</script><p>其中$m=1, \ldots, N-1$而$\hat{H}(k)=\hat{\sigma}_x \cos k+\hat{\sigma}_y \sin k$<br>可以发现链的每一端的都有一个零能级的单一特征态</p>
-<script type="math/tex; mode=display">\hat{H}|1, A\rangle=\hat{H}|N, B\rangle= 0</script><p>这时这两个咕儿原子就为边缘态</p>
-<h2 id="trivial态与topological态的混合"><a href="#trivial态与topological态的混合" class="headerlink" title="trivial态与topological态的混合"></a>trivial态与topological态的混合</h2><p>由实验测得有：<br><img src="/img_ssh/6.png" srcset="/img/loading.gif" alt=""><br>说明：</p>
-<ul>
-<li>(a)细胞间跳变幅度系统能谱w=1作为函数细胞内跳变幅度对应拓扑(平凡)相。</li>
-<li>(b)、(c)为杂化边缘态的波函数</li>
-<li>(d)为一般体波函数。</li>
+              <h1 id="晶体特征"><a href="#晶体特征" class="headerlink" title="晶体特征"></a>晶体特征</h1><h2 id="宏观特征"><a href="#宏观特征" class="headerlink" title="宏观特征"></a>宏观特征</h2><ul>
+<li>晶面规则的对称配置是晶体的宏观特征之一</li>
+<li>恒定不变的晶面间夹角</li>
+<li>存在由若干个晶面组合成的晶带</li>
+<li>晶体具有沿某些特定方位的晶面劈裂的性质</li>
 </ul>
-<p>可以发现</p>
+<p>在上述的特性中，只有特征夹角可以判断所及晶体属于何种类型的晶体。</p>
+<h2 id="微观结构特征"><a href="#微观结构特征" class="headerlink" title="微观结构特征"></a>微观结构特征</h2><p>在微观上，</p>
 <ul>
-<li>当$w=1$且v比较小时两个咕儿原子处的能量时以$E=e^{-N / \xi}$变化的，其中局域长度为$\xi=/ \log (v / w)$</li>
-<li>当存在边缘态时，电子在两个咕儿原子处出现的概率最大（波函数大）。而其他地方出现的概率则较小</li>
-<li>当只有体状态时，电子在不同原子处的概率一般分布。</li>
+<li>晶体是指既具有平移对称性又具有旋转对称性的固体。</li>
+<li>准晶体不具有平移对称性而只具有旋转对称性。</li>
+<li>非晶体既不具有平移对称性也不具有旋转对称性，长程无序。</li>
 </ul>
-<h1 id="Chiral-symmetry"><a href="#Chiral-symmetry" class="headerlink" title="Chiral symmetry"></a>Chiral symmetry</h1><p>当厄密算符$U$作用在哈密顿量时，可以说哈密顿量有U对称性</p>
-<script type="math/tex; mode=display">\hat{U} \hat{H} \hat{U}^{\dagger}=\hat{H}</script><p>若令晶格平移算符</p>
-<script type="math/tex; mode=display">\hat{U}=|m+1, A\rangle\langle m, A|+| m+1, B\rangle\langle m, B|</script><p>注意到这个算符是非厄密的</p>
-<h1 id="Edge-states数是拓扑不变的"><a href="#Edge-states数是拓扑不变的" class="headerlink" title="Edge states数是拓扑不变的"></a>Edge states数是拓扑不变的</h1>
+<p>晶体具有固定的熔点，当加热晶体到熔点温度时，晶体开始熔化，即长程有序开始解体，非晶体没有长程有序，所以没有固定的熔点。</p>
+<h1 id="空间点阵"><a href="#空间点阵" class="headerlink" title="空间点阵"></a>空间点阵</h1><h2 id="概念名词"><a href="#概念名词" class="headerlink" title="概念名词"></a>概念名词</h2><ul>
+<li><strong>基元：</strong>晶体中最基本的重复单元。<em>说明：</em>任意两个基元中华的相应的原子周围的情况是相同的。</li>
+<li><strong>格点：</strong>用原子振动的平衡位置的几何点替代每一个原子。</li>
+<li><strong>结点：</strong>晶体内部的结构是由一些相同 的格点在空间中规则的作周期性分布构成的系统。</li>
+<li><strong>点阵：</strong>结点在空间中的周期性排列。<strong>晶体结构=点阵+基元</strong></li>
+<li><strong>晶格：</strong>将结点全部包括在内的网格。<ul>
+<li><strong>布喇菲格子：</strong>如果晶体由完全相同的一种原子组成，则称为布喇菲格子。</li>
+<li><strong>复式格子：</strong>基元中包含两种或两种以上的原子，则不同的原子各自构成自身的布喇菲格子。</li>
+</ul>
+</li>
+<li><strong>格矢：</strong><script type="math/tex">\vec{R}_l=l_1 \vec{a}_1+l_2 \vec{a}_2+l_3 \vec{a}_3</script>其中<script type="math/tex">l_i =0,\pm 1,\pm 2</script><br>为了描述晶格的周期性，我们引入</li>
+<li><strong>原胞:</strong>晶格中最小的周期性重复单元。<em>说明：</em>原胞中均只含有一个原子</li>
+<li><strong>基矢：</strong>原胞的边矢量<script type="math/tex">(\vec{a}_{1}, \vec{a}_{2},\vec{a}_{3})</script>。其中<script type="math/tex">\Omega=\vec{a}_{1} \bullet\left(\vec{a}_{2} \times \vec{a}_{3}\right)</script>表示原胞的体积或一个原子所占的体积</li>
+</ul>
+<p>当我们同时考虑晶格的周期性与特殊的对称性时，我们有</p>
+<ul>
+<li><strong>晶胞：</strong>最小单元的一倍或几倍的重复单元，反映晶格的周期性与晶体对称性。<em>说明：</em>晶胞中可以含有不止一个原子</li>
+<li><strong>基矢：</strong>原胞的边矢量<script type="math/tex">(\vec{a}, \vec{b},\vec{c})</script></li>
+</ul>
+<h1 id="典型的晶体结构即其原胞晶胞"><a href="#典型的晶体结构即其原胞晶胞" class="headerlink" title="典型的晶体结构即其原胞晶胞"></a>典型的晶体结构即其原胞晶胞</h1><p>晶体中原子排列的具体形式一般称为晶体格子，简称<strong>晶格</strong></p>
+<h2 id="单原子晶体"><a href="#单原子晶体" class="headerlink" title="单原子晶体"></a>单原子晶体</h2><h3 id="简单立方"><a href="#简单立方" class="headerlink" title="简单立方"></a>简单立方</h3><p><img src="/img_solid/3.png" srcset="/img/loading.gif" alt="">配位数：6<br>原胞：</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l} \vec{a}_{1}={a}\vec{i} \\ \vec{a}_{2}={a}\vec{j} \\ \vec{a}_{3}={a}\vec{k} \end{array}\right.</script><p>晶胞=原胞</p>
+<h3 id="体心立方结构"><a href="#体心立方结构" class="headerlink" title="体心立方结构"></a>体心立方结构</h3><p><img src="/img_solid/4.png" srcset="/img/loading.gif" alt="">配位数：8<br>原胞：</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l} \vec{a}_{1}=\frac{a}{2}(-\vec{i}+\vec{j}+\vec{k}) \\\vec{a}_{2}=\frac{a}{2}(\vec{i}-\vec{j}+\vec{k}) \\\vec{a}_{3}=\frac{a}{2}(\vec{i}-\vec{j}+\vec{k})\end{array}\right.</script><p>体积<script type="math/tex">\Omega=\vec{a}_{1} \bullet\left(\vec{a}_{2} \times \vec{a}_{3}\right)=\frac{1}{2} a^{3}</script></p>
+<p>晶胞</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l} \vec{a}={a}\vec{i} \\ \vec{b}={a}\vec{j} \\ \vec{c}={a}\vec{k} \end{array}\right.</script><p>体积<script type="math/tex">V=a^3</script>。晶胞中所含原子数：3</p>
+<h3 id="面心立方结构"><a href="#面心立方结构" class="headerlink" title="面心立方结构"></a>面心立方结构</h3><p><img src="/img_solid/5.png" srcset="/img/loading.gif" alt="">配位数：12</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l}\vec{a}_{1}=\frac{a}{2}(\vec{j}+\vec{k}) \\\vec{a}_{2}=\frac{a}{2}(\vec{i}+\vec{k}) \\\vec{a}_{3}=\frac{a}{2}(\vec{i}+\vec{j})\end{array}\right.</script><p>体积<script type="math/tex">\Omega=\frac{1}{4}a^3</script></p>
+<p>晶胞</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l} \vec{a}={a}\vec{i} \\ \vec{b}={a}\vec{j} \\ \vec{c}={a}\vec{k} \end{array}\right.</script><p>体积<script type="math/tex">V=a^3</script>。晶胞中所含原子数：4</p>
+<h3 id="六角密积结构"><a href="#六角密积结构" class="headerlink" title="六角密积结构"></a>六角密积结构</h3><p><img src="/img_solid/6.png" srcset="/img/loading.gif" alt=""><br>原胞</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l}\vec{a}_{1}=-\frac{a}{2} \vec{i}-\frac{\sqrt{3} a}{2} \vec{j} \\\vec{a}_{2}=a \vec{i} \\\vec{a}_{3}=c \vec{k}\end{array}\right.</script><p>当为最密堆积时</p>
+<script type="math/tex; mode=display">\frac{c}{a}=\sqrt(\frac{8}{3})</script><h3 id="金刚石结构"><a href="#金刚石结构" class="headerlink" title="金刚石结构"></a>金刚石结构</h3><p>为正四面体结构</p>
+<h2 id="化合物晶体"><a href="#化合物晶体" class="headerlink" title="化合物晶体"></a>化合物晶体</h2><h3 id="NaCl-型"><a href="#NaCl-型" class="headerlink" title="NaCl 型"></a>NaCl 型</h3><p>NaCl 型结构的晶体可看成是两套面心立方结 构相互位移套购而形成的。</p>
+<h3 id="CsCl-型"><a href="#CsCl-型" class="headerlink" title="CsCl 型"></a>CsCl 型</h3><p>其基本结构单元是一个立方体，一种元素在立方体顶角上，另一元素在立方体体心，两种元素各自形成简单立方结构。</p>
+<h3 id="CsF2-型"><a href="#CsF2-型" class="headerlink" title="CsF2 型"></a>CsF2 型</h3><p>每个立方体中共有四个 Ca元素和 8 个 F 元素，4 个 Ca 分别占据在立方体顶角和立方体面心处，形成面心 立方格子，8 个 F 占据在立方体的四条空间对角线上，每条空间对角线上有 2 个 F 元素，分别位于对角线两端 1/4 处，这 8 个 F 形成简单立方格子，整个晶体可看成是面心立方格子和简单立方格子套购而成。</p>
+<h1 id="晶列与晶面"><a href="#晶列与晶面" class="headerlink" title="晶列与晶面"></a>晶列与晶面</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul>
+<li><strong>晶列：</strong>任意两个格点的连线，包括无数个格点。</li>
+<li><strong>晶列族：</strong>相互平行的晶列的集合。</li>
+<li><strong>晶向：</strong>晶列的取向。</li>
+<li><strong>晶向指数：</strong>用三个互质整数表示晶列的方向，记为<script type="math/tex">\left[l_{1}, l_{2}, l_{3}\right]</script>。若某一指数为负数则用<script type="math/tex">\overline{l}</script>表示。</li>
+<li><p><strong>晶列指数：</strong>在结晶学中用晶胞表示最小单位，同晶向指数，记为<script type="math/tex">\left[m,n,p\right]</script>。</p>
+</li>
+<li><p><strong>晶面：</strong>晶体中三个非共线格点组成的平面。</p>
+</li>
+<li><strong>晶面族：</strong>一系列平行的晶面。</li>
+<li><strong>密勒指数（晶面指数）：</strong>三个互质的整数<script type="math/tex">\left(h_1, h_2, h_3\right)</script><ul>
+<li>最靠近原点的晶面在3个基矢上的截距分别为<script type="math/tex">\frac{a_1}{h_1},\frac{a_2}{h_2},\frac{a_3}{h_3}</script></li>
+<li>以晶胞基矢为坐标表示晶面指数为<script type="math/tex">\left(h,k.l\right)</script></li>
+<li>与晶列指数相同，使用<script type="math/tex">\overline{h_i}</script>表示负值</li>
+<li>晶面距<script type="math/tex; mode=display">d_{h k l}=\frac{1}{\sqrt{\frac{h^{2}}{a^{2}}+\frac{k^{2}}{b^{2}}+\frac{l^{2}}{c^{2}}}}</script></li>
+<li>不同晶面族的晶面夹角余弦<script type="math/tex; mode=display">\cos \varphi=\frac{h_{1} h_{2}+k_{1} k_{2}+l_{1} l_{2}}{\left(h_{1}^{2}+k_{1}^{2}+l_{1}^{2}\right)^{1 / 2}+\left(h_{2}^{2}+k_{2}^{2}+l_{2}^{2}\right)^{1 / 2}}</script></li>
+</ul>
+</li>
+</ul>
+<h2 id="晶列指数的求法"><a href="#晶列指数的求法" class="headerlink" title="晶列指数的求法"></a>晶列指数的求法</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><ul>
+<li>找到含原点O的晶列</li>
+<li>在该晶列上找到距离O点最近的格点，其格矢为<script type="math/tex">\vec{R}_l=l_1 \vec{a}_1+l_2 \vec{a}_2+l_3 \vec{a}_3</script></li>
+<li>则晶列指数为<script type="math/tex">\left[l_{1}, l_{2}, l_{3}\right]</script></li>
+</ul>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><ul>
+<li>求出晶列所在直线的方向向量</li>
+<li><strong>晶列指数=直线的方向向量</strong></li>
+</ul>
+<h3 id="特殊的方向"><a href="#特殊的方向" class="headerlink" title="特殊的方向"></a>特殊的方向</h3><h2 id="晶面指数的求法"><a href="#晶面指数的求法" class="headerlink" title="晶面指数的求法"></a>晶面指数的求法</h2><h3 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h3><p>找截距，<script type="math/tex">\frac{a_1}{h_1},\frac{a_2}{h_2},\frac{a_3}{h_3}</script></p>
+<h3 id="2-1"><a href="#2-1" class="headerlink" title="2"></a>2</h3><ul>
+<li>找到面上的两个矢量<script type="math/tex">\vec{X}_1,\vec{X}_2</script></li>
+<li>得到晶面的法线方向<script type="math/tex">\vec{n}=\vec{X}_1-\vec{X}_2</script>，后简化</li>
+<li>**晶面指数=晶面的法线方向<script type="math/tex">\vec{n}</script></li>
+</ul>
+<h1 id="晶体对称操作"><a href="#晶体对称操作" class="headerlink" title="晶体对称操作"></a>晶体对称操作</h1>
             </article>
             <hr>
             <div>
@@ -268,7 +304,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/topological/">topological</a>
+                      <a class="hover-with-bg" href="/tags/%E5%9C%A3%E7%BB%8F%E5%92%8F%E5%94%B1%E7%B3%BB%E5%88%97/">圣经咏唱系列</a>
                     
                   </div>
                 
@@ -281,9 +317,9 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/05/30/Quantumoptics/">
+                      <a href="/2020/06/22/solid%20physics/solid3/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Quantum Optics -- Quantization of electromagnetic fields</span>
+                        <span class="hidden-mobile">固体物理圣经咏唱——晶体衍射及其倒格子空间</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -291,8 +327,8 @@
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/05/29/qrng/">
-                        <span class="hidden-mobile">QMNG</span>
+                      <a href="/2020/06/18/solid%20physics/solid1/">
+                        <span class="hidden-mobile">固体物理圣经咏唱——原子的凝聚</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -431,7 +467,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Introduction to Su-Schrieffer-Heeger&nbsp;",
+        "固体物理圣经咏唱——晶体结构及其描述&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

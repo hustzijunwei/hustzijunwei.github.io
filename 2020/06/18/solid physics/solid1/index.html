@@ -17,7 +17,7 @@
   <meta name="description" content="expand your horizons">
   <meta name="author" content="Zijun Wei">
   <meta name="keywords" content="">
-  <title>固体物理圣经——原子的凝聚 - My Web</title>
+  <title>固体物理圣经咏唱——原子的凝聚 - My Web</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -151,8 +151,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-06-05 00:00">
-      June 5, 2020 am
+    <time datetime="2020-06-18 00:00">
+      June 18, 2020 am
     </time>
   </div>
 
@@ -162,7 +162,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4k words
+      4.8k words
     </span>
   
 
@@ -172,7 +172,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      23
+      28
        minutes
     </span>
   
@@ -286,7 +286,21 @@
 <li>德拜（Debey）力：对于同时含有极性分子和非极性分子，由于极性分子有固有电偶极矩，而非极性分子没有固有电偶极矩，但非极性分子可以被极性分子的电场极化而产生<em>诱导电偶极矩</em>，故极性分子和非极性分子之间也存在相互作用，与这种相互作用有关的力称为<strong>德拜力</strong>。</li>
 </ul>
 <p>一般来说，葛生力和德拜力比伦敦力 弱，或者说在范德瓦耳斯力中起主要作用的是伦敦力。</p>
-<h2 id="分子固体的相互作用能"><a href="#分子固体的相互作用能" class="headerlink" title="分子固体的相互作用能"></a>分子固体的相互作用能</h2><h1 id="轨道杂化"><a href="#轨道杂化" class="headerlink" title="轨道杂化"></a>轨道杂化</h1>
+<h2 id="分子固体的相互作用能"><a href="#分子固体的相互作用能" class="headerlink" title="分子固体的相互作用能"></a>分子固体的相互作用能</h2><p>通过在电动力学中对电偶极矩的计算可以得出，一对分子间总的相互作用能可以表示为</p>
+<script type="math/tex; mode=display">u(r)=-\frac{A}{r^{6}}+\frac{B}{r^{12}}</script><p>若我们令$\sigma=\left(\frac{B}{A}\right)^{1 / 6}$和$\varepsilon=\frac{A^2}{4 B}$，我们可以得到</p>
+<script type="math/tex; mode=display">u(r)=4 \varepsilon\left[-\left(\frac{\sigma}{r}\right)^{6}+\left(\frac{\sigma}{r}\right)^{12}\right]</script><p>这就是雷纳德-琼斯（Lennard-Jones）势。<br>由此总能量为</p>
+<script type="math/tex; mode=display">U(r)=\frac{N}{2} \sum_{j, j \neq 1}\left\{4 \varepsilon\left[-\left(\frac{\sigma}{r_{1 j}}\right)^{6}+\left(\frac{\sigma}{r_{1 j}}\right)^{12}\right]\right\}</script><p>若分子间的间距为$r$，有$r<em>{1 j}=a</em>{j} r$。则</p>
+<script type="math/tex; mode=display">U(r)=2 N \varepsilon\left[A_{12}\left(\frac{\sigma}{r}\right)^{12}-A_{6}\left(\frac{\sigma}{r}\right)^{6}\right]</script><p>其中<script type="math/tex">A_{1 2}=\sum_{j, j \neq 1} \frac{1}{a_j^{1 2}}\,A_6=\sum_{j, j \neq 1} \frac{1}{a_j^6}</script>为和晶体结构有关的常数</p>
+<h2 id="平衡时相邻分子间的间距、体弹性模量和结合能"><a href="#平衡时相邻分子间的间距、体弹性模量和结合能" class="headerlink" title="平衡时相邻分子间的间距、体弹性模量和结合能"></a>平衡时相邻分子间的间距、体弹性模量和结合能</h2><p>平衡时相邻分子间的间距</p>
+<script type="math/tex; mode=display">r_{0}=\left(\frac{2 A_{12}}{A_{6}}\right)^{1 / 6} \sigma</script><p>平衡时固体总的相互作用能</p>
+<script type="math/tex; mode=display">U\left(r_{0}\right)=-\frac{N \varepsilon A_{6}^{2}}{2 A_{12}}</script><p>固体的结合能</p>
+<script type="math/tex; mode=display">W=-U\left(r_{0}\right)=\frac{N \varepsilon A_{6}^{2}}{2 A_{12}}</script><p>体弹性模量</p>
+<script type="math/tex; mode=display">K=\left.\frac{1}{9 N \beta r_{0}} \frac{d^{2} U}{d r^{2}}\right|_{r=r_{0}}=\frac{4 \varepsilon}{\sqrt{2} \beta \sigma^{3}} A_{12}\left(\frac{A_{6}}{A_{12}}\right)^{5 / 2}</script><h1 id="轨道杂化"><a href="#轨道杂化" class="headerlink" title="轨道杂化"></a>轨道杂化</h1><p>这一节以C元素为例来探讨其轨道的杂化。单个 C 原子的电子构型为$1 s^2 2 s^2 2 p^2$。<br>但其中2s与2p能级能量差别很小，在形成分子的过程中，原子间相互作用的影响，可以使得能量较低的 2s 能级上 电子跃迁到能量较高的 2p 能级上。<br>即变为$2 s^1 2 p_x^1 2 p_y^1 2 p_z^1$。这样一来，C 原子就有 4 个未配对电子，从而可形成四个共价键，而不是两个。</p>
+<p><em>量子力学解释</em><br>若用<script type="math/tex">\varphi_{2 s}, \varphi_{2 p_{x}}, \varphi_{2 p_{y}}</script>和<script type="math/tex">\varphi_{2 p_{z}}</script>表示处在的电子，由于能量相近，属于四重简并态。将他们重新线性组合成非简并的态：</p>
+<script type="math/tex; mode=display">\begin{aligned}\psi_{h_{1}} &=\frac{1}{2}\left(\varphi_{2 s}+\varphi_{2 p_{x}}+\varphi_{2 p_{y}}+\varphi_{2 p_{z}}\right) \\\psi_{h_{2}} &=\frac{1}{2}\left(\varphi_{2 s}+\varphi_{2 p_{x}}-\varphi_{2 p_{y}}-\varphi_{2 p_{z}}\right) \\\psi_{h_{3}} &=\frac{1}{2}\left(\varphi_{2 s}-\varphi_{2 p_{x}}+\varphi_{2 p_{y}}-\varphi_{2 p_{z}}\right) \\ \psi_{h_{4}} &=\frac{1}{2}\left(\varphi_{2 s}-\varphi_{2 p_{x}}-\varphi_{2 p_{y}}+\varphi_{2 p_{z}}\right)\end{aligned}</script><p>这样的态叫做杂化态，对应的轨道称为杂化轨道。此时每个态都含有<script type="math/tex">f_{s}=1 / 4</script>的 s 电子成分和<script type="math/tex">f_{p}=3 / 4</script>的 p 电子成分，于是把这种杂化称为<script type="math/tex">sp^3</script>杂化。键角为<script type="math/tex">109^{\circ} 28^{\prime}</script></p>
+<p>除了$sp^3$杂化，当然还有sp杂化（例：BeCl2，键角<script type="math/tex">180^{\circ}</script>）、sp2 杂化（例：BF3，键角<script type="math/tex">120^{\circ}</script> ）等杂化模 式。一般来说，同一原子中能量相近的 m 个原子轨道，线性组合后只能得到 m 个杂化轨道。</p>
+<h1 id="碳的同素异构体及其碳原子间的结合"><a href="#碳的同素异构体及其碳原子间的结合" class="headerlink" title="碳的同素异构体及其碳原子间的结合"></a>碳的同素异构体及其碳原子间的结合</h1><p>看看就好</p>
+
             </article>
             <hr>
             <div>
@@ -309,16 +323,16 @@
                 
               </div>
               
-                <p class="note note-warning">本博客所有文章除特别声明外，大部分都是我整理前人的工作或学习笔记 ，所以可以随便使用与转载，不过希望转载时最好注明出处！</p>
+                <p class="note note-warning">本博客所有文章除特别声明外，大部分都是我整理前人的工作或学习笔记 ，所以可以随便使用与转载</p>
               
               
                 <div class="post-prevnext row">
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/06/15/AHE/">
+                      <a href="/2020/06/21/solid%20physics/solid2/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">A Brief introduction to Quantum Liquid</span>
+                        <span class="hidden-mobile">固体物理圣经咏唱——晶体结构及其描述</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -326,8 +340,8 @@
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/05/31/chuascircuit/">
-                        <span class="hidden-mobile">基于蔡氏电路（Chua’s Circuit）实验与数值计算</span>
+                      <a href="/2020/06/15/reviewreed/AHE/">
+                        <span class="hidden-mobile">A Brief introduction to Quantum Liquid</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -466,7 +480,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "固体物理圣经——原子的凝聚&nbsp;",
+        "固体物理圣经咏唱——原子的凝聚&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

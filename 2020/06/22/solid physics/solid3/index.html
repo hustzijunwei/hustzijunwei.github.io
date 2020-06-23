@@ -17,7 +17,7 @@
   <meta name="description" content="expand your horizons">
   <meta name="author" content="Zijun Wei">
   <meta name="keywords" content="">
-  <title>A Brief introduction to Quantum Liquid - My Web</title>
+  <title>固体物理圣经咏唱——晶体衍射及其倒格子空间 - My Web</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -151,8 +151,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-06-15 00:00">
-      June 15, 2020 am
+    <time datetime="2020-06-22 00:00">
+      June 22, 2020 am
     </time>
   </div>
 
@@ -162,7 +162,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      336 words
+      363 words
     </span>
   
 
@@ -172,7 +172,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3
+      2
        minutes
     </span>
   
@@ -203,17 +203,16 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><h1 id="Semi-classical-Approach"><a href="#Semi-classical-Approach" class="headerlink" title="Semi-classical Approach"></a>Semi-classical Approach</h1><h2 id="classical-problem"><a href="#classical-problem" class="headerlink" title="classical problem"></a>classical problem</h2><p>When we talk about spin, it’s typically to consider simplest model— Heisenberg antiferromagnets, which Hamiltonian is given by</p>
-<script type="math/tex; mode=display">H=J \sum_{\langle i, j\rangle} \mathbf{S}_{i} \cdot \mathbf{S}_{j}</script><p>where $J&gt;0$ and $\langle i, j\rangle$ represent the pair of nearest neighborsites in the bipartite lattice. </p>
-<p>Now we use classical mechanism to analyze two-spin problem. Firstly we set</p>
-<script type="math/tex; mode=display">H=J \mathbf{S}_{A} \cdot \mathbf{S}_{B} \cdot(J>0)</script><p>as it’s classical spins, they obay Euler’s equation of motion:</p>
-<script type="math/tex; mode=display">\frac{\partial \mathbf{S}_{A(B)}}{\partial t}=J \mathbf{S}_{B(A)} \times \mathbf{S}_{A(B)}</script><p>So we set the magnetization and staggered magnetism vectors as $\mathbf{M}(N)=\mathbf{S}_A+(-) \mathbf{S}_B$. We can easily get</p>
-<script type="math/tex; mode=display">\begin{array}{l}\frac{\partial \mathbf{M}}{\partial t}=0 \\\frac{\partial \mathbf{N}}{\partial t}=J \mathbf{M} \times \mathbf{N}\end{array}</script><p>In this equation,the physics picture is the staggered magnetization vector $\mathbf{N}$ rotates around the (constant) total magnetization vector $\mathbf{M}$ and just like a free rotor (a rigid rod with one end fixed such that the rod can rotate freely around the fixed end).<br>That means if we write $\mathbf{N}=N \hat{n}$, we will find that only $\hat{n}$ changes under the equation and $N$ remain the same.</p>
-<p>When we come to quantum mechanism in this situation. The Hamiltonian is given by</p>
-<script type="math/tex; mode=display">H_{r o t o r}=\frac{1}{2 I} \mathbf{L}^{2}</script><p>its solution is coming from spherical equation which we have already been taught in QM1.</p>
-<h2 id="Berry-phase"><a href="#Berry-phase" class="headerlink" title="Berry phase"></a>Berry phase</h2><p>The rotors model couldn’t explain some phenomenons, such as half-odd-integer spin. And now we know the missing part of this model is Berry phase.</p>
-<script type="math/tex; mode=display">\gamma(\mathbf{C})=S \Omega(\mathbf{C})</script><p>where $S$ is the spin magnitude and $\Omega(\mathbf{C})$ is the surface area under the closed path C on the unit sphere.</p>
-
+              <h1 id="晶体衍射"><a href="#晶体衍射" class="headerlink" title="晶体衍射"></a>晶体衍射</h1><p>当我们需要研究晶体内部的结构时，由于X射线的波长与原子间间距的匹配，X射线是确定晶体结构的重要工具。<br>当然我们也可以使用中子束来探测晶体结构，由于中子携有磁矩，利用磁矩与晶体中电 子自旋的相互作用，还可获得其中的磁性离子的磁矩的排列信息，使得中子衍射 成为探测晶体磁有序结构的独特的手段。</p>
+<h2 id="晶体衍射的四种表示"><a href="#晶体衍射的四种表示" class="headerlink" title="晶体衍射的四种表示"></a>晶体衍射的四种表示</h2><h3 id="劳厄衍射方程"><a href="#劳厄衍射方程" class="headerlink" title="劳厄衍射方程"></a>劳厄衍射方程</h3><p><img src="/img_solid/7.png" srcset="/img/loading.gif" alt=""></p>
+<script type="math/tex; mode=display">\vec{R}_{l} \bullet\left(\vec{k}-\vec{k}_{0}\right)=2 \pi n</script><p>其中n为整数，<script type="math/tex">\vec{k},\vec{k}_{0}</script>为入射波和散射波的波矢,<script type="math/tex">\vec{R}_{l}</script>为格点 A 的格矢。</p>
+<h3 id="布拉格衍射方程"><a href="#布拉格衍射方程" class="headerlink" title="布拉格衍射方程"></a>布拉格衍射方程</h3><p><img src="/img_solid/8.png" srcset="/img/loading.gif" alt=""></p>
+<script type="math/tex; mode=display">2 d_{h_{1} h_{2} h_{3}} \sin \theta=n \lambda</script><p>其中<script type="math/tex">d h_{1}h_{2}h_{3}</script>为晶面指数为<script type="math/tex">(h_{1} h_{2} h_{3})</script>的一族平行的晶面的间距，<script type="math/tex">\lambda</script>为波长。</p>
+<h3 id="倒格子空间中"><a href="#倒格子空间中" class="headerlink" title="倒格子空间中"></a>倒格子空间中</h3><p><img src="/img_solid/9.png" srcset="/img/loading.gif" alt=""></p>
+<script type="math/tex; mode=display">\vec{k}-\vec{k}_{0}=n \vec{K}_{h}</script><p>$\vec{k}$ 和<script type="math/tex">\vec{k}_{0}</script> 为入射波和散射波的波矢<script type="math/tex">\vec{R}_{l}</script>是晶面指数为<script type="math/tex">(h_{1} h_{2} h_{3})</script>的晶面族法线方向上最短的倒格矢</p>
+<h3 id="布里渊区内"><a href="#布里渊区内" class="headerlink" title="布里渊区内"></a>布里渊区内</h3><script type="math/tex; mode=display">2 \vec{k} \bullet \vec{G}+G^{2}=0</script><p>或者</p>
+<script type="math/tex; mode=display">\vec{G} \bullet\left(\vec{k}+\frac{\vec{G}}{2}\right)=0</script><p>其中<script type="math/tex">\vec{G}=n \vec{K}_{h}</script></p>
+<h1 id="倒格子"><a href="#倒格子" class="headerlink" title="倒格子"></a>倒格子</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2>
             </article>
             <hr>
             <div>
@@ -222,7 +221,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/Literature-Review/">Literature Review</a>
+                      <a class="hover-with-bg" href="/categories/physics-note/">physics note</a>
                     
                   </div>
                 
@@ -230,22 +229,22 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/quantum-liquid/">quantum liquid</a>
+                      <a class="hover-with-bg" href="/tags/%E5%9C%A3%E7%BB%8F%E5%92%8F%E5%94%B1%E7%B3%BB%E5%88%97/">圣经咏唱系列</a>
                     
                   </div>
                 
               </div>
               
-                <p class="note note-warning">本博客所有文章除特别声明外，大部分都是我整理前人的工作或学习笔记 ，所以可以随便使用与转载，不过希望转载时最好注明出处！</p>
+                <p class="note note-warning">本博客所有文章除特别声明外，大部分都是我整理前人的工作或学习笔记 ，所以可以随便使用与转载</p>
               
               
                 <div class="post-prevnext row">
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/06/18/Bible/">
+                      <a href="/2020/06/23/reviewreed/qeh/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">圣经咏唱系列前言</span>
+                        <span class="hidden-mobile">A review about The Quantum Hall Effect</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -253,8 +252,8 @@
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/06/05/solid%20physics/solid1/">
-                        <span class="hidden-mobile">固体物理圣经——原子的凝聚</span>
+                      <a href="/2020/06/21/solid%20physics/solid2/">
+                        <span class="hidden-mobile">固体物理圣经咏唱——晶体结构及其描述</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -393,7 +392,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "A Brief introduction to Quantum Liquid&nbsp;",
+        "固体物理圣经咏唱——晶体衍射及其倒格子空间&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

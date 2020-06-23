@@ -17,7 +17,7 @@
   <meta name="description" content="expand your horizons">
   <meta name="author" content="Zijun Wei">
   <meta name="keywords" content="">
-  <title>Introduction to Su-Schrieffer-Heeger - My Web</title>
+  <title>A review about The Quantum Hall Effect - My Web</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -151,8 +151,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-05-30 00:00">
-      May 30, 2020 am
+    <time datetime="2020-06-23 00:00">
+      June 23, 2020 am
     </time>
   </div>
 
@@ -162,7 +162,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.7k words
+      975 words
     </span>
   
 
@@ -172,7 +172,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      11
+      9
        minutes
     </span>
   
@@ -203,55 +203,32 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <h1 id="previously-of-SSH-model"><a href="#previously-of-SSH-model" class="headerlink" title="previously of SSH model"></a>previously of SSH model</h1><h1 id="SSH-model的体部分"><a href="#SSH-model的体部分" class="headerlink" title="SSH model的体部分"></a>SSH model的体部分</h1><p>由Peierls定理，可知一条由费米子排列成的链具有如下结构：<br><img src="/img_ssh/1.png" srcset="/img/loading.gif" alt="势能如图"><br>图中，规定A粒子为灰色的粒子，B粒子为白色的粒子；A与其后的B粒子构成晶胞其作用力为v，晶胞间作用力（B与其后的A）为w。</p>
-<h1 id="SSH-model的Hamiltonian"><a href="#SSH-model的Hamiltonian" class="headerlink" title="SSH model的Hamiltonian"></a>SSH model的Hamiltonian</h1><p>考虑单电子在如上图的原子排列中的运动</p>
-<script type="math/tex; mode=display">H=v \sum_{m=1}^{N} (|m, B \rangle\langle m, A|+h . c .) +w \sum_{m=1}^{N-1}(|m+1, A\rangle\langle m, B|+{h.c.})</script><p>这里使用了紧束缚模型，即电子在某一原子上所受的作用只取决与与之相邻的两个原子的作用。<br>这里可以把$v,w$看成在电子在不同建上跃迁的概率。<br>同时注意SSH模型中没有电子与原子的自旋。</p>
-<h2 id="体Hamiltonian"><a href="#体Hamiltonian" class="headerlink" title="体Hamiltonian"></a>体Hamiltonian</h2><p>先来考虑均匀的链,在其体内（非边缘）的哈密顿量可以表述为：</p>
-<script type="math/tex; mode=display">\hat{H}_=\sum_{m=1}^{N}(v|m, B\rangle\langle m, A|+w|(m \bmod N)+1, A\rangle\langle m, B|)+h . c .</script><p>在实空间（$N=4$）中Hamiltonian的矩阵形式为：</p>
-<script type="math/tex; mode=display">\left(\begin{array}{llllllll}{0} & {v} & {0} & {0} & {0} & {0} & {0} & {w} \\ {v} & {0} & {w} & {0} & {0} & {0} & {0} & {0} \\ {0} & {w} & {0} & {v} & {0} & {0} & {0} & {0} \\ {0} & {0} & {v} & {0} & {w} & {0} & {0} & {0} \\ {0} & {0} & {0} & {w} & {0} & {v} & {0} & {0} \\ {0} & {0} & {0} & {0} & {v} & {0} & {w} & {0} \\ {0} & {0} & {0} & {0} & {0} & {w} & {0} & {v} \\ {w} & {0} & {0} & {0} & {0} & {0} & {v} & {0}\end{array}\right)</script><p>解特征方程，其中$\Psi_n$为特征解</p>
-<script type="math/tex; mode=display">H_{ {bulk }}\left|\Psi_{n}(k)\right\rangle= E_{n}(k)\left|\Psi_{n}(k)\right\rangle</script><h2 id="体动量空间Hamiltonian"><a href="#体动量空间Hamiltonian" class="headerlink" title="体动量空间Hamiltonian"></a>体动量空间Hamiltonian</h2><p>由Bloch定理，带入平面波形式的特征解有</p>
-<script type="math/tex; mode=display">|k\rangle=\frac{1}{\sqrt{N}} \sum_{m=1}^{N} e^{i m k}|m\rangle</script><p>其中$k$在第一布里渊区取值。</p>
-<script type="math/tex; mode=display">k \in\left\{\delta_k, 2 \delta_k, \ldots, N \delta_k \right\}</script><p>而$\delta_k=\frac{2 \pi}{N}$同时也可以把这个看成由实空间到动量空间的转换的傅里叶变换。</p>
-<p>$|\Psi_n \rangle$可以看成由$| k \rangle$与$|u_n (k)\rangle$张成的，即</p>
-<script type="math/tex; mode=display">\left|\Psi_{n}(k) \right\rangle=|k\rangle \otimes\left|u_{n}(k)\right\rangle ; \quad \quad\left|u_{n}(k)\right\rangle= a_{n}(k)|A\rangle+ b_{n}(k)|B\rangle</script><p>则$|u_n(k)\rangle$为体动量空间Hamiltonian${H}(k)$的本征态：</p>
-<script type="math/tex; mode=display">{H}(k)\left|u_{n}(k)\right\rangle= E_{n}(k)\left|u_{n}(k)\right\rangle</script><p>其中定义${H}(k)$为</p>
-<script type="math/tex; mode=display">{H}(k)=\langle k|\hat{H}_{bulk}| k\rangle</script><h2 id="Hamiltonian本征值——能量"><a href="#Hamiltonian本征值——能量" class="headerlink" title="Hamiltonian本征值——能量"></a>Hamiltonian本征值——能量</h2><p>在第一布里渊区中有周期性条件：</p>
-<script type="math/tex; mode=display">{H}(k+2 \pi)=\hat{H}(k) ; \quad \quad\left|u_{n}(k+2 \pi)\right\rangle=\left|u_{n}(k)\right\rangle</script><p>将上述对$|\Psi_n \rangle$的分解带入薛定鄂方程有<br><img src="/img_ssh/2.png" srcset="/img/loading.gif" alt=""><br>可以化简$H(k)$，发现其为分块对角矩阵，且每个分块对角的矩阵维数相同。形如</p>
-<script type="math/tex; mode=display">\left[\begin{array}{cccc}{H_{1}} & {O} & {\cdots} & {O} \\ {O} & {H_{2}} & {\cdots} & {O} \\ {\vdots} & {\vdots} & {\ddots} & {\vdots} \\ {O} & {O} & {\cdots} & {H_{n}}\end{array}\right]</script><p>对于每一个分块有（取第一分块）：</p>
-<script type="math/tex; mode=display">H(k)=\left(\begin{array}{cc}{0} & {v+w e^{-i k}} \\ {v+w e^{i k}} & {0}\end{array}\right) ; \quad H(k)\left(\begin{array}{c}{a(k)} \\ {b(k)}\end{array}\right)=E(k)\left(\begin{array}{c}{a(k)} \\ {b(k)}\end{array}\right)</script><p>可以求得能量为</p>
-<script type="math/tex; mode=display">E(k)=\left|v+e^{-i k} w\right|=\sqrt{v^{2}+w^{2}+2 v w \cos k}</script><h2 id="SSH-model的能量"><a href="#SSH-model的能量" class="headerlink" title="SSH model的能量"></a>SSH model的能量</h2><p>由上面求出的能量关系使可以给出清楚的图像：<br><img src="/img_ssh/3.png" srcset="/img/loading.gif" alt=""><br>若令$\Delta$为最小的能量差，可以看到</p>
-<script type="math/tex; mode=display">\Delta=\min _{k} E(k)=|v-w|</script><p>如图中显示，当$v=w$时两能级之间没有间隔，即为导体。当$v\ne w$时，为绝缘体。<br>需要说明的是当$v\ne w$时不一定为绝缘体，因为当v与w相隔较近时（一般为2eV）可为半导体</p>
-<h2 id="Hamiltonian的另一种表示方法"><a href="#Hamiltonian的另一种表示方法" class="headerlink" title="Hamiltonian的另一种表示方法"></a>Hamiltonian的另一种表示方法</h2><p>当使用二次量子化求Hamiltonian时可以得到Hamiltonian的另一种表示方法。当然也可以对上面求得的<br>H在palli矩阵基下进行分解，有：</p>
-<script type="math/tex; mode=display">H(k)=h(k) \cdot \sigma</script><p>其中</p>
-<script type="math/tex; mode=display">\sigma_{x}=\left(\begin{array}{cc}{0} & {1} \\ {1} & {0}\end{array}\right), \sigma_{y}=\left(\begin{array}{cc}{0} & {-i} \\ {i} & {0}\end{array}\right), \sigma_{z}=\left(\begin{array}{cc}{1} & {0} \\ {0} & {-1}\end{array}\right)</script><p>令$w=|w| e^{i a r g(w)}$则</p>
-<script type="math/tex; mode=display">\begin{array}{l}{h_{x}(k)={Re}(v)+|w| \cos (k b+\arg (w))} \\ {h_{y}(k)=-{Im}(v)+|w| \sin (k b+\arg (w))} \\ {h_{z}(k)=0}\end{array}</script><p>可知</p>
-<script type="math/tex; mode=display">H(k)=\left(\begin{array}{cc}{0} & {h^{*}(k)} \\ {h(k)} & {0}\end{array}\right)</script><h2 id="Winding-number"><a href="#Winding-number" class="headerlink" title="Winding number"></a>Winding number</h2><p>通过对能级与导体和绝缘体的讨论可以发现当v与w构成的几何有不同的特性时是可以影响物体导电性的</p>
-<p>故，设置Winding number为：</p>
-<script type="math/tex; mode=display">\nu=\frac{1}{2 \pi i} \int_{-\pi}^{\pi} d k \frac{d}{d k} \ln (h(k))</script><p>可以作为SSH模型的一个‘拓扑’数</p>
-<p>注意到当$v=w$时是无法在$R^2$空间上定义Winding number的，这时需要运用黎曼面等数学工具。</p>
-<h1 id="Edge-states"><a href="#Edge-states" class="headerlink" title="Edge states"></a>Edge states</h1><p>SSH模型在完全二聚体模型下十分简单。完全二聚体：$v=0, w=1$或者$v=1, w=2$的情形下即为完全二聚体。</p>
-<p>这时存在两种状态：</p>
-<h2 id="trivial-v-1-w-0-时"><a href="#trivial-v-1-w-0-时" class="headerlink" title="trivial:$v=1, w=0$时"></a>trivial:$v=1, w=0$时</h2><p><img src="/img_ssh/4.png" srcset="/img/loading.gif" alt=""><br>此时排列为平庸的，即只有包内有作用力，且没有咕儿原子。这时方程为</p>
-<script type="math/tex; mode=display">\hat{H}(|m, A\rangle \pm|m, B\rangle)=\pm(|m, A\rangle \pm|m, B\rangle)</script><p>此时哈密顿量为$\hat{H}(k)=\hat{\sigma}_x$，则此时解同体空间中的差不多（因此称为平凡情况）</p>
-<h2 id="topological-v-0-w-1-时"><a href="#topological-v-0-w-1-时" class="headerlink" title="topological:$v=0, w=1$时"></a>topological:$v=0, w=1$时</h2><p><img src="/img_ssh/5.png" srcset="/img/loading.gif" alt=""><br>此时为拓扑排列，在这种状态中只有不同晶胞中的才有作用力，而且开头和和结尾存在两个咕儿。方程为</p>
-<script type="math/tex; mode=display">\hat{H}(|m, B\rangle \pm|m+1, A\rangle)=\pm(|m, B\rangle \pm|m+1, A\rangle)</script><p>其中$m=1, \ldots, N-1$而$\hat{H}(k)=\hat{\sigma}_x \cos k+\hat{\sigma}_y \sin k$<br>可以发现链的每一端的都有一个零能级的单一特征态</p>
-<script type="math/tex; mode=display">\hat{H}|1, A\rangle=\hat{H}|N, B\rangle= 0</script><p>这时这两个咕儿原子就为边缘态</p>
-<h2 id="trivial态与topological态的混合"><a href="#trivial态与topological态的混合" class="headerlink" title="trivial态与topological态的混合"></a>trivial态与topological态的混合</h2><p>由实验测得有：<br><img src="/img_ssh/6.png" srcset="/img/loading.gif" alt=""><br>说明：</p>
-<ul>
-<li>(a)细胞间跳变幅度系统能谱w=1作为函数细胞内跳变幅度对应拓扑(平凡)相。</li>
-<li>(b)、(c)为杂化边缘态的波函数</li>
-<li>(d)为一般体波函数。</li>
-</ul>
-<p>可以发现</p>
-<ul>
-<li>当$w=1$且v比较小时两个咕儿原子处的能量时以$E=e^{-N / \xi}$变化的，其中局域长度为$\xi=/ \log (v / w)$</li>
-<li>当存在边缘态时，电子在两个咕儿原子处出现的概率最大（波函数大）。而其他地方出现的概率则较小</li>
-<li>当只有体状态时，电子在不同原子处的概率一般分布。</li>
-</ul>
-<h1 id="Chiral-symmetry"><a href="#Chiral-symmetry" class="headerlink" title="Chiral symmetry"></a>Chiral symmetry</h1><p>当厄密算符$U$作用在哈密顿量时，可以说哈密顿量有U对称性</p>
-<script type="math/tex; mode=display">\hat{U} \hat{H} \hat{U}^{\dagger}=\hat{H}</script><p>若令晶格平移算符</p>
-<script type="math/tex; mode=display">\hat{U}=|m+1, A\rangle\langle m, A|+| m+1, B\rangle\langle m, B|</script><p>注意到这个算符是非厄密的</p>
-<h1 id="Edge-states数是拓扑不变的"><a href="#Edge-states数是拓扑不变的" class="headerlink" title="Edge states数是拓扑不变的"></a>Edge states数是拓扑不变的</h1>
+              <h1 id="The-Basics"><a href="#The-Basics" class="headerlink" title="The Basics"></a>The Basics</h1><h2 id="The-Classical-Hall-Effect"><a href="#The-Classical-Hall-Effect" class="headerlink" title="The Classical Hall Effect"></a>The Classical Hall Effect</h2><p>As we can see in the following figure, the magnetic field B point in the z-direction, and the electrons are restricted to move only in the $(x, y)$ plane.<br><img src="/img_qhe/1.png" srcset="/img/loading.gif" alt=""><br>If there is a constant current $I$ flowing in the x-direction, The Hall effect may appear which means that a voltage $V_H$ will appear in the y-direction.</p>
+<h3 id="Classical-Motion-in-Classical-Hall-Effect"><a href="#Classical-Motion-in-Classical-Hall-Effect" class="headerlink" title="Classical Motion in Classical Hall Effect"></a>Classical Motion in Classical Hall Effect</h3><p>In classical Hall Effect the particles in materials move in circles due to the Lorentz Force. Which is </p>
+<script type="math/tex; mode=display">m \frac{d \mathbf{v}}{d t}=-e \mathbf{v} \times \mathbf{B}</script><p>where we set a particle of mass $m$ and charge $−e$ in a magnetic field $B=(0,0, B)$.<br>So $v=(\dot{x}, \dot{y}, 0)$, and the equations of motion are </p>
+<script type="math/tex; mode=display">m \ddot{x}=-e B \dot{y} \quad \text { and } \quad m \ddot{y}=e B \dot{x}</script><p>The solution is </p>
+<script type="math/tex; mode=display">x(t)=X-R \sin \left(\omega_{B} t+\phi\right) \quad \text { and } \quad y(t)=Y+R \cos \left(\omega_{B} t+\phi\right)</script><p>This indicate the particle moves in circles. Moreover, the frequency with which the particle goes around the circle is</p>
+<script type="math/tex; mode=display">\omega_{B}=\frac{e B}{m}</script><p>We call it as <strong>cyclotron frequency</strong></p>
+<h3 id="The-Drude-Model"><a href="#The-Drude-Model" class="headerlink" title="The Drude Model"></a>The Drude Model</h3><p>Now we take the electric field $E$ and scattering into consideration.</p>
+<script type="math/tex; mode=display">m \frac{d \mathbf{v}}{d t}=-e \mathbf{E}-e \mathbf{v} \times \mathbf{B}-\frac{m \mathbf{v}}{\tau}</script><p>Where the coefficient $\tau$ is called the scattering time which can be regard as the average time between collisions. This equation of motion lead to The Drude Model.<br>If we set $d \mathbf{v} / d t=0$ and use cyclotron frequency to represent the result, we obtain </p>
+<script type="math/tex; mode=display">\left(\begin{array}{cc}1 & \omega_{B} \tau \\-\omega_{B} \tau & 1\end{array}\right) \mathbf{J}=\frac{e^{2} n \tau}{m} \mathbf{E}</script><p>Where the current density $\mathbf{J}=-ne\mathbf{v}$.<br>By using Ohm’s law $\mathbf{J}=\sigma \mathbf{E}$, where<script type="math/tex">\sigma=\left(\begin{array}{cc}\sigma_{x x} & \sigma_{x y} \\ -\sigma_{x y} & \sigma_{x x}\end{array}\right)</script>, we can obtain the <strong>conductivity</strong> tensor from the Drude model.</p>
+<script type="math/tex; mode=display">\sigma=\frac{\sigma_{D C}}{1+\omega_{B}^{2} \tau^{2}}\left(\begin{array}{cc}1 & -\omega_{B} \tau \\\omega_{B} \tau & 1\end{array}\right) \quad \text { with } \quad \sigma_{D C}=\frac{n e^{2} \tau}{m}</script><p>The off-diagonal terms in the matrix are responsible for the Hall effect</p>
+<h3 id="Resistivity-vs-Resistance"><a href="#Resistivity-vs-Resistance" class="headerlink" title="Resistivity vs Resistance"></a>Resistivity vs Resistance</h3><p>The <strong>resistivity</strong> is defined as</p>
+<script type="math/tex; mode=display">\rho=\sigma^{-1}=\left(\begin{array}{cc}\rho_{x x} & \rho_{x y} \\-\rho_{x y} & \rho_{y y}\end{array}\right)</script><p>In Drude model we have </p>
+<script type="math/tex; mode=display">\rho=\frac{1}{\sigma_{D C}}\left(\begin{array}{cc}1 & \omega_{B} \tau \\-\omega_{B} \tau & 1\end{array}\right)</script><p>We can calculate that<script type="math/tex">\rho_{x y}=\omega_{B} \tau / \sigma_{D C}</script>. It’s interesting to find that<script type="math/tex">\rho_{x y}</script> are independent of the scattering time. Moreover, when we we measure the <strong>resistance</strong> $R$</p>
+<script type="math/tex; mode=display">R_{x y}=\frac{V_{y}}{I_{x}}=\frac{L E_{y}}{L J_{x}}=\frac{E_{y}}{J_{x}}=-\rho_{x y}</script><p>Which has nothing about geometric factors.<br>And the Hall coefficient is</p>
+<script type="math/tex; mode=display">R_{H}=-\frac{E_{y}}{J_{x} B}=\frac{\rho_{x y}}{B}</script><p>In the Drude model, we have</p>
+<script type="math/tex; mode=display">R_{H}=\frac{\omega_{B}}{B \sigma_{D C}}=\frac{1}{n e}</script><p>Which means The Hall effect depends only on microscopic information about the material.<br>What’s more, we calculate the two resistivities</p>
+<script type="math/tex; mode=display">\rho_{x x}=\frac{m}{n e^{2} \tau} \quad \text { and } \quad \rho_{x y}=\frac{B}{n e}</script><p>And plot them as a function of the magnetic field<br><img src="/img_qhe/2.png" srcset="/img/loading.gif" alt=""></p>
+<h2 id="Quantum-Hall-Effects"><a href="#Quantum-Hall-Effects" class="headerlink" title="Quantum Hall Effects"></a>Quantum Hall Effects</h2><h3 id="Integer-Quantum-Hall-Effect"><a href="#Integer-Quantum-Hall-Effect" class="headerlink" title="Integer Quantum Hall Effect"></a>Integer Quantum Hall Effect</h3><p><img src="/img_qhe/3.png" srcset="/img/loading.gif" alt=""><br>In 1980， von Klitzing found Integer Quantum Hall Effect. He found there exist a plateau in the plot of Hall resistivity<script type="math/tex">\rho_{x y}</script>-$B$.On these plateau, the resistivity takes the value</p>
+<script type="math/tex; mode=display">\rho_{x y}=\frac{2 \pi \hbar}{e^{2}} \frac{1}{\nu}</script><p>$\nu$is measured to be an integer, the quantity<script type="math/tex">\frac{2 \pi \hbar}{e^{2}}</script>is called the <strong>quantum of resistivity</strong>. The centre of each of these plateaux occurs when the magnetic field takes the value</p>
+<script type="math/tex; mode=display">B=\frac{2 \pi \hbar n}{\nu e}=\frac{n}{\nu} \Phi_{0}</script><p>Where<script type="math/tex">\Phi_{0}=2 \pi \hbar / e</script> is known as the <strong>flux quantum</strong></p>
+<p>There some interesting things in this experiments. In the quantum Hall effect, as you increase the amount of disorder (impurities) the plateaux become more prominent. Moreover, in the absence of disorder, the plateaux are expected to vanish completely.</p>
+<p>Besides, the longitudinal resistivity<script type="math/tex">\rho_{x x}</script> also exhibits a surprise. As we can see in the figure above, When<script type="math/tex">\rho_{x y}</script> sits on a plateau,<br>the longitudinal resistivity vanishes:<script type="math/tex">\rho_{x x}=0</script>. It spikes only when<script type="math/tex">\rho_{x y}</script> jumps to the next plateau.</p>
+<p>In the definition of conductivity and resistivity we have </p>
+<script type="math/tex; mode=display">\sigma_{x x}=\frac{\rho_{x x}}{\rho_{x x}^{2}+\rho_{x y}^{2}} \quad \text { and } \quad \sigma_{x y}=\frac{-\rho_{x y}}{\rho_{x x}^{2}+\rho_{x y}^{2}}</script><p>When<script type="math/tex">\rho_{x x}=0</script>and<script type="math/tex">\rho_{x y} \neq 0</script>, we obtain<script type="math/tex">\sigma_{x x}=0</script>.</p>
+<h3 id="Fractional-Quantum-Hall-Effect"><a href="#Fractional-Quantum-Hall-Effect" class="headerlink" title="Fractional Quantum Hall Effect"></a>Fractional Quantum Hall Effect</h3><p>In 1982, Tsui and Stormer found as the disorder is decreased, the integer Hall plateaux become less prominent, but other plateaux emerge at fractional values.<br><img src="/img_qhe/4.png" srcset="/img/loading.gif" alt=""><br>In Fractional Quantum Hall Effect, the Hall resistivity is the same as Integer Quantum Hall Effect, but with $\nu$ a fractional number (rational number).<br>Not all fractions appear ($\nu=1 / 3,1 / 5, 2 / 5$), a clear plateaux has been observed at $\nu=5 / 2$. Particularly, as the disorder is decreased,we can get infinite number of plateaux which means a straight line in classical situation.</p>
+
             </article>
             <hr>
             <div>
@@ -260,7 +237,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/physics-note/">physics note</a>
+                      <a class="hover-with-bg" href="/categories/Literature-Review/">Literature Review</a>
                     
                   </div>
                 
@@ -268,7 +245,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/topological/">topological</a>
+                      <a class="hover-with-bg" href="/tags/quantum-Hall-effect/">quantum Hall effect</a>
                     
                   </div>
                 
@@ -281,18 +258,12 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/05/30/Quantumoptics/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Quantum Optics -- Quantization of electromagnetic fields</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </div>
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/05/29/qrng/">
-                        <span class="hidden-mobile">QMNG</span>
+                      <a href="/2020/06/22/solid%20physics/solid3/">
+                        <span class="hidden-mobile">固体物理圣经咏唱——晶体衍射及其倒格子空间</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -431,7 +402,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Introduction to Su-Schrieffer-Heeger&nbsp;",
+        "A review about The Quantum Hall Effect&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
