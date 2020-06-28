@@ -17,7 +17,7 @@
   <meta name="description" content="expand your horizons">
   <meta name="author" content="Zijun Wei">
   <meta name="keywords" content="">
-  <title>固体物理圣经咏唱——晶体衍射及其倒格子空间 - My Web</title>
+  <title>热力学与统计物理圣经咏唱——热力学第零定理、态函数、温度 - My Web</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -151,8 +151,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-06-22 00:00">
-      June 22, 2020 am
+    <time datetime="2020-06-24 00:00">
+      June 24, 2020 am
     </time>
   </div>
 
@@ -162,7 +162,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.3k words
+      1.2k words
     </span>
   
 
@@ -172,7 +172,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      7
        minutes
     </span>
   
@@ -203,40 +203,48 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <h1 id="晶体衍射"><a href="#晶体衍射" class="headerlink" title="晶体衍射"></a>晶体衍射</h1><p>当我们需要研究晶体内部的结构时，由于X射线的波长与原子间间距的匹配，X射线是确定晶体结构的重要工具。<br>当然我们也可以使用中子束来探测晶体结构，由于中子携有磁矩，利用磁矩与晶体中电 子自旋的相互作用，还可获得其中的磁性离子的磁矩的排列信息，使得中子衍射 成为探测晶体磁有序结构的独特的手段。</p>
-<h2 id="晶体衍射的四种表示"><a href="#晶体衍射的四种表示" class="headerlink" title="晶体衍射的四种表示"></a>晶体衍射的四种表示</h2><h3 id="劳厄衍射方程"><a href="#劳厄衍射方程" class="headerlink" title="劳厄衍射方程"></a>劳厄衍射方程</h3><p><img src="/img_solid/7.png" srcset="/img/loading.gif" alt=""></p>
-<script type="math/tex; mode=display">\vec{R}_{l} \bullet\left(\vec{k}-\vec{k}_{0}\right)=2 \pi n</script><p>其中n为整数，<script type="math/tex">\vec{k},\vec{k}_{0}</script>为入射波和散射波的波矢,<script type="math/tex">\vec{R}_{l}</script>为格点 A 的格矢。</p>
-<h3 id="布拉格衍射方程"><a href="#布拉格衍射方程" class="headerlink" title="布拉格衍射方程"></a>布拉格衍射方程</h3><p><img src="/img_solid/8.png" srcset="/img/loading.gif" alt=""></p>
-<script type="math/tex; mode=display">2 d_{h_{1} h_{2} h_{3}} \sin \theta=n \lambda</script><p>其中<script type="math/tex">d h_{1}h_{2}h_{3}</script>为晶面指数为<script type="math/tex">(h_{1} h_{2} h_{3})</script>的一族平行的晶面的间距，<script type="math/tex">\lambda</script>为波长。</p>
-<h3 id="倒格子空间中"><a href="#倒格子空间中" class="headerlink" title="倒格子空间中"></a>倒格子空间中</h3><p><img src="/img_solid/9.png" srcset="/img/loading.gif" alt=""></p>
-<script type="math/tex; mode=display">\vec{k}-\vec{k}_{0}=n \vec{K}_{h}</script><p>$\vec{k}$ 和<script type="math/tex">\vec{k}_{0}</script> 为入射波和散射波的波矢<script type="math/tex">\vec{R}_{l}</script>是晶面指数为<script type="math/tex">(h_{1} h_{2} h_{3})</script>的晶面族法线方向上最短的倒格矢</p>
-<h3 id="布里渊区内"><a href="#布里渊区内" class="headerlink" title="布里渊区内"></a>布里渊区内</h3><script type="math/tex; mode=display">2 \vec{k} \bullet \vec{G}+G^{2}=0</script><p>或者</p>
-<script type="math/tex; mode=display">\vec{G} \bullet\left(\vec{k}+\frac{\vec{G}}{2}\right)=0</script><p>其中<script type="math/tex">\vec{G}=n \vec{K}_{h}</script></p>
-<h1 id="倒格子"><a href="#倒格子" class="headerlink" title="倒格子"></a>倒格子</h1><p>晶格具有平移周期性，如果以<script type="math/tex">\Gamma(\vec{r})</script> 代表晶体的某一物理量，则有：</p>
-<script type="math/tex; mode=display">\Gamma(\vec{r})=\Gamma\left(\vec{r}+\vec{R}_{l}\right)</script><p>其中$\vec{R}_l$为正格子空间的格矢。这时对<script type="math/tex">\Gamma(\vec{r})</script>进行傅里叶级数展开</p>
-<script type="math/tex; mode=display">\Gamma(\vec{r})=\sum_{h} \Gamma\left(\vec{K}_{h}\right) e^{i \vec{K}_{h} \cdot \vec{r}}</script><p>我们得到一组量纲为$m^{-1}$的矢量<script type="math/tex">\vec{K}_{h}</script>,</p>
-<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>由正格矢<script type="math/tex">\vec{R}_{l}=l_{1} \vec{a}_{1}+l_{2} \vec{a}_{2}+l_{3} \vec{a}_{3}</script> 确定的空间格子为正格子。 现在我们来构架新的空间</p>
-<script type="math/tex; mode=display">\left\{\begin{array}{l}\vec{b}_{1}=\frac{2 \pi}{\Omega}\left(\vec{a}_{2} \times \vec{a}_{3}\right) \\\vec{b}_{2}=\frac{2 \pi}{\Omega}\left(\vec{a}_{3} \times \vec{a}_{1}\right) \\\vec{b}_{3}=\frac{2 \pi}{\Omega}\left(\vec{a}_{1} \times \vec{a}_{2}\right)\end{array}\right.</script><p>其中<script type="math/tex">\Omega=\vec{a}_{1} \bullet\left(\vec{a}_{2} \times \vec{a}_{3}\right)</script>为正格子空间原胞的体积。由上式定义的矢量为基矢所构成的格子我们称之为<strong>倒格子</strong>。<script type="math/tex">\vec{b}_1</script>、<script type="math/tex">\vec{b}_2</script>、<script type="math/tex">\vec{b}_3</script>称为<strong>倒易格子空间的基矢</strong>。<br><strong>倒格矢：</strong></p>
-<script type="math/tex; mode=display">\vec{K}_{h}=h_{1} \vec{b}_{1}+h_{2} \vec{b}_{2}+h_{3} \vec{b}_{3}</script><p><strong>倒格子空间原胞的体积：</strong>（一个倒格点在倒格 子空间所占的体积）</p>
-<script type="math/tex; mode=display">\Omega^{*}=\vec{b}_{1} \cdot\left(\vec{b}_{2} \times \vec{b}_{3}\right)</script><p>每一个布喇菲点阵都有一个与之相对应的倒易点阵，或者说，每个晶体结构都有两套晶格与之相联系，一套为正晶格（即正格子），另一套为倒晶格（即倒格子）。</p>
-<h2 id="倒格子与正格子间的关系"><a href="#倒格子与正格子间的关系" class="headerlink" title="倒格子与正格子间的关系"></a>倒格子与正格子间的关系</h2><ul>
-<li><strong>正、倒格子基矢间的关系</strong><br>带入即可证得<script type="math/tex; mode=display">\vec{a}_{i} \bullet \vec{b}_{j}=2 \pi \delta_{i j} \quad(i, j=1,2,3)</script></li>
-<li><strong>原胞体积关系</strong><br>使用公式<script type="math/tex">\vec{a} \times(\vec{b} \times \vec{c})=(\vec{c} \bullet \vec{a}) \vec{b}-(\vec{b} \bullet \vec{a}) \vec{c}</script>展开计算得<script type="math/tex; mode=display">\Omega^{*}=\frac{(2 \pi)^{3}}{\Omega}</script></li>
-<li><strong>晶面族和倒格矢关系</strong><br><img src="/img_solid/10.png" srcset="/img/loading.gif" alt=""><br>倒格矢<script type="math/tex">(h1, h2, h3)</script> 和晶面指数<script type="math/tex">(h1h2h3)</script> 的晶面法线方向平行。可以用晶面指数为<script type="math/tex">(h1h2h3)</script> 的晶面的法线方向上的最短倒格矢来表示该晶面族的法线方向。</li>
-<li><strong>晶面距与倒格矢关系</strong><script type="math/tex; mode=display">d_{h_{1} h_{2} h_{3}}=\frac{2 \pi}{\left|\vec{K}_{h}\right|}</script></li>
-<li><strong>正倒格矢关系</strong><script type="math/tex; mode=display">\vec{R}_{l} \bullet \vec{K}_{h}=2 \pi \mu \quad(\mu=0,\pm 1, \pm 2 \dots)</script><em>推论：</em>如果两个矢量满足这个方程所示的关系，若其中一个为正格矢，则另一个必为倒格矢。</li>
+              <h1 id="热力学中的名词"><a href="#热力学中的名词" class="headerlink" title="热力学中的名词"></a>热力学中的名词</h1><ul>
+<li><strong>系统：</strong>宇宙中我们研究的对象。而其他部分称为<strong>环境</strong>。</li>
+<li>系统的<strong>分类：</strong><ul>
+<li><strong>孤立系统 (isolated system):</strong>系统与环境之间既没有能量交换，也没有物质交换。</li>
+<li><strong>封闭系统 (closed system):</strong>系统与环境之间有能量交换，但没有物质交换。</li>
+<li><strong>开放系统 (open system):</strong>系统与环境之间既有能量交换，也有物质交换。</li>
 </ul>
-<h1 id="布里渊区"><a href="#布里渊区" class="headerlink" title="布里渊区"></a>布里渊区</h1><p><strong>定义：</strong><br>布里渊区（Brillouin zone）是按照既是最小的重复单元又能反映倒格子空间点阵对称性的方式将倒格子空间分割成无限多个体积相等的结构单元<br><strong>布里渊区的划分：</strong><br>在倒格子空间中，以某一倒格点为原点，一般称原点为<script type="math/tex">\Gamma</script>点，<script type="math/tex">\vec{G}</script>为自<script type="math/tex">\Gamma</script>点到任一倒格点的倒格矢，作所有倒格矢<script type="math/tex">\vec{G}</script>的垂直平分面，这些平面把倒格子空间分割成许多包围原点的多面体。我们按照这些多面体离<script type="math/tex">\Gamma</script>的距离的远近称其为第一、第二……布里渊区。</p>
-<h2 id="一维晶格的布里渊区"><a href="#一维晶格的布里渊区" class="headerlink" title="一维晶格的布里渊区"></a>一维晶格的布里渊区</h2><p><img src="/img_solid/11.png" srcset="/img/loading.gif" alt=""><br><strong>正格子：</strong><script type="math/tex">\vec{a}_{1}=a \vec{i}, \vec{a}_{2}=0, \vec{a}_{3}=0</script><br><strong>倒格子：</strong><script type="math/tex">\vec{b}_{1}=\frac{2 \pi}{a} \vec{i}, \vec{b}_{2}=0, \vec{b}_{3}=0</script><br><strong>第一布里渊区：</strong><script type="math/tex">-\frac{\pi}{a}<k_{x} \leq \frac{\pi}{a}</script><br><strong>第二布里渊区：</strong><script type="math/tex">-\frac{2 \pi}{a}<k_{x} \leq-\frac{\pi}{a} \text { and } \frac{\pi}{a}<k_{x} \leq \frac{2 \pi}{a}</script></p>
-<h2 id="二维正方晶格的布里渊区"><a href="#二维正方晶格的布里渊区" class="headerlink" title="二维正方晶格的布里渊区"></a>二维正方晶格的布里渊区</h2><p><img src="/img_solid/12.png" srcset="/img/loading.gif" alt=""><br><strong>正格子：</strong><script type="math/tex">\vec{a}_{1}=a \vec{i}, \vec{a}_{2}=a \vec{j}, \vec{a}_{3}=0</script><br><strong>倒格子：</strong><script type="math/tex">\vec{b}_{1}=\frac{2 \pi}{a} \vec{i}, \vec{b}_{2}=\frac{2 \pi}{a} \vec{j}, \vec{b}_{3}=0</script></p>
-<h2 id="体心立方晶格"><a href="#体心立方晶格" class="headerlink" title="体心立方晶格"></a>体心立方晶格</h2><p><img src="/img_solid/13.png" srcset="/img/loading.gif" alt=""><br><strong>正格子：</strong><script type="math/tex">\vec{a}_{1}=\frac{a}{2}(-\vec{i}+\vec{j}+\vec{k}), \vec{a}_{2}=\frac{a}{2}(\vec{i}-\vec{j}+\vec{k}), \vec{a}_{3}=\frac{a}{2}(\vec{i}-\vec{j}+\vec{k})</script><br><strong>倒格子：</strong><script type="math/tex">\vec{b}_{1}=\frac{2 \pi}{a}(\vec{j}+\vec{k}), \vec{b}_{2}=\frac{2 \pi}{a}(\vec{i}+\vec{k}), \vec{b}_{3}=\frac{2 \pi}{a}(\vec{i}+\vec{j})</script><br><strong>与体心立方格子对应的倒格子为面心立方格子</strong><br><em>说明：</em>三个特殊的方向</p>
+</li>
+<li><strong>平衡态：</strong>对于孤立系统，当一段时间后，我们去测量宏观参量其平均值不会发生变化即达到平衡态。平衡态是一个动态的平衡。</li>
+<li><strong>宏观参量：</strong>也称为热力学量。</li>
+<li><strong>微观参量：</strong>描述系统粒子状态的量。</li>
+<li><strong>广延量：</strong>其大小随系统的大小改变的量，如体积，粒子数熵，能量等。</li>
+<li><strong>强度量：</strong>不随系统的大小改变而变化的量。如温度，化学势，粒子数密度等。</li>
+<li><strong>热力学极限：</strong>在粒子数保持不变，粒子数 $N \rightarrow \infty,$ 体积 $V \rightarrow \infty$ 的极限状态。</li>
+<li><strong>状态参量：</strong>对于一个处于平衡态的系统，我们往往只需要少数几个相互独立的宏观参量来描述其状态，而这些态就为状态参量。状态参量与过程无关。如体积$V$，压强$P$，温度$T$等。</li>
+<li><strong>过程量：</strong>只有指定了具体过程后才能确定下来的量，一般来说过程不同过程量也不同，</li>
+<li><strong>状态函数：</strong>在平衡态中选定一个状态参量，其他的状态参量即为其的函数。写程方程就为<strong>状态方程</strong></li>
+</ul>
+<h1 id="热容"><a href="#热容" class="headerlink" title="热容"></a>热容</h1><p><strong>热量</strong>表示的是两个系统在达到热平衡过程中进行的能量传递或转移，为过程量。<br><strong>热容</strong>描述的是一个物体存储能量的能力，定义为</p>
+<script type="math/tex; mode=display">C \equiv \frac{d Q}{d T}</script><p>即使物体温度升高单位温度需要传递给它的热量。热容是一个广延量，而比热容 (specific heat capacity)（表示单位质量的物质的热容）则为强度量。</p>
 <ul>
-<li><script type="math/tex">\Delta</script>：<script type="math/tex">[100]</script>方向</li>
-<li><script type="math/tex">\Sigma</script>：<script type="math/tex">[110]</script>方向</li>
-<li>$\Lambda$：<script type="math/tex">[111]</script>方向</li>
+<li><strong>定容热容</strong><script type="math/tex; mode=display">C_{V} \equiv\left(\frac{d Q}{d T}\right)_{V}</script></li>
+<li><strong>定压热容</strong>‘<script type="math/tex; mode=display">C_{P} \equiv\left(\frac{d Q}{d T}\right)_{P}</script></li>
 </ul>
-<h2 id="面心立方晶格"><a href="#面心立方晶格" class="headerlink" title="面心立方晶格"></a>面心立方晶格</h2><p><img src="/img_solid/14.png" srcset="/img/loading.gif" alt=""><br><strong>正格子：</strong><script type="math/tex">\vec{a}_{1}=\frac{a}{2}(\vec{j}+\vec{k}), \vec{a}_{2}=\frac{a}{2}(\vec{i}+\vec{k}), \vec{a}_{3}=\frac{a}{2}(\vec{i}+\vec{j})</script><br><strong>倒格子：</strong><script type="math/tex">\vec{b}_{1}=\frac{2 \pi}{a}(-\vec{i}+\vec{j}+\vec{k}), \vec{b}_{2}=\frac{2 \pi}{a}(\vec{i}-\vec{j}+\vec{k}), \vec{b}_{3}=\frac{2 \pi}{a}(\vec{i}+\vec{j}-\vec{k})</script><br><strong>与面心立方格子对应的倒格子为体心立方格子</strong><br><em>说明：</em>在计算面心立方格子的布里渊区的时候若只考虑最邻近的倒格点，所计算出来的不是最小单位，因此我们还需考虑次邻近的点。</p>
-<h1 id="原子散射因子"><a href="#原子散射因子" class="headerlink" title="原子散射因子"></a>原子散射因子</h1><h1 id="几何结构因子"><a href="#几何结构因子" class="headerlink" title="几何结构因子"></a>几何结构因子</h1><h1 id="典型晶体结构衍射峰消失的条件"><a href="#典型晶体结构衍射峰消失的条件" class="headerlink" title="典型晶体结构衍射峰消失的条件"></a>典型晶体结构衍射峰消失的条件</h1>
+<h1 id="第零定律"><a href="#第零定律" class="headerlink" title="第零定律"></a>第零定律</h1><p><strong>热力学第零定律：</strong>如果两个系统中每一个都和第三个系统单独处于热平衡， 那么这两个系统之间也处于热平衡。<br>第零定律反映了热平衡的可传递性。</p>
+<h1 id="温度"><a href="#温度" class="headerlink" title="温度"></a>温度</h1><p>我们把系统 1（$P_1, V_1$ ）与系统3 $\left(P_3, V_3\right)$ 进行热接触。当达到热平衡时，调整其中一个量其他量也变化，这意味着这四个变量间应该存在一定的关系：</p>
+<script type="math/tex; mode=display">P_{3}=f_{31}\left(V_{3}, P_{1}, V_{1}\right)</script><p>当系统 2 和系统 3 达到热平衡</p>
+<script type="math/tex; mode=display">P_{3}=f_{32}\left(V_{3}, P_{2}, V_{2}\right)</script><p>我们有</p>
+<script type="math/tex; mode=display">f_{32}\left(V_{3}, P_{2}, V_{2}\right)=f_{31}\left(V_{3}, P_{1}, V_{1}\right)</script><p>使用热力学第零定律，我们有系统 1 和 2 也处于热平衡状态，</p>
+<script type="math/tex; mode=display">F_{21}\left(P_{2}, V_{2}, P_{1}, V_{1}\right)=0</script><p>也就是说上面两个式子等价，可以发现$V_3$只出现在一个式子中，这意味着我们可以在$f$中提取出$V_3$</p>
+<script type="math/tex; mode=display">\begin{array}{l}f_{31}\left(V_{3}, P_{1}, V_{1}\right)=a\left(V_{3}\right) f_{1}\left(P_{1}, V_{1}\right)+b\left(V_{3}\right) \\f_{32}\left(V_{3}, P_{2}, V_{2}\right)=a\left(V_{3}\right) f_{2}\left(P_{2}, V_{2}\right)+b\left(V_{3}\right)\end{array}</script><p>这时我们有</p>
+<script type="math/tex; mode=display">f_{2}\left(P_{2}, V_{2}\right)=f_{1}\left(P_{1}, V_{1}\right)</script><p>同理就可以得到</p>
+<script type="math/tex; mode=display">f_{1}\left(P_{1}, V_{1}\right)=f_{2}\left(P_{2}, V_{2}\right)=f_{3}\left(P_{3}, V_{3}\right)</script><p>这说明，每个系统都存在一个态函数<script type="math/tex">f_{i}\left(P_{i}, V_{i}\right)</script>, 当系统相互处于热平衡时, 该态函数彼此相等。于是我们定义一个状态参量“温度”$T$：</p>
+<script type="math/tex; mode=display">g\left(T_{i}\right)=f_{i}\left(P_{i}, V_{i}\right)</script><p>这样，当两个系统达到热平衡后，<script type="math/tex">g\left(T_{1}\right)=g\left(T_{2}\right)</script>。函数 $g$ 可以选取不同的形式。最为简单的选取就是<script type="math/tex">g(T)=T</script><br>这样当热平衡时我们就可以说是温度相同了。</p>
+<p>在前面讨论中的T与其他状态参量的函数关系我们称为<strong>状态方程</strong>。对理想气体来说<script type="math/tex">P V=N k_{B} T</script>。</p>
+<h2 id="温标"><a href="#温标" class="headerlink" title="温标"></a>温标</h2><ul>
+<li>摄氏温标 (‘C)：把一个标准大气压下，水的沸点定位 100 度，水的冰点定 位 0 度。</li>
+<li>华氏温标 (‘PF)：它与摄氏温标换算关系： $F=32+\frac{9}{5} C$</li>
+<li>理想气体温标 (K)：利用理想气体状态方程 PV = ルRT 定义温度，这样的 话，水的三相点温度为 273.16 K。与摄氏度换算关系为： $K=C-273.15$</li>
+<li>热力学温标 (K): 利用卡诺循环来定义。</li>
+</ul>
+
             </article>
             <hr>
             <div>
@@ -266,9 +274,9 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/06/23/reviewreed/qeh/">
+                      <a href="/2020/06/27/solid%20physics/solid4/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">A review about The Quantum Hall Effect</span>
+                        <span class="hidden-mobile">固体物理圣经咏唱——原子振动及其格波理论</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -276,8 +284,8 @@
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/06/21/solid%20physics/solid2/">
-                        <span class="hidden-mobile">固体物理圣经咏唱——晶体结构及其描述</span>
+                      <a href="/2020/06/23/reviewreed/qeh/">
+                        <span class="hidden-mobile">A review about The Quantum Hall Effect</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -416,7 +424,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "固体物理圣经咏唱——晶体衍射及其倒格子空间&nbsp;",
+        "热力学与统计物理圣经咏唱——热力学第零定理、态函数、温度&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

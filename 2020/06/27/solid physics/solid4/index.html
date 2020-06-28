@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="expand your horizons">
+  <meta name="author" content="Zijun Wei">
+  <meta name="keywords" content="">
+  <title>固体物理圣经咏唱——原子振动及其格波理论 - My Web</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Zijun Wei's space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                about me
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-06-27 00:00">
+      June 27, 2020 am
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      711 words
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      4
+       minutes
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="一维单原子晶体中的原子振动"><a href="#一维单原子晶体中的原子振动" class="headerlink" title="一维单原子晶体中的原子振动"></a>一维单原子晶体中的原子振动</h1><h2 id="运动方程及其解"><a href="#运动方程及其解" class="headerlink" title="运动方程及其解"></a>运动方程及其解</h2><p><img src="/img_solid/15.png" srcset="/img/loading.gif" alt=""><br>如图单原子链中相邻原子间距 （晶格常数）为$a$，相邻原子间相互作用能为$U(a)$，我们将其展开只保留二阶项</p>
+<script type="math/tex; mode=display">U(a+\delta)=U(a)+\frac{1}{2} \beta \delta^{2} \quad\text{where}\quad \beta=\left(\frac{\partial^{2} U}{\partial r^{2}}\right)_{a}</script><p>第$n$个原子的<strong>运动方程</strong>为</p>
+<script type="math/tex; mode=display">m \frac{d^{2} x_{n}}{d t^{2}}=\beta\left(x_{n+1}+x_{n-1}-2 x_{n}\right) \quad(n=1,2, \ldots N)</script><p>其中<script type="math/tex">\omega=\sqrt{\frac{2 \beta}{m}}</script><br>其通解为</p>
+<script type="math/tex; mode=display">x_{n}=A e^{-i(\omega t-q n a)}</script><p>这里的$x_n$表示原子的位移，反映的是晶体中因原子集体振动而产生的晶格振动波。描述原子集体以角频率$\omega$的平面波称为晶格振动波，简称<strong>格波</strong>。<br>可以看出晶格中各原子间振动相互间都存在着固定的相位关系，说明原子链中原子振动彼此间是关联的，呈现一种集体振动。</p>
+<ul>
+<li><strong>格波的波矢</strong><script type="math/tex; mode=display">\vec{q}=\frac{2 \pi}{\lambda} \vec{e}_{n}</script></li>
+<li><strong>格波的波长</strong><script type="math/tex; mode=display">\lambda=\frac{2 \pi}{q}</script></li>
+<li><strong>格波的相速度</strong><script type="math/tex; mode=display">v_{p}=\frac{\omega}{q}</script><h2 id="色散关系"><a href="#色散关系" class="headerlink" title="色散关系"></a>色散关系</h2>将通解带入原方程可以得到频率$\omega$和波数$q$间的关系<script type="math/tex; mode=display">\omega^{2}=\frac{2 \beta}{m}[1-\cos (q a)]</script>因为$\beta&gt;0$，故<script type="math/tex; mode=display">\omega=2 \sqrt{\frac{\beta}{m}}\left|\sin \frac{q a}{2}\right|</script>即为一维原子链或一维布喇菲格子中格波的<strong>色散关系</strong>（dispersion relation）。格波的相速度<script type="math/tex">v_{p}=\frac{2}{q} \sqrt{\frac{\beta}{m}}\left|\sin \frac{q a}{2}\right|</script>。群速度<script type="math/tex">v_{g}=a \sqrt{\frac{\beta}{m}}\left|\cos \frac{q a}{2}\right|</script><br><img src="/img_solid/16.png" srcset="/img/loading.gif" alt=""><br><strong>一种色散关系对应一支格波</strong>，因此一维单原子链中只有一种格波，其最大频率<script type="math/tex">\omega_{\max }=2 \sqrt{\frac{\beta}{m}}</script>。由于<script type="math/tex">\omega_{\max }</script>~超声波，我们称其为<strong>声学波</strong>。<br>令<script type="math/tex">K_{h}=h \frac{2 \pi}{a}</script>为倒格矢，我们有<script type="math/tex">\omega\left(q+K_{h}\right)=\omega\left(q\right)</script>，所以<script type="math/tex">\omega\left(q\right)</script>以$\frac{2\pi}{a}$为周期<h3 id="长波极限"><a href="#长波极限" class="headerlink" title="长波极限"></a>长波极限</h3>当波长$\lambda$趋向于无限长的时候，$q \rightarrow 0$，因此<script type="math/tex">\sin \left(\frac{q a}{2}\right) \approx \frac{q a}{2}</script>。可得频率和相速分别为<script type="math/tex; mode=display">\begin{array}{l}\omega \approx q a \sqrt{\frac{\beta}{m}}\quad \quad \omega \propto q\\v_{p}=a \sqrt{\frac{\beta}{m}}\quad\quad \text{constant}v_{p}=v_{g}\end{array}</script><img src="/img_solid/17.png" srcset="/img/loading.gif" alt=""><br>此时格波接近于连续介质中的弹性波。<h3 id="短波极限"><a href="#短波极限" class="headerlink" title="短波极限"></a>短波极限</h3>此时波矢接近布里渊区边界，即<script type="math/tex">q \rightarrow \pm \pi / a</script><script type="math/tex; mode=display">\begin{array}{l}\omega = a \sqrt{\frac{\beta}{m}}\quad \quad \omega_{max}\\v_{p}=\frac{2}{q} \sqrt{\frac{\beta}{m}}\quad\quad v_{g}=0 \end{array}</script><img src="/img_solid/18.png" srcset="/img/loading.gif" alt=""><br>此时格波是一种驻波，不能在晶体中传播。<h2 id="波矢q的取值"><a href="#波矢q的取值" class="headerlink" title="波矢q的取值"></a>波矢q的取值</h2>为了保证 $\omega$ 与 $q$ 之间有一一对应的关系，把 $q$ 限制在第一布里洲区，即<script type="math/tex">-\frac{\pi}{a}<q \leq \frac{\pi}{a}</script>。此时$q$只能取一些分立的值。<br><strong>玻恩－卡门周期性边界条件</strong></li>
+<li>在一个长度为 的有限晶 体外仍然有无限多个相同的晶体，且各块晶体内相对应的原子的运动情况相同</li>
+<li><img src="/img_solid/19.png" srcset="/img/loading.gif" alt=""><br>由此我们可以得到$q$的取值<script type="math/tex; mode=display">q=\frac{2 \pi l}{N a}</script>其中$l$为0或任何正、负整数。在第一布里渊区（<script type="math/tex">-\frac{\pi}{a}<q \leq \frac{\pi}{a}</script>）内，$l$有N个不同的值<script type="math/tex; mode=display">l=-\frac{N}{2}+1,-\frac{N}{2}+2, \ldots . \frac{N}{2}-1, \frac{N}{2}</script></li>
+</ul>
+<h1 id="一维双原子晶体中的原子振动"><a href="#一维双原子晶体中的原子振动" class="headerlink" title="一维双原子晶体中的原子振动"></a>一维双原子晶体中的原子振动</h1><h2 id="运动方程及其解-1"><a href="#运动方程及其解-1" class="headerlink" title="运动方程及其解"></a>运动方程及其解</h2><p><img src="/img_solid/20.png" srcset="/img/loading.gif" alt=""><br><strong>运动方程</strong></p>
+<script type="math/tex; mode=display">\left\{\begin{array}{c}m \frac{d^{2} x_{2 n+1}}{d t^{2}}=\beta\left(x_{2 n+2}+x_{2 n}-2 x_{2 n+1}\right) \\M \frac{d^{2} x_{2 n+2}}{d t^{2}}=\beta\left(x_{2 n+3}+x_{2 n+1}-2 x_{2 n+2}\right)\end{array}\right.</script><p>通解</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l}x_{2 n+1}=A e^{i[q(2 n+1) a-\omega t]} \\x_{2 n+2}=B e^{i[q(2 n+2) a-\omega t]}\end{array}\right.</script><h2 id="色散关系-1"><a href="#色散关系-1" class="headerlink" title="色散关系"></a>色散关系</h2><p>将通解带入原方程可以得到两支独立的格波</p>
+<script type="math/tex; mode=display">\begin{array}{l}\omega_{+}^{2}=\frac{\beta}{M m}\left\{(m+M)+\left[m^{2}+M^{2}+2 m M \cos (2 q a)\right]^{\frac{1}{2}}\right\} \\\omega_{-}^{2}=\frac{\beta}{M m}\left\{(m+M)-\left[m^{2}+M^{2}+2 m M \cos (2 q a)\right]^{\frac{1}{2}}\right\}\end{array}</script><p><img src="/img_solid/21.png" srcset="/img/loading.gif" alt=""><br>他们的周期都为$\frac{\pi}{a}$，第一布里渊区为<script type="math/tex">-\frac{\pi}{2 a}<q \leq \frac{\pi}{2 a}</script></p>
+<h3 id="色散关系中的一些特殊值"><a href="#色散关系中的一些特殊值" class="headerlink" title="色散关系中的一些特殊值"></a>色散关系中的一些特殊值</h3><ul>
+<li>光学波<script type="math/tex">\omega_{+}</script><ul>
+<li><script type="math/tex; mode=display">\left(\omega_{+}\right)_{\max }=\sqrt{\frac{2 \beta}{\mu}}</script></li>
+<li><script type="math/tex; mode=display">\left(\omega_{+}\right)_{\min }=\sqrt{\frac{2 \beta}{m}}</script></li>
+</ul>
+</li>
+<li>声学波<script type="math/tex">\omega_{-}</script><ul>
+<li><script type="math/tex; mode=display">\left(\omega_{-}\right)_{\max }=\sqrt{\frac{2 \beta}{M}}</script></li>
+<li><script type="math/tex; mode=display">\left(\omega_{-}\right)_{\min }=0</script></li>
+</ul>
+</li>
+</ul>
+<p>在布里渊区边界存在频率<strong>禁带宽度</strong></p>
+<script type="math/tex; mode=display">\Delta \omega=\left(\omega_{+}\right)_{\min }-\left(\omega_{-}\right)_{\max }=\sqrt{2 \beta}(\sqrt{\frac{1}{m}}-\sqrt{\frac{1}{M}})</script><h3 id="声学波"><a href="#声学波" class="headerlink" title="声学波"></a>声学波</h3><p>若令<script type="math/tex">\mu=\frac{m M}{m+M}</script>，由于<script type="math/tex">\frac{4 \mu}{m+M} \sin ^{2}(q a) \ll 1</script>，声学波的频率近似表示为</p>
+<script type="math/tex; mode=display">\omega_{-}=\sqrt{\frac{2 \beta}{m+M}}|\sin (q a)|</script><p><img src="/img_solid/22.png" srcset="/img/loading.gif" alt=""><br><strong>声学波的长波极限</strong>（<script type="math/tex">q \rightarrow 0</script>）</p>
+<script type="math/tex; mode=display">\omega_{-} \approx \sqrt{\frac{2 \beta}{m+M}} a|q|</script><script type="math/tex; mode=display">v_{p}=v_{g}=\sqrt{\frac{2 \beta}{m+M}} a</script><p><strong>声学波的振幅特征</strong></p>
+<script type="math/tex; mode=display">\frac{A_{-}}{B_{-}}=\frac{2 \beta \cos q a}{2 \beta-m \omega_{-}^{2}}> 0</script><p>这意味着相邻原子都是沿着同一方向振动。<br><strong>声学波实际上代表原胞质心的运动</strong></p>
+<h3 id="光学波"><a href="#光学波" class="headerlink" title="光学波"></a>光学波</h3><script type="math/tex; mode=display">\omega_{+}^{2} \approx \frac{2 \beta}{m M}(m+M)\left\{1-\frac{m M}{(m+M)^{2}} \sin ^{2} q a\right\}</script><p><img src="/img_solid/23.png" srcset="/img/loading.gif" alt=""><br><strong>光学波的振幅特征</strong></p>
+<script type="math/tex; mode=display">\frac{A_{+}}{B_{+}}=\frac{2 \beta-M \omega_{+}^{2}}{2 \beta \cos q a}<0</script><p><strong>光学波实际上代表原胞中原子的相对的运动</strong></p>
+<h2 id="波矢q的取值-1"><a href="#波矢q的取值-1" class="headerlink" title="波矢q的取值"></a>波矢q的取值</h2><script type="math/tex; mode=display">q=\frac{\pi l}{N a}</script><p>其中$l$为0或任何正、负整数。在第一布里渊区（<script type="math/tex">-\frac{\pi}{2 a}<q \leq \frac{\pi}{2 a}</script>）内，$l$有N个不同的值</p>
+<script type="math/tex; mode=display">l=-\frac{N}{2}+1,-\frac{N}{2}+2, \ldots . \frac{N}{2}-1, \frac{N}{2}</script><h2 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h2><p><strong>一个布里渊区里，晶格振动频率的数目和晶体的总自由度数相等。</strong>即在一个布里渊区内</p>
+<ul>
+<li>晶体原胞数=波矢$q$取值的个数</li>
+<li>原子种类的个数=色散关系的个数<h2 id="三维多原子晶体中的原子振动"><a href="#三维多原子晶体中的原子振动" class="headerlink" title="三维多原子晶体中的原子振动"></a>三维多原子晶体中的原子振动</h2><img src="/img_solid/24.png" srcset="/img/loading.gif" alt=""><br>对纵波，原子振动方向与波的传播方向一致，而对横 波，原子振动与波传播方向垂直。</li>
+</ul>
+<h1 id="原子振动的量子理论"><a href="#原子振动的量子理论" class="headerlink" title="原子振动的量子理论"></a>原子振动的量子理论</h1><p>哈密顿算符：</p>
+<script type="math/tex; mode=display">\hat{H}=\hat{T}+\hat{U}=\sum_{n} \frac{\hat{p}_{n}^{2}}{2 m}+\frac{1}{2} \beta \sum_{n}\left(x_{n-1}-x_{n}\right)^{2}</script><p>可以看到交叉项很麻烦，为此我们经行表象变化</p>
+<script type="math/tex; mode=display">x_{n, q}=A e^{-i(\omega t-q n a)}=\sum_{q} x_{n, q}=\sum_{q} w_{q} \frac{1}{\sqrt{N}} e^{i n q a}</script><p>其中<script type="math/tex">w_{q}(t)=\sqrt{N} A e^{-i \omega t}</script>。可以证明<script type="math/tex">\left\{\frac{1}{\sqrt{N}} e^{i n q a}\right\}</script>是完备且正交归一的<br>则变化后的哈密顿量为</p>
+<script type="math/tex; mode=display">\hat{H}=\sum_{q}\left(\frac{\hat{p}_{q}^{2}}{2 m}+\frac{1}{2} m \omega_{q}^{2} w_{q}^{2}\right)</script><p>对单一$q$解为</p>
+<script type="math/tex; mode=display">\varepsilon_{q}=\left(n_{q}+\frac{1}{2}\right) \hbar \omega_{q} \quad\left(n_{q}=0,1,2 \ldots .\right)</script><h1 id="声子"><a href="#声子" class="headerlink" title="声子"></a>声子</h1><p>对于晶体中的格波，其能量是量子化的，且格波最小的能量单元（能量量子）是<script type="math/tex">\hbar \omega_{s}(\vec{q})</script>。格波能量的增减必须是<script type="math/tex">\hbar \omega_{s}(\vec{q})</script>的整数倍，这种激发我们可以将其看成‘粒子’，称之为<strong>声子</strong>（phonon）。<br>当我们忽略掉零点能</p>
+<script type="math/tex; mode=display">\varepsilon_{q s}=n_{q s} \hbar \omega_{s}(\vec{q})</script><p>这里<script type="math/tex">n_{q s}</script>可以理解为能量为<script type="math/tex">\hbar \omega_{s}(\vec{q})</script>的声子能级上的声子数。在温度为T时，声子能级<script type="math/tex">\hbar \omega_{s}(\vec{q})</script>上有<script type="math/tex">n_{q s}</script>个声子的<strong>几率</strong>为</p>
+<script type="math/tex; mode=display">P_{n_{q s}}=\frac{e^{-n_{q s} \hbar \omega_{s}(\vec{q}) / k_{B} T}}{\sum_{n_{q s}} e^{-n_{q s} \hbar \omega_{s}(\vec{q}) / k_{B} T}}</script><p>由此<strong>平均声子占据数</strong></p>
+<script type="math/tex; mode=display">n_{q s}(T)=\frac{1}{e^{h \omega_{s}(\bar{q}) / k_{B} T}-1}</script><p>由此可见<strong>声子是玻色子，服从玻色统计分布。</strong><br>频率为<script type="math/tex">\omega_{s}(\vec{q})</script>的格波的<strong>平均能量</strong></p>
+<script type="math/tex; mode=display">\overline{\varepsilon_{q s}(T)}=n_{q s}(T) \hbar \omega_{s}(\vec{q})=\frac{\hbar \omega_{s}(\vec{q})}{e^{\hbar \omega_{s}(\bar{q}) / k_{B} T}-1}</script><p>由此可知声子对<strong>比热</strong>的贡献</p>
+<script type="math/tex; mode=display">C_{V}^{q s} \equiv \frac{\partial \varepsilon_{q s}(T)}{\partial T}=k_{B}\left[\frac{\hbar \omega_{s}(\vec{q})}{k_{B} T}\right]^{2} \frac{e^{\hbar \omega_{s}(\vec{q}) / k_{B} T}}{\left[e^{\hbar \omega_{s}(\vec{q}) / k_{B} T}-1\right]^{2}}</script><p>则总比热为</p>
+<script type="math/tex; mode=display">C_{V}=\sum_{q, s}^{3 n N} C_{V}^{q}</script><ul>
+<li>高温极限<script type="math/tex">k_{B} T>>\hbar \omega_{s}(\vec{q})</script>，我们展开exp指数可以得到<script type="math/tex; mode=display">C_{V}=\sum_{q, s}^{3 n N} C_{V}^{q s}=3 n N k_{B}</script>这正是杜隆-珀替理论所给出的结果。</li>
+<li>低温极限<script type="math/tex">k_{B} T<<\hbar \omega_{s}(\vec{q})</script>，此时有<script type="math/tex">e^{\hbar \omega_{s}(\vec{q}) / k_{B} T}>>1</script><script type="math/tex; mode=display">C_{V} \approx \sum_{q, s}^{3 n N} k_{B}\left[\frac{\hbar \omega_{s}(\vec{q})}{k_{B} T}\right]^{2} e^{-\hbar \omega_{s}(\bar{q}) / k_{B} T}</script>可见，在低温极限下，晶格比热随温度降低按指数规律快速趋向于0，与实验相符。</li>
+</ul>
+<h1 id="声子谱"><a href="#声子谱" class="headerlink" title="声子谱"></a>声子谱</h1><p>对由N个原胞、每个原胞中有n个原子组成的三 维多原子晶体，总的晶格振动能在<script type="math/tex">V \rightarrow \infty</script>时可以写为积分形式</p>
+<script type="math/tex; mode=display">E(T)=\frac{V}{(2 \pi)^{3}} \sum_{s} \int_{\Omega^{\prime}} \varepsilon_{q s}(T) d \vec{q}</script><p>其中<script type="math/tex">\varepsilon_{q s}(T)=\frac{\hbar \omega_{s}(\vec{q})}{e^{\hbar \omega_{s}(\vec{q}) / k_{B} T}-1}, \quad \Omega^{*}=\frac{(2 \pi)^{3}}{\Omega}, \quad \Omega</script>为正格子空间原胞的体积。我们可以将其写为</p>
+<script type="math/tex; mode=display">E(T)=\int_{0}^{\infty} \varepsilon(\omega, T) {g}(\omega) {d} \omega</script><p>其中<script type="math/tex">g(w)</script>即为声子频率的分布函数，简称<strong>声子谱</strong>。<script type="math/tex">{g}(\omega)</script>可以由色散关系推出<br>我们可以将<script type="math/tex">g(\omega)</script>定义为</p>
+<script type="math/tex; mode=display">g(\omega)=\lim _{ \Delta \omega \rightarrow 0} \frac{\Delta n}{\Delta \omega }</script><p>即在<script type="math/tex">\omega \sim \omega+\Delta \omega</script>频率间隔内的振动模式数<script type="math/tex">\Delta n</script></p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l}\Delta n=\frac{V}{(2 \pi)^{2}} \iint d S_{\omega} d q \quad\quad d S_{\omega}\text{为等频面上的面积元}\\\Delta \omega=d q\left|\nabla_{q} \omega(q)\right| \quad \quad dq \text{为等频面内的垂直距离}\end{array}\right.</script><p>由此可以推出</p>
+<script type="math/tex; mode=display">g_{3 D}(\omega)=\frac{V}{(2 \pi)^{3}} \sum_{s} \int_{S_{\omega}} \frac{d s}{\left|\nabla_{\bar{q}} \omega_{s}(\vec{q})\right|}</script><script type="math/tex; mode=display">g_{2 D}(\omega)=\frac{S}{(2 \pi)^{2}} \sum_{s} \int_{l_{o}} \frac{d l}{\left|\nabla_{\bar{q}} \omega_{s}(\vec{q})\right|}</script><script type="math/tex; mode=display">g_{1 D}(\omega)=\frac{L}{2 \pi} \sum_{s} \frac{2}{\left|\nabla_{\bar{q}} \omega_{s}(\vec{q})\right|}</script><p>通过$g(w)$我们可以计算</p>
+<ul>
+<li>平均晶格振动能<script type="math/tex; mode=display">\bar{E} (T)=\int_{0}^{\infty} E(T,\omega)  g(\omega) d \omega</script></li>
+<li>晶格比热<script type="math/tex; mode=display">C_{V}=\frac{\partial \bar{E}}{\partial T}=\int_{0}^{\infty} \frac{\partial E(T, \omega)}{\partial T} g(\omega) d \omega</script>其中<script type="math/tex">E(T, \omega)=\frac{\hbar \omega}{e^{\hbar \omega / k_{B} T}-1}</script></li>
+</ul>
+<h1 id="晶格比热的模型"><a href="#晶格比热的模型" class="headerlink" title="晶格比热的模型"></a>晶格比热的模型</h1><h2 id="经典比热理论"><a href="#经典比热理论" class="headerlink" title="经典比热理论"></a>经典比热理论</h2><p>$N$个原子，每个原子有3个自由度，且每个自由度的平均热能为<script type="math/tex">k_{B}T</script>，则平均内能为<script type="math/tex">\bar{E}=3k_{B}T</script>。则原子定容比热为</p>
+<script type="math/tex; mode=display">C_{V}=3 N k_{B}</script><p>这即为杜隆-珀替定律</p>
+<h2 id="爱因斯坦模型"><a href="#爱因斯坦模型" class="headerlink" title="爱因斯坦模型"></a>爱因斯坦模型</h2><p>晶体中每个原子都以同一<script type="math/tex">\omega_{E}</script>频率振动，且振动的能量量子<script type="math/tex">\hbar \omega_{E}</script>。则平均能量为</p>
+<script type="math/tex; mode=display">\bar{E}(T)=\frac{\sum_{j=1}^{3 N} \hbar \omega_{j} e^{-\hbar \omega_{j} / k_{B} T}}{\sum_{j=1}^{3 N} e^{-\hbar \omega_{j} k_{B} T}}=\sum_{j=1}^{3 N} \frac{\hbar \omega_{j}}{e^{\hbar \omega_{j} / k_{B} T}-1}=\frac{3 N \hbar \omega_{E}}{e^{\hbar \omega_{E} / k_{B} T}-1}</script><p>则<strong>晶格比热</strong>为</p>
+<script type="math/tex; mode=display">C_{V}=3 N k_{B}\left(\frac{\hbar \omega_{E}}{k_{B} T}\right)^{2} \frac{e^{\hbar \omega_{E} / k_{B} T}}{\left(e^{\hbar \omega_{E} / k_{B} T}-1\right)^{2}}</script><p>若我们令<strong>爱因斯坦温度</strong><script type="math/tex">\theta_{E}=\hbar \omega_{E} / k_{B}</script>，且<strong>爱因斯坦比热函数</strong><script type="math/tex">f_{E}\left(\frac{\theta_{E}}{T}\right)=\left(\frac{\theta_{E}}{T}\right)^{2} \frac{e^{\frac{\theta_{E}}{T}}}{\left(e^{\frac{\theta_{E}}{T}}-1\right)^{2}}</script>。则我们有</p>
+<script type="math/tex; mode=display">C_{V}=3 N k_{B} f_{E}\left(\frac{\theta_{E}}{T}\right)</script><ul>
+<li>高温极限<script type="math/tex">T \gg \theta_{E}</script>，我们展开爱因斯坦比热函数<script type="math/tex">f_{E}\approx 1</script><script type="math/tex; mode=display">C_{V} \approx 3 N k_{B}</script>与杜隆-珀替理论结果相同。这是因为在高温区，量子化效应可以忽略</li>
+<li>低温极限<script type="math/tex">T \ll \theta_{E}</script><script type="math/tex; mode=display">C_{V}=3 N k_{B}\left(\frac{\Theta_{E}}{T}\right)^{2} e^{-\Theta_{E} / T}</script>随温度降低按温度的指数形式趋于0</li>
+</ul>
+<p>由此爱因斯坦的模型可以解释在低温时，比热趋于0的问题。但实验中测得晶格比热在低温下是按照<script type="math/tex">C_{V} \propto T^{3}</script>规律趋于 0 的。与爱因斯坦模型不符。原因是因为其忽略了每个原子和它的近邻原子的联系，而这在低温下其很大作用。</p>
+<h2 id="德拜模型"><a href="#德拜模型" class="headerlink" title="德拜模型"></a>德拜模型</h2><p>德拜模型中将布喇菲格子看作是各向同性的连续介质，而将格波看成是弹性波。<strong>本质：</strong>考虑的是声学波中的长波极限对比热的贡献。<br>长波极限下，纵波和横波的色散关系分别为：</p>
+<script type="math/tex; mode=display">\begin{array}{ll}\text { 纵波 }: & \omega=v_{l} q \\\text { 横波 }: & \omega=v_{l} q\end{array}</script><p>带入<script type="math/tex">g_{3 D}(\omega)=\frac{V}{(2 \pi)^{3}} \int_{S_{\omega}} \frac{d s}{\left|\nabla_{\bar{q}} \omega(\vec{q})\right|}</script>。其中<script type="math/tex">\nabla_{\vec{q}} \omega(\vec{q})=v_{l}, \quad \int_{S_{\omega}} d s=4 \pi q^{2}=4 \pi\left(\frac{\omega^{2}}{v_{l}^{2}}\right)</script>（横波同理）因此有</p>
+<script type="math/tex; mode=display">g_{3 D}(\omega)=\frac{V}{(2 \pi)^{3}}\left[\frac{4 \pi \omega^{2}}{v_{l}^{3}}+2 \times \frac{4 \pi \omega^{2}}{v_{t}^{3}}\right]=\frac{3 V}{2 \pi^{3} \bar{v}^{3}} \omega^{2}</script><p>定义格波的平均波速为<script type="math/tex">\frac{3}{\bar{v}^{3}}=\left(\frac{1}{v_{l}^{3}}+\frac{2}{v_{t}^{3}}\right)</script><br>此时对<script type="math/tex">g_{3 D}</script>的积分发散，为解决这个问题，德拜假设存在一个频率上限<script type="math/tex">\omega_{m}</script>，称之为德拜频率。大于<script type="math/tex">\omega_{m}</script>的波是不存在的，即</p>
+<script type="math/tex; mode=display">\int_{0}^{\omega_{m}} g_{3 D}(\omega) d \omega=3 N</script><p>计算可得<strong>德拜频率</strong></p>
+<script type="math/tex; mode=display">\omega_{m}=\bar{v}\left[6 \pi^{2}\left(\frac{N}{V}\right)\right]^{\frac{1}{3}}.</script><p>则晶格比热为</p>
+<script type="math/tex; mode=display">C_{V}=\frac{3 V}{2 \pi^{2} \bar{v}^{3}} \int_{0}^{\omega_{m}} k_{B}\left(\frac{\hbar \omega}{k_{B} T}\right)^{2} \frac{e^{\hbar \omega / k_{B} T}}{\left(e^{\hbar \omega / k_{B} T}-1\right)^{2}} \omega^{2} d \omega=3 N k_{B} f_{D}\left(\frac{T}{\theta_{D}}\right)</script><p><strong>德拜温度</strong></p>
+<script type="math/tex; mode=display">\theta_{D}=\frac{\hbar \omega_{m}}{k_{B}}</script><p><strong>德拜比热函数</strong></p>
+<script type="math/tex; mode=display">f_{D}\left(T / \theta_{D}\right)=3 \left[\frac{T}{\theta_{D}}\right]^3 \int_{0}^{\theta_{D} / T} \frac{\xi^{4} e^{\xi}}{\left(e^{\xi}-1\right)^{2}} d \xi</script><p>其中<script type="math/tex">\xi=\frac{\hbar \omega}{k_{B} T}</script></p>
+<ul>
+<li>高温极限<script type="math/tex">T \gg \theta_{D}</script>，<script type="math/tex">\xi=\frac{\hbar \omega}{k_{B} T} \ll 1</script>，即<script type="math/tex">f_{D}\left(T / \theta_{D}\right) \approx 1</script><script type="math/tex; mode=display">C_{V} \approx 3 N k_{B}</script></li>
+<li>低温极限<script type="math/tex">T \ll \theta_{D}</script>，此时积分上限可取为<script type="math/tex">\infty</script>。即<script type="math/tex">\int_{0}^{\theta_{0} / T}  \rightarrow \int_{0}^{\infty} =\frac{4 \pi^{4}}{15}</script><script type="math/tex; mode=display">C_{V}=\frac{12 \pi^{4} N k_{B}}{5}\left(\frac{T}{\theta_{D}}\right)^{3}</script>低温下晶格比热和温度$T^3$成比例，称为<strong>德拜定律</strong>。</li>
+</ul>
+<p>德拜模型可以很好的解释低温与高温的晶体比热情况，尤其是低温情况，这时因为低温下晶格振动以长波为主。在德拜模型中德拜温度是一个与温度无关的常数，但事实上是温度有关的函数。这是因为德拜模型过于简单，特别是德拜模型实际上只考虑了长声学波对比热的贡献，在中间温度或高温时，其它波长的声学波激发也是可能的。</p>
+<h1 id="非谐效应"><a href="#非谐效应" class="headerlink" title="非谐效应"></a>非谐效应</h1>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/physics-note/">physics note</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9C%A3%E7%BB%8F%E5%92%8F%E5%94%B1%E7%B3%BB%E5%88%97/">圣经咏唱系列</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，大部分都是我整理前人的工作或学习笔记 ，所以可以随便使用与转载</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/06/24/Thermal/temperature/">
+                        <span class="hidden-mobile">热力学与统计物理圣经咏唱——热力学第零定理、态函数、温度</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "固体物理圣经咏唱——原子振动及其格波理论&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+</body>
+</html>

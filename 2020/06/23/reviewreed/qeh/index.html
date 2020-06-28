@@ -162,7 +162,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      3.1k words
+      3.9k words
     </span>
   
 
@@ -172,7 +172,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      30
+      38
        minutes
     </span>
   
@@ -258,7 +258,8 @@
 <script type="math/tex; mode=display">H=\frac{1}{2 m}\left(p_{x}^{2}+\left(p_{y}+e B x\right)^{2}\right)+e E x</script><p>By using the method in a harmonic oscillator, we can find the electric field only contribute a shift, which means wavefunctions are </p>
 <script type="math/tex; mode=display">\psi(x, y)=\psi_{n, k}\left(x+m E / e B^{2}, y\right)</script><p>the energy eigenvalues are</p>
 <script type="math/tex; mode=display">E_{n, k}=\hbar \omega_{B}\left(n+\frac{1}{2}\right)-e E\left(k l_{B}^{2}+\frac{e E}{m \omega_{B}^{2}}\right)+\frac{m}{2} \frac{E^{2}}{B^{2}}</script><p>Here we plot the figure of $E$ and $k$ as follow<br><img src="/img_qhe/6.png" srcset="/img/loading.gif" alt=""><br>We can find the degeneracy in each Landau level has now been lifted.</p>
-<h3 id="Symmetric-Gauge"><a href="#Symmetric-Gauge" class="headerlink" title="Symmetric Gauge"></a>Symmetric Gauge</h3><p>This time we choose <strong>symmetric gauge</strong>, which is</p>
+<p>Because the energy now depends on the momentum, it means that states now drift in the y direction. The <strong>group velocity</strong> is</p>
+<script type="math/tex; mode=display">v_{y}=\frac{1}{\hbar} \frac{\partial E_{n, k}}{\partial k}=-\frac{e}{\hbar} E l_{B}^{2}=-\frac{E}{B}</script><h3 id="Symmetric-Gauge"><a href="#Symmetric-Gauge" class="headerlink" title="Symmetric Gauge"></a>Symmetric Gauge</h3><p>This time we choose <strong>symmetric gauge</strong>, which is</p>
 <script type="math/tex; mode=display">\mathbf{A}=-\frac{1}{2} \mathbf{r} \times \mathbf{B}=-\frac{y B}{2} \hat{\mathbf{x}}+\frac{x B}{2} \hat{\mathbf{y}}</script><p>This gauge breaks translational symmetry in both the x and the y directions, but preserves rotational symmetry, which means that angular momentum is a good quantum number. Furthermore, this gauge plays an important part in FQHE</p>
 <p>We recall the algebraic approach at the beginning of this section, we define a mechanical momenta as<script type="math/tex">\boldsymbol{\pi}=\mathbf{p}+e \mathbf{A}</script>. In this section we set </p>
 <script type="math/tex; mode=display">\tilde{\pi}=\mathbf{p}-e \mathbf{A}</script><p>The commutators of this new momenta is</p>
@@ -282,6 +283,27 @@
 <li>In symmetric gauge, the profiles of the wavefunctions form concentric rings around the origin.<br>By using this physical profile, we find the wavefunction with angular momentum $m$ is peaked on a ring of radius<script type="math/tex">r=\sqrt{2 m l_{B}}</script>.In a disc shaped region of area $A=\pi R^2$ ,the number of states is<script type="math/tex; mode=display">\mathcal{N}=R^{2} / 2 l_{B}^{2}=A / 2 \pi l_{B}^{2}=\frac{e B A}{2 \pi \hbar}</script></li>
 <li>we review the classical motion of particles in a magnetic field. And it’s solution is <script type="math/tex; mode=display">x(t)=X-R \sin \left(\omega_{B} t+\phi\right) \quad \text { and } \quad y(t)=Y+R \cos \left(\omega_{B} t+\phi\right)</script>Now we rewrite them in the coordinates labelling the centre of the orbit as quantum operators, which is <script type="math/tex; mode=display">\begin{array}{l}X=x(t)+R \sin \left(\omega_{B} t+\phi\right)=x-\frac{\dot{y}}{\omega_{B}}=x-\frac{\pi_{y}}{m \omega_{B}} \\Y=y(t)-R \cos \left(\omega_{B} t+\phi\right)=y+\frac{\dot{x}}{\omega_{B}}=y+\frac{\pi_{x}}{m \omega_{B}}\end{array}</script>This definition holds in any gauge. When come into symmetric gauge we have <script type="math/tex; mode=display">X=\frac{1}{e B}\left(2 e A_{y}-\pi_{y}\right)=-\frac{\tilde{\pi}_{y}}{e B} \quad \text { and } \quad Y=\frac{1}{e B}\left(-2 e A_{x}+\pi_{x}\right)=\frac{\tilde{\pi}_{x}}{e B}</script>Then using the commutation relation of $\tilde{\pi}$ we obtain that the positions of the orbit in the $(X, Y)$ plane fail to commute with each other,<script type="math/tex; mode=display">[X, Y]=i l_{B}^{2}</script>By using The Heisenberg uncertainty principle, the uncertainty is given by<script type="math/tex; mode=display">\Delta X \Delta Y=\frac{l_{B}^{2}}{2}</script>Using Bohr-Sommerfeld semi-classical count of the states, we have<script type="math/tex; mode=display">\mathcal{N}=\frac{A}{\Delta X \Delta Y}=\frac{A}{2 \pi l_{B}^{2}}=\frac{e B A}{2 \pi \hbar}</script></li>
 </ul>
+<h2 id="Berry-Phase"><a href="#Berry-Phase" class="headerlink" title="Berry Phase"></a>Berry Phase</h2><p>We have already talk about Berry Phase in previous note <a href="https://zijunwei.top/2020/05/30/1/">Berry Phase note</a>, So we will talk about it when we define some mathematical form about Berry Phase.</p>
+<h1 id="The-Integer-Quantum-Hall-Effect"><a href="#The-Integer-Quantum-Hall-Effect" class="headerlink" title="The Integer Quantum Hall Effect"></a>The Integer Quantum Hall Effect</h1><p>In the integer quantum Hall effect we do not need to take the interactions between electrons into account. Thing may be different in FQHE.</p>
+<h2 id="Conductivity-in-Filled-Landau-Levels"><a href="#Conductivity-in-Filled-Landau-Levels" class="headerlink" title="Conductivity in Filled Landau Levels"></a>Conductivity in Filled Landau Levels</h2><p>In IQHE, we obtain the Hall resistivity from experiments, which is </p>
+<script type="math/tex; mode=display">\rho_{x y}=\frac{2 \pi \hbar}{e^{2}} \frac{1}{\nu}</script><p>And we also get<script type="math/tex">\rho_{x y}</script> in the Drude model, which is </p>
+<script type="math/tex; mode=display">\rho_{x y}=\frac{B}{n e}</script><p>Where $n$ is the density of electrons. Comparing these two expressions, we find the density need to satisfy </p>
+<script type="math/tex; mode=display">n=\frac{B}{\Phi_{0}} \nu</script><p>With<script type="math/tex">\Phi_{0}=2 \pi \hbar / e</script>.<br>Now we have a figure of IQHE, which is the integer in IQHE represent the density of electrons filling ν Landau levels. When $\nu$ Landau levels are filled there is a gap in the energy spectrum. The gap is<script type="math/tex">\hbar \omega_B</script> (where<script type="math/tex">\omega_B=e B / m</script> is the <em>cyclotron frequency</em>). When we add a electric field, the electrons couldn’t move, as long as we’re at temperature<script type="math/tex">k_{B} T \ll \hbar \omega_{B}</script>. This can account for<script type="math/tex">\rho_{x x}=0</script>.</p>
+<h3 id="Conductivity-for-a-single-free-particle"><a href="#Conductivity-for-a-single-free-particle" class="headerlink" title="Conductivity for a single free particle"></a>Conductivity for a single free particle</h3><p>The velocity of the particle is given by</p>
+<script type="math/tex; mode=display">m \dot{\mathbf{x}}=\mathbf{p}+e \mathbf{A}</script><p>where $p_i$ is the canonical momentum.<br>In the quantum mechanics, the total current is given by</p>
+<script type="math/tex; mode=display">\mathbf{I}=-\frac{e}{m} \sum_{\text {filled states }}\langle\psi|-i \hbar \nabla+e \mathbf{A}| \psi\rangle</script><p>Then we use Landau gauge<script type="math/tex">\mathbf{A}=x B \hat{\mathbf{y}}</script>, and introduce an electric field E in the x-direction. By using the Hamiltonian and state we have already talked in the previous section (Landau Levels), we can calculate the current in x-direction and y-direction.</p>
+<script type="math/tex; mode=display">I_{x}=-\frac{e}{m} \sum_{n=1}^{\nu} \sum_{k}\left\langle\psi_{n, k}\left|-i \hbar \frac{\partial}{\partial x}\right| \psi_{n, k}\right\rangle=0</script><script type="math/tex; mode=display">I_{y}=-\frac{e}{m} \sum_{n=1}^{\nu} \sum_{k}\left\langle\psi_{n, k}\left|-i \hbar \frac{\partial}{\partial y}+e x B\right| \psi_{n, k}\right\rangle=-\frac{e}{m} \sum_{n=1}^{\nu} \sum_{k}\left\langle\psi_{n, k}|\hbar k+e B x| \psi_{n, k}\right\rangle</script><p>We find<script type="math/tex">I_x</script> is vanished, and<script type="math/tex">I_y</script> is just related to the position expectation value<script type="math/tex">\langle x\rangle</script> of the eigenstates which is<script type="math/tex">\left\langle\psi_{n, k}|x| \psi_{n, k}\right\rangle=-\hbar k / e B-m E / e B^{2}</script>. Then we have</p>
+<script type="math/tex; mode=display">I_{y}=e \nu \sum_{k} \frac{E}{B}</script><p>The sum over $k$ just gives the degeneracy<script type="math/tex">N=A B / \Phi_{0}</script>. Then we obtain the current density in a electric field</p>
+<script type="math/tex; mode=display">\mathbf{E}=\left(\begin{array}{c}E \\0\end{array}\right) \quad \Rightarrow \quad \mathbf{J}=\left(\begin{array}{c}0 \\e \nu E / \Phi_{0}\end{array}\right)</script><p>Finally we can get the conductivity and the resistivity.</p>
+<script type="math/tex; mode=display">\sigma_{x x}=0 \quad \text { and } \quad \sigma_{x y}=\frac{e \nu}{\Phi_{0}} \quad \Rightarrow \quad \rho_{x x}=0 \quad \text { and } \quad \rho_{x y}=-\frac{\Phi_{0}}{e \nu}=-\frac{2 \pi \hbar}{e^{2} \nu}</script><h3 id="Edge-Modes"><a href="#Edge-Modes" class="headerlink" title="Edge Modes"></a>Edge Modes</h3><p>There are two things which the simple description above does not capture.</p>
+<ul>
+<li>the role played by disorder</li>
+<li>edge modes</li>
+</ul>
+<p>The picture of edge modes is as follows<br><img src="/img_qhe/7.png" srcset="/img/loading.gif" alt=""><br>We find boundary particles move only in a single direction. which is called as <strong>chiral</strong>. Then the particles move in opposite direction on the two sides of the sample, we say that the particles have opposite <strong>chirality</strong> on the two sides.</p>
+<p>We can account the edge modes in the quantum theory.<br>We’ll work in Landau gauge and consider a rectangular geometry which is finite only in the x-direction, which we model by $V(x)$. The Hamiltonian is</p>
+<script type="math/tex; mode=display">H=\frac{1}{2 m}\left(p_{x}^{2}+\left(p_{y}+e B x\right)^{2}\right)+V(x)</script><p>If the potential is smooth over distance scales $l_B$, we can Taylor expand the potential around its location $X$ (<script type="math/tex">V(x) \approx V(X)+(\partial V / \partial x)(x-X)+\ldots</script>), and drop quadratic terms. Then we obtain a linear potential which we have already talked at Landau Levels. The result is a group velocity in the y-direction, now is given by</p>
+<script type="math/tex; mode=display">v_{y}=-\frac{1}{e B} \frac{\partial V}{\partial x}</script><p>The modes at each edge are both chiral:<script type="math/tex">v_{y}>0</script> on the left, and<script type="math/tex">v_{y}<0</script> on the right.</p>
 
             </article>
             <hr>
@@ -311,6 +333,12 @@
                 <div class="post-prevnext row">
                   <div class="post-prev col-6">
                     
+                    
+                      <a href="/2020/06/24/Thermal/temperature/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">热力学与统计物理圣经咏唱——热力学第零定理、态函数、温度</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
                     
                   </div>
                   <div class="post-next col-6">
