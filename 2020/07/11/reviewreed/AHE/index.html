@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="expand your horizons">
+  <meta name="author" content="Zijun Wei">
+  <meta name="keywords" content="">
+  <title>A review about The Anomalous Hall Effect(AHE) - My Web</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Zijun Wei's space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                about me
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-11 00:00">
+      July 11, 2020 am
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.4k words
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      13
+       minutes
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>Anomalous Hall effect (AHE) was first found in 1881 by Hall. He reported that Hall effect was ten times larger in ferromagnetic iron. And as the temperature rises, the Hall coefficient rises rapidly.<br>Moreover, the Hall voltage is not directly proportional to the external field, indicating the anomalous Hall effect. The experiment was made by Pugh <a href="#refer"><sup>2<sup></a><a href="#refer"><sup>3<sup></a>and they got an empirical relation</p>
+<script type="math/tex; mode=display">\rho_{x y}=R_{0} H_{z}+R_{s} M_{z}</script><h1 id="Theory"><a href="#Theory" class="headerlink" title="Theory"></a>Theory</h1><p>The research of AHE then continues for more than 100 years. Now there are three distinct contributions to Hall conductivity<script type="math/tex">\sigma_{x y}</script></p>
+<script type="math/tex; mode=display">\sigma_{x y}^{A H}=\sigma_{x y}^{A H-i n t}+\sigma_{x y}^{A H-s k e w}+\sigma_{x y}^{A H-s j}</script><h2 id="Intrinsic-mechanism-of-AHE"><a href="#Intrinsic-mechanism-of-AHE" class="headerlink" title="Intrinsic mechanism of AHE"></a>Intrinsic mechanism of AHE</h2><p>In 1954, Karplus and Luttinger proposed a theory for the AHE<a href="#refer"><sup>4<sup></a>, which is recently referred as the intrinsic contribution to the AHE. By research the effect of SOI, they found that electrons have an additional contribution to their group velocity, when an external electric field is applied. And we call this velocity as KL’s anomalous velocity.<br>This contribution depends only on the band structure and completely ignores the impurity scattering. Then the intrinsic AHE yields</p>
+<script type="math/tex; mode=display">\sigma_{x y}^{A H-i n t} \propto \sigma_{x x}^{0}</script><h2 id="extrinsic-mechanism-of-AHE"><a href="#extrinsic-mechanism-of-AHE" class="headerlink" title="extrinsic mechanism of AHE"></a>extrinsic mechanism of AHE</h2><h3 id="Skew-scattering"><a href="#Skew-scattering" class="headerlink" title="Skew scattering"></a>Skew scattering</h3><p>After Karplus and Luttinger proposed their theory, Smit opposed this theory and took scattering into consideration<a href="#refer"><sup>5<sup></a><a href="#refer"><sup>6<sup></a> He put forwards a mechanism called Skew scattering, which is due to the chirality that appears in the disorder scattering of spin-orbit coupled ferromagnets. </p>
+<p>In this scattering theory, the skew angle is<script type="math/tex">\theta_{H}=\rho_{xy} / \rho</script><a href="#refer"><sup>7<sup></a>. So the Hall conductivity is proportional to the longitudinal conductivity<script type="math/tex">\sigma_{x x}</script>, that is</p>
+<script type="math/tex; mode=display">\sigma_{x y}^{A H-s k e w} \propto \sigma_{x x}</script><h3 id="Side-jump"><a href="#Side-jump" class="headerlink" title="Side jump"></a>Side jump</h3><p>While the debate between the above two theories didn’t have a consensus, Berger came up with another mechanism in 1970<a href="#refer"><sup>8<sup></a>. When the system exists SOI, there is a crosswise jump $\Delta y$ after scattering.This may lead to</p>
+<script type="math/tex; mode=display">\sigma_{x y}^{A H-s j} \propto \sigma_{x x}^{0}</script><p>After introducing these three main contributions in AHE, we need to remember that those contributions only take elastic scattering into account, and the inelastic scattering are not fully understood.<br><img src="/img_AHE/1.png" srcset="/img/loading.gif" alt=""><br>Illustration of the three main mechanisms in AHE <a href="#refer"><sup>9<sup></a></p>
+<h2 id="Recent-Theory"><a href="#Recent-Theory" class="headerlink" title="Recent Theory"></a>Recent Theory</h2><p>In recent years, we find more and more evidence suggest that intrinsic contribution play the most important part in AHE.<br>Now we can review the intrinsic contribution through the aspect of Berry curvature of the Bloch states in momentum space<a href="#refer"><sup>1<sup></a> , which is usually given as </p>
+<script type="math/tex; mode=display">\sigma_{x y}^{\prime}=n \frac{\mathrm{e}^{2}}{\hbar}\langle\Omega\rangle</script><p>where<script type="math/tex">\langle\Omega\rangle \equiv n^{-1} \sum_{\vec{k}} \Omega_{z}(\vec{k}) f_{\vec{k}}^{0}</script>.<br>The Berry curvature<script type="math/tex">\Omega(\vec{k})</script> is given by a perturbation on the Hamiltonian<script type="math/tex">H=V(\vec{R})+\epsilon_{n}(\vec{k})</script>, and<script type="math/tex">f_{\vec{k}}^{0}</script> is distribution function at steady state.<br>Then we can focus on the specific in intrinsic contribution</p>
+<h3 id="Anomalous-Velocity"><a href="#Anomalous-Velocity" class="headerlink" title="Anomalous Velocity"></a>Anomalous Velocity</h3><p>In solid physics The eigenstates of electrons are Bloch states, which is </p>
+<script type="math/tex; mode=display">\psi_{n \vec{k}}(\vec{r})=\frac{1}{\sqrt{N}} \exp (\overrightarrow{\mathrm{i} k} \cdot \vec{r}) u_{n \vec{k}}(\vec{r})=\langle\vec{r} | n \vec{k}\rangle</script><p>Now we add a perturbation to the Hamiltonian<script type="math/tex">H=V(\vec{R})+\epsilon_{n}(\vec{k})</script>, where<script type="math/tex">\vec{R}=\mathrm{i} \nabla_{\vec{k}}</script>.<br>if the potential $V$ is weak, we can obtain the Berry Phase when the state $|\psi\rangle$ varying in parameter space alone $C$.</p>
+<script type="math/tex; mode=display">\chi(\vec{k})=-\int_{C}^{\vec{k}} \mathrm{d} \vec{k}^{\prime} \cdot \vec{X}\left(\vec{k}^{\prime}\right)</script><p>And Berry vector potential:</p>
+<script type="math/tex; mode=display">\vec{X}(\vec{k})=\int_{\mathrm{cell}} \mathrm{d}^{3} \vec{r} u_{n \vec{k}}^{*}(\vec{r}) \mathrm{i} \nabla_{\vec{k}} u_{n \vec{k}}(\vec{r})</script><p>Berry curvature:</p>
+<script type="math/tex; mode=display">\Omega(\vec{k})=\nabla_{\vec{k}} \times \vec{X}(\vec{k})</script><p>Same as the form in electrodynamics, we can call $\Omega(\vec{k})$ as magnetic field, and $\vec{X}(\vec{k})$is vector gauge potential.</p>
+<p>In order to remove the AB phase, we may give a gauge transformation to Hamiltonian, which means:</p>
+<script type="math/tex; mode=display">H^{\prime}=V\left(\mathrm{i} \nabla_{\vec{k}}+\vec{X}\right)+\epsilon_{n}(\vec{k})</script><p>and now the coordinate operator become $\vec{x}=\vec{R}+\vec{X}(\vec{k})$, which lead to non-commutation to itself</p>
+<script type="math/tex; mode=display">\left[x_{i}, x_{j}\right]=\mathrm{i} \epsilon^{i j k} \Omega_{k}</script><p>So we can get the group velocity as  </p>
+<script type="math/tex; mode=display">\hbar \vec{v}=-\mathrm{i}\left[\vec{x}, H^{\prime}\right]=\nabla_{\vec{k}} \epsilon_{n}(\vec{k})+\left(\frac{\partial V}{\partial \vec{x}}\right) \times \vec{\Omega}(\vec{k})</script><p>We call the last term $\left(\frac{\partial V}{\partial \vec{x}}\right) \times \vec{\Omega}(\vec{k})$ as Anomalous velocity</p>
+<p>When we consider a potential $V=-e \vec{E} \cdot \vec{x}$, we can immediately obtain phase velocity and group velocity:</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l}\hbar \dot{\vec{k}}=e \vec{E}+e \vec{v} \times \vec{B} \\\hbar \vec{v}=\nabla \epsilon_{n}-e \vec{E} \times \vec{\Omega}\end{array}\right.</script><h3 id="Anomalous-Hall-Current"><a href="#Anomalous-Hall-Current" class="headerlink" title="Anomalous Hall Current"></a>Anomalous Hall Current</h3><p>In Boltzmann transport equation, the electric current density is given as when $B=0$</p>
+<script type="math/tex; mode=display">\vec{J}=e \sum_{\vec{k}, s} \vec{v}_{\vec{k}}\left[f_{\vec{k}}^{0}+g_{\vec{k}}\right]</script><p>where $f_{\vec{k}}^{0}$ is distribution function at steady state, and </p>
+<script type="math/tex; mode=display">g_{\vec{k}}=e \vec{v}_{\vec{k}} \tau \cdot \vec{E}\left(-\frac{\partial f^{0}}{\partial \epsilon}\right)</script><p>Where $\tau$ is transport relaxation time.</p>
+<p>In general case,<script type="math/tex">\sum f_{\vec{k}}^{0}=0</script> due to it’s symmetry, and we usually get conductivity $\sigma$ from<script type="math/tex">g_{\vec{k}}</script><br>But, when we consider<script type="math/tex">\hbar \vec{v}=\nabla \epsilon_{n}-e \vec{E} \times \vec{\Omega}</script>, it will lead to a hall current from<script type="math/tex">f_{\vec{k}}^{0}</script></p>
+<script type="math/tex; mode=display">\vec{J}_{H}=\frac{\mathrm{e}^{2}}{\hbar} \vec{E} \times \sum_{\vec{k}, s} \vec{\Omega}(\vec{k}) f_{\vec{k}}^{0}</script><p>Therefore we can obtain Hall conductivity<script type="math/tex">\sigma_{x y}^{\prime}</script></p>
+<script type="math/tex; mode=display">\sigma_{x y}^{\prime}=n \frac{\mathrm{e}^{2}}{\hbar}\langle\Omega\rangle</script><p>where<script type="math/tex">\langle\Omega\rangle \equiv n^{-1} \sum_{\vec{k}} \Omega_{z}(\vec{k}) f_{\vec{k}}^{0}</script><br>Here we can find that<script type="math/tex">\Omega</script> has the same form as magnet field $B$. So AHE can also regard as the monopoles in momentum space.</p>
+<h3 id="Symmetry"><a href="#Symmetry" class="headerlink" title="Symmetry"></a>Symmetry</h3><p>In this case we have two symmetry, which is </p>
+<ul>
+<li>inversion symmetry<script type="math/tex">\vec{\Omega}(\vec{k}) \rightarrow-\vec{\Omega}(-\vec{k})</script></li>
+<li>time-reversal symmetry<script type="math/tex">\vec{\Omega}(\vec{k}) \rightarrow\vec{\Omega}(-\vec{k})</script></li>
+</ul>
+<p>if both symmetry are exist in system, we only have $\vec{\Omega}(\vec{k})=0$, henze $\vec{J}_H=0$, which means there are no Hall effect. So in order to get Hall effect we must break time-reversal symmetry(not only break inversion symmetry).<br>In ordinary Hall effect, external magnetic field $B$ break time-reversal symmetry.<br>In ferromagnetic conductors, $\vec{M}$ break time-reversal symmetry, so they exist Anomalous Hall current.</p>
+<div id="refer"></div>
+
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>[1] <a href="">Ye J, Kim Y B, Millis A J, et al. Berry phase theory of the anomalous Hall effect: Application to colossal magnetoresistance manganites[J]. Physical review letters,1999, 83(18): 3737.</a><br>[2] <a href="">Pugh E M. Hall effect and the magnetic properties of some ferromagnetic materials[J]. Physical Review, 1930, 36(9): 1503.</a><br>[3] <a href="">Pugh E M, Lippert T W. Hall emf and intensity of magnetization[J]. Physical Review, 1932, 42(5): 709.</a><br>[4] <a href="">Karplus R, Luttinger J M. Hall effect in ferromagnetics[J]. Physical Review, 1954, 95(5): 1154.</a><br>[5] <a href="">Smit J. The spontaneous Hall effect in ferromagnetics I[J]. Physica, 1955, 21(6-10): 877-887.</a><br>[6] <a href="">Smit J. The spontaneous Hall effect in ferromagnetics II[J]. Physica, 1958, 24(1-5): 39-51.</a><br>[7] <a href="">Bernevig B A, Hughes T L, Zhang S C. Quantum spin Hall effect and topological phase transition in HgTe quantum wells[J]. science, 2006, 314(5806): 1757-1761.</a><br>[8] <a href="">Berger L. Side-jump mechanism for the Hall effect of ferromagnets[J]. Physical Review B, 1970, 2(11): 4559.</a><br>[9] <a href="">Nagaosa N, Sinova J, Onoda S, et al. Anomalous hall effect[J]. Reviews of modern physics, 2010, 82(2): 1539.</a></p>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Literature-Review/">Literature Review</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Hall-effect/">Hall effect</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，大部分都是我整理前人的工作或学习笔记 ，所以可以随便使用与转载</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/07/03/reviewreed/Plasmonics/">
+                        <span class="hidden-mobile">A Brief introduction to Plasmonics</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "A review about The Anomalous Hall Effect(AHE)&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+</body>
+</html>

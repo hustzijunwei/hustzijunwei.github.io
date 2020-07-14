@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="expand your horizons">
+  <meta name="author" content="Zijun Wei">
+  <meta name="keywords" content="">
+  <title>固体物理圣经咏唱——金属电子论 - My Web</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Zijun Wei's space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                about me
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-06-29 00:00">
+      June 29, 2020 am
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      460 words
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      2
+       minutes
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="特鲁特（Drude）模型"><a href="#特鲁特（Drude）模型" class="headerlink" title="特鲁特（Drude）模型"></a>特鲁特（Drude）模型</h1><p><strong>Core:</strong>故把金属看成是由大量自由电子构成的理想气体。由此电子气只有一个参数，即电子密度<script type="math/tex">n</script>（单位体积的电子数）。<br>电子气<strong>性质</strong>：</p>
+<ul>
+<li>浓度比理想气体高<script type="math/tex">n\sim 10^{23} / cm^3</script></li>
+<li>电子运动是无规则热运动和漂移运动（导电的原因）的叠加，满足牛顿运动方程</li>
+<li>电子等效球半径<script type="math/tex; mode=display">r_{s}=\left(\frac{3}{4 \pi n}\right)^{1 / 3}</script></li>
+<li>电子服从玻尔兹曼统计</li>
+</ul>
+<p><em>一些问题：</em>使用Drude模型得到的自由电子气系统的定容比热为<script type="math/tex">C_{V}^{e}=\frac{3}{2} N k_{B}</script>和实验明显不相符合</p>
+<ul>
+<li>Drude模型预测电子比热和温度无关，而实验上则表明低温下电子比热随温度降低而线性减小。</li>
+<li>Drude模型预测电子比热同晶格比热相当，但实验观察到的电子比热仅为理论值的<script type="math/tex">1 / 200</script></li>
+</ul>
+<h1 id="索末菲模型"><a href="#索末菲模型" class="headerlink" title="索末菲模型"></a>索末菲模型</h1><p><strong>Core：</strong>金属可以看成由在均匀分布在正电荷背景上‘自由’运动的价电子构成的电子气。也称为<strong>金属自由电子气量子理论</strong>。<br>这里有三个<strong>假设</strong>：一是自由电子近似，即忽略电子和离子实之间的相互作用，二是独立电子近似，即忽略了电子-电子之间的相互作用，三是弛豫时间近似<br><strong>性质：</strong></p>
+<ul>
+<li>运动方程满足schrondinger方程</li>
+<li>服从费米-狄拉克统计<script type="math/tex; mode=display">f(\varepsilon)=\frac{1}{e^{(\varepsilon-\mu) / k_{B} T}+1}</script></li>
+</ul>
+<h2 id="金属自由电子气量子理论"><a href="#金属自由电子气量子理论" class="headerlink" title="金属自由电子气量子理论"></a>金属自由电子气量子理论</h2><p>此时假设金属是一个边长为L的立方体，其中含有N个价电子。按照索末菲模型如图所示<br><img src="/img_solid/25.png" srcset="/img/loading.gif" alt=""><br>则电子受到的势场为</p>
+<script type="math/tex; mode=display">U(x, y, z)=\left\{\begin{array}{cc}0 & (0<x, y, z<L) \\\infty & (x, y, z \leq 0 ; x, y, \geq L)\end{array}\right.</script><p>在金属内对于状态<script type="math/tex">\psi(x, y, z)</script>有（若在外则<script type="math/tex">\psi=0</script>）</p>
+<script type="math/tex; mode=display">-\frac{\hbar^{2}}{2 m} \nabla^{2} \psi(x, y, z)=\varepsilon \psi(x, y, z)</script><p>其解（归一化后）为</p>
+<script type="math/tex; mode=display">\psi_{\vec{k}}(\vec{r})=\frac{1}{\sqrt{V}} e^{i \vec{k} \cdot \vec{r}}</script><p>能量为</p>
+<script type="math/tex; mode=display">\varepsilon(\vec{k})=\frac{\hbar^{2} k^{2}}{2 m}=\frac{\hbar^{2}\left(k_{x}^{2}+k_{y}^{2}+k_{z}^{2}\right)}{2 m}</script><p>同时由于玻恩-卡门周期性边条件</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l}\psi(x+L, y, z)=\psi(x, y, z) \\\psi(x, y+L, z)=\psi(x, y, z) \\ \psi(x, y, z+L)=\psi(x, y, z) \end{array}\right.</script><p>对于<script type="math/tex">k_{i}</script>需满足</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{ll}k_{x}=\frac{2 \pi}{L} n_{x} & \left(n_{x}=0,\pm 1, \pm 2 \ldots\right) \\k_{y}=\frac{2 \pi}{L} n_{y} & \left(n_{y}=0,\pm 1, \pm 2 \ldots\right) \\k_{z}=\frac{2 \pi}{L} n_{z} & \left(n_{z}=0,\pm 1, \pm 2 \ldots\right)\end{array}\right.</script><p>由此得知电子本征能量是量子化的</p>
+<script type="math/tex; mode=display">\varepsilon_{n}=\frac{h^{2}}{2 m L^{2}}\left(n_{x}^{2}+n_{y}^{2}+n_{z}^{2}\right)</script><h3 id="状态空间"><a href="#状态空间" class="headerlink" title="状态空间"></a>状态空间</h3><p>假如以￥$k<em>{x}, k</em>{y}, k_{z}$￥为坐标轴建立起波矢（状态）空间，简称<script type="math/tex">\vec{k}</script>空间,则每一个电子的本征态可以用<script type="math/tex">\vec{k}</script>空间的一个点来代表，且可以铺满整个空间。如图所示<br><img src="/img_solid/26.png" srcset="/img/loading.gif" alt=""></p>
+<h3 id="状态密度"><a href="#状态密度" class="headerlink" title="状态密度"></a>状态密度</h3><p>在<script type="math/tex">\vec{k}</script>空间每个点所占据的体积为</p>
+<script type="math/tex; mode=display">\Delta \vec{k}=(2 \pi / L)^{3}=8 \pi^{3} / V</script><p>其倒数表示<script type="math/tex">\vec{k}</script>空间中单位体积内许可态的代表点数，由此可以得到状态密度</p>
+<script type="math/tex; mode=display">\frac{1}{\Delta \overrightarrow{\boldsymbol{k}}}=\frac{V}{8 \pi^{3}}</script><h3 id="能态密度"><a href="#能态密度" class="headerlink" title="能态密度"></a>能态密度</h3><p>由于</p>
+<script type="math/tex; mode=display">k_{x}^{2}+k_{y}^{2}+k_{z}^{2}=\frac{2 m \varepsilon}{\hbar^{2}}</script><p>在<script type="math/tex">\vec{k}</script>空间内，球面上的电子具有相同的能量，称之为电子的等能面。如图所示<br><img src="/img_solid/27.png" srcset="/img/loading.gif" alt=""><br>此时我们通过能态密度的定义可以算出</p>
+<script type="math/tex; mode=display">g(\varepsilon)=\frac{d N}{d \varepsilon}=4 \pi V\left(\frac{2 m}{h^{2}}\right)^{3 / 2} \varepsilon^{1 / 2}=C \varepsilon^{1 / 2}</script><h3 id="自由电子气的基态与费米面"><a href="#自由电子气的基态与费米面" class="headerlink" title="自由电子气的基态与费米面"></a>自由电子气的基态与费米面</h3><p>由于电子属于费米子，服从泡利不相容原理，这意味着自由电子气系统中N个电子 不可能都占据在$k=0$这样一个能量最低的态。同时考虑电子的自旋，每个许可态上可以有自旋相上和 自旋向下的两个电子占据。<br>由此我们可以得到电子的填充顺序：从能量最低的$k=0$态开始，每个态上占据两个电子，按能量从低到高，依次占据而得到系统的基态。在$\vec{k}$空间中，电子占据区最后成为一个球。这样一个$\vec{k}$空间中所有态被电子占据形成的球称为<strong>费米球</strong>（Fermi sphere），费米球的表面称为<strong>费米面</strong>（Fermi surface）</p>
+<ul>
+<li>费米球的半径称为<strong>费米波矢<script type="math/tex">k_{F}^{0}</script></strong><script type="math/tex; mode=display">k_{F}^{0}=\left(3 \pi^{2} n\right)^{1 / 3}</script></li>
+<li>费米面上的电子能量，简称<strong>费米能</strong><script type="math/tex; mode=display">\varepsilon_{F}^{0}=\frac{\hbar^{2}\left(k_{F}^{0}\right)^{2}}{2 m}=\frac{\hbar^{2}\left(3 \pi^{2} n\right)^{2 / 3}}{2 m}</script></li>
+<li>由<script type="math/tex">\vec{p}=\hbar \vec{k}</script>，可得<strong>费米动量</strong><script type="math/tex; mode=display">p_{F}^{0}=\hbar k_{F}^{0}=\hbar\left(3 \pi^{2} n\right)^{1 / 3}</script></li>
+<li>同时<script type="math/tex">m \vec{v}=\hbar \vec{k}</script>，可得<strong>费米速度</strong><script type="math/tex; mode=display">v_{F}^{0}=\frac{\hbar k_{F}^{0}}{m}=\frac{\hbar\left(3 \pi^{2} n\right)^{1 / 3}}{m}</script></li>
+<li>由<script type="math/tex">\varepsilon_{F}^{0}=k_{B} T_{F}^{0}</script>，可得到<strong>费米温度</strong><script type="math/tex; mode=display">T_{F}^{0}=\frac{\hbar^{2}\left(3 \pi^{2} n\right)^{2 / 3}}{2 m k_{B}}</script>以上几个量的大体数值<script type="math/tex">k_{F}^{0} \sim 10^{8} \mathrm{cm}^{-1}, \quad \varepsilon_{F}^{0} \sim \text { 几 } \mathrm{eV}, \quad T_{F}^{0} \sim 10^{4} K \text { 和 } v_{F}^{0} \sim 10^{8} \mathrm{cm} / \mathrm{s}</script></li>
+</ul>
+<h3 id="自由电子气的基态能量"><a href="#自由电子气的基态能量" class="headerlink" title="自由电子气的基态能量"></a>自由电子气的基态能量</h3><p>对基态时所有电子能量求和</p>
+<script type="math/tex; mode=display">E_{0}=2 \times \sum_{k<k_{F}^{0}} \frac{\hbar^{2} k^{2}}{2 m}</script><p>这里因子2是由于自旋的简并导致的。带入<script type="math/tex">\Delta \vec{k}=\frac{8 \pi^{3}}{V}</script>，且转为积分，可得</p>
+<script type="math/tex; mode=display">E_{0}=\frac{3}{5} N \varepsilon_{F}^{0}</script><p>对应电子的平均能量</p>
+<script type="math/tex; mode=display">\bar{\varepsilon}_{0}=\frac{E_{0}}{N}=\frac{3}{5} \varepsilon_{F}^{0}</script><p>当$T=0$时，能量不为0。与经典（特鲁特）模型不同。</p>
+<h1 id="金属自由电子气激发态"><a href="#金属自由电子气激发态" class="headerlink" title="金属自由电子气激发态"></a>金属自由电子气激发态</h1><h2 id="费米-狄喇克统计"><a href="#费米-狄喇克统计" class="headerlink" title="费米-狄喇克统计"></a>费米-狄喇克统计</h2><p>在温度T时电子处在能量为<script type="math/tex">\varepsilon</script>的几率</p>
+<script type="math/tex; mode=display">f(\varepsilon)=\frac{1}{e^{(\varepsilon-\mu) / k_{B} T}+1}</script><p>其中<script type="math/tex">\mu</script>为系统的化学势，其意义是在体积不变的条件下系统增加一个电子所需要的能量。<br><img src="/img_solid/28.png" srcset="/img/loading.gif" alt=""><br>由此可以看出$T \rightarrow 0$ 时的 $\mu$ 实际上就是前面所讲的基态费米能<script type="math/tex">\varepsilon_{F}^{0}</script>。所以我们可以将费米-狄喇克统计写为</p>
+<script type="math/tex; mode=display">f(\varepsilon)=\frac{1}{e^{\left(\varepsilon-\varepsilon_{F}\right) / k_{B} T}+1}</script><h2 id="有限温度时量子态上的电子占据"><a href="#有限温度时量子态上的电子占据" class="headerlink" title="有限温度时量子态上的电子占据"></a>有限温度时量子态上的电子占据</h2><p>对与 $T \neq 0$ 时的情况，由于热激发，费米能以下 一些电子被热激发到<script type="math/tex">\varepsilon>\varepsilon_{F}</script>的量子态上，使得费米能以下留下一些没有被电子占据的量子态，而在费米能以上出现一些热激发电子。</p>
+<h2 id="费米能随温度的变化关系"><a href="#费米能随温度的变化关系" class="headerlink" title="费米能随温度的变化关系"></a>费米能随温度的变化关系</h2><p>经过稍微复杂的计算可以得到</p>
+<script type="math/tex; mode=display">\varepsilon_{F}=\frac{\varepsilon_{F}^{0}}{\left[1+\frac{\pi^{2}}{8}\left(\frac{k_{B} T}{\varepsilon_{F}}\right)^{2}\right]^{2 / 3}} \approx \varepsilon_{F}^{0}\left[1-\frac{\pi^{2}}{12}\left(\frac{k_{B} T}{\varepsilon_{F}}\right)^{2}\right] \approx \varepsilon_{F}^{0}\left[1-\frac{\pi^{2}}{12}\left(\frac{k_{B} T}{\varepsilon_{F}^{0}}\right)^{2}\right]</script><p>具体的picture：<strong>温度升高引起费米球的收缩（<script type="math/tex">k_{F}</script>减小）。</strong>费米面以内能量离<script type="math/tex">\varepsilon_{F}</script>约<script type="math/tex">k_B T</script>范围的能级上的电子被激发到<script type="math/tex">\varepsilon_{F}</script>之上约<script type="math/tex">k_{B} T</script>范围的能级</p>
+<h1 id="金属自由电子气电子比热的量子理论"><a href="#金属自由电子气电子比热的量子理论" class="headerlink" title="金属自由电子气电子比热的量子理论"></a>金属自由电子气电子比热的量子理论</h1><p>索末菲金属自由电子气量子理论可以解决Drude模型在电子比热上遇到的问题。我们可以计算出总能量</p>
+<script type="math/tex; mode=display">E \approx \frac{3}{5} N \varepsilon_{F}^{0}+\frac{\pi^{2}}{4} N k_{B} T \times\left(k_{B} T / \varepsilon_{F}^{0}\right)</script><p>由此可得到金属自由电子气的电子比热</p>
+<script type="math/tex; mode=display">C_{V}^{e} \equiv \frac{\partial E}{\partial T}=\frac{\pi^{2}}{2} N k_{B}\left(k_{B} T / \varepsilon_{F}^{0}\right)</script><p>可见，量子理论给出的金属自由电子气的电子比热随温度降低而线性减小。且数量级也与实验数值相符。<br><em>区别：</em>在经典理论中，所有电子参与了对电子比热的贡献，而在量子理论中，只有费米面以下约<script type="math/tex">k_{B} T</script>的能量范围内的电子因热激发而跃迁到费米面以上能量较高的量子态上，只有这些热激发电子参与对系统电子比热的贡献。</p>
+<p>固体的比热是若干个子系统对比热的贡献之和。对非磁性金属，共有晶格和电子两个子系统，因此</p>
+<script type="math/tex; mode=display">c_{V}=\gamma T+\beta T^{3}</script><p>这里第一项为自由电子气贡献，第二项为德拜模型贡献。</p>
+<h1 id="自由电子气顺磁性的量子理论"><a href="#自由电子气顺磁性的量子理论" class="headerlink" title="自由电子气顺磁性的量子理论"></a>自由电子气顺磁性的量子理论</h1><p>金属电子气系统中，每个电子的自旋量子数 $s=\frac{1}{2},$ 相应的磁矩为<script type="math/tex">\vec{\mu}_{s}=-g \vec{s} \mu_{B}</script>，利用 $s=\frac{1}{2}$ 和朗德因子 $g=2,$ 每个电子携带的磁矩大小正好为一个玻尔磁子<script type="math/tex">\left(\mu_{B}\right)</script>，电子磁矩间没有相互作用。<br>经典模型：经典的朗之万顺磁理论预言的磁化率（<script type="math/tex">\chi</script>）随温度的变化具有居里定律的形式</p>
+<script type="math/tex; mode=display">\chi=\frac{N \mu_{B}^{2}}{3 k_{B}} \frac{1}{T}</script><p>遇到的<em>问题：</em></p>
+<ul>
+<li>简单金属中观测到的顺磁磁化率值远小于经典理论值</li>
+<li>简单金属中的顺磁磁化率低温下基本上与温度无关</li>
+</ul>
+<p>金属自由电子气量子理论可以解决上述问题。<br>我们使用<script type="math/tex">g_{+}</script>表示自旋向上的电子的能态密度，<script type="math/tex">g_{-}</script>表示自旋向下的。</p>
+<script type="math/tex; mode=display">g_{+}(\varepsilon)+g_{-}(\varepsilon)=g(\varepsilon)</script><p><img src="/img_solid/29.png" srcset="/img/loading.gif" alt=""><br>如图所示</p>
+<ul>
+<li>（a）未加磁场时，此时<script type="math/tex; mode=display">g_{+}(\varepsilon)=g_{-}(\varepsilon)=\frac{1}{2} g(\varepsilon)</script></li>
+<li>（b）外加强度为$H$的磁场时，自旋向下的电子，由于其自旋取向和磁场方向相反，故每个电子的能量从<script type="math/tex">\varepsilon \text { 提高到 } \varepsilon+\mu_{B} H</script><script type="math/tex; mode=display">g_{-}(\varepsilon)=\frac{1}{2} g\left(\varepsilon+\mu_{B} H\right)</script>自旋向上的电子则相反<script type="math/tex; mode=display">g_{+}(\varepsilon)=\frac{1}{2} g\left(\varepsilon-\mu_{B} H\right)</script></li>
+<li>（c）体系平衡时，右边能量较高的自旋向下的电子可通过自旋翻转而转移到左边未被自旋向上电 子占据的空态上。两种自旋取向的电子有相同的费米能<script type="math/tex">\varepsilon_{F}</script></li>
+</ul>
+<p>由此可以计算外加磁场下金属自由电子气系统的<strong>磁化强度</strong></p>
+<script type="math/tex; mode=display">M=-\mu_{B}\left(N_{+}-N_{-}\right)=-\frac{1}{2} \mu_{B} \int_{0}^{\infty}\left[g\left(\varepsilon-\mu_{B} H\right)-g\left(\varepsilon+\mu_{B} H\right)\right] f(\varepsilon) d \varepsilon</script><p>积分的下限近似取为0是因为仅仅在费米面附近的电子才可能发生翻转，同时<script type="math/tex">\mp \mu_{B} H</script>也很小。一阶展开<script type="math/tex">g\left(\varepsilon \pm \mu_{B} H\right)</script>带入计算可得</p>
+<script type="math/tex; mode=display">M=g\left(\varepsilon_{F}^{0}\right) \mu_{B}^{2} H\left[1-\frac{\pi^{2}}{12}\left(k_{B} T / \varepsilon_{F}^{0}\right)^{2}\right]</script><p>所以金属自由电子气系统的<strong>顺磁磁化率</strong>为</p>
+<script type="math/tex; mode=display">\chi_{p} \equiv \frac{M}{H}=g\left(\varepsilon_{F}^{0}\right) \mu_{B}^{2}\left[1-\frac{\pi^{2}}{12}\left(k_{B} T / \varepsilon_{F}^{0}\right)^{2}\right]</script><h1 id="金属自由电子气的电子输运理论"><a href="#金属自由电子气的电子输运理论" class="headerlink" title="金属自由电子气的电子输运理论"></a>金属自由电子气的电子输运理论</h1><h1 id="电子发射"><a href="#电子发射" class="headerlink" title="电子发射"></a>电子发射</h1><h1 id="金属自由电子气模型的局限性"><a href="#金属自由电子气模型的局限性" class="headerlink" title="金属自由电子气模型的局限性"></a>金属自由电子气模型的局限性</h1><ul>
+<li>无法解释多价金属尽管电子密度大，电导率却比一价金属差。</li>
+<li>预测一价碱金属的霍尔系数很好，但对一价贵金属和二、三价金属理论与实验不相符。</li>
+<li>无法解释磁电阻效应</li>
+<li>无法解释金属、半导体和绝缘体的分类</li>
+</ul>
+<p>尽管金属电子气模型对稍微复杂点的金属明显是不适合的，但对于重金属我们还是使用这个模型，通常定义电子的<strong>有效质量</strong>来描述实际的电子气系统和自由电子气的差别程度</p>
+<script type="math/tex; mode=display">m^{*}=m_{0} \times \frac{\gamma^{\exp }}{\gamma^{\text {theo}}}</script>
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/physics-note/">physics note</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9C%A3%E7%BB%8F%E5%92%8F%E5%94%B1%E7%B3%BB%E5%88%97/">圣经咏唱系列</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，大部分都是我整理前人的工作或学习笔记 ，所以可以随便使用与转载</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/07/03/reviewreed/Plasmonics/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">A Brief introduction to Plasmonics</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/06/29/solid%20physics/solid6/">
+                        <span class="hidden-mobile">固体物理圣经咏唱——固体能带论</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "固体物理圣经咏唱——金属电子论&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+</body>
+</html>

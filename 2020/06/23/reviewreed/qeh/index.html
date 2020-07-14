@@ -285,9 +285,9 @@
 </ul>
 <h2 id="Berry-Phase"><a href="#Berry-Phase" class="headerlink" title="Berry Phase"></a>Berry Phase</h2><p>We have already talk about Berry Phase in previous note <a href="https://zijunwei.top/2020/05/30/1/">Berry Phase note</a>, So we will talk about it when we define some mathematical form about Berry Phase.</p>
 <h1 id="The-Integer-Quantum-Hall-Effect"><a href="#The-Integer-Quantum-Hall-Effect" class="headerlink" title="The Integer Quantum Hall Effect"></a>The Integer Quantum Hall Effect</h1><p>In the integer quantum Hall effect we do not need to take the interactions between electrons into account. Thing may be different in FQHE.</p>
-<h2 id="Conductivity-in-Filled-Landau-Levels"><a href="#Conductivity-in-Filled-Landau-Levels" class="headerlink" title="Conductivity in Filled Landau Levels"></a>Conductivity in Filled Landau Levels</h2><p>In IQHE, we obtain the Hall resistivity from experiments, which is </p>
-<script type="math/tex; mode=display">\rho_{x y}=\frac{2 \pi \hbar}{e^{2}} \frac{1}{\nu}</script><p>And we also get<script type="math/tex">\rho_{x y}</script> in the Drude model, which is </p>
-<script type="math/tex; mode=display">\rho_{x y}=\frac{B}{n e}</script><p>Where $n$ is the density of electrons. Comparing these two expressions, we find the density need to satisfy </p>
+<h2 id="Conductivity-in-Filled-Landau-Levels"><a href="#Conductivity-in-Filled-Landau-Levels" class="headerlink" title="Conductivity in Filled Landau Levels"></a>Conductivity in Filled Landau Levels</h2><p>In IQHE, we obtain the Hall resistivity from experiments, which is</p>
+<script type="math/tex; mode=display">\rho_{x y}=\frac{2 \pi \hbar}{e^{2}} \frac{1}{\nu}</script><p>And we also get<script type="math/tex">\rho_{x y}</script> in the Drude model, which is</p>
+<script type="math/tex; mode=display">\rho_{x y}=\frac{B}{n e}</script><p>Where $n$ is the density of electrons. Comparing these two expressions, we find the density need to satisfy</p>
 <script type="math/tex; mode=display">n=\frac{B}{\Phi_{0}} \nu</script><p>With<script type="math/tex">\Phi_{0}=2 \pi \hbar / e</script>.<br>Now we have a figure of IQHE, which is the integer in IQHE represent the density of electrons filling ν Landau levels. When $\nu$ Landau levels are filled there is a gap in the energy spectrum. The gap is<script type="math/tex">\hbar \omega_B</script> (where<script type="math/tex">\omega_B=e B / m</script> is the <em>cyclotron frequency</em>). When we add a electric field, the electrons couldn’t move, as long as we’re at temperature<script type="math/tex">k_{B} T \ll \hbar \omega_{B}</script>. This can account for<script type="math/tex">\rho_{x x}=0</script>.</p>
 <h3 id="Conductivity-for-a-single-free-particle"><a href="#Conductivity-for-a-single-free-particle" class="headerlink" title="Conductivity for a single free particle"></a>Conductivity for a single free particle</h3><p>The velocity of the particle is given by</p>
 <script type="math/tex; mode=display">m \dot{\mathbf{x}}=\mathbf{p}+e \mathbf{A}</script><p>where $p_i$ is the canonical momentum.<br>In the quantum mechanics, the total current is given by</p>
@@ -301,9 +301,13 @@
 <li>edge modes</li>
 </ul>
 <p>The picture of edge modes is as follows<br><img src="/img_qhe/7.png" srcset="/img/loading.gif" alt=""><br>We find boundary particles move only in a single direction. which is called as <strong>chiral</strong>. Then the particles move in opposite direction on the two sides of the sample, we say that the particles have opposite <strong>chirality</strong> on the two sides.</p>
-<p>We can account the edge modes in the quantum theory.<br>We’ll work in Landau gauge and consider a rectangular geometry which is finite only in the x-direction, which we model by $V(x)$. The Hamiltonian is</p>
+<p>We can account the edge modes in the quantum theory.<br>We’ll work in Landau gauge and consider a rectangular geometry which is finite only in the x-direction, which we model by $V(x)$.<br><img src="/img_qhe/8.png" srcset="/img/loading.gif" alt=""><br>The Hamiltonian is</p>
 <script type="math/tex; mode=display">H=\frac{1}{2 m}\left(p_{x}^{2}+\left(p_{y}+e B x\right)^{2}\right)+V(x)</script><p>If the potential is smooth over distance scales $l_B$, we can Taylor expand the potential around its location $X$ (<script type="math/tex">V(x) \approx V(X)+(\partial V / \partial x)(x-X)+\ldots</script>), and drop quadratic terms. Then we obtain a linear potential which we have already talked at Landau Levels. The result is a group velocity in the y-direction, now is given by</p>
-<script type="math/tex; mode=display">v_{y}=-\frac{1}{e B} \frac{\partial V}{\partial x}</script><p>The modes at each edge are both chiral:<script type="math/tex">v_{y}>0</script> on the left, and<script type="math/tex">v_{y}<0</script> on the right.</p>
+<script type="math/tex; mode=display">v_{y}=-\frac{1}{e B} \frac{\partial V}{\partial x}</script><p>We can find that the modes at each edge are both <strong>chiral</strong>:<script type="math/tex">v_{y}>0</script> on the left, and<script type="math/tex">v_{y}<0</script> on the right.</p>
+<p>Now we look what happen when all states are filled.<br><img src="/img_qhe/9.png" srcset="/img/loading.gif" alt=""><br>The bulk of the material is an insulator because all the states are filled. But the edge of the material is a metal.<br>when we add a potential $\Delta \mu$ on the two sides of the sample, the picture become<br><img src="/img_qhe/10.png" srcset="/img/loading.gif" alt=""><br>To obtain the current we need to sum over all filled states, which is approximately the same as integrating over $x$ </p>
+<script type="math/tex; mode=display">I_{y}=-e \int \frac{d k}{2 \pi} v_{y}(k)=\frac{e}{2 \pi l_{B}^{2}} \int d x \frac{1}{e B} \frac{\partial V}{\partial x}=\frac{e}{2 \pi \hbar} \Delta \mu</script><p>Where Hall voltage<script type="math/tex">e V_{H}=\Delta \mu</script>, then we can obtain the Hall conductivity</p>
+<script type="math/tex; mode=display">\sigma_{x y}=\frac{I_{y}}{V_{H}}=\frac{e^{2}}{2 \pi \hbar}</script><p>Which is the same as the expected conductivity for a single Landau level.This picture of states shows that the current is carried entirely by the edge states. Fortunately, we can find that the sum over all states result in the independence of the shape of states, which means we can still get the same Hall conductivity as long as<script type="math/tex">V(x)<E_F</script>.</p>
+<p>Now we have the Hall conductivity in a single Landau level, if there are more than one level, the Hall conductivity become<script type="math/tex">\sigma_{x y}=n \frac{I_{y}}{V_{H}}=\frac{e^{2}}{2 \pi \hbar}</script></p>
 
             </article>
             <hr>
@@ -321,7 +325,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/quantum-Hall-effect/">quantum Hall effect</a>
+                      <a class="hover-with-bg" href="/tags/Hall-effect/">Hall effect</a>
                     
                   </div>
                 
