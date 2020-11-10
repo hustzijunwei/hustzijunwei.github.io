@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="expand your horizons">
+  <meta name="author" content="Zijun Wei">
+  <meta name="keywords" content="">
+  <title>热力学与统计物理圣经咏唱——热力学势及其应用 - My Web</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Zijun Wei's space</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                about me
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-08-25 00:00">
+      August 25, 2020 am
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.1k words
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      23
+       minutes
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <h1 id="Legendre变化与热力学势"><a href="#Legendre变化与热力学势" class="headerlink" title="Legendre变化与热力学势"></a>Legendre变化与热力学势</h1><h2 id="Legendre变换"><a href="#Legendre变换" class="headerlink" title="Legendre变换"></a>Legendre变换</h2><p>我们可以使用Legendre变换将独立变量从某个量转换为其对应的共轭变量。<br>对于函数<script type="math/tex">f(x, y)</script>，其全微分为</p>
+<script type="math/tex; mode=display">d f(x, y)=u(x, y) d x+v(x, y) d y</script><p>我们可以将变量y用v反解出来</p>
+<script type="math/tex; mode=display">v=v(x, y) \quad \Rightarrow \quad y=y(x, v)</script><p>由此我们可以定义一个新的函数</p>
+<script type="math/tex; mode=display">g:=f-v y</script><p>其全微分为</p>
+<script type="math/tex; mode=display">d g=d f-d(v y)=u d x+v d y-v d y-y d v=u d x-y d v</script><p>即$g$是新变量$x, v$的函数。于是，通过Legendre变换，将以$x, y$为变量的函数$f(x, y)$变成了以$x, v$为变量的新的函数$g(x, v)$。容易验证，再做一次Legendre变换即可从$g(x, v)$变回$f(x, y)$。因此$g(x, v)$和$f(x, y)$包含了同样多的信息。</p>
+<h2 id="各种热力学势"><a href="#各种热力学势" class="headerlink" title="各种热力学势"></a>各种热力学势</h2><p><img src="/img_therm/4.png" srcset="/img/loading.gif" alt=""></p>
+<h3 id="内能-U"><a href="#内能-U" class="headerlink" title="内能$U$"></a>内能$U$</h3><p>内能的微分可以由热力学基本方程给出</p>
+<script type="math/tex; mode=display">d U(S, V)=T d S-P d V</script><p>于是有</p>
+<script type="math/tex; mode=display">T=\left(\frac{\partial U}{\partial S}\right)_{V}, \quad P=-\left(\frac{\partial U}{\partial V}\right)_{S}</script><h3 id="焓-H"><a href="#焓-H" class="headerlink" title="焓$H$"></a>焓$H$</h3><p>我们定义焓为</p>
+<script type="math/tex; mode=display">H(S, P)=U+P V</script><p>其全微分为</p>
+<script type="math/tex; mode=display">d H(S, P)=d U+P d V+V d P=T d S+V d P</script><p>于是</p>
+<script type="math/tex; mode=display">T=\left(\frac{\partial H}{\partial S}\right)_{P}, \quad V=\left(\frac{\partial H}{\partial P}\right)_{S}</script><p>焓常用在等压环境下的热力学过程。</p>
+<ul>
+<li>对于定容热容<script type="math/tex; mode=display">C_{V}=\left(\frac{d Q}{d T}\right)_{V}=\left(\frac{\partial U}{\partial T}\right)_{V}</script>由此对于等容过程有<script type="math/tex; mode=display">\Delta U=\int_{T_{1}}^{T_{2}} C_{V} d T</script></li>
+<li>对于定压热容，在等压环境下我们有<script type="math/tex">d Q=d U+P d V=d(U+P V)=d H</script>，由此<script type="math/tex; mode=display">C_{P}=\left(\frac{d Q}{d T}\right)_{P}=\left(\frac{\partial H}{\partial T}\right)_{P}</script>对于等压过程<script type="math/tex; mode=display">\Delta H=\int_{T_{1}}^{T_{2}} C_{P} d T</script></li>
+</ul>
+<p>结合可逆过程的<script type="math/tex">d Q=T d S</script>，我们可以总结为</p>
+<script type="math/tex; mode=display">C_{V}=\left(\frac{\partial U}{\partial T}\right)_{V}=T\left(\frac{\partial S}{\partial T}\right)_{V}, \quad C_{P}=\left(\frac{\partial H}{\partial T}\right)_{P}=T\left(\frac{\partial S}{\partial T}\right)_{P}</script><h3 id="Hemholtz势-F"><a href="#Hemholtz势-F" class="headerlink" title="Hemholtz势$F$"></a>Hemholtz势$F$</h3><p>之前讨论的U与H都有一个自然变量为熵S，我们希望用温度T来替代。我们通过S到T的Legendre变换可以得到Hemholtz势。我们定义为</p>
+<script type="math/tex; mode=display">F(T, V)=U-T S</script><p>其全微分为</p>
+<script type="math/tex; mode=display">d F(T, V)=-S d T-P d V</script><p>由此在等温条件下使用Hemholtz势更方便，在等温条件下</p>
+<script type="math/tex; mode=display">d F=-P d V</script><p>因此</p>
+<script type="math/tex; mode=display">\Delta F=-\int_{V_{1}}^{V_{2}} P d V</script><p>此时F的增加表示环境对系统做了可逆的功，F的减小表示系统对环境做了可逆的功。在等温条件下，系统会对环境做功，直到系统的F达到极小值。</p>
+<h3 id="Gibbs势-G"><a href="#Gibbs势-G" class="headerlink" title="Gibbs势$G$"></a>Gibbs势$G$</h3><p>定义</p>
+<script type="math/tex; mode=display">G=F+P V</script><p>全微分为</p>
+<script type="math/tex; mode=display">d G=-S d T+V d P</script><p>Gibbs势在等压、等温的情况下使用起来比较方便。</p>
+<p>对于Hemholtz势与Gibbs势我们有Gibbs-Hemholtz关系</p>
+<script type="math/tex; mode=display">U=-T^{2}\left(\frac{\partial}{\partial T} \frac{F}{T}\right)_{V}, \quad H=-T^{2}\left(\frac{\partial}{\partial T} \frac{G}{T}\right)_{P}</script><h1 id="Maxwell关系"><a href="#Maxwell关系" class="headerlink" title="Maxwell关系"></a>Maxwell关系</h1><h2 id="偏导关系"><a href="#偏导关系" class="headerlink" title="偏导关系"></a>偏导关系</h2><p>对于一个二元函数<script type="math/tex">x=x(y, z)</script>，我们可以反解出<script type="math/tex">z=z(x, y)</script>。由是我们可以得到其<strong>偏导关系</strong>：</p>
+<script type="math/tex; mode=display">\left(\frac{\partial x}{\partial z}\right)_{y}=\frac{1}{\left(\frac{\partial z}{\partial x}\right)_{y}}</script><script type="math/tex; mode=display">\left(\frac{\partial x}{\partial y}\right)_{z}=-\left(\frac{\partial x}{\partial z}\right)_{y}\left(\frac{\partial z}{\partial y}\right)_{x}</script><p>注意与多元微积分中的<strong>链式法则</strong>区分</p>
+<script type="math/tex; mode=display">\left(\frac{\partial f}{\partial x}\right)_{y}=\left(\frac{\partial f}{\partial z}\right)_{y}\left(\frac{\partial z}{\partial x}\right)_{y}</script><p>我们注意到前一种形式的角标是轮换的，后一种的角标是定的。</p>
+<h2 id="Maxwell关系及其应用"><a href="#Maxwell关系及其应用" class="headerlink" title="Maxwell关系及其应用"></a>Maxwell关系及其应用</h2><p>我们之前得到了四个全微分</p>
+<script type="math/tex; mode=display">\begin{aligned}d U &=T d S-P d V, & & d H=T d S+V d P \\d F &=-S d T-P d V, & & d G=-S d T+V d P\end{aligned}</script><p>我们可以得到四个关系式，我们称其为<strong>Maxwell关系</strong></p>
+<script type="math/tex; mode=display">\begin{array}{rlr}\left(\frac{\partial T}{\partial V}\right)_{S} & =-\left(\frac{\partial P}{\partial S}\right)_{V}, & \left(\frac{\partial T}{\partial P}\right)_{S}=\left(\frac{\partial V}{\partial S}\right)_{P} \\\left(\frac{\partial S}{\partial V}\right)_{T} & =\left(\frac{\partial P}{\partial T}\right)_{V}, & \left(\frac{\partial S}{\partial P}\right)_{T}=-\left(\frac{\partial V}{\partial T}\right)_{P}\end{array}</script><p><strong>证明</strong>：这里我们只证明第一个式子，之后同理。<br>对于全微分<script type="math/tex">d U=T d S-P d V</script>我们可以得到</p>
+<script type="math/tex; mode=display">T=\left(\frac{\partial U}{\partial S}\right)_{V} \, -P=\left(\frac{\partial U}{\partial V}\right)_{V}</script><p>由于<script type="math/tex">\left(\frac{\partial^2 U}{\partial S \partial V}\right)=\left(\frac{\partial^2 U}{\partial V \partial S}\right)</script>，我们得到</p>
+<script type="math/tex; mode=display">\left(\frac{\partial T}{\partial V}\right)_{S}=-\left(\frac{\partial P}{\partial S}\right)_{V}</script><p>这些偏微分通常用所谓的<strong>广义极化率</strong>来定义</p>
+<ul>
+<li>等压膨胀率（isobaric expansivity）<script type="math/tex">\beta_{P}</script>:<script type="math/tex; mode=display">\beta_{P}:=\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P}</script></li>
+<li>绝热膨胀率（adiabatic expansivity）<script type="math/tex">\beta_{S}</script>:<script type="math/tex; mode=display">\beta_{S}:=\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{S}</script></li>
+<li>等温压缩率（isothermal compressibility）<script type="math/tex">\kappa_{T}</script>:<script type="math/tex; mode=display">\kappa_{T}:=-\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T}</script></li>
+<li>绝热压缩率（adiabatic compressibility）<script type="math/tex">\kappa_{S}</script>:<script type="math/tex; mode=display">\kappa_{S}:=-\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{S}</script></li>
+</ul>
+<p><strong>Maxwell关系的记忆方法</strong></p>
+<ul>
+<li>对角线连接的两个量为共斩量（即乘积有能量量纲，例如T和S，P和V）</li>
+<li>确定两个分母之后，脚标也就确定了（同一侧的脚标和分母一起构成了独立的态参量。左右的脚标正好与左右的分母对换）。</li>
+<li>当$T, V$出现在同一侧的分子分母上时，有一个额外的负号。</li>
+</ul>
+<p><strong>补充</strong>：</p>
+<ul>
+<li>热容用熵的表示（由<script type="math/tex">d Q=T d S</script>可以推出）<script type="math/tex; mode=display">C_{V}=T\left(\frac{\partial S}{\partial T}\right)_{V}, \quad C_{P}=T\left(\frac{\partial S}{\partial T}\right)_{P}</script></li>
+<li>内能与状态方程并不完全独立。<script type="math/tex; mode=display">\left(\frac{\partial U}{\partial V}\right)_{T}=T\left(\frac{\partial P}{\partial T}\right)_{V}-P</script></li>
+<li>热容与状态方程也不完全独立<script type="math/tex; mode=display">\left(\frac{\partial C_{V}}{\partial V}\right)_{T}=T\left(\frac{\partial^{2} P}{\partial T^{2}}\right)_{V}, \quad\left(\frac{\partial C_{P}}{\partial P}\right)_{T}=-T\left(\frac{\partial^{2} V}{\partial T^{2}}\right)_{P}</script><h1 id="基本热力学函数的确定，特性函数"><a href="#基本热力学函数的确定，特性函数" class="headerlink" title="基本热力学函数的确定，特性函数"></a>基本热力学函数的确定，特性函数</h1>在之前的讨论中我们发现热力学中的基本函数为温度T，内能U，熵S。其他热力学量可以由其导出。</li>
+</ul>
+<h2 id="以-T-V-为独立变量"><a href="#以-T-V-为独立变量" class="headerlink" title="以 T, V 为独立变量"></a>以 T, V 为独立变量</h2><p>假设我们实验测得<script type="math/tex">P=P(T, V)</script></p>
+<script type="math/tex; mode=display">U(T, V)=\int_{T_{0}}^{T} C_{V}\left(T, V_{0}\right) d T+\int_{V_{0}}^{V}\left[T\left(\frac{\partial P}{\partial T}\right)_{V}-P\right] d V+U\left(T_{0}, V_{0}\right)</script><script type="math/tex; mode=display">S(T, V)=\int\left[\frac{C_{V}}{T} d T+\left(\frac{\partial P}{\partial T}\right)_{V} d V\right]+S\left(T_{0}, V_{0}\right)</script><p>对于其他热力学函数</p>
+<script type="math/tex; mode=display">H(T, V)=U(T, V)+P(T, V) V, \quad F(T, V)=U(T, V)-T S(T, V), \quad G(T, V)=F(T, V)+P(T,V)V</script><p><strong>小结</strong>：只需要从实验上测定状态方程<script type="math/tex">P=P(T, V)</script>和在某体积<script type="math/tex">V_{0}</script>处的 热容<script type="math/tex">C_{V}\left(T, V_{0}\right)</script>就可得到全部的热力学函数。</p>
+<h2 id="以丁-P-为独立变量"><a href="#以丁-P-为独立变量" class="headerlink" title="以丁, $P$ 为独立变量"></a>以丁, $P$ 为独立变量</h2><p>假设我们实验测得<script type="math/tex">V=V(T, P)</script></p>
+<script type="math/tex; mode=display">H(T, P)=\int\left\{C_{P} d T+\left[V-T\left(\frac{\partial V}{\partial T}\right)_{P}\right] d P\right\}+H\left(T_{0}, P_{0}\right)</script><script type="math/tex; mode=display">S(T, P)=\int\left[\frac{C_{P}}{T} d T-\left(\frac{\partial V}{\partial T}\right)_{P} d P\right]+S\left(T_{0}, P_{0}\right)</script><p>对于其他热力学函数</p>
+<script type="math/tex; mode=display">U(T, P)=H(T, P)-P V(T, P), \quad F(T, P)=U(T, P)-T S(T, P), \quad G(T, P)=F(T, P)+P(T,V)V</script><p><strong>小结</strong>：只需要从实验上测定状态方程<script type="math/tex">V=V(T, P)</script>和在某压强<script type="math/tex">P_{0}</script>下的热容<script type="math/tex">C_{P}\left(T, P_{0}\right),</script>就可得到全部的热力学函数</p>
+<h2 id="特性函数"><a href="#特性函数" class="headerlink" title="特性函数"></a>特性函数</h2><p><strong>如果适当选取独立态参量（称其为自然变量），则只要知道一个热力学函数，就可求出均匀系统的全部热力学函数。</strong><br><strong>常用特性函数</strong></p>
+<script type="math/tex; mode=display">U=U(S, V), S(U, V), H(S, P), F(T, V), G(T, P)</script><p>即特性函数与上面四个全微分式子相关。</p>
+<h1 id="理想气体状态函数"><a href="#理想气体状态函数" class="headerlink" title="理想气体状态函数"></a>理想气体状态函数</h1><h1 id="其他热力学系统"><a href="#其他热力学系统" class="headerlink" title="其他热力学系统"></a>其他热力学系统</h1><h2 id="弹性杆"><a href="#弹性杆" class="headerlink" title="弹性杆"></a>弹性杆</h2><h2 id="表面张力"><a href="#表面张力" class="headerlink" title="表面张力"></a>表面张力</h2><h2 id="磁性介质"><a href="#磁性介质" class="headerlink" title="磁性介质"></a>磁性介质</h2><h1 id="热力学第三定律"><a href="#热力学第三定律" class="headerlink" title="热力学第三定律"></a>热力学第三定律</h1><p>我们现在希望回答如何测量系统的熵，由于<script type="math/tex">C_{P}=T(\partial S / \partial T)_{P}</script>，我们可以对其积分得到熵</p>
+<script type="math/tex; mode=display">S(T)=S\left(T_{0}\right)+\int_{T_{0}}^{T} \frac{C_{P}}{T} d T</script><p>此时只有积分常数<script type="math/tex">S\left(T_{0}\right)</script>未知。而热力学第三定律给出了嫡在一个特定温度一绝对零度的额外信息。<br>首先是Nernst发现，在T趋于0时内平衡（各部分都平衡）系统中所有的反应过程熵不变。<br><strong>热力学第三定律的Planck表述</strong>：<br>处于内平衡的所有系统的嫡在绝对零度时是相等的，可以取为零。<br><strong>热力学第三定律的Simon表述</strong><br>处在热力学内平衡的系统的每个方面对系统嫡的贡献随着<script type="math/tex">T \rightarrow 0K</script>而趋于0。<br><strong>推论</strong>：</p>
+<ul>
+<li>当 $T \rightarrow 0$ 时热容趋于零。<script type="math/tex; mode=display">C=T\left(\frac{\partial S}{\partial T}\right)=\left(\frac{\partial S}{\partial \ln T}\right) \rightarrow 0</script></li>
+<li>当 $T \rightarrow 0$ 时热膨胀停止。<script type="math/tex; mode=display">\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_{P}=\frac{1}{V}\left(\frac{\partial S}{\partial P}\right)_{T}</script></li>
+<li>当 $T \rightarrow 0$ 没有气体保持为理想气体。</li>
+<li>顺磁体的居里定律失效。</li>
+<li>通过有限步骤不可能达到绝对零度</li>
+</ul>
+<h1 id="化学势"><a href="#化学势" class="headerlink" title="化学势"></a>化学势</h1><p>如果一个系统个部分的性质完全一样，则称该系统为均匀系。如果一个系统不是均匀的，但可分成若干个均匀的部分，则将每个均匀的部分称做一个<strong>相</strong>，该系统称做<strong>复相系</strong>。因此均匀系也称<strong>单相系</strong>。如果系统由多种化学成分的粒子组成，通常称为<strong>多元系</strong>。多元系会发生化学反应，复相系可以发生相变。</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>如果系统中增加一个粒子而不改变温度和体积的话，则系统的自由能将改变一个量，即自由能的微分可被修正为</p>
+<script type="math/tex; mode=display">d F(T, V, N)=-S d T-P d V+\mu d N</script><p>N为粒子数，因此定义为</p>
+<script type="math/tex; mode=display">\mu=\left(\frac{\partial F}{\partial N}\right)_{T, V}</script><p>由Legendre变换</p>
+<script type="math/tex; mode=display">\begin{aligned}d U(S, V, N) &=T d S-P d V+\mu d N \\d H(S, P, N) &=T d S+V d P+\mu d N \\d G(T, P, N) &=-S d T+V d P+\mu d N \\d S(U, V, N) &=\frac{1}{T} d U+\frac{P}{T} d V-\frac{\mu}{T} d N\end{aligned}</script><p>由此化学势的等价定义有</p>
+<script type="math/tex; mode=display">\mu=\left(\frac{\partial U}{\partial N}\right)_{S, V}=\left(\frac{\partial H}{\partial N}\right)_{S, P}=\left(\frac{\partial F}{\partial N}\right)_{T, V}=\left(\frac{\partial G}{\partial N}\right)_{T, P}</script><p>以及</p>
+<script type="math/tex; mode=display">\frac{\mu}{T}=-\left(\frac{\partial S}{\partial N}\right)_{U, V}</script><p>假设系统有K个组元，由此定义</p>
+<script type="math/tex; mode=display">\begin{aligned}d F\left(T, V, N_{i}\right) &=-S d T-P d V+\sum_{i=1}^{K} \mu_{i} d N_{i} \\d U\left(S, V, N_{i}\right) &=T d S-P d V+\sum_{i=1}^{K} \mu_{i} d N_{i} \\d H\left(S, P, N_{i}\right) &=T d S+V d P+\sum_{i=1}^{K} \mu_{i} d N_{i} \\d G\left(T, P, N_{i}\right) &=-S d T+V d P+\sum_{i=1}^{K} \mu_{i} d N_{i} \\d S\left(U, V, N_{i}\right) &=\frac{1}{T} d U+\frac{P}{T} d V-\sum_{i=1}^{K} \frac{\mu_{i}}{T} d N_{i}\end{aligned}</script><p>由此也可以得到新的Maxwell关系</p>
+<script type="math/tex; mode=display">\left(\frac{\partial \mu_{i}}{\partial V}\right)_{S, N_{i}, \bar{N}_{i}}=-\left(\frac{\partial P}{\partial N_{i}}\right)_{S, V, \bar{N}_{i}}</script><h2 id="化学式的物理意义"><a href="#化学式的物理意义" class="headerlink" title="化学式的物理意义"></a>化学式的物理意义</h2><h3 id="单元系"><a href="#单元系" class="headerlink" title="单元系"></a>单元系</h3><p>我们先来假设两个均匀的单元系，我们用<script type="math/tex">\left(S^{a}, U^{a}, V^{a}, N^{a}\right) \text { 和 }\left(S^{b}, U^{b}, V^{b}, N^{b}\right)</script>来表示两个系统。并假设粒子数守恒</p>
+<script type="math/tex; mode=display">S=S^{a}+S^{b}, \quad U=U^{a}+U^{b}, \quad V=V^{a}+V^{b}, \quad N=N^{a}+N^{b}</script><p>此时给熵一个虚变动使其熵为极大值（平衡态），虚满足<script type="math/tex">\delta S=0, \quad \delta^{2} S<0</script>。计算有</p>
+<script type="math/tex; mode=display">\delta S=\left(\frac{1}{T^{a}}-\frac{1}{T^{b}}\right) \delta U^{a}+\left(\frac{P^{a}}{T^{a}}-\frac{P^{b}}{T^{b}}\right) \delta V^{a}-\left(\frac{\mu^{a}}{T^{a}}-\frac{\mu^{b}}{T^{b}}\right) \delta N^{a}=0</script><p>则达到平衡时必有</p>
+<script type="math/tex; mode=display">T^{a}=T^{b}, \quad P^{a}=P^{b}, \quad \mu^{a}=\mu^{b}</script><p>我们分别称其为<strong>热平衡条件</strong>、<strong>力学平衡条件</strong>与<strong>相平衡条件</strong>。现在我们考虑不平衡时</p>
+<ul>
+<li><script type="math/tex; mode=display">T^{a}>T^{b}</script>系统朝着S增大的方向延缓，可以计算到<script type="math/tex">d U^{a}<0</script>，即热量从高温部分流向低温</li>
+<li><script type="math/tex; mode=display">P^{a}>P^{b}</script>可以得到<script type="math/tex">d V^{a}>0</script>，即活塞从大压强部分流向小压强部分。</li>
+<li><script type="math/tex; mode=display">\mu^{a}>\mu^{b}</script><script type="math/tex">d N^{a}<0</script>，即<strong>物质会从化学势高的部分向化学势低的部分流动</strong>。</li>
+</ul>
+<p>特别的，之前我们假设了粒子数守恒，当<strong>粒子数不守恒时</strong>。为使下式成立</p>
+<script type="math/tex; mode=display">\delta S =\left(\frac{1}{T^{a}}-\frac{1}{T^{b}}\right) \delta U^{a}+\left(\frac{P^{a}}{T^{a}}-\frac{P^{b}}{T^{b}}\right) \delta V^{a}-\frac{\mu^{a}}{T^{a}} \delta N^{a}-\frac{\mu^{b}}{T^{b}} \delta N^{b} =0</script><p>我们有</p>
+<script type="math/tex; mode=display">T^{a}=T^{b}, \quad P^{a}=P^{b}, \quad \mu^{a}=\mu^{b}=0</script><p>即，对粒子数不守恒的单元系，化学势必为零</p>
+<h2 id="多元系"><a href="#多元系" class="headerlink" title="多元系"></a>多元系</h2><ul>
+<li>设系统中共有K种组元，且<strong>每种组元的粒子数都分别守恒</strong>。则类似的推导可知：在处于平衡的两部分中，每种组元的化学势都分别相等:<script type="math/tex; mode=display">\mu_{i}^{a}=\mu_{i}^{b}, \quad(i=1,2, \cdots, K)</script></li>
+<li>当组元<strong>粒子数满足某约束条件</strong>：假设化学反应为<script type="math/tex">a+2 b \leftrightarrow 3 c+4 d</script>时，$\mu_{i}$ 之间也满足相应的特定关系。即<script type="math/tex; mode=display">-\mu_{a}-2 \mu_{b}+3 \mu_{c}+4 \mu_{d}=0</script></li>
+<li>当某组元粒子数不受任何限制时，<script type="math/tex; mode=display">\mu_{i}=0</script></li>
+</ul>
+<h1 id="Gibbs-Duhem-关系"><a href="#Gibbs-Duhem-关系" class="headerlink" title="Gibbs-Duhem 关系"></a>Gibbs-Duhem 关系</h1><p>考虑到<script type="math/tex">U\left(S, V, N_{i}\right)</script>中的物理量都为广延量</p>
+<script type="math/tex; mode=display">U\left(\lambda S, \lambda V, \lambda N_{i}\right)=\lambda U\left(S, V, N_{i}\right)</script><p>对任意都成立，我们对<script type="math/tex">\lambda</script>做微分可以得到</p>
+<script type="math/tex; mode=display">\left(\frac{\partial U}{\partial S}\right)_{V, N_{i}} S+\left(\frac{\partial U}{\partial V}\right)_{S, N_{i}} V+\sum_{i}\left(\frac{\partial U}{\partial N_{i}}\right)_{S, V, \bar{N}_{i}} N_{i}=U\left(S, V, N_{i}\right)=T S-P V+\sum_{i} \mu_{i} N_{i}</script><p>之后可以得到</p>
+<script type="math/tex; mode=display">\begin{aligned}S\left(U, V, N_{i}\right) &=\frac{1}{T}\left(U+P V-\sum_{i} \mu_{i} N_{i}\right) \\H\left(S, P, N_{i}\right) &=U+P V=T S+\sum_{i} \mu_{i} N_{i} \\F\left(T, V, N_{i}\right) &=U-T S=-P V+\sum_{i} \mu_{i} N_{i} \\G\left(T, P, N_{i}\right) &=F+P V=\sum_{i} \mu_{i} N_{i} \\\Phi_{G}\left(T, V, \mu_{i}\right) &=F-\sum \mu_{i} N_{i}=-P V\end{aligned}</script><p>最后一个称为<strong>巨势</strong>。同时我们也发现<strong>化学式为强度量</strong></p>
+<script type="math/tex; mode=display">\mu_{i}\left(T, P, \lambda N_{i}\right)=\mu_{i}\left(T, P, N_{i}\right)</script><p>由此我们可以把化学式写为<script type="math/tex">\mu_{i}=\mu_{i}\left(T, P, x_{1}, x_{2}, \cdots, x_{K}\right.</script>其中<script type="math/tex">x_i</script>为浓度。同时对上式求导有</p>
+<script type="math/tex; mode=display">\sum_{i} N_{i}\left(\frac{\partial \mu_{j}}{\partial N_{i}}\right)_{T, P, \bar{N}_{i}}=0</script><p>我们若对<script type="math/tex">U\left(S, V, N_{i}\right)=T S-P V+\sum_{i} \mu_{i} N_{i}</script>取微分并考虑<script type="math/tex">d U=T d S-P d V+\sum_{i} \mu_{i} d N_{i}</script>，我们可以得到</p>
+<script type="math/tex; mode=display">S d T-V d P+\sum_{i} N_{i} d \mu_{i}=0</script><p>这个就为<strong>Gibbs-Duhem 关系</strong>，这意味着<script type="math/tex">T, P, \mu_{i}</script>不独立。</p>
+<h1 id="热动平衡判据"><a href="#热动平衡判据" class="headerlink" title="热动平衡判据"></a>热动平衡判据</h1><p>热力学第二定律给出，孤立系统可以用熵为极大值作判据来得到孤立系统处于平衡态时所必需满足的平衡条件和稳定条件，称为<strong>熵判据</strong>。即</p>
+<script type="math/tex; mode=display">\delta S=0, \delta^{2} S<0</script><p>因此真实的演化过程一定是向着熵增加的方向演化的</p>
+<script type="math/tex; mode=display">(\Delta S)_{U, V, N}>0</script><p>现在我们希望通过其他的的热力学量来判断平衡：</p>
+<ul>
+<li>对于恒温系统（<script type="math/tex">(T, N)</script>恒定），系统向外界吸热Q，则熵判据为<script type="math/tex">\Delta S+\Delta S_{B} \geq 0</script>。带入<script type="math/tex">\Delta S_{B}=-Q / T_{B}</script>有<script type="math/tex; mode=display">\Delta S-Q / T_{B} \geq 0</script>我们使用来替代<script type="math/tex; mode=display">\Delta F=\Delta U-T \Delta S \leq \Delta U-Q=W</script>即系统对外界做的功一定不大于其自由能的减少。</li>
+<li>若体积不变，则不做功有<script type="math/tex; mode=display">(\Delta F)_{T, V, N}<0</script>对 $(T, V, N)$ 恒定的系统，系统的演化方向倾向于使Helmholtz自由能降低，直到平衡自由能取极小值不再发生变化。称为<strong>自由能判据</strong>（判据为<script type="math/tex">\delta F=0, \quad \delta^{2} F>0</script>）</li>
+<li>若恒温等压，同上计算有<script type="math/tex; mode=display">(\Delta G)_{T, P, N}<0</script>$(T, P, N)$恒定的系统，系统的演化方向倾向于使Gibbs自由能降低，直到达到平衡后，Gibbs自由能取极小值不再发生变化，这被称作<strong>Gibbs函数判据</strong>。</li>
+</ul>
+<h2 id="资用能平衡判据"><a href="#资用能平衡判据" class="headerlink" title="资用能平衡判据"></a>资用能平衡判据</h2><p>定义资用能为</p>
+<script type="math/tex; mode=display">A:=U-T_{0} S+P_{0} V-\mu_{0} N</script><p>其中下标0代表环境物理量。则平衡判据为</p>
+<script type="math/tex; mode=display">d A \leq 0</script><p>系统的演化方向倾向于使资用能降低到极小值，这被称做平衡的<strong>资用能判据</strong>。</p>
+<ul>
+<li>对<script type="math/tex">(U, V, N)</script>固定系统（孤立系统），<script type="math/tex">d U, d V, d N</script>为0。则转变为<strong>熵判据</strong><script type="math/tex; mode=display">(d S)_{U, V, N} \geq 0</script></li>
+<li><script type="math/tex; mode=display">(S, V, N)$$固定，**内能判据**
+$$(d U)_{S, V, N} \leq 0</script></li>
+<li><script type="math/tex; mode=display">(T, V, N)$$固定，**自由能判据**
+$$(d F)_{T, V, N} \leq 0</script></li>
+<li><script type="math/tex; mode=display">(T, P, N)$$固定**Gibbs函数判据**
+$$(d G)_{T, P, N} \leq 0</script></li>
+</ul>
+
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/physics-note/">physics note</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9C%A3%E7%BB%8F%E5%92%8F%E5%94%B1%E7%B3%BB%E5%88%97/">圣经咏唱系列</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，大部分都是我整理前人的工作或学习笔记 ，所以可以随便使用与转载</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/08/26/Thermal/8/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">热力学与统计物理圣经咏唱——统计物理的“套路”</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/2020/08/24/Thermal/thermodynamics2/">
+                        <span class="hidden-mobile">热力学与统计物理圣经咏唱——热力学第二定理</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: 'article.markdown-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "热力学与统计物理圣经咏唱——热力学势及其应用&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.staticfile.org/mathjax/3.0.5/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+</body>
+</html>

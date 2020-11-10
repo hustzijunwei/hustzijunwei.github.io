@@ -162,7 +162,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.2k words
+      3.5k words
     </span>
   
 
@@ -172,7 +172,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      7
+      21
        minutes
     </span>
   
@@ -239,11 +239,42 @@
 <script type="math/tex; mode=display">g\left(T_{i}\right)=f_{i}\left(P_{i}, V_{i}\right)</script><p>这样，当两个系统达到热平衡后，<script type="math/tex">g\left(T_{1}\right)=g\left(T_{2}\right)</script>。函数 $g$ 可以选取不同的形式。最为简单的选取就是<script type="math/tex">g(T)=T</script><br>这样当热平衡时我们就可以说是温度相同了。</p>
 <p>在前面讨论中的T与其他状态参量的函数关系我们称为<strong>状态方程</strong>。对理想气体来说<script type="math/tex">P V=N k_{B} T</script>。</p>
 <h2 id="温标"><a href="#温标" class="headerlink" title="温标"></a>温标</h2><ul>
-<li>摄氏温标 (‘C)：把一个标准大气压下，水的沸点定位 100 度，水的冰点定 位 0 度。</li>
-<li>华氏温标 (‘PF)：它与摄氏温标换算关系： $F=32+\frac{9}{5} C$</li>
-<li>理想气体温标 (K)：利用理想气体状态方程 PV = ルRT 定义温度，这样的 话，水的三相点温度为 273.16 K。与摄氏度换算关系为： $K=C-273.15$</li>
+<li>摄氏温标 (<script type="math/tex">{ }^{\circ} \mathrm{C}</script>)：把一个标准大气压下，水的沸点定位 100 度，水的冰点定位 0 度。</li>
+<li>华氏温标 (<script type="math/tex">{ }^{\circ} \mathrm{F}</script>)：它与摄氏温标换算关系： $F=32+\frac{9}{5} C$</li>
+<li>理想气体温标 (K)：利用理想气体状态方程 $PV = \nu RT$ 定义温度，这样的 话，水的三相点温度为 273.16 K。与摄氏度换算关系为： $K=C-273.15$</li>
 <li>热力学温标 (K): 利用卡诺循环来定义。</li>
 </ul>
+<h1 id="统计物理的基本概念"><a href="#统计物理的基本概念" class="headerlink" title="统计物理的基本概念"></a>统计物理的基本概念</h1><h2 id="微观态"><a href="#微观态" class="headerlink" title="微观态"></a>微观态</h2><p><strong>基本思想：</strong>物理系统的热力学特征由宏观态所对应微观态的多重性决定。<br>在经典力学中，我们使用系统中每一个粒子的<em>广义坐标</em>与<em>广义动量</em>(<strong>正则变量</strong>)来表示系统的微观状态。我们称这个空间为<strong>相空间</strong>，系统的运动状态为<strong>代表点</strong>，当系统随时间演化时形成<strong>相轨道</strong>。此时系统的运动遵循哈密顿正则方程</p>
+<script type="math/tex; mode=display">\dot{q}_{i}=\frac{\partial H}{\partial p_{i}}, \quad \dot{p}_{i}=\frac{\partial H}{\partial q_{i}} \quad(i=1,2 \cdots, f)</script><p>由<strong>刘维尔定理</strong>代表点附近的数密度随着时间的演化是不变的，即。</p>
+<script type="math/tex; mode=display">\frac{d}{d t} \rho=0</script><p>或者</p>
+<script type="math/tex; mode=display">\frac{\partial \rho}{\partial t}=-\sum_{i}\left[\frac{\partial \rho}{\partial q_{i}} \frac{\partial H}{\partial p_{i}}-\frac{\partial H}{\partial q_{i}} \frac{\partial \rho}{\partial p_{i}}\right]=-[\rho, H]_{P . B .}</script><p>由此经典力学中力学状态变化是连续的。由此是不可分的。为统计上的方便我们常常将相空间分成很多小相格，不管系统的正则变量落在小相格的哪一部分，都看作是同一个微观状态。在一定的相空间体积中，能划分出多少个相格，就认为系统有多少个微观状态。这就为经典力学中微观状态的定义。</p>
+<p>在量子力学中微观状态用量子态来描述，即可以用一组量子数来表示，我们常用能量本征态来表述。同时我们还需考虑粒子的全同性。若粒子是可分辨的（非全同粒子或定域的全同粒子），则整个 N 粒子系统的微观状态可以由<strong>每个粒子分别处在哪个量子态来描述</strong>。但是，如果粒子是不可分新的全同粒子，系统的微观状态应该由<strong>每个单粒子态上有多少粒子来描述</strong>。<br>对于全同粒子，在考虑弱简并条件（每个粒子能量本征态上的粒子数远小于1）下时，我们可以近似认为每个粒子都处在不同的量子态。由此我们可以统一为：在<script type="math/tex">\Delta E \ll k_{B} T</script>时一个多粒子系统的能量本征态的求和可近似为对经典相空间的积分：</p>
+<script type="math/tex; mode=display">\sum_{i} \longrightarrow \frac{1}{N ! h^{f}} \int d q_{1} \cdots d q_{n} d p_{1} \cdots d p_{n}</script><p>其中因子<script type="math/tex">N !</script>仅对全同粒子时才需要，f为系统的自由度。（这个公式可以简单的理解为对谐振子微观态计算的一种推广）</p>
+<h2 id="系综和统计物理的基本假设：等概率原理"><a href="#系综和统计物理的基本假设：等概率原理" class="headerlink" title="系综和统计物理的基本假设：等概率原理"></a>系综和统计物理的基本假设：等概率原理</h2><p>当我们知道系统的微观态后，我们有两种方法得到宏观物理量B的平均值</p>
+<ol>
+<li>测定在一定时间<script type="math/tex">\tau</script>内的B的平均值<script type="math/tex; mode=display">\bar{B}\left(t_{0}\right)=\frac{1}{\tau} \int_{t_{0}}^{t_{0}+\tau} B(q(t), p(t)) d t</script>需要说明的是我们希望<script type="math/tex">\tau</script>对微观态来说足够的长对宏观来说又足够小，但这又很难操作，因此我们可以操作：在测量过程的时间段 $\tau$ 中均匀插入无穷多个时刻点，将 每个时刻所得到的测量结果加起来取平均。这样，宏观量 B 的测量值便可等价</li>
+<li>也可以在相空间内积分得到<script type="math/tex; mode=display">\bar{B}\left(t_{0}\right)=\int \rho\left(q, p, t_{0}\right) B(q, p) d q d p</script>由此我们可以发现可以将态密度理解为大量的、具有相同宏观性质的系统的概率密度。</li>
+</ol>
+<p>这种具有相同宏观性质的大量的系统副本的集合，其中每个系统副本都按照正则运动方程随时间演化，被称为<strong>系综</strong>（Ensemble），上述平均值的公式也被称为<strong>系综平均</strong>。<br>我们注意到系综的代表点运动时满足刘维尔定理，所以任意宏观量的平均值不随时间变化。当然这是针对<strong>平衡态</strong>而言的，即一个系统的宏观物理量的测量值是相应微观量的系综平均值。于是统计物理的主要任务就是确定系统在一定宏观条件（约束）下处在各个微观态上的概率分布。<br>为了确定概率分布引入了<em>各态历经假设</em>(Ergodic Hypothesis) :在足够长的时间内，孤立系统的代表点将会历经系统的等能量曲面上的每个微观态。可以证明，如果各态历经假设成立，则对于处在平衡态的孤立系统，一切可能的微观状态出现的概率都相等。这就引出统计物理中最重要的一条基本假设——<strong>等概率原理</strong>:对于处在平衡态的孤立系统，一切可能的微观状态出现的概率都相等。对于量子力学其也成立。</p>
+<p>统计物理中常见的三种系综：</p>
+<ol>
+<li>微正则系综 (microcanonical ensemble)： 由孤立系统构成（无热交换与物质交换）。即体系的能量、 体积、粒子数 $(E, V, N)$ 均恒定。</li>
+<li>正则系综（canonical ensemble)：系统与一个大的热源热接触（恒定的温度 T)，保持体积、粒子数仍恒定。正则系综中的系统中能量可以有涨落。即 $(T, V, N)$ 恒定。</li>
+<li>巨正则系综（grand canonical ensemble)：系统与一个大的热源和粒子源接触（恒定的温度 T 和化学势 $\mu$ )，但体积恒定。在巨正则系综中的系统中能量和粒子数都有涨落。即 $(T, V, \mu)$ 恒定。</li>
+</ol>
+<h1 id="温度的统计定义"><a href="#温度的统计定义" class="headerlink" title="温度的统计定义"></a>温度的统计定义</h1><p>通过上述的基本原理我们可以得到温度的统计定义。首先我们考虑两个孤立系统，其构成一个大的孤立系统（能量为E），其子能量为<script type="math/tex">E_1</script>与<script type="math/tex">E_2</script>。当两个系统平衡时，在某一能量分配下每个子系统的微观状态数分别为<script type="math/tex">\Omega_{1}\left(E_{1}\right)</script>和<script type="math/tex">\Omega_{2}\left(E_{2}\right)</script>则在这种能量分配下微观状态数为</p>
+<script type="math/tex; mode=display">\Omega\left(E_{1}\right)=\Omega_{1}\left(E_{1}\right) \Omega_{2}\left(E_{2}\right)</script><p>由于等概率原理，每个微观态出现的概率相同，因此对于最有可能出现的微观状态即为极大值</p>
+<script type="math/tex; mode=display">\frac{\partial}{\partial E_{1}} \Omega\left(E_{1}\right)=\frac{\partial}{\partial E_{1}}\left(\Omega_{1}\left(E_{1}\right) \Omega_{2}\left(E_{2}\right)\right)=0</script><p>整理后即得到最概然的能量分配满足:</p>
+<script type="math/tex; mode=display">\frac{\partial \ln \Omega_{1}\left(E_{1}\right)}{\partial E_{1}}=\frac{\partial \ln \Omega_{2}\left(E_{2}\right)}{\partial E_{2}}</script><p>由此我们可以将<strong>最概然分配对应的状态看作是达到平衡时系统的状态</strong>。<br>同时我们也可以将上式看为两个确定能量的<strong>孤立系统达到热平衡的判据</strong>。由此我们可以定义<strong>孤立平衡态系统的温度</strong>为：</p>
+<script type="math/tex; mode=display">g\left(T_{i}\right)=\frac{\partial \ln \Omega_{i}\left(E_{i}\right)}{\partial E_{i}}</script><p>同时由于最概然的能量分配，我们认为从非平衡态向平衡态演化的过程就是从微观态数少的能量分配向微观态数多的能量分配的演化过程。由此可知<strong>函数$g(T)$随T的增加而降低</strong>。由此我们定义温度为</p>
+<script type="math/tex; mode=display">g(T)=\frac{1}{k_{B} T}=\frac{\partial \ln \Omega(E)}{\partial E}</script><p>其中k为Boltzmann常数</p>
+<script type="math/tex; mode=display">k_{B}=1.3807 \times 10^{-23} \mathrm{J} \cdot \mathrm{K}^{-1}</script><h1 id="正则系综、Boltzmann因子"><a href="#正则系综、Boltzmann因子" class="headerlink" title="正则系综、Boltzmann因子"></a>正则系综、Boltzmann因子</h1><p>对于正则系综，系统处于状态k的概率正比与热源可能的微观状态数</p>
+<script type="math/tex; mode=display">P_{k} \propto 1 \times \Omega_{B}\left(E_{T}-\varepsilon_{k}\right)</script><p>其中<script type="math/tex">E_{T}</script>为总能量，<script type="math/tex">\varepsilon_{k}</script>为系统的能量。我们通过对<script type="math/tex">\Omega_{B}\left(E_{T}-\varepsilon_{k}\right)</script>展开并运用温度定义我们可以得到，系统处于能态$k$的概率正比于<strong>Boltzmann因子</strong>（<script type="math/tex">e^{-\beta \varepsilon_{k}}</script>）。</p>
+<script type="math/tex; mode=display">P_{k} \propto e^{-\beta \varepsilon_{k}}</script><p>其中<script type="math/tex">\beta=1 /\left(k_{B} T\right)</script>。<br>我们将概率归一化有</p>
+<script type="math/tex; mode=display">P_{k}=\frac{1}{Z} e^{-\beta \varepsilon_{k}}</script><p>这里有归一因子，我们称其为<strong>配分函数</strong>（Partition function），其意味着系统被“分配”到每一个可能微观状态的概率。</p>
+<script type="math/tex; mode=display">Z=\sum_{\text {微观态 } k} e^{-\beta \varepsilon_{k}}</script><p>在正则系综中内能为</p>
+<script type="math/tex; mode=display">\langle E\rangle=\frac{\sum_{k} \varepsilon_{k} e^{-\beta \varepsilon_{k}}}{\sum_{k} e^{-\beta \varepsilon_{k}}}=-\frac{\partial}{\partial \beta} \ln Z</script><p>能量涨落为</p>
+<script type="math/tex; mode=display">\frac{\sigma_{E}}{\langle E\rangle}=\frac{\sqrt{k_{B} T^{2} C_{V}}}{\langle E\rangle}</script><p>由于<script type="math/tex">C_{V}</script>和<script type="math/tex">\langle E\rangle</script>都是广延量，与粒子数正比。故能量涨落<script type="math/tex">\propto 1 / \sqrt{N}</script>很小，由此我们可以将正则系综作为微正则系综来处理。即，<strong>正则系综与微正则系综对于计算平衡态下的热力学量来说是等价的</strong></p>
 
             </article>
             <hr>
