@@ -8,7 +8,7 @@
     <link href="/2020/11/11/QE/"/>
     <url>/2020/11/11/QE/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>在这篇note中第一部分简单介绍了QE并计算了单光场与双光场下的时间演化问题。在第二部分计算了在给定的一个MODEL下的QE系统的基态能量，并探究其中的部分物理意义。<br>在第三部分我们希望将DMRG算法运用到QE问题中用来计算更多光子的光场下的基态能量。在第四部分当我们只关心基态能量时我们可以使用lanczos算法更快的得到近似的结果。<br>在第五部分中我们运用一种截断希尔伯特空间的近似方法进而更快的求得基态能量。在第六部分我们调研了相关的论文，试图探究并计算与SSH model相似光场下的问题。<br>在第七章我们调研了另一篇论文，具体来探究使用QE来模拟巨原子。</p>]]></content>
     
     
     <categories>
