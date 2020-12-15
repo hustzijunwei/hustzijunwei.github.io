@@ -204,8 +204,8 @@
             
             <article class="markdown-body">
               <h1 id="原理介绍"><a href="#原理介绍" class="headerlink" title="原理介绍"></a>原理介绍</h1><h2 id="蔡氏电路简介"><a href="#蔡氏电路简介" class="headerlink" title="蔡氏电路简介"></a>蔡氏电路简介</h2><p>蔡氏电路是一个可以产生混沌振荡的三阶自治电路，它包含两个电容器 C1、C2，一个电感 L，<br>一个可调电阻R 和一个非线性负阻 $R_N$，其电路如图</p>
-<p><img src="/img_cc/1.png" srcset="/img/loading.gif" alt="势能如图"></p>
-<p><strong>有源非线性负阻元件</strong><br>其中，$R_N$部分是该电路唯一的非线性元件，也称为蔡氏二极管，它可用运算放大器来实现。如图：<br><img src="/img_cc/2.png" srcset="/img/loading.gif" alt="势能如图"></p>
+<p><img src="/img_cc/1.png" srcset="/img/loading.gif" alt=""></p>
+<p><strong>有源非线性负阻元件</strong><br>其中，$R_N$部分是该电路唯一的非线性元件，也称为蔡氏二极管，它可用运算放大器来实现。如图：<br><img src="/img_cc/2.png" srcset="/img/loading.gif" alt=""></p>
 <h2 id="蔡氏电路方程"><a href="#蔡氏电路方程" class="headerlink" title="蔡氏电路方程"></a>蔡氏电路方程</h2><p>依据电路可以列带电感电容的KVL和KCL Eq，由于有三个Loop,可以很容易的建立蔡氏电路的演化方程：</p>
 <script type="math/tex; mode=display">\begin{equation}\left\{\begin{array}{l}{\frac{d V_{1}}{d t}=\frac{1}{R C_{1}}\left(V_{2}-V_{1}\right)-\frac{1}{C_{1}} I\left(V_{1}\right)} \\ {\frac{d V_{2}}{d t}=\frac{1}{C_{2}} I_{3}-\frac{1}{R C_{2}}\left(V_{2}-V_{1}\right)} \\ {\frac{d I_{3}}{d t}=-\frac{1}{L} V_{2}}\end{array}\right.\end{equation}</script><p>在计算上，我们一般考虑将其设为无量纲方程</p>
 <script type="math/tex; mode=display">\begin{equation}\begin{array}{l}{\dot{x}=\alpha(y-h(x))} \\ {\dot{y}=x-y+z} \\ {\dot{z}=-\beta y-\gamma z}\end{array}\end{equation}</script><h2 id="一般化方程"><a href="#一般化方程" class="headerlink" title="一般化方程"></a>一般化方程</h2><p>经过上述的讨论，可以得到一般形式无量纲化的蔡氏电路的方程组</p>
@@ -391,7 +391,7 @@ x=znmp(P1);
                 
               </div>
               
-                <p class="note note-warning">本博客所有文章除特别声明外，大部分都是我整理前人的工作或学习笔记 ，所以可以随便使用与转载</p>
+                <p class="note note-warning">本博客所有文章除特别声明外，大部分都是我整理前人的工作或学习笔记 ，使用与转载需说明</p>
               
               
                 <div class="post-prevnext row">
